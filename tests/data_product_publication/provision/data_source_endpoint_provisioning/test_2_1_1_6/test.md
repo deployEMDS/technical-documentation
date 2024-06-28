@@ -1,21 +1,21 @@
 
-# [2.1.1.6] Data product publication: Provision - Data source endpoint provisioning
+## [2.1.1.6] Data product publication: Provision - Data source endpoint provisioning
  
-## Test description
+### Test description
 nan
  
-## Test type
+### Test type
 nan
  
-## Execution phase
+### Execution phase
 Phase 1
  
-## Minimal?
+### Minimal?
 No
  
-## Extra information
-### ISO25010 Quality
+### Extra information
+#### ISO25010 Quality
 Security
-### ISO25010 Quality description
+#### ISO25010 Quality description
 Does the data provider need to certify the ownership of the data source platform?
     

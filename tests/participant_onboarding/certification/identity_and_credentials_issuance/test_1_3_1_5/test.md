@@ -1,21 +1,21 @@
 
-# [1.3.1.5] Participant onboarding: Certification - Identity and credentials issuance
+## [1.3.1.5] Participant onboarding: Certification - Identity and credentials issuance
  
-## Test description
+### Test description
 Prove that a full credential lifecycle is supported: request, issuance, validation, renewal, revocation.
  
-## Test type
+### Test type
 Test
  
-## Execution phase
+### Execution phase
 Phase 1
  
-## Minimal?
+### Minimal?
 No
  
-## Extra information
-### ISO25010 Quality
+### Extra information
+#### ISO25010 Quality
 Security
-### ISO25010 Quality description
+#### ISO25010 Quality description
 [Integrity] The credential issuance/verification services implements integrity controls manage the issuance and renewal/revoking of credentials and certificates.
     

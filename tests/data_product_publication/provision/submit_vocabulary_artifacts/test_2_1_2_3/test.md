@@ -1,21 +1,21 @@
 
-# [2.1.2.3] Data product publication: Provision - Submit vocabulary artifacts
+## [2.1.2.3] Data product publication: Provision - Submit vocabulary artifacts
  
-## Test description
+### Test description
 Assess if and how a change in a vocabulary hub asset is executed. Rank higher if integrity controls are in place.
  
-## Test type
+### Test type
 Assessment
  
-## Execution phase
+### Execution phase
 Phase 2
  
-## Minimal?
+### Minimal?
 No
  
-## Extra information
-### ISO25010 Quality
+### Extra information
+#### ISO25010 Quality
 Functional suitability
-### ISO25010 Quality description
+#### ISO25010 Quality description
 Can the data provider request to update/modify a vocabulary asset?
     

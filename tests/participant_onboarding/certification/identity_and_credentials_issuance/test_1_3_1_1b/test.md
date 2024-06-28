@@ -1,21 +1,21 @@
 
-# [1.3.1.1B] Participant onboarding: Certification - Identity and credentials issuance
+## [1.3.1.1B] Participant onboarding: Certification - Identity and credentials issuance
  
-## Test description
+### Test description
 Prove that the stack uses a credential framework that is compatible with this initiative: eIDAS
  
-## Test type
+### Test type
 Test
  
-## Execution phase
+### Execution phase
 Phase 1
  
-## Minimal?
+### Minimal?
 No
  
-## Extra information
-### ISO25010 Quality
+### Extra information
+#### ISO25010 Quality
 Functional suitability
-### ISO25010 Quality description
+#### ISO25010 Quality description
 [Completeness] The credential framework supports attestations and (multiple?) trust anchors.
     

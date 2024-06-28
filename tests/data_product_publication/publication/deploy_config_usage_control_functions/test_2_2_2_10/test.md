@@ -1,21 +1,21 @@
 
-# [2.2.2.10] Data product publication: Publication - Deploy/config usage control functions
+## [2.2.2.10] Data product publication: Publication - Deploy/config usage control functions
  
-## Test description
+### Test description
 Assess that the policy language is extensible and score the results by flexibility and availability of development and testing facilities for new operators.
  
-## Test type
+### Test type
 Assessment
  
-## Execution phase
+### Execution phase
 Phase 1
  
-## Minimal?
+### Minimal?
 No
  
-## Extra information
-### ISO25010 Quality
+### Extra information
+#### ISO25010 Quality
 Flexibility
-### ISO25010 Quality description
+#### ISO25010 Quality description
 The policies language allows development of new operators to support new models of consumption and constraints.
     

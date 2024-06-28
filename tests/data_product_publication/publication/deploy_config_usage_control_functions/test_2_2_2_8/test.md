@@ -1,21 +1,21 @@
 
-# [2.2.2.8] Data product publication: Publication - Deploy/config usage control functions
+## [2.2.2.8] Data product publication: Publication - Deploy/config usage control functions
  
-## Test description
+### Test description
 Create an enforcement function that artificially allocates memory and CPU resources in a loop and monitor performance management of the connector.
  
-## Test type
+### Test type
 Test
  
-## Execution phase
+### Execution phase
 Phase 1
  
-## Minimal?
+### Minimal?
 No
  
-## Extra information
-### ISO25010 Quality
+### Extra information
+#### ISO25010 Quality
 Performance
-### ISO25010 Quality description
+#### ISO25010 Quality description
 The system minimizes the impact of usage control policies to the performance of the data product offerings.
     

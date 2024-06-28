@@ -1,21 +1,21 @@
 
-# [4.2.4.2] Sharing agreement: Negotiation - Update observability registry
+## [4.2.4.2] Sharing agreement: Negotiation - Update observability registry
  
-## Test description
+### Test description
 Determine that none other than a privileged admistrator can view the observability traces.
  
-## Test type
+### Test type
 Assessment
  
-## Execution phase
+### Execution phase
 Phase 2
  
-## Minimal?
+### Minimal?
 No
  
-## Extra information
-### ISO25010 Quality
+### Extra information
+#### ISO25010 Quality
 Security
-### ISO25010 Quality description
+#### ISO25010 Quality description
 [Confidentiality] Participant’s identifiers in observability traces are obfuscated.
     

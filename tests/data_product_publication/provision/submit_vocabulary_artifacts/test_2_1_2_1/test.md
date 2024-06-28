@@ -1,21 +1,21 @@
 
-# [2.1.2.1] Data product publication: Provision - Submit vocabulary artifacts
+## [2.1.2.1] Data product publication: Provision - Submit vocabulary artifacts
  
-## Test description
+### Test description
 Test that the vocabulary hub's assets are available to every data space participant. Rank higher if the reference to a vocabulary asset is integrated in the data sharing process.
  
-## Test type
+### Test type
 Test
  
-## Execution phase
+### Execution phase
 Phase 2
  
-## Minimal?
+### Minimal?
 No
  
-## Extra information
-### ISO25010 Quality
+### Extra information
+#### ISO25010 Quality
 nan
-### ISO25010 Quality description
+#### ISO25010 Quality description
 2 - 4
     

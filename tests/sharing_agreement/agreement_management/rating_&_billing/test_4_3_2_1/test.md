@@ -1,22 +1,22 @@
 
-# [4.3.2.1] Sharing agreement: Agreement management - Rating & billing
+## [4.3.2.1] Sharing agreement: Agreement management - Rating & billing
  
-## Test description
+### Test description
 Verify and document the existence (and functionalities) of a rating and billing capability.
  
-## Test type
+### Test type
 Assessment
  
-## Execution phase
+### Execution phase
 Phase 2
  
-## Minimal?
+### Minimal?
 No
  
-## Extra information
-### ISO25010 Quality
+### Extra information
+#### ISO25010 Quality
 Functional appropriateness, Modifiability & Security
-### ISO25010 Quality description
+#### ISO25010 Quality description
 The system provides a rating/billing management interface. The system notifies every data consumer that rating is activated, or rating params are changed.
 
 The system allows a data producer to define the rating model, tiering and conditional rating parameters. 

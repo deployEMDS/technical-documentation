@@ -1,21 +1,21 @@
 
-# [1.1.1.1] Participant onboarding: Registration - Gather information
+## [1.1.1.1] Participant onboarding: Registration - Gather information
  
-## Test description
+### Test description
 The system provides the means to build an online resource centre and its onboarding documentation. 
  
-## Test type
+### Test type
 Assessment
  
-## Execution phase
+### Execution phase
 Phase 2
  
-## Minimal?
+### Minimal?
 No
  
-## Extra information
-### ISO25010 Quality
+### Extra information
+#### ISO25010 Quality
 Functional suitability
-### ISO25010 Quality description
+#### ISO25010 Quality description
 [Completeness] The EMDS project provides an online resource center, covering onboarding information and data space governance. 
     

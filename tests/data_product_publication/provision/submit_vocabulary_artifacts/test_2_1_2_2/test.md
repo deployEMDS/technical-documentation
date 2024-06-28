@@ -1,21 +1,21 @@
 
-# [2.1.2.2] Data product publication: Provision - Submit vocabulary artifacts
+## [2.1.2.2] Data product publication: Provision - Submit vocabulary artifacts
  
-## Test description
+### Test description
 Test that a data space participant can publish new vocabularies (test vocabulary), and the vocabulary hub returns convenient feedback on the operation
  
-## Test type
+### Test type
 Test
  
-## Execution phase
+### Execution phase
 Phase 2
  
-## Minimal?
+### Minimal?
 No
  
-## Extra information
-### ISO25010 Quality
+### Extra information
+#### ISO25010 Quality
 nan
-### ISO25010 Quality description
+#### ISO25010 Quality description
 1 - 6
     

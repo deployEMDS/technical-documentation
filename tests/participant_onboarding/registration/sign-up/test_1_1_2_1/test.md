@@ -1,21 +1,21 @@
 
-# [1.1.2.1] Participant onboarding: Registration - Sign-up
+## [1.1.2.1] Participant onboarding: Registration - Sign-up
  
-## Test description
+### Test description
 Evaluate online validation features and, if any, the integration with external services that filter automated bots.
  
-## Test type
+### Test type
 Assessment
  
-## Execution phase
+### Execution phase
 Phase 2
  
-## Minimal?
+### Minimal?
 No
  
-## Extra information
-### ISO25010 Quality
+### Extra information
+#### ISO25010 Quality
 Security
-### ISO25010 Quality description
+#### ISO25010 Quality description
 e.g., The sign-up process implements user verification measures.
     

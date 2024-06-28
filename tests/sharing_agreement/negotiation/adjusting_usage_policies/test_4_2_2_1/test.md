@@ -1,21 +1,21 @@
 
-# [4.2.2.1] Sharing agreement: Negotiation - Adjusting usage policies
+## [4.2.2.1] Sharing agreement: Negotiation - Adjusting usage policies
  
-## Test description
+### Test description
 Assess whether making a counterproposal is possible and supported. Recommend to skip for now: Skip tests: The feature is either unfinished (EDC) or absent (Fiware). 
  
-## Test type
+### Test type
 Assessment
  
-## Execution phase
+### Execution phase
 Phase 2
  
-## Minimal?
+### Minimal?
 No
  
-## Extra information
-### ISO25010 Quality
+### Extra information
+#### ISO25010 Quality
 Functional completeness
-### ISO25010 Quality description
+#### ISO25010 Quality description
 The system supports the making of a counterproposal in data sharing negotiation.
     

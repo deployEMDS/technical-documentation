@@ -1,21 +1,21 @@
 
-# [1.1.2.2] Participant onboarding: Registration - Sign-up
+## [1.1.2.2] Participant onboarding: Registration - Sign-up
  
-## Test description
+### Test description
 If an IAM + IDP are present, test federation via a common protocol, like OAUTH.
  
-## Test type
+### Test type
 Test
  
-## Execution phase
+### Execution phase
 Phase 2
  
-## Minimal?
+### Minimal?
 No
  
-## Extra information
-### ISO25010 Quality
+### Extra information
+#### ISO25010 Quality
 Compatibility
-### ISO25010 Quality description
+#### ISO25010 Quality description
 [Co-existence] Users of national mobility data spaces are federated in the community user base.
     

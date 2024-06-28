@@ -1,21 +1,21 @@
 
-# [2.2.2.5] Data product publication: Publication - Deploy/config usage control functions
+## [2.2.2.5] Data product publication: Publication - Deploy/config usage control functions
  
-## Test description
+### Test description
 Feature assessment: assess that the usage control framework supports external enforcement.
  
-## Test type
+### Test type
 Assessment
  
-## Execution phase
+### Execution phase
 Phase 1
  
-## Minimal?
+### Minimal?
 No
  
-## Extra information
-### ISO25010 Quality
+### Extra information
+#### ISO25010 Quality
 Functional suitability
-### ISO25010 Quality description
+#### ISO25010 Quality description
 Usage control policies can support enforcement by external or manual input.
     

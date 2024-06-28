@@ -1,21 +1,21 @@
 
-# [1.3.1.4] Participant onboarding: Certification - Identity and credentials issuance
+## [1.3.1.4] Participant onboarding: Certification - Identity and credentials issuance
  
-## Test description
+### Test description
 nan
  
-## Test type
+### Test type
 Assessment
  
-## Execution phase
+### Execution phase
 Phase 1
  
-## Minimal?
+### Minimal?
 No
  
-## Extra information
-### ISO25010 Quality
+### Extra information
+#### ISO25010 Quality
 Maintainability
-### ISO25010 Quality description
+#### ISO25010 Quality description
 [Modifiability] The credential issuance stack will require modifications to abide to changing EU’s claims standards without affecting the data sharing components?
     

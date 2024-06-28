@@ -1,21 +1,21 @@
 
-# [2.1.1.7] Data product publication: Provision - Data source endpoint provisioning
+## [2.1.1.7] Data product publication: Provision - Data source endpoint provisioning
  
-## Test description
+### Test description
 Assess that the data product publication contains information on the ownership of data
  
-## Test type
+### Test type
 Assessment
  
-## Execution phase
+### Execution phase
 Phase 1
  
-## Minimal?
+### Minimal?
 No
  
-## Extra information
-### ISO25010 Quality
+### Extra information
+#### ISO25010 Quality
 Security
-### ISO25010 Quality description
+#### ISO25010 Quality description
 Is the data provider required to indicate the owner/sovereign of the data?
     

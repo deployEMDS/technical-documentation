@@ -1,21 +1,21 @@
 
-# [2.2.1.4] Data product publication: Publication - Data product offering submittal
+## [2.2.1.4] Data product publication: Publication - Data product offering submittal
  
-## Test description
+### Test description
 Simulate submission inconsistencies to test error-handling. Rank by error clarity, notification channel, and timeliness of error report.
  
-## Test type
+### Test type
 Assessment
  
-## Execution phase
+### Execution phase
 Phase 1
  
-## Minimal?
+### Minimal?
 No
  
-## Extra information
-### ISO25010 Quality
+### Extra information
+#### ISO25010 Quality
 Functional suitability
-### ISO25010 Quality description
+#### ISO25010 Quality description
 Clear feedback is provided on validation errors and warnings during the publishing process.
     

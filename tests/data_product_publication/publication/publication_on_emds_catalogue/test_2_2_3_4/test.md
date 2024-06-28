@@ -1,21 +1,21 @@
 
-# [2.2.3.4] Data product publication: Publication - Publication on EMDS catalogue
+## [2.2.3.4] Data product publication: Publication - Publication on EMDS catalogue
  
-## Test description
+### Test description
 Feature assessment: catalogue de-publishing or make the catalogue entry private.
  
-## Test type
+### Test type
 Assessment
  
-## Execution phase
+### Execution phase
 Phase 1
  
-## Minimal?
+### Minimal?
 No
  
-## Extra information
-### ISO25010 Quality
+### Extra information
+#### ISO25010 Quality
 Functional suitability
-### ISO25010 Quality description
+#### ISO25010 Quality description
 Can the data producer remove a data product offering from the EMDS catalogue?
     

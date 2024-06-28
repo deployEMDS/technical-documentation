@@ -1,21 +1,21 @@
 
-# [2.2.3.1C] Data product publication: Publication - Publication on EMDS catalogue
+## [2.2.3.1C] Data product publication: Publication - Publication on EMDS catalogue
  
-## Test description
+### Test description
 Test the process of catalogue publication for a data product under the following conditions: a new data product cannot be published on the catalogue
  
-## Test type
+### Test type
 Test
  
-## Execution phase
+### Execution phase
 Phase 1
  
-## Minimal?
+### Minimal?
 No
  
-## Extra information
-### ISO25010 Quality
+### Extra information
+#### ISO25010 Quality
 Functional suitability
-### ISO25010 Quality description
+#### ISO25010 Quality description
 The data producer can, at any time, make a data product visible in the data space catalogue(s).
     

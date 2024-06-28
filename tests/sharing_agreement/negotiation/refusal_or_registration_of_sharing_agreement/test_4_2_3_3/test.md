@@ -1,21 +1,21 @@
 
-# [4.2.3.3] Sharing agreement: Negotiation - Refusal or registration of sharing agreement
+## [4.2.3.3] Sharing agreement: Negotiation - Refusal or registration of sharing agreement
  
-## Test description
+### Test description
 Determine if the logging system is protected against intrusion.
  
-## Test type
+### Test type
 Assessment
  
-## Execution phase
+### Execution phase
 Phase 1
  
-## Minimal?
+### Minimal?
 No
  
-## Extra information
-### ISO25010 Quality
+### Extra information
+#### ISO25010 Quality
 Security
-### ISO25010 Quality description
+#### ISO25010 Quality description
 [Integrity] A negotiated sharing agreement trace is persisted on a tamper-proof storage / DB.
     

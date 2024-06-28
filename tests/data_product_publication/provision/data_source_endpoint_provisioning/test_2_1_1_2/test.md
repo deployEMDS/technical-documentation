@@ -1,21 +1,21 @@
 
-# [2.1.1.2] Data product publication: Provision - Data source endpoint provisioning
+## [2.1.1.2] Data product publication: Provision - Data source endpoint provisioning
  
-## Test description
+### Test description
 Assess that a connector provides a proxy http(s) data plane, that masks the data source.
  
-## Test type
+### Test type
 Assessment
  
-## Execution phase
+### Execution phase
 Phase 1
  
-## Minimal?
+### Minimal?
 No
  
-## Extra information
-### ISO25010 Quality
+### Extra information
+#### ISO25010 Quality
 Security
-### ISO25010 Quality description
+#### ISO25010 Quality description
 Can the endpoint of the data source be masked/obfuscated when the data is consumed?
     

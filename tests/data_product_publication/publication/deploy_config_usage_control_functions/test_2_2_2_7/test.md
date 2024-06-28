@@ -1,21 +1,21 @@
 
-# [2.2.2.7] Data product publication: Publication - Deploy/config usage control functions
+## [2.2.2.7] Data product publication: Publication - Deploy/config usage control functions
  
-## Test description
+### Test description
 Assess that only the data producer can associate a policy to a DP during its publication. If multitenancy is allowed, published assets should not be manageable cross-tenancy by default.
  
-## Test type
+### Test type
 Assessment
  
-## Execution phase
+### Execution phase
 Phase 1
  
-## Minimal?
+### Minimal?
 No
  
-## Extra information
-### ISO25010 Quality
+### Extra information
+#### ISO25010 Quality
 Accountability
-### ISO25010 Quality description
+#### ISO25010 Quality description
 Security measures are in place to ensure that only authorized data producers deploy and configure usage control policies and custom functions.
     

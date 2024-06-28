@@ -1,21 +1,21 @@
 
-# [2.2.5.1] Data product publication: Publication - Publication on federated data spaces
+## [2.2.5.1] Data product publication: Publication - Publication on federated data spaces
  
-## Test description
+### Test description
 Give an existing data space, assess whether the system allows to publish a data product offering on a data space other than the EMDS. More qualitative assessment comes in the KPIs that follow.
  
-## Test type
+### Test type
 Assessment
  
-## Execution phase
+### Execution phase
 Phase 4
  
-## Minimal?
+### Minimal?
 No
  
-## Extra information
-### ISO25010 Quality
+### Extra information
+#### ISO25010 Quality
 Interoperability
-### ISO25010 Quality description
+#### ISO25010 Quality description
 The system allows to publish a data product offering on a data space other than the EMDS.
     

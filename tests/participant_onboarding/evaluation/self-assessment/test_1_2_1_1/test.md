@@ -1,21 +1,21 @@
 
-# [1.2.1.1] Participant onboarding: Evaluation - Self-assessment
+## [1.2.1.1] Participant onboarding: Evaluation - Self-assessment
  
-## Test description
+### Test description
 If an onboarding online facility is provided, evaluate the level of customisation required to input participants’ metadata.
  
-## Test type
+### Test type
 Assessment
  
-## Execution phase
+### Execution phase
 Phase 1
  
-## Minimal?
+### Minimal?
 No
  
-## Extra information
-### ISO25010 Quality
+### Extra information
+#### ISO25010 Quality
 Functional suitability
-### ISO25010 Quality description
+#### ISO25010 Quality description
 A self-assessment process exists with well-defined inputs and outputs standardised information that will be a relevant part of the profile of the aspiring participant. 
     

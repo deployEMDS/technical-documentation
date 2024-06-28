@@ -1,21 +1,21 @@
 
-# [1.3.2.1] Participant onboarding: Certification - Certificates issuance
+## [1.3.2.1] Participant onboarding: Certification - Certificates issuance
  
-## Test description
+### Test description
 Perform a general ISO 2700x assessment of the certificate issuance processes.
  
-## Test type
+### Test type
 Assessment
  
-## Execution phase
+### Execution phase
 Phase 3
  
-## Minimal?
+### Minimal?
 No
  
-## Extra information
-### ISO25010 Quality
+### Extra information
+#### ISO25010 Quality
 Security
-### ISO25010 Quality description
+#### ISO25010 Quality description
 [Integrity] Certificates and cryptographic material are managed securely.
     

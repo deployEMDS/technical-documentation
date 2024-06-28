@@ -1,21 +1,21 @@
 
-# [1.1.3.1] Participant onboarding: Registration - Create a profile
+## [1.1.3.1] Participant onboarding: Registration - Create a profile
  
-## Test description
+### Test description
 Perform a general ISO 2700x assesment. Follow the subsets of ISO27001 controls.
  
-## Test type
+### Test type
 Assessment
  
-## Execution phase
+### Execution phase
 Phase 4
  
-## Minimal?
+### Minimal?
 No
  
-## Extra information
-### ISO25010 Quality
+### Extra information
+#### ISO25010 Quality
 Security
-### ISO25010 Quality description
+#### ISO25010 Quality description
 1 - 3
     
