@@ -1,17 +1,32 @@
-This folder contains all design and architectural information related to the test facilities. 
+This folder contains the artifacts used to deploy the data space technology stacks of each testing facility.
 
-Design decisions can be organized per overarching topic (e.g., security, test data, virtualization, ...) or per test facility.
-Historical and preparatory documents, although not related to development, are included to speed up on-boarding of repository contributors.
+In case the deployment is automated using infrastructure as code, a possible structure of an environment could be:
 
 ```
 .
-|-- Overarching decisions (cross-environment)
-| |-- Architecture decisions
-| |-- Security decisions
-| |-- Testing environment decisions
-|-- Testing facility A
-| |-- Decision within the testing facility A
-|-- Testing facility B
-| |-- Decision within the testing facility B
-| ...
+|-- Environment (testing facility)
+| |-- main module
+| |-- modules
+| |- configuration
+| |- artifacts
 ```
+
+If the environment is deployed manually, instead:
+```
+.
+|-- * Environment (testing facility)
+| |-- deployment logs
+| | |-- Log1
+| | |-- Log2
+| | |-- ...
+| |-- scripts
+| |-- libs
+| |-- configurations
+| |-- artifacts
+```
+
+In general, with the content of this folder, one should be able to replicate the deployment. In a not-so distant future the deployment assets will be streamlined to create a standard EMDS environment for each participant.
+
+The project’s infrastructure is hosted on IONOS’ Virtual data center (https://docs.ionos.com/cloud/getting-started/data-center-designer), which is a Kubernetes-based IaaS service. 
+
+IONOS provides also several PaaS services, e.g., DB as a service, DNS… If these are used in a test facility, their configuration must also appear here.
