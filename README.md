@@ -2,7 +2,7 @@ deployEMDS
 ========
 ### deployEMDS empowers interoperable, trustworthy and accessible data sharing
 
-[https://deployemds.eu/](deployEMDS) is a project co-funded under the [https://digital-strategy.ec.europa.eu/en/activities/digital-programme](EU Digital Europe Programme) and responds to its outlined challenges. The project will help make the common European mobility data space a reality.  The initiative will cultivate a broad European ecosystem of data providers and users, facilitating the adoption of common building blocks. 16 use cases from nine EU countries will contribute to the development of innovative services and applications.
+[deployEMDS](https://deployemds.eu/) is a project co-funded under the [EU Digital Europe Programme](https://digital-strategy.ec.europa.eu/en/activities/digital-programme) and responds to its outlined challenges. The project will help make the common European mobility data space a reality.  The initiative will cultivate a broad European ecosystem of data providers and users, facilitating the adoption of common building blocks. 16 use cases from nine EU countries will contribute to the development of innovative services and applications.
 
 The European mobility data space (EMDS) will offer a framework for interlinking and federating ecosystems. deployEMDS supports the EMDS initiative through:
 * **Data interoperability:** Sharing and exchaging data in a standardised way
