@@ -50,6 +50,22 @@ The **testing facility** is the composition of infrastructure, data space stack,
 - The same certificate authority.
 
 The testing facilities will use a phased or agile approach,  where in each phase specific components are deployed and tested. 
-The progress of each testing facility will be tracked by use of reporting tools, _in casu_ the [Github issues](https://github.com/imec-int/deployEMDS/issues) of this repository.
+The progress of each testing facility will be tracked by use of reporting tools, _in casu_ the [GitHub issues](https://github.com/imec-int/deployEMDS/issues) of this repository.
 
+![deployEMDS workflow](./static/workflow_overview.png)
 
+Testing facilities
+==================
+
+The following testing facilities are currently proposed:
+
+| Facility Name     | Stack                                | Components available                                   | Technical buddy                        | Test squad 1 | Test squad 2                  | Status                                                                                                                                            
+|-------------------|--------------------------------------|--------------------------------------------------------|----------------------------------------|--------------|-------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------|
+| EDC+VC            | EDC v0.7 with Verifiable Credentials | TBD                                                    | Arian (IONOS)                          | imec         | i2cat (ph 1), NTTDATA (ph 2)  | [Ready to start](https://github.com/imec-int/deployEMDS/issues?q=is%3Aopen+is%3Aissue+milestone%3A%22Phase+1%22+label%3Aedc%2Bvc+label%3Aminimal) |
+| Fiware            | Fiware with Verifiable Credentials   | TBD                                                    | Gernot (Fiware)                        | Fraunhofer   | Cefriel                       | [Ready to start](https://github.com/imec-int/deployEMDS/issues?q=is%3Aopen+is%3Aissue+milestone%3A%22Phase+1%22+label%3Afiware+label%3Aminimal+)  |
+| EDC+Gaia-X        | EDC v0.7 with Gaia-X                 | TBD                                                    | Jonathan (Eona-X)                      | NTTDATA      | i2cat (ph 1), imec (ph 2)     | Awaiting info session                                                                                                                             |
+| EDC+iShare        | EDC v0.7 with iShare                 | TBD                                                    | Ferdinand (Fairsfair)                  | Fraunhofer   | NTTDATA                       | Not developed yet                                                                                                                                 |
+| ~~Fiware+iShare~~ | ~~i4Trust~~  | ~~TBD~~ | ~~Gernot (Fiware)~~                    | ~~imec~~              | ~~Cefriel~~  | ~~Deprecated, will not test~~                                                                                                                     |
+| EDC+XFSC | EDC v0.7 with some XFSC components | Catalog, identity provider, wallet from XFSC (Eclipse) | Christoph Lange-Bever (?) (Fraunhofer) | TBD | TBD | Unknown                                                                                                                                           |
+* **Technical buddies** are either commercial providers or experienced partners who help deploying the stacks.
+* The **Test squads** are deployEMDS WP2 workgroup _"Building blocks"_ partners that are responsible for phase 0 and phase 1.
