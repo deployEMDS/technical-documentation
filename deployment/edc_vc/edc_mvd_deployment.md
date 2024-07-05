@@ -24,7 +24,7 @@
   - Name: SSD Storage 1 (Attached to Test Case 1 Server) (boot option)
   - Type: SSD Storage
   - Size:   100GB
-  - SSH Key: SSH Key 1 - id rsa (key pair: , use it for ssh)
+  - SSH Key: SSH Key 1 - id rsa (key pair:[id_ed25519.zip](ssh-keys%2Fid_ed25519.zip), use it for ssh)
   - Image: ubuntu 24.01-sever-clouding-amd64-20240425
     - username: root
     - password:12345678
