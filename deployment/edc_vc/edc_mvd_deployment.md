@@ -35,5 +35,5 @@
 - Operational:
   - Connect to the deployed server use OpenSSH by Connect via SSH | Products (ionos.com) `e.g. ssh root@5.250.180.17` to connect to EDC MVD 
 
-![4ce97165-9e66-4aa5-8689-a465039e4264.png](C:\EMDS\deployEMDS\deployment\edc_vc\images\4ce97165-9e66-4aa5-8689-a465039e4264.png)
+![4ce97165-9e66-4aa5-8689-a465039e4264.png](images%2F4ce97165-9e66-4aa5-8689-a465039e4264.png)
 ![c1e8b48e-836b-478c-94ec-dcf3a921b175.png](images%2Fc1e8b48e-836b-478c-94ec-dcf3a921b175.png)
