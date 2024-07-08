@@ -1,6 +1,6 @@
 ## Deployment IONOS Environment with EDC MVD
 ### Deployment Architecture Overview
-**This deployment aims to deploy [https://github.com/eclipse-edc/MinimumViableDataspace](https://github.com/eclipse-edc/MinimumViableDataspace) in the IONOS environment.**
+**This deployment aims to deploy [https://github.com/eclipse-edc/MinimumViableDataspace](https://github.com/eclipse-edc/MinimumViableDataspace) in the IONOS environment, current deployed version is [8cf5a75f39d43f18da60e931d6381727191dc275](https://github.com/eclipse-edc/MinimumViableDataspace/commit/8cf5a75f39d43f18da60e931d6381727191dc275)**
 ![441dd775-a988-4b2c-844b-f230a1eb96c3.png](images%2F441dd775-a988-4b2c-844b-f230a1eb96c3.png)
 #### Deployed IONOS Components:
 - Compute Instances:
