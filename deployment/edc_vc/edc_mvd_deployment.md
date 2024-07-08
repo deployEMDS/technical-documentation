@@ -19,7 +19,7 @@
     - a POSIX compliant shell
     - Postman (to comfortably execute REST requests)
     - newman (to run Postman collections from the command line)
-    - Deployed and build by following https://github.com/eclipse-edc/MinimumViableDataspace/tree/mvd-with-dcp-and-mgmtdomains, locate under /root/emds_edc_mvd folder`
+    - Deployed and build by following https://github.com/eclipse-edc/MinimumViableDataspace/tree/mvd-with-dcp-and-mgmtdomains, locate under `/root/emds_edc_mvd folder`
 - Storage Instances:
   - Name: SSD Storage 1 (Attached to Test Case 1 Server) (boot option)
   - Type: SSD Storage
@@ -33,7 +33,8 @@
   - Type:  Internet Access (via LAN1 with EDC MVD)
   
 - Operational:
-  - Connect to the deployed server use OpenSSH by Connect via SSH | Products (ionos.com) `e.g. ssh root@5.250.180.17` to connect to EDC MVD 
+  - Connect to the deployed server use OpenSSH by Connect via SSH | Products (ionos.com) `e.g. ssh root@5.250.180.17` to connect to EDC MVD
+- Deployment and run test results:
 
 ![4ce97165-9e66-4aa5-8689-a465039e4264.png](images%2F4ce97165-9e66-4aa5-8689-a465039e4264.png)
 ![c1e8b48e-836b-478c-94ec-dcf3a921b175.png](images%2Fc1e8b48e-836b-478c-94ec-dcf3a921b175.png)
