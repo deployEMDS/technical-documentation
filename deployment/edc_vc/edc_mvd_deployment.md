@@ -19,7 +19,7 @@
     - a POSIX compliant shell
     - Postman (to comfortably execute REST requests)
     - newman (to run Postman collections from the command line)
-    - Deployed and build by following https://github.com/eclipse-edc/MinimumViableDataspace/tree/mvd-with-dcp-and-mgmtdomains, locate under `/root/emds_edc_mvd folder`
+    - Deployed and build by following [https://github.com/eclipse-edc/MinimumViableDataspace](https://github.com/eclipse-edc/MinimumViableDataspace), locate under `/root/emds_edc_mvd folder`, current deployed version is [8cf5a75f39d43f18da60e931d6381727191dc275](https://github.com/eclipse-edc/MinimumViableDataspace/commit/8cf5a75f39d43f18da60e931d6381727191dc275).
 - Storage Instances:
   - Name: SSD Storage 1 (Attached to Test Case 1 Server) (boot option)
   - Type: SSD Storage
