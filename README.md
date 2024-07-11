@@ -54,6 +54,16 @@ The progress of each testing facility will be tracked by use of reporting tools,
 
 ![deployEMDS workflow](./static/workflow_overview.png)
 
+Planning
+========
+The deployEMDS testing is planned to be executed in three phases:
+ 1. **Phase 1**: 2024-07-01 - 2024-07-19
+     1. _[Minimal](https://github.com/imec-int/deployEMDS/issues?q=is%3Aopen+is%3Aissue+milestone%3A%22Phase+1%22+label%3Aminimal)_: The minimal set of tests to be executed in each testing facility.
+     2. _[Extended](https://github.com/imec-int/deployEMDS/issues?q=is%3Aopen+is%3Aissue+milestone%3A%22Phase+1%22+-label%3Aminimal)_: The extended set of tests to be executed in each testing facility, should time allow.
+ 2. **Phase 2**: 2024-07-22 - 2024-08-09
+     * _Minimal_: The minimal set of tests to be executed in each testing facility.
+     * _Extended_: The extended set of tests to be executed in each testing facility, should time allow.
+
 Testing facilities
 ==================
 
@@ -61,11 +71,24 @@ The following testing facilities are currently proposed:
 
 | Facility Name     | Stack                                | Components available                                   | Technical buddy                        | Test squad 1 | Test squad 2                  | Status                                                                                                                                            
 |-------------------|--------------------------------------|--------------------------------------------------------|----------------------------------------|--------------|-------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------|
-| EDC+VC            | EDC v0.7 with Verifiable Credentials | TBD                                                    | Arian (IONOS)                          | imec         | i2cat (ph 1), NTTDATA (ph 2)  | [Ready to start](https://github.com/imec-int/deployEMDS/issues?q=is%3Aopen+is%3Aissue+milestone%3A%22Phase+1%22+label%3Aedc%2Bvc+label%3Aminimal) |
+| EDC+VC            | EDC v0.7 with Verifiable Credentials | TBD                                                    |                           | imec         | i2cat (ph 1), NTTDATA (ph 2)  | [Ready to start](https://github.com/imec-int/deployEMDS/issues?q=is%3Aopen+is%3Aissue+milestone%3A%22Phase+1%22+label%3Aedc%2Bvc+label%3Aminimal) |
 | Fiware            | Fiware with Verifiable Credentials   | TBD                                                    | Gernot (Fiware)                        | Fraunhofer   | Cefriel                       | [Ready to start](https://github.com/imec-int/deployEMDS/issues?q=is%3Aopen+is%3Aissue+milestone%3A%22Phase+1%22+label%3Afiware+label%3Aminimal+)  |
 | EDC+Gaia-X        | EDC v0.7 with Gaia-X                 | TBD                                                    | Jonathan (Eona-X)                      | NTTDATA      | i2cat (ph 1), imec (ph 2)     | Awaiting info session                                                                                                                             |
-| EDC+iShare        | EDC v0.7 with iShare                 | TBD                                                    | Ferdinand (Fairsfair)                  | Fraunhofer   | NTTDATA                       | Not developed yet                                                                                                                                 |
+| ~~EDC+iShare~~        | ~~EDC v0.7 with iShare~~                 |~~TBD~~                                            | ~~Ferdinand (Fairsfair)~~              | ~~Fraunhofer~~   | ~~NTTDATA~~                     | ~~Not developed~~ yet                                                                                                                                 |
 | ~~Fiware+iShare~~ | ~~i4Trust~~  | ~~TBD~~ | ~~Gernot (Fiware)~~                    | ~~imec~~              | ~~Cefriel~~  | ~~Deprecated, will not test~~                                                                                                                     |
 | EDC+XFSC | EDC v0.7 with some XFSC components | Catalog, identity provider, wallet from XFSC (Eclipse) | Christoph Lange-Bever (?) (Fraunhofer) | TBD | TBD | Unknown                                                                                                                                           |
 * **Technical buddies** are either commercial providers or experienced partners who help deploying the stacks.
 * The **Test squads** are deployEMDS WP2 workgroup _"Building blocks"_ partners that are responsible for phase 0 and phase 1.
+
+Information security
+====================
+GitHub may be utilized for version control; however, code should be treated as an information asset. Prior to publication, all code must undergo a thorough assessment in addition to standard code review procedures. This assessment aims to prevent the unintended disclosure of sensitive information, such as credentials, to the repository.
+
+In accordance with the [deployEMDS Information Security Policy](https://acatechev.sharepoint.de/:b:/r/sites/EuropeanMobilityDataSpaceDeploymentConsortiumspace/Freigegebene%20Dokumente/General/07_Security%20Policy/2024-02-16%20Information%20security%20policy_DeployEMDS_V1.5_CLEAN.pdf?csf=1&web=1&e=SwIPb1), section 7.1 "Information asset protection responsibility," we are required to evaluate all information assets used or created during the project. This evaluation should adhere to the checklist provided in the risk assessment template (Annex 1, pp. 15) . The Security Advisory Board (SAB) and Project Security Officer (PSO) should only be consulted if information security concerns arise, such as when any question on the checklist is answered affirmatively.
+
+To ensure compliance with the Information Security Policy, the following steps have been taken:
+- The checklist provided in the risk assessment template is included in the pull request template, ensuring that all code is evaluated before publication.
+- This evaluation is performed by the submitter and reviewed by the reviewer.
+- If any question on the checklist is answered affirmatively, the SAB and PSO are consulted.
+
+This process ensures compliance with our security protocols and safeguards the intellectual property and sensitive information.
