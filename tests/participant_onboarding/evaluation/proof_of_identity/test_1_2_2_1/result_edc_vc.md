@@ -29,20 +29,22 @@ Few national identity providers currently exist, such as Italy's SPID system (ht
 
 4. [DC4EU](https://www.dc4eu.eu/) supports the public and private sectors in education and social security by deploying interoperable digital service infrastructures and integrating them into a cross-border trust framework.
 
-**As these projects are in the pilot stage, the verifiable credentials issued by European/National identity providers and their schemas are not yet standardized. Requests have been paused to European Digital Identity Wallet Consortium (EWC) to provide the project's output and the flow of issuance and verification of verifiable credentials.**
-
-**#TODO follow up**
-
+#### Deliverables:[EU Digital Identity Wallet](https://ec.europa.eu/digital-building-blocks/sites/display/EUDIGITALIDENTITYWALLET/EU+Digital+Identity+Wallet+Home)
+- European Digital Identity's implementations can be found in the GitHub repository [here](https://github.com/eu-digital-identity-wallet), with Verifiable Credentials being an intrinsic part of the EU digital identity wallet.
+- The reference implementation of the EU Digital Identity Wallet is available on the [Wallet Reference Implementation - Open Source Code](https://github.com/eu-digital-identity-wallet#wallet-reference-implementation---open-source-code). This implementation enables Member States and other interested parties to develop their own digital wallets.
+- The reference implementation includes [issuing services](https://github.com/eu-digital-identity-wallet/.github/blob/main/profile/reference-implementation.md#issuing-apps-and-services), which provide a credential issuing service according to OpenId4VCI - draft12. This includes a test PID and mDL issuing service in mDoc format, with support for SD-JWT-VC format coming soon.
+- The issuing service is implemented in both Python and Kotlin, which can be found in the [issuing-service](https://github.com/eu-digital-identity-wallet/.github/blob/main/profile/reference-implementation.md#issuing-apps-and-services).
+- Instructions on how to build demo-able use cases are located in the [Demoable Use Cases](https://github.com/eu-digital-identity-wallet/.github/blob/main/profile/reference-implementation.md#issuing-apps-and-services) section. These use cases are mobile-based, and demo videos are available [here](https://github.com/eu-digital-identity-wallet/eudi-app-ios-wallet-ui?tab=readme-ov-file#demo-videos).
  
 #### Integration with EDC ecosystem
-With the testing environment, we noticed that EDC MVD commit [84f3c5f7] (https://github.com/eclipse-edc/MinimumViableDataspace/commit/84f3c5f70b4eea94de7ebee83da377e62fc759fd)
-hasn't yet include the insurance flow, which the verifiable credentials issued by European/National identity provider cannot be auto stored and verified by the EDC ecosystem.
-A DID resolver extension also needs to be implemented to resolve the participant's DID, which depends on the specific DID method used.
+In the testing environment, we observed that EDC MVD commit [84f3c5f7](https://github.com/eclipse-edc/MinimumViableDataspace/commit/84f3c5f70b4eea94de7ebee83da377e62fc759fd) has not yet included the insurance flow. 
+Consequently, verifiable credentials issued by European or National identity providers cannot be automatically stored and verified within the EDC ecosystem.
+Additionally, a DID resolver extension needs to be implemented to resolve participants' DIDs, depending on the specific DID method used. 
+Also,the reference implementation of the EU Digital Identity Wallet targets mobile-based use cases and is not directly integrated with the EDC ecosystem.
 
 
 #### Measured results
-- From a digital identity perspective, the ecosystem has not been well-developed at the European level, and the project outputs are currently unclear.
-- From the EDC ecosystem perspective, the EDC ecosystem has not yet fully integrated with European/National identity providers. This integration requires a DID resolver extension to resolve participants' DIDs and an implementation of issuance flow to store and verify the verifiable credentials issued by European/National identity providers.
+- As stated, the EDC ecosystem has not yet fully integrated with European/National identity providers. This integration requires a DID resolver extension to resolve participants' DIDs and the implementation of an issuance flow to store and verify the verifiable credentials issued by European/National identity providers.
 
 - **Functional suitability quality metric: 3**
 
