@@ -3,23 +3,42 @@
 
 ### Statement of assessment
 #### Environment
-[TODO] Describe the environment used for the test / assessment
+* [EDC IdentityHub 0.8.0](https://github.com/eclipse-edc/IdentityHub)
+* [Gaia-X VC Wizard](https://wizard.lab.gaia-x.eu/)
 
-#### Tested quality metric and method
-[TODO] Describe the quality metric and method used for the test / assessment
 
 #### Comparative criteria (checklists, ...)
-[TODO] Describe the comparative criteria used for the test / assessment. If possible, align with the criteria used for the same test in the other stack(s).
 
-#### Expected output
-[TODO] Describe the expected output and how the ranking is calculated
+* Does the stack support VC?
+
+* The stack supports self-issued VCs
+
+* The stack supports self-issued VCs with support for SD classes?
+
+* The stack supports self-issued VCs where SD classes don't break the VC manager, a GAIA-X compatible DID method can be used. No compliance or claim verification are mandatory, just a smoke test.
+
+* The stack uses GAIA-X trust anchors. -> N/A, This test requires the setup of a GXDCH infrastructure that we don't have, yet.
+
+* The stack has a service that verifies credential compliance and a connector has policies to ensure a participant has compliant GAIA-X descriptors -> N/A, requires GAIA-X infrastructure
+
+* The stack implements policies that can use SD classes to interpret claims and use a GXDCH clearing house for business purposes -> N/A, requires GAIA-X infrastructure
+
 
 ### Results
-#### Assessment
-[TODO] Describe the assessment results (qualitative results), if applicable. Include screenshots, logs, etc, if necessary.
 
-#### Measured results
-[TODO] Describe the measured results (quantitative results), if applicable. Rank the results according to the expected output, if applicable.
+[x] Does the stack support VC? - PASS
+
+[x] The stack supports self-issued VCs - PASS
+
+[x] The stack supports self-issued VCs with support for SD classes? - FAIL
+
+[] The stack supports self-issued VCs where SD classes don't break the VC manager, a GAIA-X compatible DID method can be used. No compliance or claim verification are mandatory, just a smoke test.
+
+[] The stack uses GAIA-X trust anchors. -> N/A, This test requires the setup of a GXDCH infrastructure that we don't have, yet.
+
+[] The stack has a service that verifies credential compliance and a connector has policies to ensure a participant has compliant GAIA-X descriptors -> N/A, requires GAIA-X infrastructure
+
+[] The stack implements policies that can use SD classes to interpret claims and use a GXDCH clearing house for business purposes -> N/A, requires GAIA-X infrastructure
 
 #### Notes
-[TODO] Add notes, if necessary.
+EDC components are plugin-based. Support for various verifiable credential formats is possible by implementing a plugin (this applies to both decentralized as well as centralized solutions). For examplem, support for web DID resolution is just a preview of a method that can be created. See [docs](https://github.com/eclipse-edc/Publications/blob/main/Identity%20Management/DID_EDC.md).
