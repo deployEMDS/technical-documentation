@@ -40,7 +40,7 @@ Few national identity providers currently exist, such as Italy's SPID system (ht
 In the testing environment, we observed that EDC MVD commit [84f3c5f7](https://github.com/eclipse-edc/MinimumViableDataspace/commit/84f3c5f70b4eea94de7ebee83da377e62fc759fd) has not yet included the issuance flow. 
 Consequently, verifiable credentials issued by European or National identity providers cannot be automatically stored and verified within the EDC ecosystem.
 Additionally, a DID resolver extension needs to be implemented to resolve participants' DIDs, depending on the specific DID method used. 
-Also,the reference implementation of the EU Digital Identity Wallet targets mobile-based use cases and is not directly integrated with the EDC ecosystem.
+Also, the reference implementation of the EU Digital Identity Wallet targets mobile-based use cases and is not directly integrated with the EDC ecosystem.
 
 
 #### Measured results
