@@ -1,49 +1,51 @@
-## [1.3.1.5] Participant onboarding: Certification - Identity and credentials issuance
-### Stack: EDC+VC
+## [1.3.1.5] Participant Onboarding: Certification - Identity and Credentials Issuance
+### Stack: EDC + VC
 
-### Statement of assessment
+### Assessment Statement
 #### Environment
-- The test is carried in the local environment within Intellij IDE.
-- The test uses the EDC MVD commit [650ed8f](https://github.com/eclipse-edc/MinimumViableDataspace/commit/650ed8fbc4b19e152ef2491d86f5ab3b316a6fec).
-#### Tested quality metric and method
-The test quality is based on the metric defined in [iso27001_kpis_subkpis.xlsx](../../../../../design_decisions/background_info/iso27001_kpis_subkpis.xlsx)
-For current phase (phase 1), the test focus on the Functional suitability quality metric
+- The test is conducted in a local environment using IntelliJ IDE.
+- The EDC MVD commit used is [650ed8f](https://github.com/eclipse-edc/MinimumViableDataspace/commit/650ed8fbc4b19e152ef2491d86f5ab3b316a6fec).
 
-[TODO] Describe the comparative criteria used for the test / assessment. If possible, align with the criteria used for the same test in the other stack(s).
+#### Tested Quality Metric and Method
+The test quality is based on the metric defined in [iso27001_kpis_subkpis.xlsx](../../../../../design_decisions/background_info/iso27001_kpis_subkpis.xlsx). For the current phase (phase 1), the test focuses on the Functional Suitability quality metric.
 
-#### Expected output
-**The expected output of test is an assessment regarding if full credential lifecycle is supported by EDC which includes request, issuance, validation, renewal, revocation.**
+[TODO] Describe the comparative criteria used for the test/assessment. If possible, align with the criteria used for the same test in the other stack(s).
+
+#### Expected Output
+**The expected output of the test is an assessment of whether the EDC supports the full credential lifecycle, including request, issuance, validation, renewal, and revocation.**
 
 ### Results
 #### Assessment
-##### Protocol support
-The EDC identity hub implements the [Eclipse Dataspace Decentralized Claims Protocol](https://projects.eclipse.org/projects/technology.dataspace-dcp/governance) a.k.a. [Identity And Trust Specifications](https://github.com/eclipse-tractusx/identity-trust)
-The protocol covers the credential issuance protocol, and verifiable presentation protocol. 
+##### Protocol Support
+The EDC identity hub implements the [Eclipse Dataspace Decentralized Claims Protocol](https://projects.eclipse.org/projects/technology.dataspace-dcp/governance), also known as [Identity And Trust Specifications](https://github.com/eclipse-tractusx/identity-trust). The protocol covers the credential issuance protocol and verifiable presentation protocol.
 
-##### Current implemenatio of the protocol
-The EDC identity hub snapshot 0.8.1-SNAPSHOT provides endpoint for
-- Query the verifiable credentials: 
+##### Current Implementation of the Protocol
+The EDC identity hub version 0.8.1-SNAPSHOT provides endpoints for:
+- Querying verifiable credentials:
   - `/v1alpha/credentials`
-- Revoke the verifiable credentials:
+- Revoking verifiable credentials:
   - `/v1alpha/participants/{participantId}/credentials/{credentialId}`
-- Present the verifiable credentials:
+- Presenting verifiable credentials:
   - `/v1alpha/participants/{participantId}/presentations/query`
 
-More identity management API locates at [here](https://github.com/eclipse-edc/IdentityHub/blob/gh-pages/openapi/identity-api/0.8.1-SNAPSHOT/identity-api.yaml) <br />
-The EDC identity hub also provides the endpoint for verifiable credential presentation at `/v1/participants/{participantId}/presentations/queryy` [More details](https://github.com/eclipse-edc/IdentityHub/blob/gh-pages/openapi/ih-resolution-api/0.8.1-SNAPSHOT/ih-resolution-api.yaml). <br />
-However, Implementation of the Credential Issuance Protocol is in the future roadmap of the EDC identity hub, which have not been implemented yet.
+Additional identity management APIs are available [here](https://github.com/eclipse-edc/IdentityHub/blob/gh-pages/openapi/identity-api/0.8.1-SNAPSHOT/identity-api.yaml).
+
+The EDC identity hub also offers an endpoint for verifiable credential presentation at `/v1/participants/{participantId}/presentations/query`. [More details](https://github.com/eclipse-edc/IdentityHub/blob/gh-pages/openapi/ih-resolution-api/0.8.1-SNAPSHOT/ih-resolution-api.yaml).
+
+However, the implementation of the Credential Issuance Protocol is planned for future updates and has not been implemented yet.
 
 ###### Evaluation of MVD Commit [650ed8f](https://github.com/eclipse-edc/MinimumViableDataspace/commit/650ed8fbc4b19e152ef2491d86f5ab3b316a6fec)
-The lifecycle VC has been partially covered by the EDC MVD as outlined as follows:
-- **Issuance and Storage**: with workaround extension funciton `seedCredentials`.
-- **Presentation**: covered
-- **Verification & Use**: covered, which is implemented in the [identityhub:core:lib](https://github.com/eclipse-edc/IdentityHub/blob/main/docs/developer/architecture/identity-trust-protocol/identity-hub-modules.md#authpermission-modules-corelib), by calling [TokenValidationService](https://github.com/eclipse-edc/Connector/blob/980f10f2ad21368a2dc07cf3654e640aa01e3216/docs/developer/decision-records/2023-12-19-token-handling-refactor/README.md#tokenvalidationservice).[did](https://github.com/eclipse-edc/Connector/tree/980f10f2ad21368a2dc07cf3654e640aa01e3216/extensions/common/iam/decentralized-identity).
-- **Revocation/Expiration**: covered. API support for revoking the verifiable credentials.    
-- **Renewal/Re-Issuance**: Not covered, renewal and re-issuance are not implemented in the 
+The VC lifecycle is partially covered by the EDC MVD as follows:
+- **Issuance and Storage**: Available with the workaround extension function `seedCredentials`.
+- **Presentation**: Covered.
+- **Verification & Use**: Covered, using public key validation as explained in [edc-did](https://github.com/eclipse-edc/Connector/tree/980f10f2ad21368a2dc07cf3654e640aa01e3216/extensions/common/iam/decentralized-identity). The validation function is in [TokenValidationService](https://github.com/eclipse-edc/Connector/blob/980f10f2ad21368a2dc07cf3654e640aa01e3216/docs/developer/decision-records/2023-12-19-token-handling-refactor/README.md#tokenvalidationservice).
+In the MVD, a mock `DID Resolver` is used to resolve the DID of the participant.
+- **Revocation/Expiration**: Covered, with API support for revoking verifiable credentials.
+- **Renewal/Re-Issuance**: Not covered; renewal and re-issuance are not yet implemented.
 
-#### Measured results
+#### Measured Results
 The EDC implementation partially covers the VC lifecycle as outlined above.
-**Functional suitability quality metric: 3**
+**Functional Suitability Quality Metric: 3**
 
 #### Notes
-EDC is a pluggable ecosystem primarily targeting Java/Kotlin developers. Some extensions are available on the market for plug-and-play, but for certain specific use cases, developers need to write their own extensions.
+EDC is a pluggable ecosystem primarily targeting Java/Kotlin developers. While some extensions are available for plug-and-play, specific use cases may require developers to create their own extensions.
