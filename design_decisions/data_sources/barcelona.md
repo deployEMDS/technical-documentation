@@ -17,4 +17,6 @@ Barcelona data sets that can be used for testing.
 
 - **URL**: <https://api.ambmobilitat.cat/v1/swagger-ui.html>
 - **Type**: API accessible via auth key
+  - API Key request form: https://www.ambmobilitat.cat/Principales/OpenData.aspx
+  - Swagger documentation: https://api.ambmobilitat.cat/v1/swagger-ui.html
 - **Format**: JSON
