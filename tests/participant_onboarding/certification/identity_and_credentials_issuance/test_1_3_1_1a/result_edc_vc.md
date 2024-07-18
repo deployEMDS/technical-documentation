@@ -106,6 +106,7 @@ the Identity Hub without issues.
 participantId.
 - Additionally, Identity Hub is unable to properly parse the Gaia-X VC because there is no issuance flow implemented yet. The IdentityHubExtension#seedCredentials() extension, used as a workaround to seed credentials for mocking the issuance flow, cannot parse Gaia-X credentials. This is evident from the improperly parsed credentials in the response payload from the Identity Hub API.
 However, EDC supports LDP-VC and LDP-VPs if the credential can be seeded correctly, with certain limitations regarding the supported signature suites and the intermixing of LDP-VC and JWT-VCs. Identity Hub uses the VC 1.1 data model for LDP-VCs.
+- To support parsing of Gaia-X VC, `VerifiableCredentialResource` needs to be adapted.
 - Moreover, there is no out-of-the-box solution from EDC for resolving the DID method used by Gaia-X VC, and the VC
 issuance flow is also currently missing in the Identity Hub.
 
