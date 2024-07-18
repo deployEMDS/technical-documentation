@@ -19,6 +19,8 @@ Evaluate the level of support for the following data formats
 - GBFS
 - WMS/WFS
 
+Also access through APIs.
+
 ### Results
 #### Assessment
 
@@ -29,3 +31,6 @@ The following data formats can be represented with an asset by the EDC Connector
 - [ ] DATX II Light (TODO)
 - [ ] GBFS (TODO)
 - [ ] WMS/WFS (TODO)
+
+The following protocols can be used with an asset with the EDC Connector
+- [ ] APIs
