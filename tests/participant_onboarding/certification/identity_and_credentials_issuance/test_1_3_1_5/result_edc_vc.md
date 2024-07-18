@@ -35,11 +35,11 @@ However, Implementation of the Credential Issuance Protocol is in the future roa
 
 ###### Evaluation of MVD Commit [650ed8f](https://github.com/eclipse-edc/MinimumViableDataspace/commit/650ed8fbc4b19e152ef2491d86f5ab3b316a6fec)
 The lifecycle VC has been partially covered by the EDC MVD as outlined as follows:
-- Issuance and Storage: with workaround extension funciton `seedCredentials`.
-- Presentation: covered
-- Verification & Use: covered, which is implemented in the [identityhub:core:lib](https://github.com/eclipse-edc/IdentityHub/blob/main/docs/developer/architecture/identity-trust-protocol/identity-hub-modules.md#authpermission-modules-corelib), by calling [TokenValidationService](https://github.com/eclipse-edc/Connector/blob/980f10f2ad21368a2dc07cf3654e640aa01e3216/docs/developer/decision-records/2023-12-19-token-handling-refactor/README.md#tokenvalidationservice).
-- Revocation/Expiration: covered. API support for revoking the verifiable credentials.    
-- Renewal/Re-Issuance: Not covered, renewal and re-issuance are not implemented in the 
+- **Issuance and Storage**: with workaround extension funciton `seedCredentials`.
+- **Presentation**: covered
+- **Verification & Use**: covered, which is implemented in the [identityhub:core:lib](https://github.com/eclipse-edc/IdentityHub/blob/main/docs/developer/architecture/identity-trust-protocol/identity-hub-modules.md#authpermission-modules-corelib), by calling [TokenValidationService](https://github.com/eclipse-edc/Connector/blob/980f10f2ad21368a2dc07cf3654e640aa01e3216/docs/developer/decision-records/2023-12-19-token-handling-refactor/README.md#tokenvalidationservice).
+- **Revocation/Expiration**: covered. API support for revoking the verifiable credentials.    
+- **Renewal/Re-Issuance**: Not covered, renewal and re-issuance are not implemented in the 
 
 #### Measured results
 The EDC implementation partially covers the VC lifecycle as outlined above.
