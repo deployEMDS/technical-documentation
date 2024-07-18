@@ -104,8 +104,7 @@ The Identity Hub API returns the stored VC, and the returned payload is as follo
 the Identity Hub without issues.
 - However, the Gaia-X VC lacks fields expected by the Identity Hub, such as
 participantId.
-- Additionally, Identity Hub cannot properly parse the Gaia-X VC, as
-evidenced by the credential not being correctly parsed in the response payload from the Identity Hub API.
+- Additionally, Identity Hub is unable to properly parse the Gaia-X VC because there is no issuance flow implemented yet. The `IdentityHubExtension#seedCredentials()` extension, which is used to seed credentials, cannot parse Gaia-X credentials. This is evident as the credentials are not correctly parsed in the response payload from the Identity Hub API.
 - Moreover, there is no out-of-the-box solution from EDC for resolving the DID method used by Gaia-X VC, and the VC
 issuance flow is also currently missing in the Identity Hub.
 
