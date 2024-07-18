@@ -37,13 +37,13 @@ However, Implementation of the Credential Issuance Protocol is in the future roa
 The lifecycle VC has been partially covered by the EDC MVD as outlined as follows:
 - Issuance and Storage: with workaround extension funciton `seedCredentials`.
 - Presentation: covered
-- Verification: 
-- Use 
-- Revocation/Expiration 
-- Renewal/Re-Issuance
+- Verification & Use: covered, which is implemented in the [`identityhub:core:lib`](https://github.com/eclipse-edc/IdentityHub/blob/main/docs/developer/architecture/identity-trust-protocol/identity-hub-modules.md#authpermission-modules-corelib). with [TokenValidationService](https://github.com/eclipse-edc/Connector/blob/980f10f2ad21368a2dc07cf3654e640aa01e3216/docs/developer/decision-records/2023-12-19-token-handling-refactor/README.md#tokenvalidationservice).
+- Revocation/Expiration: covered. API support for revoking the verifiable credentials.    
+- Renewal/Re-Issuance: Not covered, renewal and re-issuance are not implemented in the 
 
 #### Measured results
-[TODO] Describe the measured results (quantitative results), if applicable. Rank the results according to the expected output, if applicable.
+The EDC implementation partially covers the VC lifecycle as outlined above.
+**Functional suitability quality metric: 3**
 
 #### Notes
-[TODO] Add notes, if necessary.
+EDC is a pluggable ecosystem primarily targeting Java/Kotlin developers. Some extensions are available on the market for plug-and-play, but for certain specific use cases, developers need to write their own extensions.
