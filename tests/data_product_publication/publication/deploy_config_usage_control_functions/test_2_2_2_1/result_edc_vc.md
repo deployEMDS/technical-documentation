@@ -22,4 +22,7 @@ The following operations are tested via API
 - [X] Assign a policy to a sharing agreement
 - [X] Delete a policy
 - [X] Re-use an uploaded policy
-- [ ] Persist uploaded policies (Impossible to test with the current testbed setup)
+- [ ] Persist uploaded policies
+  - Impossible to test with the current testbed setup.
+  Policies are “persisted” only if the Docker container with the connector is paused/resumed.
+  By stopping the container we lose the policies.
