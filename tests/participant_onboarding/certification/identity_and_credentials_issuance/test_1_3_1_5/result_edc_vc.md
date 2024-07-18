@@ -17,8 +17,7 @@ For current phase (phase 1), the test focus on the Functional suitability qualit
 ### Results
 #### Assessment
 ##### Protocol support
-The EDC identity hub implements the [Eclipse Dataspace Decentralized Claims Protocol](https://projects.eclipse.org/projects/technology.dataspace-dcp/governance) a.k.a. [Identity And Trust Specifications]
-(https://github.com/eclipse-tractusx/identity-trust)
+The EDC identity hub implements the [Eclipse Dataspace Decentralized Claims Protocol](https://projects.eclipse.org/projects/technology.dataspace-dcp/governance) a.k.a. [Identity And Trust Specifications](https://github.com/eclipse-tractusx/identity-trust)
 The protocol covers the credential issuance protocol, and verifiable presentation protocol. 
 
 ##### Current implemenatio of the protocol
