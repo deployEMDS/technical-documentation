@@ -48,4 +48,5 @@ The EDC implementation partially covers the VC lifecycle as outlined above.
 **Functional Suitability Quality Metric: 3**
 
 #### Notes
-EDC is a pluggable ecosystem primarily targeting Java/Kotlin developers. While some extensions are available for plug-and-play, specific use cases may require developers to create their own extensions.
+- EDC components are plugin-based. Support for various verifiable credential formats is possible by implementing a plugin (this applies to both decentralized as well as centralized solutions). For example, support for web DID resolution is just a preview of a method that can be created. See [docs](https://github.com/eclipse-edc/Publications/blob/main/Identity%20Management/DID_EDC.md).
+- EDC is a pluggable ecosystem primarily targeting Java/Kotlin developers. While some extensions are available for plug-and-play, specific use cases may require developers to create their own extensions.
