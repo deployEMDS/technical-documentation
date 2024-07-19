@@ -26,6 +26,7 @@ Also access through APIs.
 
 The following data formats can be represented with an asset by the EDC Connector
 - [X] GTFS
+  - [Public dataset](https://opendata-ajuntament.barcelona.cat/data/dataset/c46503e3-cec6-4032-894d-1063b7a365ee/resource/1c92542e-0346-4df5-9824-d7753ab02e33/download), file transfer over HTTPS
 - [ ] GTFS-RT (TODO)
 - [ ] DATEX-II (TODO)
 - [ ] DATX II Light (TODO)
