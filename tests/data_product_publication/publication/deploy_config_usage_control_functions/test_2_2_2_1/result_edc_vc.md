@@ -4,7 +4,8 @@
 ### Statement of assessment
 #### Environment
 
-EDC Connector v.0.7.1 within a local testbed
+EDC Connector v.0.7.1 within a local testbed.
+The tests are available in [this](https://www.postman.com/i2cat-dev/workspace/deployemds) Postman workspace.
 
 #### Tested quality metric and method
 
