@@ -26,11 +26,10 @@ The EDC identity hub version 0.8.1-SNAPSHOT provides endpoints for:
 - Revoking verifiable credentials:
   - `/v1alpha/participants/{participantId}/credentials/{credentialId}`
 - Presenting verifiable credentials:
-  - `/v1alpha/participants/{participantId}/presentations/query`
+  - `/v1/participants/{participantId}/presentations/query`
 
-Additional identity management APIs are available [here](https://github.com/eclipse-edc/IdentityHub/blob/gh-pages/openapi/identity-api/0.8.1-SNAPSHOT/identity-api.yaml).
-
-The EDC identity hub also offers an endpoint for verifiable credential presentation at `/v1/participants/{participantId}/presentations/query`. [More details](https://github.com/eclipse-edc/IdentityHub/blob/gh-pages/openapi/ih-resolution-api/0.8.1-SNAPSHOT/ih-resolution-api.yaml).
+Additional identity management APIs are available [identity-api.yaml](https://github.com/eclipse-edc/IdentityHub/blob/gh-pages/openapi/identity-api/0.8.1-SNAPSHOT/identity-api.yaml).
+ and [ih-resolution-api.yaml](https://github.com/eclipse-edc/IdentityHub/blob/gh-pages/openapi/ih-resolution-api/0.8.1-SNAPSHOT/ih-resolution-api.yaml).
 
 However, the implementation of the Credential Issuance Protocol is planned for future updates and has not been implemented yet.
 
@@ -42,6 +41,20 @@ The VC lifecycle is partially covered by the EDC MVD as follows:
 In the MVD, a mock `DID Resolver` is used to resolve the DID of the participant.
 - **Revocation/Expiration**: Covered, with API support for revoking verifiable credentials.
 - **Renewal/Re-Issuance**: Not covered; renewal and re-issuance are not yet implemented.
+
+
+The following sequence is performed whenever a request is received:
+
+**C ... Consumer, P ... Provider, CIH ... Consumer's Identity Hub, VC ... Verifiable Credential**
+
+- C presents JWT to P (in message header, i.e. in the authorization header)
+- P resolves the DID URL from the VC received from C
+- P resolves C's DID Document from the DID URL (in current case is the CIH)
+- P verifies C's VC using C's public key (from the DID Document)
+- P sends query to `CredentialService` endpoint for the VC presentation of C, A typical `CredentialService` is e.g. `http://{service_url}/api/resolution/v1/participants/`, the endpoint of `CredentialService` is in the DID Document.
+- p validate the VPs using the public key of the VC issuer (from the DID Document)
+- P looks for the expected claims in the VP
+- P applies the claims to the policy and makes a decision.
 
 #### Measured Results
 The EDC implementation partially covers the VC lifecycle as outlined above.
