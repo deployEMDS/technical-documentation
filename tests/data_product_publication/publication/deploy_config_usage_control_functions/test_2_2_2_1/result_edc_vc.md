@@ -8,7 +8,7 @@ EDC Connector v.0.7.1 within a local testbed
 
 #### Tested quality metric and method
 
-The following operations are tested via API
+The following operations are tested via [API](https://app.swaggerhub.com/apis-docs/eclipse-edc-bot/management-api/0.7.1-SNAPSHOT#/Policy%20Definition%20V3)
 - Upload a new policy
 - Assign a policy to a sharing agreement
 - Delete a policy
