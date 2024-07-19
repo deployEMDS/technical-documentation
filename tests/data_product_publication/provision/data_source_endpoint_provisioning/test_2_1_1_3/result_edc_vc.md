@@ -5,6 +5,7 @@
 #### Environment
 
 EDC Connector v.0.7.1 within a local testbed
+The tests are available in [this](https://www.postman.com/i2cat-dev/workspace/deployemds) Postman workspace.
 
 #### Tested quality metric and method
 If an asset can represent a data source `X`, then data source `X` can be provisioned.
