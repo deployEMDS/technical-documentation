@@ -57,8 +57,6 @@ Functional Suitability Quality Metric Score: 4
 
 ##### [WMS/WFS](https://www.postman.com/i2cat-dev/workspace/deployemds/collection/36812968-f34c9167-094b-47ec-b7bf-1e93115abb4d?action=share&creator=36812968)
 
-Functional Suitability Quality Metric Score: 2
+Functional Suitability Quality Metric Score: 4
 
-[Public dataset](https://openstreetgs.stockholm.se/geoservice/api/DIN%20API-NYCKEL/wfs?request=GetCapabilities), via private APIs.
-The test is pending since we have not auth key, or simple change to a public resource with this formats.
-Since artifacts simply store a URL to a resource, this is expected to work.
+[Public dataset](https://openmaps.gov.bc.ca/geo/ows?SERVICE=WMS&REQUEST=GetCapabilities), via public APIs.
