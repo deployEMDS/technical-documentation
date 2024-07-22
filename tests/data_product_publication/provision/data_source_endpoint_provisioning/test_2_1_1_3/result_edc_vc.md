@@ -24,15 +24,41 @@ Also access through APIs.
 
 ### Results
 #### Assessment
+##### [GTFS](https://www.postman.com/i2cat-dev/workspace/deployemds/collection/36812968-1f42e195-aab4-4440-8302-3cd544a0a030?action=share&creator=36812968)
 
-The following data formats can be represented with an asset by the EDC Connector
-- [X] GTFS
-  - [Public dataset](https://opendata-ajuntament.barcelona.cat/data/dataset/c46503e3-cec6-4032-894d-1063b7a365ee/resource/1c92542e-0346-4df5-9824-d7753ab02e33/download), file transfer over HTTPS
-- [ ] GTFS-RT (TODO)
-- [ ] DATEX-II (TODO)
-- [ ] DATX II Light (TODO)
-- [ ] GBFS (TODO)
-- [ ] WMS/WFS (TODO)
+Functional Suitability Quality Metric Score: 4
 
-The following protocols can be used with an asset with the EDC Connector
-- [ ] APIs
+[Public dataset](https://opendata-ajuntament.barcelona.cat/data/dataset/c46503e3-cec6-4032-894d-1063b7a365ee/resource/1c92542e-0346-4df5-9824-d7753ab02e33/download), file transfer over HTTPS
+
+##### [GTFS-RT](https://www.postman.com/i2cat-dev/workspace/deployemds/collection/36812968-af4dfd50-c823-4069-b335-f01a503d4e3f?action=share&creator=36812968)
+
+Functional Suitability Quality Metric Score: 4
+
+[Public dataset](https://api.data.gov.my/gtfs-realtime/vehicle-position/ktmb/), via public APIs.
+
+##### [DATEX-II](https://www.postman.com/i2cat-dev/workspace/deployemds/collection/36812968-069098d6-b5f1-4f2a-8be3-aef8ccfee9cc?action=share&creator=36812968)
+
+Functional Suitability Quality Metric Score: 4
+
+[Public dataset](https://opendata.emel.pt/cycling/biciparks?skip=1&limit=1), via public APIs.
+
+##### [DATX II Light](https://www.postman.com/i2cat-dev/workspace/deployemds/collection/36812968-f437f62e-4784-45a8-9a4d-5e571efc45d1?action=share&creator=36812968)
+
+Functional Suitability Quality Metric Score: 2
+
+Since artifacts simply store a URL to a resource, this is expected to work.
+However, this has not been tested since no DATX II Light has been found yet.
+
+##### [GBFS](https://www.postman.com/i2cat-dev/workspace/deployemds/collection/36812968-acad1256-9871-448b-8883-feed3704a269?action=share&creator=36812968)
+
+Functional Suitability Quality Metric Score: 4
+
+[Public dataset](https://opendata.emel.pt/cycling/biciparks?skip=1&limit=1), via public APIs.
+
+##### [WMS/WFS](https://www.postman.com/i2cat-dev/workspace/deployemds/collection/36812968-f34c9167-094b-47ec-b7bf-1e93115abb4d?action=share&creator=36812968)
+
+Functional Suitability Quality Metric Score: 2
+
+[Public dataset](https://openstreetgs.stockholm.se/geoservice/api/DIN%20API-NYCKEL/wfs?request=GetCapabilities), via private APIs.
+The test is pending since we have not auth key, or simple change to a public resource with this formats.
+Since artifacts simply store a URL to a resource, this is expected to work.
