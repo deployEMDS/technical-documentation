@@ -10,11 +10,11 @@ The tests are available in [this](https://www.postman.com/i2cat-dev/workspace/de
 #### Tested quality metric and method
 
 The following operations are tested via [API](https://app.swaggerhub.com/apis-docs/eclipse-edc-bot/management-api/0.7.1-SNAPSHOT#/Policy%20Definition%20V3)
-- Upload a new policy
-- Assign a policy to a sharing agreement
-- Delete a policy
-- Re-use an uploaded policy
-- Persist uploaded policies
+- Upload a new policy - Create an access policy, a contract policy and a policy to be delete later on.
+- Assign a policy to a sharing agreement - Create a sharing agreement with an access policy, one with a contract policy ad one with both.
+- Re-use an uploaded policy - Specify another agreement that uses the same policy
+- Persist uploaded policies - After creating the policies, restart the connector and check the policies are still there
+- Delete a policy - Delete the policy specifically created to be deleted
 
 ### Results
 #### Assessment
