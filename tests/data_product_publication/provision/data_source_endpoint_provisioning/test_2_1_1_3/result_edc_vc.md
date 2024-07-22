@@ -60,3 +60,5 @@ Functional Suitability Quality Metric Score: 4
 We can create an artifact with attribute `dataAddress.baseUrl` storing a URL to this resource.
 
 Functional Suitability Quality Metric Score: 4
+
+##### REST API + Api Key
