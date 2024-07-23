@@ -61,4 +61,10 @@ We can create an artifact with attribute `dataAddress.baseUrl` storing a URL to 
 
 Functional Suitability Quality Metric Score: 4
 
-##### REST API + Api Key
+##### REST API + Api Key [[link to Postman tests](https://www.postman.com/i2cat-dev/workspace/deployemds/collection/36812968-bc90948e-9449-434e-a382-50ad402b16fa?action=share&creator=36812968)]
+
+We can create an artifact with
+- Attribute `dataAddress.baseUrl` storing a URL
+- Attribute `privateProperties.privateKey` storing an API key
+
+Functional Suitability Quality Metric Score: 4
