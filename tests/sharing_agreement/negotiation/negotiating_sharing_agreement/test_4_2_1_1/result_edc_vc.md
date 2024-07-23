@@ -30,7 +30,8 @@ The states of contract negotiation is possible with following status.
 - COUNTER-PROPOSAL: The contract negotiation is hold on the provider side waiting for a COUNTER-PROPOSAL from consumer party.
 
 
-
+##### EDC implementations 
+As there is no TCK (Technology Compatibility Kit) has been published, there is no implementation can "conform" to DSP. However, there is a work in progress and EDC does intend to pass the TCK when it is available. [Refer here](https://docs.internationaldataspaces.org/ids-knowledgebase/v/dataspace-protocol/contract-negotiation/contract.negotiation.protocol#id-1.2-state-machine)
 
 #### Measured results
 [TODO] Describe the measured results (quantitative results), if applicable. Rank the results according to the expected output, if applicable.
