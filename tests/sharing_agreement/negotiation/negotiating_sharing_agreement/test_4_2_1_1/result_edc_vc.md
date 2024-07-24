@@ -35,7 +35,7 @@ The states of contract negotiation are possible with the following states, the s
 ##### EDC implementations 
 As there is no TCK (Technology Compatibility Kit) has been published, there is no implementation can "conform" to DSP. However, there is a work in progress and EDC does intend to pass the TCK when it is available. [Refer here](https://github.com/eclipse-edc/Connector/discussions/4351#discussioncomment-10009825).
 
-"EDC implements the following states in the [ContractNegotiationStates](https://github.com/eclipse-edc/Connector/blob/f9f4d181cd92514ef1b2d9af96d14ab7ad77757f/spi/control-plane/contract-spi/src/main/java/org/eclipse/edc/connector/controlplane/contract/spi/types/negotiation/ContractNegotiationStates.java#L25)
+EDC implements the following states in the [ContractNegotiationStates](https://github.com/eclipse-edc/Connector/blob/f9f4d181cd92514ef1b2d9af96d14ab7ad77757f/spi/control-plane/contract-spi/src/main/java/org/eclipse/edc/connector/controlplane/contract/spi/types/negotiation/ContractNegotiationStates.java#L25)
 - INITIAL(50)
 - REQUESTING(100)
 - REQUESTED(200)
