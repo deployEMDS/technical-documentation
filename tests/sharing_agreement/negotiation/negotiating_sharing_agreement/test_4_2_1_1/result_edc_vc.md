@@ -96,13 +96,14 @@ DEBUG 2024-07-24T12:35:58.726042394 ContractNegotiation: ID c4dec03e-e21f-4103-b
 DEBUG 2024-07-24T12:35:58.726205646 [ProviderContractNegotiationManagerImpl] ContractNegotiation c4dec03e-e21f-4103-b186-6a0e8447d1fb is now in state FINALIZED
 ```
 ##### Extensibility of EDC implementations
-As we can see, EDC support several status of a contract negotiation, but there are still some states are not covered/possible to be a requirments. e.g. a `PENDING` state.
+As we can see, EDC support several status of a contract negotiation, but there are still some states are not covered, which can possible to be a requirements. e.g. a `PENDING` state.
 - Use [State Transition Functions](https://github.com/eclipse-edc/Connector/blob/main/docs/developer/ids-dataspace-protocol/contract-negotiation-architecture.md)`: State transition functions (StateTransitionFunction) can be registered at specific callback points which are responsible for transitioning the Contract Negotiation State Machine (CNSM) to a new state. These functions can be used to implement custom workflows. In runtime configurations that support it, transition functions will be called transactionally as part of the ContractNegotiationManager process loop. This will ensure state transitions are atomic.
   Scanning through the code taught it’s not yet implemented though [commit 1ce468](https://github.com/eclipse-edc/Connector/commit/1ce4687ac4fe97e676ea04a1518668238b632b34).
-- Use [Event Subscriber](https://github.com/eclipse-edc/Connector/blob/1ce4687ac4fe97e676ea04a1518668238b632b34/docs/developer/events.md). Depending on how the EventSubscriber is registered to the EventRouter (synchronous - asynchronous), in synchronous mode, subscriber will block the main thread until the event is dispatched, therefore a `PENDING` state can be added to the event flow.
+- Use [Event Subscriber](https://github.com/eclipse-edc/Connector/blob/1ce4687ac4fe97e676ea04a1518668238b632b34/docs/developer/events.md). Depending on how the EventSubscriber is registered to the EventRouter (synchronous - asynchronous), in synchronous mode, subscriber will block the main thread until the event is dispatched, therefore flow can be "PENDING" by this way.
 - etc.. 
 #### Measured results
-[TODO] Describe the measured results (quantitative results), if applicable. Rank the results according to the expected output, if applicable.
+EDC has implemented a state machine and offers an extensible ecosystem, however, these features are not fully available out of the box and may require additional configuration and development
+**Functional suitability quality metric: 4**
 
 #### Notes
 EDC is a pluggable ecosystem primarily targeting Java/Kotlin developers. Some extensions are available on the market for plug-and-play, but for certain specific use cases, developers need to write their own extensions.
