@@ -35,8 +35,8 @@ The states of contract negotiation is possible with following status, the states
 ##### EDC implementations 
 As there is no TCK (Technology Compatibility Kit) has been published, there is no implementation can "conform" to DSP. However, there is a work in progress and EDC does intend to pass the TCK when it is available. [Refer here](https://github.com/eclipse-edc/Connector/discussions/4351#discussioncomment-10009825).
 
-Within EDC implementation following states are implemented in the [ContractNegotiationStates](https://github.com/eclipse-edc/Connector/blob/f9f4d181cd92514ef1b2d9af96d14ab7ad77757f/spi/control-plane/contract-spi/src/main/java/org/eclipse/edc/connector/controlplane/contract/spi/types/negotiation/ContractNegotiationStates.java#L25)
-- INITIAL(50),
+EDC implements following states in the [ContractNegotiationStates](https://github.com/eclipse-edc/Connector/blob/f9f4d181cd92514ef1b2d9af96d14ab7ad77757f/spi/control-plane/contract-spi/src/main/java/org/eclipse/edc/connector/controlplane/contract/spi/types/negotiation/ContractNegotiationStates.java#L25)
+- INITIAL(50)
 - REQUESTING(100)
 - REQUESTED(200)
 - OFFERING(300)
@@ -52,10 +52,58 @@ Within EDC implementation following states are implemented in the [ContractNegot
 - TERMINATING(1300)
 - TERMINATED(1400)
 
+The state machine is at [here](https://github.com/eclipse-edc/Connector/blob/main/docs/developer/contracts.md)\
+![edc-state-machine.png](./images/edc-state-machine.png)
 
+EDC provides a documentation which details the mapping between existing EDC states, the corresponding new EDC states, and the IDS specification states, please refer to [here](https://github.com/eclipse-edc/Connector/blob/main/docs/developer/ids-dataspace-protocol/contract-negotiation-architecture.md#the-state-machine).
 
+With a successful negotiation flow:  for the consumer: initiated → requested → agreed → verified → finalized, for the provider: requested → agreed → verified → finalized.
+
+> - This is for a successful negotiation; if not it will go from the current state to “terminated”
+> - Other defined states(e.g. “offered” etc), these are currently not used, but they could be useful if there are other options than just accepting the provider contract as is (currently not implemented in EDC).
+> - Policies are evaluated during the  “requested” phase on the provider.
+> - During ContractNegotiation, the negotiation has a different id on both provider and consumer
+
+Logs for `ContractNegotiation a1a32534-6c1d-4875-bd48-3b2cc41da8eb` on the `consumer` connect as follows:
+```text
+DEBUG 2024-07-24T12:35:55.205642506 [ConsumerContractNegotiationManagerImpl] ContractNegotiation a1a32534-6c1d-4875-bd48-3b2cc41da8eb is now in state INITIAL
+DEBUG 2024-07-24T12:35:55.470100382 [ConsumerContractNegotiationManagerImpl] ContractNegotiation a1a32534-6c1d-4875-bd48-3b2cc41da8eb is now in state REQUESTING
+DEBUG 2024-07-24T12:35:55.470552694 ContractNegotiation: ID a1a32534-6c1d-4875-bd48-3b2cc41da8eb. [Consumer] send request
+DEBUG 2024-07-24T12:35:55.816844368 ContractNegotiation: ID a1a32534-6c1d-4875-bd48-3b2cc41da8eb. [Consumer] send request
+DEBUG 2024-07-24T12:35:55.816948427 [ConsumerContractNegotiationManagerImpl] ContractNegotiation a1a32534-6c1d-4875-bd48-3b2cc41da8eb is now in state REQUESTED
+DEBUG 2024-07-24T12:35:56.503153685 DSP: Incoming ContractAgreementMessage for class org.eclipse.edc.connector.controlplane.contract.spi.types.negotiation.ContractNegotiation process: a1a32534-6c1d-4875-bd48-3b2cc41da8eb
+DEBUG 2024-07-24T12:35:56.888602662 [CONSUMER] ContractNegotiation a1a32534-6c1d-4875-bd48-3b2cc41da8eb is now in state AGREED.
+DEBUG 2024-07-24T12:35:57.549414156 [ConsumerContractNegotiationManagerImpl] ContractNegotiation a1a32534-6c1d-4875-bd48-3b2cc41da8eb is now in state VERIFYING
+DEBUG 2024-07-24T12:35:57.549611466 ContractNegotiation: ID a1a32534-6c1d-4875-bd48-3b2cc41da8eb. [consumer] send verification
+DEBUG 2024-07-24T12:35:57.838410104 ContractNegotiation: ID a1a32534-6c1d-4875-bd48-3b2cc41da8eb. [consumer] send verification
+DEBUG 2024-07-24T12:35:57.838515447 [ConsumerContractNegotiationManagerImpl] ContractNegotiation a1a32534-6c1d-4875-bd48-3b2cc41da8eb is now in state VERIFIED
+DEBUG 2024-07-24T12:35:58.533433993 DSP: Incoming ContractNegotiationEventMessage for class org.eclipse.edc.connector.controlplane.contract.spi.types.negotiation.ContractNegotiation process: a1a32534-6c1d-4875-bd48-3b2cc41da8eb
+DEBUG 2024-07-24T12:35:58.72499179 [CONSUMER] ContractNegotiation a1a32534-6c1d-4875-bd48-3b2cc41da8eb is now in state FINALIZED.
+```
+The corresponding `ContractNegotiation c4dec03e-e21f-4103-b186-6a0e8447d1fb` logs in the `provider` connector are as follows:
+```text
+DEBUG 2024-07-24T12:35:55.588913773 DSP: Incoming ContractRequestMessage for class org.eclipse.edc.connector.controlplane.contract.spi.types.negotiation.ContractNegotiation process
+DEBUG 2024-07-24T12:35:55.75999992 [PROVIDER] ContractNegotiation c4dec03e-e21f-4103-b186-6a0e8447d1fb is now in state REQUESTED.
+DEBUG 2024-07-24T12:35:56.30306143 [ProviderContractNegotiationManagerImpl] ContractNegotiation c4dec03e-e21f-4103-b186-6a0e8447d1fb is now in state AGREEING
+DEBUG 2024-07-24T12:35:56.303415276 ContractNegotiation: ID c4dec03e-e21f-4103-b186-6a0e8447d1fb. [Provider] send agreement
+DEBUG 2024-07-24T12:35:56.890075427 ContractNegotiation: ID c4dec03e-e21f-4103-b186-6a0e8447d1fb. [Provider] send agreement
+DEBUG 2024-07-24T12:35:56.890262842 [ProviderContractNegotiationManagerImpl] ContractNegotiation c4dec03e-e21f-4103-b186-6a0e8447d1fb is now in state AGREED
+DEBUG 2024-07-24T12:35:57.622123397 DSP: Incoming ContractAgreementVerificationMessage for class org.eclipse.edc.connector.controlplane.contract.spi.types.negotiation.ContractNegotiation process: c4dec03e-e21f-4103-b186-6a0e8447d1fb
+DEBUG 2024-07-24T12:35:57.837314656 [PROVIDER] ContractNegotiation c4dec03e-e21f-4103-b186-6a0e8447d1fb is now in state VERIFIED.
+DEBUG 2024-07-24T12:35:58.44331619 [ProviderContractNegotiationManagerImpl] ContractNegotiation c4dec03e-e21f-4103-b186-6a0e8447d1fb is now in state FINALIZING
+DEBUG 2024-07-24T12:35:58.443776224 ContractNegotiation: ID c4dec03e-e21f-4103-b186-6a0e8447d1fb. [Provider] send finalization
+DEBUG 2024-07-24T12:35:58.726042394 ContractNegotiation: ID c4dec03e-e21f-4103-b186-6a0e8447d1fb. [Provider] send finalization
+DEBUG 2024-07-24T12:35:58.726205646 [ProviderContractNegotiationManagerImpl] ContractNegotiation c4dec03e-e21f-4103-b186-6a0e8447d1fb is now in state FINALIZED
+```
+##### Extensibility of EDC implementations
+As we can see, EDC support several status of a contract negotiation, but there are still some states are not covered/possible to be a requirments. e.g. a `PENDING` state.
+- Use [State Transition Functions](https://github.com/eclipse-edc/Connector/blob/main/docs/developer/ids-dataspace-protocol/contract-negotiation-architecture.md)`: State transition functions (StateTransitionFunction) can be registered at specific callback points which are responsible for transitioning the Contract Negotiation State Machine (CNSM) to a new state. These functions can be used to implement custom workflows. In runtime configurations that support it, transition functions will be called transactionally as part of the ContractNegotiationManager process loop. This will ensure state transitions are atomic.
+  Scanning through the code taught it’s not yet implemented though [commit 1ce468](https://github.com/eclipse-edc/Connector/commit/1ce4687ac4fe97e676ea04a1518668238b632b34).
+- Use [Event Subscriber](https://github.com/eclipse-edc/Connector/blob/1ce4687ac4fe97e676ea04a1518668238b632b34/docs/developer/events.md). Depending on how the EventSubscriber is registered to the EventRouter (synchronous - asynchronous), in synchronous mode, subscriber will block the main thread until the event is dispatched, therefore a `PENDING` state can be added to the event flow.
+- etc.. 
 #### Measured results
 [TODO] Describe the measured results (quantitative results), if applicable. Rank the results according to the expected output, if applicable.
 
 #### Notes
-[TODO] Add notes, if necessary.
+EDC is a pluggable ecosystem primarily targeting Java/Kotlin developers. Some extensions are available on the market for plug-and-play, but for certain specific use cases, developers need to write their own extensions.
+
