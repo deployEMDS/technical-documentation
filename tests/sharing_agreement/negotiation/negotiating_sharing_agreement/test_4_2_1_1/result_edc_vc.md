@@ -103,6 +103,7 @@ As we can see, EDC support several status of a contract negotiation, but there a
 - etc.. 
 #### Measured results
 EDC has implemented a state machine and offers an extensible ecosystem, however, these features are not fully available out of the box and may require additional configuration and development
+
 **Functional suitability quality metric: 4**
 
 #### Notes
