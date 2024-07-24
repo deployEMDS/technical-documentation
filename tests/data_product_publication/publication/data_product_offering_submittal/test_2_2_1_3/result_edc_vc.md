@@ -9,10 +9,25 @@ The tests are available in [this](https://www.postman.com/i2cat-dev/workspace/de
 
 #### Tested quality metric and method
 
-Has the data producer access to overviews of
+Has the data producer access (via GUI or API) to overviews of
 
 - Data products offerings
 - Sharing agreements
 - Available data planes
 
 ### Results
+#### Data products offerings [[link to Postman tests](https://www.postman.com/i2cat-dev/workspace/deployemds/folder/36812968-5000faf7-2793-45cb-92ec-b56d9ef97127?action=share&source=copy-link&creator=36812968&ctx=documentation)]
+
+The data producer can see all the artifacts loaded into the connector.
+
+Functional Suitability Quality Metric Score: 4
+
+#### Sharing agreements [[link to Postman tests](https://www.postman.com/i2cat-dev/workspace/deployemds/folder/36812968-063d3ebc-d5c2-4493-b977-8b3b4e2fbdf1?action=share&source=copy-link&creator=36812968&ctx=documentation)]
+
+In progress
+
+#### Available data planes [[link to Postman tests](https://www.postman.com/i2cat-dev/workspace/deployemds/folder/36812968-5143c698-3021-47f8-b590-043b0db8d054?action=share&source=copy-link&creator=36812968&ctx=documentation)]
+
+The data producer can see all the data planes available in the connector.
+
+Functional Suitability Quality Metric Score: 4
