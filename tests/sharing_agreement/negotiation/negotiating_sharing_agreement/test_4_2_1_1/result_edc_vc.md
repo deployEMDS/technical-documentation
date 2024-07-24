@@ -17,7 +17,7 @@ The test aims to assess the state machine implementation of the EDC ecosystem wi
 
 ### Results
 #### Assessment
-The states of contract negotiation is possible with following status, the states in <span style="color:blue">**_blue_**</span> are covered by [Data Space Protocol State Machine](https://docs.internationaldataspaces.org/ids-knowledgebase/v/dataspace-protocol/contract-negotiation/contract.negotiation.protocol#id-1.1-states).
+The states of contract negotiation is possible with following status, the states in <span style="color:blue">**_bold_**</span> are covered by [Data Space Protocol State Machine](https://docs.internationaldataspaces.org/ids-knowledgebase/v/dataspace-protocol/contract-negotiation/contract.negotiation.protocol#id-1.1-states).
 
 - <span style="color:blue">**_REQUESTED: A contract for a Dataset has been requested by the Consumer based on an Offer and the Provider has sent an ACK response._**</span>
 - PENDING: A contract negotiation is on hold on one of the parties, might wait for external approves.
