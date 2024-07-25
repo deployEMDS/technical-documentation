@@ -3,9 +3,10 @@
  
 ### Test description
 Prove that the negotiation can use (one or more of) the following assets and parameters to define a contract:
-• Claim verification
-• Usage policy rules
-• Service Agreements
+- Claim verification
+- Usage policy rules
+- Service Agreements
+
 The larger the coverage (i.e. more possibilities), the higher the rank.
  
 ### Test type
