@@ -3,7 +3,7 @@
 
 ### Statement of assessment
 #### Environment
-- The test utilizes the EDC MVD commit [5d58b38] (https://github.com/eclipse-edc/MinimumViableDataspace/commit/5d58b3871983ce00a69a38b3215c6a8cb67d8ced).
+- The test utilizes the EDC MVD commit [5d58b38](https://github.com/eclipse-edc/MinimumViableDataspace/commit/5d58b3871983ce00a69a38b3215c6a8cb67d8ced).
 - The test is executed in an Ubuntu environment using IntelliJ.
 #### Tested quality metric and method
 The test quality is based on the metric defined in [iso27001_kpis_subkpis.xlsx](../../../../../design_decisions/background_info/iso27001_kpis_subkpis.xlsx)
