@@ -25,6 +25,7 @@ The EDC connector features a [policy engine](https://github.com/eclipse-edc/Conn
 - Cataloging scope: `contract.cataloging`
 - Negotiation scope: `contract.negotiation`
 - Manifest verification scope: `provision.manifest.verify`
+
 This policy engine can be added and activated as an extension to the EDC connector services.
 
 #### EDC MVD implementation commit [5d58b38](https://github.com/eclipse-edc/MinimumViableDataspace/commit/5d58b3871983ce00a69a38b3215c6a8cb67d8ced)
