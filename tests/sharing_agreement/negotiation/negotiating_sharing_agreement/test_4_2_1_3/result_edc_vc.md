@@ -50,7 +50,7 @@ An example of a policy requiring the consumer to present a DataProcessorCredenti
   ]
 }
 ```
-The implementation of the policy engine for verifying the correct claim is detailed [here](https://github.com/eclipse-edc/MinimumViableDataspace?tab=readme-ov-file#742-dataaccesslevel-evaluation-function).``json
+The implementation of the policy engine for verifying the correct claim is detailed [here](https://github.com/eclipse-edc/MinimumViableDataspace?tab=readme-ov-file#742-dataaccesslevel-evaluation-function).
 
 ##### Test result
 After defining the asset and policy, when requesting the catalog, the mentioned processing policy is present as follows:
