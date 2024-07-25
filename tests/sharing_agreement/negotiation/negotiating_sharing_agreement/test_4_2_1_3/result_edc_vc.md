@@ -77,7 +77,7 @@ After defining the asset and policy, when requesting the catalog, the mentioned 
                         "odrl:rightOperand": "processing"
                     }
                 }
-            }
+            }}
 ```
 When the consumer holds the DataProcessorCredential with the correct claim `level`: `processing`:
 ```json
