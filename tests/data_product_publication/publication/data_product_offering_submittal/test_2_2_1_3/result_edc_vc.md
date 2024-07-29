@@ -27,6 +27,11 @@ Functional Suitability Quality Metric Score: 2
 
 In progress
 
+#### Catalog [[link to Postman](https://www.postman.com/i2cat-dev/workspace/deployemds/folder/36812968-6b36ee62-0cec-49c1-b34a-b1f7dd74ed6b?action=share&source=copy-link&creator=36812968&ctx=documentation)]
+
+The data producer can consult the catalog.
+By the default, the connector comes with an empty catalog.
+
 #### Available data planes [[link to Postman tests](https://www.postman.com/i2cat-dev/workspace/deployemds/folder/36812968-045542a4-413c-4924-b045-4433d125c2e5?action=share&source=copy-link&creator=36812968&ctx=documentation)]
 
 The data producer can see all the data planes available in the connector.
