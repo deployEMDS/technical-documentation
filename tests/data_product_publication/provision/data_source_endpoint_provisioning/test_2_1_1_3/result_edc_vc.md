@@ -21,6 +21,7 @@ Evaluate the level of support for the following data formats
 - WMS/WFS - [Public dataset](https://openmaps.gov.bc.ca/geo/ows?SERVICE=WMS&REQUEST=GetCapabilities) via APIs
 
 Also access through APIs.
+Access to private APIs is tested using the AMB mobilitat endpoint.
 
 ### Results
 #### Assessment
