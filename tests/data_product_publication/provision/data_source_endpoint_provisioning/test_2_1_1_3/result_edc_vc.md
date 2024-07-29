@@ -26,7 +26,9 @@ Access to private APIs is tested using the AMB mobilitat endpoint.
 ### Results
 #### Assessment
 
-[Link to Postman tests](https://www.postman.com/i2cat-dev/workspace/deployemds/folder/36812968-777cf599-0621-46a5-93c5-455aa7ae508c?action=share&source=copy-link&creator=36812968&ctx=documentation)
+All the tests are stored under [this folder](https://www.postman.com/i2cat-dev/workspace/deployemds/folder/36812968-777cf599-0621-46a5-93c5-455aa7ae508c?action=share&source=copy-link&creator=36812968&ctx=documentation).
+A single, parameterized call is used for the entire batch of tests.
+Execute this tests by running the entire folder at once.
 
 ##### GTFS
 
