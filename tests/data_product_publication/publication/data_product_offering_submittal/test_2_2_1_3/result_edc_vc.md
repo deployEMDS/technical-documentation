@@ -60,3 +60,9 @@ GUI is not available.
 
 Functional Suitability Quality Metric Score: 2
 
+#### Contract negotiations [[link to Postman tests](https://www.postman.com/i2cat-dev/workspace/deployemds/folder/36812968-f1a36521-ac88-4e97-85a1-49326f712596?ctx=documentation)]
+
+The data producer can see all the contract negotiations loaded into the connector via API.
+GUI is not available.
+
+Functional Suitability Quality Metric Score: 2
