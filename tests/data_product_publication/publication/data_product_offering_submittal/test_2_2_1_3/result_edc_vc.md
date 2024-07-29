@@ -31,5 +31,6 @@ In progress
 
 The data producer can see all the data planes available in the connector.
 GUI is not available.
+By default, the connector runs with one data plane instance.
 
 Functional Suitability Quality Metric Score: 2
