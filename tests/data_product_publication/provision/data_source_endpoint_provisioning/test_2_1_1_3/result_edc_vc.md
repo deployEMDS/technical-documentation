@@ -16,7 +16,7 @@ Evaluate the level of support for the following data formats
 - GTFS - [Public dataset](https://opendata-ajuntament.barcelona.cat/data/dataset/c46503e3-cec6-4032-894d-1063b7a365ee/resource/1c92542e-0346-4df5-9824-d7753ab02e33/download) with direct download via HTTPS
 - GTFS-RT - [Public dataset](https://api.data.gov.my/gtfs-realtime/vehicle-position/ktmb/) via APIs
 - DATEX-II - [Public dataset](https://opendata.emel.pt/cycling/biciparks?skip=1&limit=1) via APIs
-- DATX II Light - None
+- DATX II Light - No available datasets for this data format, tests are skipped
 - GBFS - [Public dataset](https://opendata.emel.pt/cycling/biciparks?skip=1&limit=1) via APIs
 - WMS/WFS - [Public dataset](https://openmaps.gov.bc.ca/geo/ows?SERVICE=WMS&REQUEST=GetCapabilities) via APIs
 
@@ -45,13 +45,6 @@ Functional Suitability Quality Metric Score: 4
 We can create an artifact with attribute `dataAddress.baseUrl` storing a URL to this resource.
 
 Functional Suitability Quality Metric Score: 4
-
-##### DATX II Light
-
-Since artifacts simply store a URL to a resource, this is expected to work.
-However, this has not been tested since no DATX II Light has been found yet.
-
-Functional Suitability Quality Metric Score: 2
 
 ##### GBFS
 
