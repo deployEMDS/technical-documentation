@@ -1,5 +1,7 @@
 ## [2.1.3.2] Data product publication: Provision - Reuse or create usage control policies / functions
 
+https://github.com/imec-int/deployEMDS/issues/167
+
 ### Stack: EDC+VC
 
 ### Statement of assessment
@@ -21,15 +23,15 @@ The test aims to assess the ease of use of deploying Usage Control Policies in r
 
 #### Assessment
 
-Policy implementation as well as definitions are not part of the EDC connector itself. The reasons for this is because policies are highlight dependent on the specific use case and the specific requirements of the data space - it is not possible to create a generic abstraction that would cover all possible use cases.
+Policy implementation as well as definitions are not part of the EDC connector itself. The reasons for this is because policies are highly dependent on the specific use case and the specific requirements of the data space - it is not possible to create a generic abstraction that would cover all possible use cases.
 
-The EDC connector ships with a [policy engine](https://github.com/eclipse-edc/Connector/blob/main/docs/developer/policy-engine.md) which orchestrates the execution of programatically registered policy rules throughout the lifecycle of the connector state machine.
+The EDC connector ships with a [policy engine](https://github.com/eclipse-edc/Connector/blob/main/docs/developer/policy-engine.md) which orchestrates the execution of programmatically registered policy rules throughout the lifecycle of the connector state machine.
 
-EDC in a MVD configuration does not offer a user interface for deployment of usage policies. Such interface can be created as an extension to the existing UI or as a separate application.
+EDC in an MVD configuration does not offer a user interface for deployment of usage policies. Such interface can be created as an extension to the existing UI or as a separate application.
 
 The EDC API can be used to deploy usage policies programmatically.
 
-The EDC extensibility model can be used to add custom policy enforcement points as well as expand the scopes and actions that can be used in the policies.
+The EDC extensibility model can be used to add custom policy enforcement points, as well as expand the scopes and actions that can be used in the policies.
 
 Currently, the EDC core provides 3 different policy scopes:
 
