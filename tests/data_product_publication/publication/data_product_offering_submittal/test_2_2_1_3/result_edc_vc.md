@@ -37,6 +37,14 @@ GUI is not available.
 By the default, the connector comes with an empty catalog.
 
 Functional Suitability Quality Metric Score: 2
+
+#### Transfer processes [[link to Postman](https://www.postman.com/i2cat-dev/workspace/deployemds/folder/36812968-163f8f41-97e1-42be-8331-b1bf29974068?action=share&source=copy-link&creator=36812968&ctx=documentation)]
+
+The data producer is supposed to be able to consult the transfer processes, but this is not been tested with a transfer flow.
+GUI is not available.
+
+Functional Suitability Quality Metric Score: 2
+
 #### Available data planes [[link to Postman tests](https://www.postman.com/i2cat-dev/workspace/deployemds/folder/36812968-045542a4-413c-4924-b045-4433d125c2e5?action=share&source=copy-link&creator=36812968&ctx=documentation)]
 
 The data producer can see all the data planes available in the connector.
