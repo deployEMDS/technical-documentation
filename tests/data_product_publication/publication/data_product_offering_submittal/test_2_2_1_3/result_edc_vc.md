@@ -52,3 +52,11 @@ GUI is not available.
 By default, the connector runs with one data plane instance.
 
 Functional Suitability Quality Metric Score: 2
+
+#### Contract definitions [[link to Postman tests](https://www.postman.com/i2cat-dev/workspace/deployemds/folder/36812968-5d66388c-db0b-4cb6-977a-4a0f6c91d4f4?ctx=documentation)]
+
+The data producer can see all the contract definitions loaded into the connector via API.
+GUI is not available.
+
+Functional Suitability Quality Metric Score: 2
+
