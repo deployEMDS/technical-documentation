@@ -27,6 +27,7 @@ According to the testing results from EDC MVD commit 9a5f93c, logs are only disp
 - `/v3/contractnegotiations/{id}/agreement`
 - `/v3/contractnegotiations/{id}/state`
 - `/v3/contractnegotiations/{id}/terminate`
+
 The API endpoints allow consultation of the negotiation states. As stated in [TEST 4.2.1.6](../../negotiating_sharing_agreement/test_4_2_1_6/result_edc_vc.md), EDC provides an `AuthenticationService` for integrating authentication protection into the APIs, ensuring that the APIs can only be triggered with the correct authentication method.
 #### Measured Results
 As previously mentioned, EDC offers built-in extensions to secure the API endpoints and restrict logging access exclusively to participants and privileged system administrators.
