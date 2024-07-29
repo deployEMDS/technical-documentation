@@ -29,9 +29,9 @@ The EDC connector ships with a [policy engine](https://github.com/eclipse-edc/Co
 
 EDC in an MVD configuration does not offer a user interface for deployment of usage policies. Such interface can be created as an extension to the existing UI or as a separate application.
 
-The EDC API can be used to deploy usage policies programmatically.
+The EDC API can be used to deploy usage policies programmatically but only for already supported policy functions.
 
-The EDC extensibility model can be used to add custom policy enforcement points, as well as expand the scopes and actions that can be used in the policies.
+The EDC extensibility model can be used to add custom policy enforcement functions, as well as expand the scopes and actions that can be used in the policies.
 
 Currently, the EDC core provides 3 different policy scopes:
 
