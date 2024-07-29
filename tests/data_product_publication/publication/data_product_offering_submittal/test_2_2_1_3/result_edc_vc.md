@@ -16,18 +16,18 @@ Has the data producer access (via GUI or API) to overviews of
 - Available data planes
 
 ### Results
-#### Data products offerings [[link to Postman tests](https://www.postman.com/i2cat-dev/workspace/deployemds/folder/36812968-5000faf7-2793-45cb-92ec-b56d9ef97127?action=share&source=copy-link&creator=36812968&ctx=documentation)]
+#### Data products offerings [[link to Postman tests](https://www.postman.com/i2cat-dev/workspace/deployemds/folder/36812968-9ce34b1f-3a11-4a19-b73c-46c332e5e165?action=share&source=copy-link&creator=36812968&ctx=documentation)]
 
 The data producer can see all the artifacts loaded into the connector via API.
 GUI is not available.
 
 Functional Suitability Quality Metric Score: 2
 
-#### Sharing agreements [[link to Postman tests](https://www.postman.com/i2cat-dev/workspace/deployemds/folder/36812968-063d3ebc-d5c2-4493-b977-8b3b4e2fbdf1?action=share&source=copy-link&creator=36812968&ctx=documentation)]
+#### Sharing agreements [[link to Postman tests](https://www.postman.com/i2cat-dev/workspace/deployemds/folder/36812968-a8a150be-50d8-471b-a80b-dab2c61861fb?action=share&source=copy-link&creator=36812968&ctx=documentation)]
 
 In progress
 
-#### Available data planes [[link to Postman tests](https://www.postman.com/i2cat-dev/workspace/deployemds/folder/36812968-5143c698-3021-47f8-b590-043b0db8d054?action=share&source=copy-link&creator=36812968&ctx=documentation)]
+#### Available data planes [[link to Postman tests](https://www.postman.com/i2cat-dev/workspace/deployemds/folder/36812968-045542a4-413c-4924-b045-4433d125c2e5?action=share&source=copy-link&creator=36812968&ctx=documentation)]
 
 The data producer can see all the data planes available in the connector.
 GUI is not available.
