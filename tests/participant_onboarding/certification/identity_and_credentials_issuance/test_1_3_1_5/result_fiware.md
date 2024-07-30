@@ -58,18 +58,25 @@ export VERIFIABLE_CREDENTIAL=$(curl --insecure -s -X POST https://keycloak.demo-
       --data '{"credential_identifier":"natural-person", "format":"jwt_vc"}' | jq '.credential' -r); echo ${VERIFIABLE_CREDENTIAL}
 
 
+**Verify Credentials**
+
+Credential verification is done using the Verifiert component. For more information consult: https://github.com/FIWARE/VCVerifier?tab=readme-ov-file#overview
+
+
+**Revoke Credentials**
+User revocation is not available. 
+However, since the vcverifier does check the existence of a participant in the TIR. Participants could be deleted from the TIR and then the access would be revoked. 
 
 
 #### Measured results
 [TODO] Describe the measured results (quantitative results), if applicable. Rank the results according to the expected output, if applicable.
 
 The VC lifecycle is partially covered by the FIWARE connector as follows:
-- **Issuance and Storage**: Available with the workaround extension function `seedCredentials`.
+- **Issuance and Storage**: Covered.
 - **Presentation**: Covered.
-- **Verification & Use**: Covered, using public key validation as explained in [edc-did](https://github.com/eclipse-edc/Connector/tree/980f10f2ad21368a2dc07cf3654e640aa01e3216/extensions/common/iam/decentralized-identity). The validation function is in [TokenValidationService](https://github.com/eclipse-edc/Connector/blob/980f10f2ad21368a2dc07cf3654e640aa01e3216/docs/developer/decision-records/2023-12-19-token-handling-refactor/README.md#tokenvalidationservice).
-In the MVD, a mock `DID Resolver` is used to resolve the DID of the participant.
-- **Revocation/Expiration**: Covered, with API support for revoking verifiable credentials.
-- **Renewal/Re-Issuance**: Not covered; renewal and re-issuance are not yet implemented.
+- **Verification & Use**: Covered.
+- **Revocation/Expiration**: Not fully covered. The API does not support it but there is a way to delete participants in order to stop them from accessing. 
+- **Renewal/Re-Issuance**: Not covered, but participants can be created and deleted. 
 
 
 #### Notes
