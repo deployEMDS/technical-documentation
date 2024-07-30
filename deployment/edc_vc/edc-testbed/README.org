@@ -1,0 +1,26 @@
+#+title: README
+
+The [[file:docker-compose.yaml]] defines a simple testbed.
+To start the testbed.
+
+#+begin_src sh
+docker compose up --detach
+#+end_src
+
+#+RESULTS:
+
+To restart the testbed
+
+#+begin_src sh
+docker compose restart
+#+end_src
+
+#+RESULTS:
+
+To stop the testbed
+
+#+begin_src sh
+docker compose stop
+#+end_src
+
+#+RESULTS:
