@@ -37,11 +37,22 @@ This `curl` command is used to remove the specified data product (asset) from th
 The test demonstrates that de-publishing an asset will remove it from the catalog returned by this endpoint.
 
 #### Federated Catalog
-As mentioned in [Test 2.2.3.1a](../test_2_2_3_1a/result_edc_vc.md), EDC provides a ready-to-use [Federated Catalog Solution](https://github.com/eclipse-edc/FederatedCatalog). This solution employs a set number of crawlers to periodically scan the dataspace, request catalogs from each participant in a predefined list, and consolidate them into a local persistence. The federated catalog also offers [API endpoints](https://github.com/eclipse-edc/FederatedCatalog/blob/gh-pages/openapi/management-api/0.8.1-SNAPSHOT/management-api.yaml) for querying the catalogs. The Federated Catalog is integrated into the EDC MVD commit [9a5f93c](https://github.com/eclipse-edc/MinimumViableDataspace/commit/9a5f93c89cf5624cc4bf8eaa024a29da9b8e3d12) within the connector. Test results from the MVD indicate that the Federated Catalog has its own local persistence. De-publishing a data asset does not remove it from the federated catalog.
-#### Measured results
-As demonstrated above, EDC provides an out-of-the-box process for de-publishing a data product (including the data asset, policies, and contract) from the catalog. However, this de-publishing process is not reflected in the federated catalog due to its own local persistence. With the extensible nature of EDC, this functionality can be implemented with a suitable extension. Therefore, the following score is given to the test.
+As mentioned in [Test 2.2.3.1a](../test_2_2_3_1a/result_edc_vc.md), EDC provides a ready-to-use [Federated Catalog Solution](https://github.com/eclipse-edc/FederatedCatalog). This solution employs a set number of crawlers to periodically scan the dataspace, request catalogs from each participant in a predefined list, and consolidate them into a local persistence. The federated catalog also offers [API endpoints](https://github.com/eclipse-edc/FederatedCatalog/blob/gh-pages/openapi/management-api/0.8.1-SNAPSHOT/management-api.yaml) for querying the catalogs. The Federated Catalog is integrated into the EDC MVD commit [9a5f93c](https://github.com/eclipse-edc/MinimumViableDataspace/commit/9a5f93c89cf5624cc4bf8eaa024a29da9b8e3d12) within the connector. \
+Test results from the MVD indicate that the Federated Catalog has its own local persistence. 
+![fc-db.png](image/fc-db.png)
+The persistence can be saved in the database, as shown above, identified by the DSP scrawled point. De-publishing a data asset will result in the catalog being refreshed at the DSP query point, as explained above. Therefore, the asset will also be removed from the Federated Catalog.
+The crawling pace can be configured with following keys:
 
-**Functional Suitability Quality Metric: 3**
+```text
+edc.catalog.cache.execution.delay.seconds
+edc.catalog.cache.execution.period.seconds
+edc.catalog.cache.partition.num.crawlers
+```
+
+#### Measured results
+As demonstrated above, EDC provides an out-of-the-box process for de-publishing a data product (including the data asset, policies, and contract) from the catalog. This de-publishing process is also reflected in the federated catalog. Therefore, the following score is given to the test.
+
+**Functional Suitability Quality Metric: 4**
 
 #### Notes
 
