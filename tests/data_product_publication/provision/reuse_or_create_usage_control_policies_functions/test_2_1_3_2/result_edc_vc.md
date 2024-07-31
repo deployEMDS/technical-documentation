@@ -33,6 +33,42 @@ The EDC API can be used to deploy usage policies programmatically but only for a
 
 The EDC extensibility model can be used to add custom policy enforcement functions, as well as expand the scopes and actions that can be used in the policies.
 
+A very simple example bellow illustrates the implementation logic for specific policy that only allows the usage of an asset if sufficient time has passed:
+
+```kotlin
+class TimeIntervalFunction(private val monitor: Monitor, private val transferProcessStore: TransferProcessStore) :
+    AtomicConstraintFunction<Permission> {
+    // p1 is the value of the constraint
+    override fun evaluate(p0: Operator?, p1: Any?, p2: Permission?, p3: PolicyContext?): Boolean {
+        monitor.info("Checking timeInterval constraint")
+        when (p0) {
+            Operator.EQ -> {
+                // will throw if not a valid duration
+                val duration = Duration.parse(p1.toString())
+                p3?.getContextData(ContractAgreement::class.java)?.let {
+                    val agreementId = it.id
+                    val querySpecBuilder = QuerySpec.none().toBuilder()
+                    val criterion = criterion("contractId", "=", agreementId)
+                    // updatedAt is not present it seems
+                    querySpecBuilder.filter(criterion).sortField("createdAt").sortOrder(SortOrder.DESC)
+                    val transferProcesses = transferProcessStore.findAll(querySpecBuilder.build())
+                    transferProcesses.findFirst().getOrNull()?.let {
+                        val timeDiff = Duration.between(Instant.ofEpochMilli(it.createdAt), Instant.now())
+                        monitor.info("Last transfer was ${it.id}, ${timeDiff.toMinutes()} minutes ago")
+                        if (timeDiff < duration) {
+                            return false
+                        }
+                    }
+                    return true
+                }
+            }
+            else -> throw IllegalArgumentException("Only 'eq' operator is supported for timeInterval constraint")
+        }
+        return false
+    }
+}
+```
+
 Currently, the EDC core provides 3 different policy scopes:
 
 - `all` - policy functions will be used for every policy evaluation
