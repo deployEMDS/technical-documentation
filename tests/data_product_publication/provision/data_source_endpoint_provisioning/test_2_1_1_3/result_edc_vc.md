@@ -3,23 +3,67 @@
 
 ### Statement of assessment
 #### Environment
-[TODO] Describe the environment used for the test / assessment
+
+EDC Connector v.0.7.1 within a local testbed.
+The tests are available in [this](https://www.postman.com/i2cat-dev/workspace/deployemds) Postman workspace.
 
 #### Tested quality metric and method
-[TODO] Describe the quality metric and method used for the test / assessment
-
-#### Comparative criteria (checklists, ...)
-[TODO] Describe the comparative criteria used for the test / assessment. If possible, align with the criteria used for the same test in the other stack(s).
+If an asset can represent a data source `X`, then data source `X` can be provisioned.
 
 #### Expected output
-[TODO] Describe the expected output and how the ranking is calculated
+Evaluate the level of support for the following data formats
+
+- GTFS - [Public dataset](https://opendata-ajuntament.barcelona.cat/data/dataset/c46503e3-cec6-4032-894d-1063b7a365ee/resource/1c92542e-0346-4df5-9824-d7753ab02e33/download) with direct download via HTTPS
+- GTFS-RT - [Public dataset](https://api.data.gov.my/gtfs-realtime/vehicle-position/ktmb/) via APIs
+- DATEX-II - [Public dataset](https://opendata.emel.pt/cycling/biciparks?skip=1&limit=1) via APIs
+- DATX II Light - No available datasets for this data format, tests are skipped
+- GBFS - [Public dataset](https://opendata.emel.pt/cycling/biciparks?skip=1&limit=1) via APIs
+- WMS/WFS - [Public dataset](https://openmaps.gov.bc.ca/geo/ows?SERVICE=WMS&REQUEST=GetCapabilities) via APIs
+
+Also access through APIs.
+Access to private APIs is tested using the AMB mobilitat endpoint.
 
 ### Results
 #### Assessment
-[TODO] Describe the assessment results (qualitative results), if applicable. Include screenshots, logs, etc, if necessary.
 
-#### Measured results
-[TODO] Describe the measured results (quantitative results), if applicable. Rank the results according to the expected output, if applicable.
+All the tests are stored under [this folder](https://www.postman.com/i2cat-dev/workspace/deployemds/folder/36812968-777cf599-0621-46a5-93c5-455aa7ae508c?action=share&source=copy-link&creator=36812968&ctx=documentation).
+A single, parameterized call is used for the entire batch of tests.
+Execute this tests by running the entire folder at once.
 
-#### Notes
-[TODO] Add notes, if necessary.
+##### GTFS
+
+We can create an artifact with attribute `dataAddress.baseUrl` storing a URL to this resource.
+
+Functional Suitability Quality Metric Score: 4
+
+##### GTFS-RT
+
+We can create an artifact with attribute `dataAddress.baseUrl` storing a URL to this resource.
+
+Functional Suitability Quality Metric Score: 4
+
+##### DATEX-II
+
+We can create an artifact with attribute `dataAddress.baseUrl` storing a URL to this resource.
+
+Functional Suitability Quality Metric Score: 4
+
+##### GBFS
+
+We can create an artifact with attribute `dataAddress.baseUrl` storing a URL to this resource.
+
+Functional Suitability Quality Metric Score: 4
+
+##### WMS/WFS
+
+We can create an artifact with attribute `dataAddress.baseUrl` storing a URL to this resource.
+
+Functional Suitability Quality Metric Score: 4
+
+##### REST API + Api Key
+
+We can create an artifact with
+- Attribute `dataAddress.baseUrl` storing a URL
+- Attribute `privateProperties.privateKey` storing an API key
+
+Functional Suitability Quality Metric Score: 4
