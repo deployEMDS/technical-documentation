@@ -81,7 +81,44 @@ Currently, the EDC core provides 3 different policy scopes:
 
 More informnation on scopes can be [found here](https://github.com/eclipse-edc/Connector/blob/main/docs/developer/policy-engine.md#policy-scopes).
 
-Policies can be implemented as `ServiceExtension` which upon initialization are registered to be evaluated for a specific scope.
+Policies can be implemented as `ServiceExtension` which upon initialization are registered to be evaluated for a specific scope. More details are available in the [EDC documentation](https://eclipse-edc.github.io/docs/#/submodule/Connector/docs/developer/policy-engine?id=step-2-implement-a-serviceextension). For example, a ServiceExtension to register the above time interval function can be:
+
+```kotlin
+class PolicyFunctionsExtension : ServiceExtension {
+    @Inject
+    private val ruleBindingRegistry: RuleBindingRegistry? = null
+
+    @Inject
+    private val policyEngine: PolicyEngine? = null
+
+    @Inject
+    private val transferProcessStore: TransferProcessStore? = null
+
+    override fun name(): String {
+        return "Policy functions for timeInterval restricted usage"
+    }
+
+    override fun initialize(context: ServiceExtensionContext) {
+        val monitor = context.monitor
+        monitor.info("Registering the policy functions extension")
+        ruleBindingRegistry!!.bind(USE_ACTION, PolicyEngine.ALL_SCOPES)
+        // for every registered operand, we need to provide an implementation,
+        // otherwise exceptions will be thrown
+        ruleBindingRegistry.bind(TIME_INTERVAL, TRANSFER_SCOPE)
+        policyEngine!!.registerFunction(
+            TRANSFER_SCOPE,
+            Permission::class.java,
+            TIME_INTERVAL,
+            TimeIntervalFunction(monitor, transferProcessStore!!),
+        )
+    }
+
+    companion object {
+        val USE_ACTION = "use"
+        val TIME_INTERVAL = "timeInterval"
+    }
+}
+```
 
 Depending on the scope, custom policy functions are executed as part of the lifecycle of the connector state machine and receive the corresponding state of the connector as input.
 
