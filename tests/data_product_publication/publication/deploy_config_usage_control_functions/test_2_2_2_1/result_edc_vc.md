@@ -39,7 +39,7 @@ From the [connector developers documentation](https://github.com/eclipse-edc/Con
 
 So by stopping the container, we lose the policies.
 
-Functional Suitability Quality Metric Score: 1
+Functional Suitability Quality Metric Score: 2
 
 ##### Delete a policy [[link to Postman tests](https://www.postman.com/i2cat-dev/workspace/deployemds/folder/36812968-5b7e3beb-18c7-40a9-b91c-93b701d92fec?action=share&source=copy-link&creator=36812968&ctx=documentation)]
 
