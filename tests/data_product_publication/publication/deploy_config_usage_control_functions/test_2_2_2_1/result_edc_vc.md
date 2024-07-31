@@ -33,10 +33,13 @@ Functional Suitability Quality Metric Score: 3
 ##### Persist uploaded policies [[link to Postman tests](https://www.postman.com/i2cat-dev/workspace/deployemds/folder/36812968-d8173b27-a951-4718-beba-2ff922c8bc19?action=share&source=copy-link&creator=36812968&ctx=documentation)]
 
 By default, the connector doesn't persist data.
-Enabling this feature requires proper configuration, which we have not yet been able to achieve.
+From the [connector developers documentation](https://github.com/eclipse-edc/Connector/blob/0bb741787fd0abc2a6a8a883a6fafdbf3b795c29/docs/developer/default_provider_methods.md?plain=1#L21)
+
+> Fallbacks are meant as safety net, in case developers forget or don't want to add a specific implementation for a service. It is there so as not to end up _without_ an implementation for a service interface. A good example for this are in-memory store implementations. It is expected that an actual persistence implementation is contributed by another extension.
+
 So by stopping the container, we lose the policies.
 
-Functional Suitability Quality Metric Score: 2
+Functional Suitability Quality Metric Score: 1
 
 ##### Delete a policy [[link to Postman tests](https://www.postman.com/i2cat-dev/workspace/deployemds/folder/36812968-5b7e3beb-18c7-40a9-b91c-93b701d92fec?action=share&source=copy-link&creator=36812968&ctx=documentation)]
 
