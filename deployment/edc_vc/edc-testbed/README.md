@@ -16,3 +16,8 @@ To stop the testbed
 
 -   **NOTE:** The certificates used by this testbed should never be used in a production environment.
 
+## Services
+
+- `consumer` runs the consumer connector
+- `provider` runs the provider connector
+- `http-server` is not required by the current set of tests, but might be useful for future tests (e.g. file transfer)
