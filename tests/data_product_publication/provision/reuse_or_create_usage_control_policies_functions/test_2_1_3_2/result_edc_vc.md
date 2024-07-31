@@ -27,7 +27,7 @@ Policy implementation as well as definitions are not part of the EDC connector i
 
 The EDC connector ships with a [policy engine](https://github.com/eclipse-edc/Connector/blob/main/docs/developer/policy-engine.md) which orchestrates the execution of programmatically registered policy rules throughout the lifecycle of the connector state machine.
 
-EDC in an MVD configuration does not offer a user interface for deployment of usage policies. Such interface can be created as an extension to the existing UI or as a separate application.
+EDC in an MVD configuration does not offer a user interface for deployment of usage policies. Such interface can be created as an extension to the [existing UI](https://github.com/eclipse-edc/DataDashboard) or as a separate application.
 
 The EDC API can be used to deploy usage policies programmatically but only for already supported policy functions.
 
