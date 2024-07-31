@@ -1,5 +1,3 @@
-
-
 # README
 
 The <docker-compose.yaml> defines a simple testbed.
