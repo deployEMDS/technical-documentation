@@ -49,7 +49,7 @@ Functional Suitability Quality Metric Score: 2
 
 The data producer can see all the data planes available in the connector.
 GUI is not available.
-By default, the connector runs with one data plane instance.
+By default, the connector runs with one data plane instance with transfer type `HttpData-PUSH`.
 
 Functional Suitability Quality Metric Score: 2
 
