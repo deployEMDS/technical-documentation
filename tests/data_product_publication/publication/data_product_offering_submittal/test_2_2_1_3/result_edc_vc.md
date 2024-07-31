@@ -18,7 +18,7 @@ Has the data producer access (via GUI or API) to overviews of
 ### Results
 #### Data products offerings [[link to Postman tests](https://www.postman.com/i2cat-dev/workspace/deployemds/folder/36812968-9ce34b1f-3a11-4a19-b73c-46c332e5e165?action=share&source=copy-link&creator=36812968&ctx=documentation)]
 
-The data producer can see all the artifacts loaded into the connector via API.
+The data producer can see all the data products loaded into the connector via API.
 GUI is not available.
 
 Functional Suitability Quality Metric Score: 2
