@@ -24,3 +24,5 @@ docker compose stop
 #+end_src
 
 #+RESULTS:
+
+- NOTE :: The certificates used by this testbed should never be used in a production environment.
