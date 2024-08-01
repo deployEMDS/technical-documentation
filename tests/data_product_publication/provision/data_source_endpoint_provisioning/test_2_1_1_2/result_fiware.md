@@ -19,7 +19,10 @@
 [TODO] Describe the assessment results (qualitative results), if applicable. Include screenshots, logs, etc, if necessary.
 
 #### Measured results
-[TODO] Describe the measured results (quantitative results), if applicable. Rank the results according to the expected output, if applicable.
+
+Since the Fiware Connector uses Apache APISIX as a proxy between the incoming request and the data source, the data source endpoint can always be masked or obfuscated.
+
+For all data sources, a route has to be created that routes the incoming request to the data source. The route can be used to mask the data source.
 
 #### Notes
 [TODO] Add notes, if necessary.

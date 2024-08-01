@@ -22,4 +22,9 @@
 [TODO] Describe the measured results (quantitative results), if applicable. Rank the results according to the expected output, if applicable.
 
 #### Notes
-[TODO] Add notes, if necessary.
+
+The Apache APISIX gateway used to proxy communication to the data source offers various ways to activate rate limiting.
+
+In general, rate limiting can simply be enabled for all routes or by matching rules on an e.g. per host or per URI basis.
+
+There are many configurable ways to determine the limit, e.g. on a per request (leaky bucket), per concurrent request or request per time window basis.

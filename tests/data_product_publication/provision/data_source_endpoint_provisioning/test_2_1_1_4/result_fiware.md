@@ -22,4 +22,5 @@
 [TODO] Describe the measured results (quantitative results), if applicable. Rank the results according to the expected output, if applicable.
 
 #### Notes
-[TODO] Add notes, if necessary.
+
+Since the Fiware Controller uses Apache APISIX proxy in the data plane, it natively supports load balancing in its data source endpoint configuration.
