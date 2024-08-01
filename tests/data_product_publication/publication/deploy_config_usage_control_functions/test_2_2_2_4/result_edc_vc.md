@@ -19,4 +19,4 @@ Users must implement the custom usage enforcement functionality themselves, whic
 Additionally, once the custom functionality is developed, the EDC connector needs to be rebuilt to include this new extension.
 This process requires a thorough understanding of the EDC connector’s architecture and extension mechanisms.
 
-Functional Suitability Quality Metric Score: 2
+Functional Suitability Quality Metric Score: 1
