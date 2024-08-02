@@ -75,3 +75,9 @@ Company A wants to share a dataset to Company B.
 Company A only allows Company B to use the data for generating a ML model.
 Company B can not transfer any data to internal or external parties
 ```
+
+In conclusion, although the policy language can be extended as described, these operations exceed the current capabilities of the available API.
+Additionally, a deep understanding of ODRL and ODRL Profiles is necessary to effectively expand the default set of operations provided by the policy.
+Finally, this complexity surpasses the abilities of a non-technical profile.
+
+Functional Suitability Quality Metric Score: 1
