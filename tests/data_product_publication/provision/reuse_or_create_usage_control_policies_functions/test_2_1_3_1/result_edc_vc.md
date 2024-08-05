@@ -19,7 +19,7 @@ We rank the ease of use of the API by scoring the following actions
 7. Create new policy enforcement functions
 
 The score will be as follows
-- -1 if the action can't be executed via APIs
+- 0 if the action can't be executed via APIs
 - 1/N if the action can be executed with N calls
 
 ### Results
@@ -36,8 +36,8 @@ Let `C` be the number of sharing agreements that are referencing a given policy.
 | Delete a usage policy                        | 1/(C+1) | Each sharing agreements must be deleted first           |
 | Update existing sharing agreement            | 1/2     | No update available, requires 1 deletion and 1 creation |
 | Update existing policy                       | 1       |                                                         |
-| Extend the usage policy language             | -1      |                                                         |
-| Create new policy enforcement functions      | -1      |                                                         |
+| Extend the usage policy language             | 0       |                                                         |
+| Create new policy enforcement functions      | 0       |                                                         |
 
 The APIs cover the most fundamental policy actions.
 Actions that modify existing objects might be restricted by integrity constraints (e.g. prevent a situation where a sharing agreement is referencing some non-existing policy), increasing the number of calls required to complete the action.
