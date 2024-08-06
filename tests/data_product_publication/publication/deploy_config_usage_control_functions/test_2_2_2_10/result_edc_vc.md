@@ -80,4 +80,4 @@ In conclusion, although the policy language can be extended as described, these 
 Additionally, a deep understanding of ODRL and ODRL Profiles is necessary to effectively expand the default set of operations provided by the policy.
 Finally, this complexity surpasses the abilities of a non-technical profile.
 
-Functional Suitability Quality Metric Score: 1
+Flexibility Quality Metric Score: 1
