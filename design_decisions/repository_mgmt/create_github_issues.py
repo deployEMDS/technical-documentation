@@ -51,7 +51,7 @@ def create_github_issues(excel_file, sheet_name, stacks, phases, only_minimal):
     existing_issues = repo.get_issues(state='open')
     existing_issue_titles = {issue.title for issue in existing_issues}
 
-    issue_template = template_env.get_template('issue.md')
+    issue_template = template_env.get_template('issue.jinja2')
 
     for index, row in df.iterrows():
         for stack in stacks:

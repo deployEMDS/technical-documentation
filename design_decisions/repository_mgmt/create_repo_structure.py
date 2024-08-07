@@ -48,7 +48,7 @@ def _create_directory(path):
 
 def _create_test_md(path, row):
     """Create test.md file with test description."""
-    template = template_env.get_template('test.md')
+    template = template_env.get_template('test.jinja2')
     content = template.render(
         title=f"[{row['Test ID']}] {row['Business capability']}: {row['Customer journey']} - {row['Customer sub-journey']}",
         test_description=row['Test description'],
@@ -69,7 +69,7 @@ def _create_gitkeep(path):
 
 def _create_result_md(path, row, stack):
     """Create result markdown files with template."""
-    template = template_env.get_template('result.md')
+    template = template_env.get_template('result.jinja2')
     content = template.render(
         title=f"[{row['Test ID']}] {row['Business capability']}: {row['Customer journey']} - {row['Customer sub-journey']}",
         stack=stack
