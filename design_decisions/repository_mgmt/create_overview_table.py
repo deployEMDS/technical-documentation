@@ -50,7 +50,7 @@ def generate_test_results_table(base_dir, output_file, github_base_url):
                     # Find result files and check if they're done
                     result_files = list(test_id.glob('result_*.md'))
                     result_statuses = {f.stem.replace('result_', ''): _is_result_file_done(f) for f in result_files}
-                    minimal = 'Yes' if any(result_statuses.values()) else minimal
+                    is_one_done = any(result_statuses.values())
 
                     # Create relative path for linking
                     relative_path = test_id.relative_to(base_path)
@@ -62,7 +62,8 @@ def generate_test_results_table(base_dir, output_file, github_base_url):
                         'result_files': result_files,
                         'result_statuses': result_statuses,
                         'phase': phase,
-                        'minimal': minimal
+                        'minimal': minimal,
+                        'is_one_done': is_one_done
                     })
 
     # Filter and sort results
@@ -85,7 +86,7 @@ def generate_test_results_table(base_dir, output_file, github_base_url):
 
 
 def _filter_result_data(results):
-    return [r for r in results if r['minimal'] == 'Yes' and r['phase'] in ['1', '2']]
+    return [r for r in results if (r['minimal'] == 'Yes' and r['phase'] in ['1', '2']) or r['is_one_done']]
 
 
 def _prepare_result_data(results, github_base_url):
