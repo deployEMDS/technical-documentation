@@ -3,22 +3,17 @@
 
 ### Statement of assessment
 #### Environment
-[TODO] Describe the environment used for the test / assessment
 The test is conducted in the IONOS FIWARE_cluster cluster using node pool IP 85.215.161.198. 
 
 
 #### Tested quality metric and method
 The test quality is based on the metric defined in [iso27001_kpis_subkpis.xlsx](../../../../../design_decisions/background_info/iso27001_kpis_subkpis.xlsx). For the current phase (phase 1), the test focuses on the Functional Suitability quality metric.
 
-#### Comparative criteria (checklists, ...)
-[TODO] Describe the comparative criteria used for the test / assessment. If possible, align with the criteria used for the same test in the other stack(s).
-
 #### Expected output
 **The expected output of the test is an assessment of whether the FIWARE connector supports the full credential lifecycle, including request, issuance, validation, renewal, and revocation.**
 
 ### Results
 #### Assessment
-[TODO] Describe the assessment results (qualitative results), if applicable. Include screenshots, logs, etc, if necessary.
 
 **Verifiable Credential Issuance**
 1) The access token is created accessing keycloak test realm portal using the following command:
@@ -69,7 +64,6 @@ However, since the vcverifier does check the existence of a participant in the T
 
 
 #### Measured results
-[TODO] Describe the measured results (quantitative results), if applicable. Rank the results according to the expected output, if applicable.
 
 The VC lifecycle is partially covered by the FIWARE connector as follows:
 - **Issuance and Storage**: Covered.
@@ -79,5 +73,3 @@ The VC lifecycle is partially covered by the FIWARE connector as follows:
 - **Renewal/Re-Issuance**: Not covered, but participants can be created and deleted. 
 
 
-#### Notes
-[TODO] Add notes, if necessary.

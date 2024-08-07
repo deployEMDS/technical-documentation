@@ -11,7 +11,7 @@ Assessment
 Phase 2
  
 ### Minimal?
-No
+Yes
  
 ### Extra information
 #### ISO25010 Quality
