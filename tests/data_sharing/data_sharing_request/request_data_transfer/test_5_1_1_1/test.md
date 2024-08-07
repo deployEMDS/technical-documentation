@@ -18,7 +18,7 @@ Test
 Phase 1
  
 ### Minimal?
-No
+Yes
  
 ### Extra information
 #### ISO25010 Quality
