@@ -91,7 +91,7 @@ def _filter_result_data(results):
 def _prepare_result_data(results, github_base_url):
     prepared_results = []
     for result in results:
-        test_link = f"[{result['title']}]({github_base_url}/{result['path']}/test.jinja2)"
+        test_link = f"[{result['title']}]({github_base_url}/{result['path']}/test.md)"
         result_links = []
         for f in result['result_files']:
             file_name = f.stem.replace('result_', '')
