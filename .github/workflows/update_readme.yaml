@@ -29,7 +29,7 @@ jobs:
 
       - name: Update README
         working-directory: design_decisions/repository_mgmt
-        run: python update_readme.py
+        run: python update_readme.py --readme-path ../../README.md --overview-path ../../overview.tmp.md
 
       - name: Commit and push if changed
         run: |
