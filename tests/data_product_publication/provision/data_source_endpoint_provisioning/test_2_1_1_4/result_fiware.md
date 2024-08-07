@@ -1,26 +1,34 @@
 ## [2.1.1.4] Data product publication: Provision - Data source endpoint provisioning
+
 ### Stack: Fiware
 
 ### Statement of assessment
+
 #### Environment
-[TODO] Describe the environment used for the test / assessment
+
+
 
 #### Tested quality metric and method
-[TODO] Describe the quality metric and method used for the test / assessment
+
+Load balancing is one of the standard features of APISIX.
 
 #### Comparative criteria (checklists, ...)
-[TODO] Describe the comparative criteria used for the test / assessment. If possible, align with the criteria used for the same test in the other stack(s).
+
+
 
 #### Expected output
-[TODO] Describe the expected output and how the ranking is calculated
+
+Data sources can be load balanced.
 
 ### Results
+
 #### Assessment
-[TODO] Describe the assessment results (qualitative results), if applicable. Include screenshots, logs, etc, if necessary.
-
-#### Measured results
-[TODO] Describe the measured results (quantitative results), if applicable. Rank the results according to the expected output, if applicable.
-
-#### Notes
 
 Since the Fiware Controller uses Apache APISIX proxy in the data plane, it natively supports load balancing in its data source endpoint configuration.
+
+Documentation can be consulted here: [Load Balancing](https://apisix.apache.org/docs/apisix/getting-started/load-balancing/)
+
+#### Measured results
+
+
+#### Notes
