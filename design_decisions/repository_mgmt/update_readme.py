@@ -29,8 +29,7 @@ def update_readme(readme_path, overview_path, start_marker, end_marker, timestam
 {timestamp_prefix}{current_time}
 
 {new_table}
-{end_marker}
-"""
+{end_marker}"""
 
     # Replace the old table with the new one
     pattern = f"{start_marker}.*?{end_marker}"

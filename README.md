@@ -131,11 +131,6 @@ Last updated: 2024-08-07 09:54:54 UTC
 | [5.3.3.2] | [Data sharing: Post-sharing activities - Log data sharing transaction](https://github.com/imec-int/deployEMDS/tree/main/tests/data_sharing/post-sharing_activities/log_data_sharing_transaction/test_5_3_3_2/test.md) | 2 | Yes | [edc_vc](https://github.com/imec-int/deployEMDS/tree/main/tests/data_sharing/post-sharing_activities/log_data_sharing_transaction/test_5_3_3_2/result_edc_vc.md)&nbsp;❌<br/>[fiware](https://github.com/imec-int/deployEMDS/tree/main/tests/data_sharing/post-sharing_activities/log_data_sharing_transaction/test_5_3_3_2/result_fiware.md)&nbsp;❌<br/> |
 <!-- END_TEST_RESULTS_TABLE -->
 
-
-
-
-
-
 Information security
 ====================
 GitHub may be utilized for version control; however, code should be treated as an information asset. Prior to publication, all code must undergo a thorough assessment in addition to standard code review procedures. This assessment aims to prevent the unintended disclosure of sensitive information, such as credentials, to the repository.
