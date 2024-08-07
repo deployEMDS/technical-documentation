@@ -85,8 +85,9 @@ Test overview
 =============
 This gives a quick view of the tests from Phase 1 and Phase 2 that were deemed crucial for a Minimum Viable Data Space.
 
+
 <!-- START_TEST_RESULTS_TABLE -->
-Last updated: 2024-08-07 08:56:01 UTC
+Last updated: 2024-08-07 09:00:20 UTC
 
 | Test | Title | Phase | Minimal | Results |
 |------|-------|-------|---------|---------|
@@ -120,6 +121,7 @@ Last updated: 2024-08-07 08:56:01 UTC
 | [5.3.3.1] | [Data sharing: Post-sharing activities - Log data sharing transaction](https://github.com/imec-int/deployEMDS/tree/main/tests/data_sharing/post-sharing_activities/log_data_sharing_transaction/test_5_3_3_1/test.jinja2) | 2 | Yes | [fiware](https://github.com/imec-int/deployEMDS/tree/main/tests/data_sharing/post-sharing_activities/log_data_sharing_transaction/test_5_3_3_1/result_fiware.md)&nbsp;❌<br/>[edc_vc](https://github.com/imec-int/deployEMDS/tree/main/tests/data_sharing/post-sharing_activities/log_data_sharing_transaction/test_5_3_3_1/result_edc_vc.md)&nbsp;❌<br/> |
 | [5.3.3.2] | [Data sharing: Post-sharing activities - Log data sharing transaction](https://github.com/imec-int/deployEMDS/tree/main/tests/data_sharing/post-sharing_activities/log_data_sharing_transaction/test_5_3_3_2/test.jinja2) | 2 | Yes | [fiware](https://github.com/imec-int/deployEMDS/tree/main/tests/data_sharing/post-sharing_activities/log_data_sharing_transaction/test_5_3_3_2/result_fiware.md)&nbsp;❌<br/>[edc_vc](https://github.com/imec-int/deployEMDS/tree/main/tests/data_sharing/post-sharing_activities/log_data_sharing_transaction/test_5_3_3_2/result_edc_vc.md)&nbsp;❌<br/> |
 <!-- END_TEST_RESULTS_TABLE -->
+
 
 
 Information security
