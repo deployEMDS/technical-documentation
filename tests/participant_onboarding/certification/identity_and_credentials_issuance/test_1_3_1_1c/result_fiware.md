@@ -19,10 +19,10 @@ Compatibility specifications regarding EBSI.
 
 ### Results
 #### Assessment
-The FIWARE documentation assess that the connector has in fact an interface with Trust Services aligned with EBSI specifications.
+The FIWARE documentation assess that the connector can effectively interface with trust services aligned with EBSI specifications by integrating decentralized identifiers, verifiable credentials, and EBSI-compliant trust services.
 
 #### Measured results
-
+(4 + 4 + 4)/3 = 4 
 
 #### Notes
 More information about it:  [https://github.com/FIWARE/data-space-connector](https://github.com/FIWARE/data-space-connector)
