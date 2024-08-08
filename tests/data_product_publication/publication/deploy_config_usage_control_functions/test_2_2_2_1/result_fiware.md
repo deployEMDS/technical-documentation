@@ -131,6 +131,16 @@ The policy allows the organization "odrl:any" to "read"(e.g. GET) the entity:
 Fiware connector aims to take ODRL Policies and execute them using the Open Policy Agent.
 
 
+To get all policies use the following command:
+
+    curl -s -X GET http://odrl-pap.demo-portal.eu/policy
+
+
+
+To get a specific policy use the command:
+
+    curl -s -X GET http://odrl-pap.demo-portal.eu/policy/{policy_id}
+
 #### 2. Policy binding with custom enforcement function
 
 There are two ways:
@@ -146,7 +156,9 @@ This will be activated with the TMForum/Marketplace addition.
 
 #### 4. Policy deletion
 
+Yes. The command used is: 
 
+    curl -s -X DELETE http://odrl-pap.demo-portal.eu/policy/{policy_id}}
 
 
 #### 5. Policy re-use
