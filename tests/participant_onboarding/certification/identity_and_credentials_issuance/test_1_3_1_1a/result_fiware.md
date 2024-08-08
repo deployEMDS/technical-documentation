@@ -23,4 +23,5 @@ The documentation states in the onboarding steps that the organization validates
 #### Measured results
 ( 3 + 3 + 3)/ 3 = 3
 #### Notes
+More information about it:  [https://github.com/FIWARE/data-space-connector](https://github.com/FIWARE/data-space-connector)
 
