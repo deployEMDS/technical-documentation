@@ -3,23 +3,24 @@
 
 ### Statement of assessment
 #### Environment
-[TODO] Describe the environment used for the test / assessment
+
+The test is conducted in the IONOS FIWARE_cluster cluster using node pool IP 85.215.161.198.
 
 #### Tested quality metric and method
-[TODO] Describe the quality metric and method used for the test / assessment
+
+The test quality is based on the metric defined in [iso27001_kpis_subkpis.xlsx](../../../../../design_decisions/background_info/iso27001_kpis_subkpis.xlsx). For the current phase (phase 1), the test focuses on the Functional Suitability quality metric.
 
 #### Comparative criteria (checklists, ...)
-[TODO] Describe the comparative criteria used for the test / assessment. If possible, align with the criteria used for the same test in the other stack(s).
+Asses that the stack uses a credential framework that is compatible with this initiative: Gaia-X
 
 #### Expected output
-[TODO] Describe the expected output and how the ranking is calculated
+Compatibility specifications regarding Gaia-X.
 
 ### Results
 #### Assessment
-[TODO] Describe the assessment results (qualitative results), if applicable. Include screenshots, logs, etc, if necessary.
+The documentation states in the onboarding steps that the organization validates that the VC containing its description as organization is compliant with Gaia-X specifications using the services of a Gaia-X Digital Clearing House. Therefore it is compatible with Gaia-X framework.
 
 #### Measured results
-[TODO] Describe the measured results (quantitative results), if applicable. Rank the results according to the expected output, if applicable.
-
+( 3 + 3 + 3)/ 3 = 3
 #### Notes
-[TODO] Add notes, if necessary.
+
