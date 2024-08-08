@@ -30,14 +30,20 @@ However, dashboards have not yet been integrated into the EDC MVD commit [8da0c4
 
 
 ##### Integrate catalog API with a data search tool
-Due to the extensible nature of EDC, a plugin could be developed to integrate with the EDC ecosystem.
-This plugin would track catalog updates and synchronize them with an external metadata search solution. 
-We have investigated how to use the federated catalog API with [DataHub](https://datahubproject.io/). 
-The main development task for this integration is to create an EDC extension that periodically queries the EDC API endpoint and uses the [DataHub emitter](https://datahubproject.io/docs/metadata-integration/java/as-a-library/) to send changes to DataHub. 
-A similar approach can be applied to other metadata platforms, with the primary challenge being the complexity of the platform itself. There are no technical barriers to integrating a search tool with the EDC ecosystem.
 
+###### Open-Source Platform (DataHub)
 
+IMEC has investigated how to use the federated catalog API with [DataHub](https://datahubproject.io/). The main development task for this integration is to create an EDC extension that periodically queries the EDC API endpoint and uses the [DataHub emitter](https://datahubproject.io/docs/metadata-integration/java/as-a-library/) to send changes to DataHub.
 
+###### Hosted Solution (Metadata Vlaanderen)
+
+IMEC has studied how to integrate the federated catalog endpoint with a hosted solution, such as [datavindplaats](https://www.vlaanderen.be/datavindplaats). Datavindplaats employs a harvester to periodically harvest the catalog endpoint, which in the EMDS case will be the API endpoint of the Federated Catalog. The detailed implementation of how to onboard EMDS to datavindplaats needs to be done by reaching out to the datavindplaats team.
+
+###### EU-Driven Project
+
+The [DCAT-AP Feed Specification](https://semiceu.github.io/LDES-DCAT-AP-feeds/) from SEMIC details how to publish an event source API for catalog replication. Since EDC uses DCAT to represent its catalog, adhering to this specification to publish EDC's federated catalog data to [LDES](https://semiceu.github.io/LinkedDataEventStreams/) is straightforward. This allows the data to be seamlessly integrated with linked data search engines like [Comunica](https://comunica.dev/) or queried using tools such as [GraphDB](https://graphdb.ontotext.com/).
+
+In conclusion, various approaches can be applied to different metadata platforms, with the primary challenge being the complexity of each platform. However, there are no technical barriers to integrating a search tool with the EDC ecosystem.
 #### Measured results
 As demonstrated above, EDC provides an out-of-the-box solution for search tools to integrate with the catalog API. Therefore, the following score is assigned to the test:
 
