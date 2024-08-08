@@ -35,7 +35,7 @@ However, dashboards have not yet been integrated into the EDC MVD commit [8da0c4
 
 IMEC has investigated how to use the federated catalog API with [DataHub](https://datahubproject.io/). The main development task for this integration is to create an EDC extension that periodically queries the EDC API endpoint and uses the [DataHub emitter](https://datahubproject.io/docs/metadata-integration/java/as-a-library/) to send changes to DataHub.
 
-###### Hosted Solution (Metadata Vlaanderen)
+###### Hosted Solution (Datavindplaats)
 
 IMEC has studied how to integrate the federated catalog endpoint with a hosted solution, such as [datavindplaats](https://www.vlaanderen.be/datavindplaats). Datavindplaats employs a harvester to periodically harvest the catalog endpoint, which in the EMDS case will be the API endpoint of the Federated Catalog. The detailed implementation of how to onboard EMDS to datavindplaats needs to be done by reaching out to the datavindplaats team.
 
