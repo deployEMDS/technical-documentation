@@ -29,7 +29,7 @@ The EDC connector features a [policy engine](https://github.com/eclipse-edc/Conn
 This policy engine can be added and activated as an extension to the EDC connector services.
 
 #### EDC MVD implementation commit [5d58b38](https://github.com/eclipse-edc/MinimumViableDataspace/commit/5d58b3871983ce00a69a38b3215c6a8cb67d8ced)
-Details on how policies are defined for assets in MVC Access Control can be found [here](https://github.com/eclipse-edc/MinimumViableDataspace?tab=readme-ov-file#33-access-control).
+Details on how policies are defined for assets in MVD Access Control can be found [here](https://github.com/eclipse-edc/MinimumViableDataspace?tab=readme-ov-file#33-access-control).
 Specifically, for negotiating policy rules, an asset might require a Data Processor credential with a "level": "processing" to negotiate a contract and transfer data.
 The implementation of this requirement is explained [here](https://github.com/eclipse-edc/MinimumViableDataspace?tab=readme-ov-file#73-scope-extractor-for-dataprocessor-credentials).
 An example of a policy requiring the consumer to present a DataProcessorCredential with an access level of processing, represented in ODRL, would look like this:
