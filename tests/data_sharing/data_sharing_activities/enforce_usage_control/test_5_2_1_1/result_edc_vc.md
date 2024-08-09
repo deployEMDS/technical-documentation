@@ -37,6 +37,7 @@ IMEC has analyzed how usage control could be enforced. For example, a usage poli
 
 #### Measured results
 As demonstrated above, there is no usage control feature currently implemented in the EDC development. Therefore, the following score is given to the test:
+
 **Functional Suitability Quality Metric: 0**
 
 #### Notes
