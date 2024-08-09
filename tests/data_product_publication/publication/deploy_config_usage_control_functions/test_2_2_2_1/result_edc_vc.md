@@ -53,3 +53,9 @@ Functional Suitability Quality Metric Score: 4
 A custom constraint function is implicitely bound to a named operator, the interface is the same as the policy upload, provided the custom operator is used. The mechanism makes for a light administrative workload, but it requires knowledge of custom developed policies (i.e., there is no directory of available policies).
 
 Functional Suitability Quality Metric Score: 3
+
+#### Cumulative measured results
+The EDC implementation partially covers the deployment cyclus of Usage Control Policies, as described in the test requirements.
+**Functional Suitability Quality Metric Score: 3,2**
+
+#### Notes
