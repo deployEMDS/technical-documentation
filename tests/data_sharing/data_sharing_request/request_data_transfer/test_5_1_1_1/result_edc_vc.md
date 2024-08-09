@@ -43,7 +43,14 @@ EDC version [0.8.2-SNAPSHOT](https://github.com/eclipse-edc/MinimumViableDataspa
 These endpoints, included in the EDC MVD commit [8da0c4e](https://github.com/eclipse-edc/MinimumViableDataspace/commit/8da0c4e6a8921dcb6ff189c2901868979bdc9a93), are secured using the EDC implementation of [Token-Based Authentication Service](https://github.com/eclipse-edc/Connector/tree/0bb741787fd0abc2a6a8a883a6fafdbf3b795c29/extensions/common/auth/auth-tokenbased). This service secures connector APIs and is configured with the key [EDC_API_AUTH_KEY](https://github.com/eclipse-edc/MinimumViableDataspace/blob/9a5f93c89cf5624cc4bf8eaa024a29da9b8e3d12/deployment/assets/env/consumer_connector.env#L15). EDC also provides an [AuthenticationService](https://github.com/eclipse-edc/Connector/blob/0bb741787fd0abc2a6a8a883a6fafdbf3b795c29/spi/common/auth-spi/src/main/java/org/eclipse/edc/api/auth/spi/AuthenticationService.java#L25) to integrate authentication protection into the APIs. Additionally, out-of-the-box extensions for authentication are available from EDC [here](https://github.com/eclipse-edc/Connector/tree/0bb741787fd0abc2a6a8a883a6fafdbf3b795c29/extensions/common/auth).
 
 #### Measured results
-[TODO] Describe the measured results (quantitative results), if applicable. Rank the results according to the expected output, if applicable.
+As demonstrated above, the following aspects of the transfer API coverage are fulfilled:
 
+- [x] Initiating a data sharing request
+- [x] Retrieving information and status of the data sharing request
+- [x] Receiving the outcome and conditions of the data sharing request
+- [x] Accessing information on past data sharing activities
+- [x] API is secured and utilizes standard method (REST)
+
+**Functional Suitability Quality Metric: 4**
 #### Notes
 EDC is a pluggable ecosystem primarily targeting Java/Kotlin developers. Some extensions are available on the market for plug-and-play, but for certain specific use cases, developers need to create their own extensions.
