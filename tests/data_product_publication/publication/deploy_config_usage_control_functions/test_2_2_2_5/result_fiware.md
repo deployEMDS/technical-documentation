@@ -21,7 +21,7 @@ The test quality is based on the metric defined in [iso27001_kpis_subkpis.xlsx](
 ### Results
 #### Assessment
 Policies can only be created via manual input. Here's an example on how to do so.
-
+```
     curl -s -X POST http://odrl-pap.demo-portal.eu/policy \
         -H 'Content-Type: application/json' \
         -d  '{
@@ -61,8 +61,7 @@ Policies can only be created via manual input. Here's an example on how to do so
                 }
                 }
             }'
-
-
+```
 
 #### Measured results
 ((0*3)/3 + (2+4+4)/3 + (0*3)/3 +(2+4+4)/3)/4 = (20/3)/4  = 20/12 = 1.66
