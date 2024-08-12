@@ -9,7 +9,15 @@
 [TODO] Describe the quality metric and method used for the test / assessment
 
 #### Comparative criteria (checklists, ...)
-[TODO] Describe the comparative criteria used for the test / assessment. If possible, align with the criteria used for the same test in the other stack(s).
+| Criteria           | Scoring          |
+| ------------- | ------------- |
+| No out of the box policies  | 0 |
+| No out of the box policies but policies are available from a library  | 1 |
+| Partial out-of-the-box-policies  | 2 |
+| Full set of out-of-the-box policies  | 3 |
+| Documented way to create/expand policies  | +1 |
+| Documented way to create/expand policies + templates for basic polices   | +2 |
+
 
 #### Expected output
 [TODO] Describe the expected output and how the ranking is calculated
