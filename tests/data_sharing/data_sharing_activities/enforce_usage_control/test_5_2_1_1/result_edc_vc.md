@@ -12,7 +12,15 @@ The test quality is based on the metric defined in [iso27001_kpis_subkpis.xlsx](
 For the current phase (phase 1), the test focuses on the Functional Suitability quality metric.
 
 #### Comparative criteria (checklists, ...)
-[TODO] Describe the comparative criteria used for the test/assessment. If possible, align with the criteria used for the same test in other stack(s).
+| Criteria           | Scoring          |
+| ------------- | ------------- |
+| No out of the box policies  | 0 |
+| No out of the box policies but policies are available from a library  | 1 |
+| Partial out-of-the-box-policies  | 2 |
+| Full set of out-of-the-box policies  | 3 |
+| Documented way to create/expand policies  | +1 |
+| Documented way to create/expand policies + templates for basic polices   | +2 |
+
 
 #### Expected Output
 Usage control is defined based on the IDSA Position Paper “[Data Usage Control in IDS](https://internationaldataspaces.org/data-sovereignty-updated-position-paper-on-data-usage-control-in-the-ids/)”. Usage control involves specifying and enforcing restrictions on what must (or must not) happen to data after access has been granted.
