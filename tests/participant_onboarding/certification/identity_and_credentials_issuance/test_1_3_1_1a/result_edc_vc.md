@@ -132,7 +132,7 @@ integrating Gaia-X trust anchor.
 purposes -> N/A, requires GAIA-X infrastructure. EDC doesn't have an open-box solution for integrating Gaia-X trust
 anchor.
 
-#### Functional suitability quality metric: 3
+#### Functional suitability quality metric: 2
 
 #### Notes
 - EDC components are plugin-based. Support for various verifiable credential formats is possible by implementing a plugin (this applies to both decentralized as well as centralized solutions). For example, support for web DID resolution is just a preview of a method that can be created. See [docs](https://github.com/eclipse-edc/Publications/blob/main/Identity%20Management/DID_EDC.md).
