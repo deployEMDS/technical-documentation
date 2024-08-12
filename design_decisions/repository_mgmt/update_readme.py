@@ -24,8 +24,7 @@ def update_readme(readme_path, overview_path, start_marker, end_marker, timestam
         new_table = file.read()
 
     # Create the new content with timestamp
-    new_content = f"""
-{start_marker}
+    new_content = f"""{start_marker}
 {timestamp_prefix}{current_time}
 
 {new_table}
