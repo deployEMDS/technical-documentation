@@ -1,0 +1,44 @@
+---
+tags:
+{%- for tag in test.tags %}
+    - {{ tag.lower().replace(' ', '-') }}
+{%- endfor %}
+title: "[{{ test.id }}] {{ test.title }}"
+sidebar_label: {{ test.id }} ({{ test.num_results_done }}/{{ test.num_results }})
+sidebar_class_name: {{ 'green' if test.at_least_one_done else 'red' }}
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# [{{ test.id }}]({{ test.path }})
+
+{{ test.title }}
+
+**{{ test.type }}:** {{ test.description }}
+
+## Information
+* Phase {{ test.execution_phase }}
+* Minimal? {{ 'Yes' if test.minimal else 'No' }}
+{% if test.kpis %}
+* Related KPIs:
+    {%+ for kpi in test.kpis +%}
+    * **{{ kpi.name }}:** {{ kpi.description }}
+    {%+ endfor +%}
+{% endif %}
+
+## Results
+<Tabs>
+{%+ for result in test.results +%}
+    <TabItem value="{{ result.testing_facility }}">
+        ### [{{ result.testing_facility }}]({{ result.path }})
+        {%+ if result.is_done +%}
+                {{ result.content | indent(4) }}
+        {%+ else +%}
+            :::info
+            **TODO:** This test is not done yet for this testing facility.
+            :::
+        {% endif %}
+    </TabItem>
+{%+ endfor +%}
+</Tabs>
