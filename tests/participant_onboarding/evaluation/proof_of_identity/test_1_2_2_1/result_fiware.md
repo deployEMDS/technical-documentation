@@ -3,23 +3,29 @@
 
 ### Statement of assessment
 #### Environment
-[TODO] Describe the environment used for the test / assessment
+
+The test is conducted in the IONOS FIWARE_cluster cluster using node pool IP 85.215.161.198.
 
 #### Tested quality metric and method
-[TODO] Describe the quality metric and method used for the test / assessment
+
+The test quality is based on the metric defined in [iso27001_kpis_subkpis.xlsx](../../../../../design_decisions/background_info/iso27001_kpis_subkpis.xlsx). For the current phase (phase 1), the test focuses on the Functional Suitability quality metric.
+
 
 #### Comparative criteria (checklists, ...)
-[TODO] Describe the comparative criteria used for the test / assessment. If possible, align with the criteria used for the same test in the other stack(s).
+Assess if the data space can validate requestors’ real-world identities from national identity providers.
 
 #### Expected output
-[TODO] Describe the expected output and how the ranking is calculated
+The expected output of this test is to evaluate the level of customization required to use European/National identity provider as issuer for verifiable credentials.
 
 ### Results
 #### Assessment
-[TODO] Describe the assessment results (qualitative results), if applicable. Include screenshots, logs, etc, if necessary.
+The connector only addresses natural persons, and to do so it utilizes tools such as Keycloak to issue certificates. 
+Organizations' oboarding is done by a trust anchor, not the connector. 
+
+ 
 
 #### Measured results
-[TODO] Describe the measured results (quantitative results), if applicable. Rank the results according to the expected output, if applicable.
+( 4 + 4 + 2 + 2 + 4) / 5 = 3.2
 
 #### Notes
-[TODO] Add notes, if necessary.
+
