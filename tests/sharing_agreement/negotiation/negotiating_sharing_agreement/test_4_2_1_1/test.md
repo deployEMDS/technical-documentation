@@ -17,7 +17,5 @@ Yes
 #### ISO25010 Quality
 Interoperability
 #### ISO25010 Quality description
-The system provides components that negotiate a data sharing agreement through a common protocol.
-
-The data sharing protocol implements requests, responses, and states that produce an iterative data sharing negotiation which is semantically interpretable by an observer.
+The system provides components that negotiate a data sharing agreement through a common protocol. The data sharing protocol implements requests, responses, and states that produce an iterative data sharing negotiation which is semantically interpretable by an observer.
     
