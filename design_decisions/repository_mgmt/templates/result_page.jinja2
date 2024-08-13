@@ -34,7 +34,7 @@ This file was last modified at {{ test.last_modified | datetime_format }}.
 ## Results
 <Tabs>
 {%+ for result in test.results +%}
-    <TabItem value="{{ result.testing_facility }}">
+    <TabItem value="{{ result.testing_facility }}" label="{{ result.testing_facility }}">
         {%+ if result.is_done +%}
             :::note
             The results for Test {{ test.id }} for {{ result.testing_facility }} were extracted from **[this page]({{ result.path }})** in the GitHub repository.<br/>

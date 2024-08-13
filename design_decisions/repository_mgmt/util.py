@@ -75,7 +75,7 @@ def read_test_info(file_path, github_base_url) -> TestInformation:
         test_content = f.read()
         title_parts = test_content.split('\n')[1].strip('## ').split(' ')
         title = ' '.join(title_parts[1:])
-        description = re.search(r"### Test description\s*(.+?)\s*###", test_content)
+        description = re.search(r"### Test description\s*(.*?)(?=\n###|$)", test_content, re.DOTALL)
         description = description.group(1) if description else 'N/A'
         test_id_numeric = title_parts[0][1:-1]
         execution_phase = re.search(r'Phase (\d+)', test_content)
@@ -99,7 +99,7 @@ def read_test_info(file_path, github_base_url) -> TestInformation:
         )
 
 def read_test_kpis(test_content, test_id_numeric) -> List[TestKpi]:
-    kpi_names = re.search(r"#### ISO25010 Quality\s*(.*?)(?=\n####|$)", test_content)
+    kpi_names = re.search(r"#### ISO25010 Quality\s*(.*?)(?=\n####|$)", test_content, re.DOTALL)
     kpi_names = (kpi_names.group(1) if kpi_names else '').split('\n')
     kpi_descs = re.search(r"#### ISO25010 Quality description\s*(.*?)(?=\n####|$)", test_content, re.DOTALL)
     kpi_descs = (kpi_descs.group(1) if kpi_descs else '').split('\n')
