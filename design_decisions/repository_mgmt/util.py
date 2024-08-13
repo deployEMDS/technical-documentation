@@ -1,5 +1,8 @@
+import os.path
 import re
+import time
 from dataclasses import dataclass
+from datetime import datetime
 from typing import List, Optional
 
 
@@ -15,6 +18,8 @@ class TestResult:
     content: str
     path: str
     is_done: bool
+    last_modified: Optional[datetime] = None
+
 
 @dataclass
 class TestInformation:
@@ -25,6 +30,7 @@ class TestInformation:
     execution_phase: int
     minimal: bool
     path: str
+    last_modified: Optional[datetime] = None
     tags: Optional[List[str]] = None
     kpis: Optional[List[TestKpi]] = None
     criteria: Optional[str] = None
@@ -47,6 +53,7 @@ class TestResults(TestInformation):
         self.kpis = information.kpis
         self.criteria = information.criteria
         self.tags = information.tags
+        self.last_modified = information.last_modified
         self.at_least_one_done = at_least_one_done
         self.num_results = num_results
         self.num_results_done = num_results_done
@@ -76,6 +83,8 @@ def read_test_info(file_path, github_base_url) -> TestInformation:
         minimal = 'Minimal?\nYes' in test_content
         test_type = re.search(r'Test type\n(.+?)\n', test_content)
         test_type = test_type.group(1) if test_type else 'N/A'
+        dir_of_test = str(file_path).split('tests/')[1]
+        last_modified = datetime.fromtimestamp(os.path.getmtime(file_path))
 
         return TestInformation(
             id=test_id_numeric,
@@ -84,7 +93,8 @@ def read_test_info(file_path, github_base_url) -> TestInformation:
             type=test_type,
             execution_phase=int(execution_phase),
             minimal=minimal,
-            path=f"{github_base_url}/{file_path}",
+            last_modified=last_modified,
+            path=f"{github_base_url}/{dir_of_test}",
             kpis=read_test_kpis(test_content, test_id_numeric)
         )
 
@@ -93,15 +103,10 @@ def read_test_kpis(test_content, test_id_numeric) -> List[TestKpi]:
     kpi_names = (kpi_names.group(1) if kpi_names else '').split('\n')
     kpi_descs = re.search(r"#### ISO25010 Quality description\s*(.*?)(?=\n####|$)", test_content, re.DOTALL)
     kpi_descs = (kpi_descs.group(1) if kpi_descs else '').split('\n')
-    if len(kpi_names) > 1:
-        print(f'More than one kpi {test_id_numeric}', kpi_names)
     kpi_names = [name.strip() for name in kpi_names if name.strip()]
     kpi_descs = [desc.strip() for desc in kpi_descs if desc.strip()]
     if len(kpi_names) != len(kpi_descs):
-        # print(f'KPI names and descriptions do not match for {test_id_numeric}', kpi_names, kpi_descs)
-        pass
-    elif len(kpi_names) > 1:
-        print(f'More than one kpi {test_id_numeric}')
+        print(f'KPI names and descriptions do not match for {test_id_numeric}', kpi_names, kpi_descs)
     return [TestKpi(name, desc) for name, desc in zip(kpi_names, kpi_descs)]
 
 def read_test_result(file_path, github_base_url) -> TestResult:
@@ -112,10 +117,13 @@ def read_test_result(file_path, github_base_url) -> TestResult:
         result_groups = re.search(r'Statement of asses*ment\n((.|\n)*)', result_content, re.DOTALL)
         result = result_groups.group(1) if result_groups else 'N/A'
         result_done = _is_result_file_done(file_path)
+        dir_of_test_result = str(file_path).split('tests/')[1]
+        last_modified = datetime.fromtimestamp(os.path.getmtime(file_path))
 
         return TestResult(
             testing_facility=stack,
             content=result,
             is_done=result_done,
-            path=f"{github_base_url}/{file_path}"
+            last_modified=last_modified,
+            path=f"{github_base_url}/{dir_of_test_result}"
         )

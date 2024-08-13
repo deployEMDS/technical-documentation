@@ -1,4 +1,5 @@
 import shutil
+from datetime import datetime, timezone
 from pathlib import Path
 
 import click
@@ -17,10 +18,14 @@ load_dotenv()
 @click.option('--input-dir', '-i', required=True, type=click.Path(exists=True), help='Base directory containing test files')
 @click.option('--output-dir', '-o', required=True, type=click.Path(exists=True), help='Output directory for the docusaurus content')
 @click.option('--github-base-url', required=True, help='Base URL for GitHub repository')
-def generate_test_results_table(input_dir, output_dir, github_base_url):
+@click.option('--timestamp-format', default='%Y-%m-%d %H:%M:%S UTC', help='Format for the timestamps')
+def generate_test_results_table(input_dir, output_dir, github_base_url, timestamp_format):
     """Generate a Markdown table linking to test results."""
+    datetime_format = lambda dt: dt.strftime(timestamp_format)
     base_path = Path(input_dir)
+    template_env.filters["datetime_format"] = datetime_format
     test_result_template = template_env.get_template('result_page.jinja2')
+
 
     for business_capability in base_path.iterdir():
         if not business_capability.is_dir():
@@ -56,7 +61,11 @@ def generate_test_results_table(input_dir, output_dir, github_base_url):
 
                     # Extract test information
                     test_info: util.TestInformation = util.read_test_info(test_md_path, github_base_url)
-                    test_info.tags = [business_capability_name, customer_journey_name, customer_sub_journey_name]
+                    test_info.tags = [business_capability_name, customer_journey_name, customer_sub_journey_name,
+                                      f'phase-{test_info.execution_phase}']
+                    if test_info.minimal:
+                        test_info.tags.append('minimal')
+
 
                     # Find result files and check if they're done
                     result_files = list(test_id.glob('result_*.md'))
@@ -75,16 +84,12 @@ def generate_test_results_table(input_dir, output_dir, github_base_url):
                     )
                     csj_tests = sorted(csj_tests, key=lambda x: x.id)
 
-                    # Create relative path for linking
-                    relative_path = test_id.relative_to(base_path)
-
                     for test in csj_tests:
                         result_path = docs_path / f"{test.id}.mdx"
                         with open(result_path, 'w') as f:
                             f.write(test_result_template.render(
                                 test=test,
-                                github_base_url=github_base_url,
-                                relative_path=relative_path,
+                                generation_timestamp=datetime.now(timezone.utc)
                             ))
 
                     static_dirs = list(test_id.glob('static')) + list(test_id.glob('images/')) + list(test_id.glob('image/'))

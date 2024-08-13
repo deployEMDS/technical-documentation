@@ -5,17 +5,21 @@ tags:
 {%- endfor %}
 title: "[{{ test.id }}] {{ test.title }}"
 sidebar_label: {{ test.id }} ({{ test.num_results_done }}/{{ test.num_results }})
-sidebar_class_name: {{ 'green' if test.at_least_one_done else 'red' }}
 ---
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# [{{ test.id }}]({{ test.path }})
+# {{ test.id }}
 
 {{ test.title }}
 
 **{{ test.type }}:** {{ test.description }}
+
+:::note
+The description of Test {{ test.id }} was extracted from **[this page]({{ test.path }})** in the GitHub repository.<br/>
+This file was last modified at {{ test.last_modified | datetime_format }}.
+:::
 
 ## Information
 * Phase {{ test.execution_phase }}
@@ -31,12 +35,16 @@ import TabItem from '@theme/TabItem';
 <Tabs>
 {%+ for result in test.results +%}
     <TabItem value="{{ result.testing_facility }}">
-        ### [{{ result.testing_facility }}]({{ result.path }})
         {%+ if result.is_done +%}
-                {{ result.content | indent(4) }}
+            :::note
+            The results for Test {{ test.id }} for {{ result.testing_facility }} were extracted from **[this page]({{ result.path }})** in the GitHub repository.<br/>
+            This file was last modified at {{ result.last_modified | datetime_format}}.
+            :::
+            {{ result.content | indent(4) }}
         {%+ else +%}
             :::info
             **TODO:** This test is not done yet for this testing facility.
+            Last checked at {{ generation_timestamp | datetime_format}}.
             :::
         {% endif %}
     </TabItem>
