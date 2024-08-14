@@ -1,7 +1,7 @@
 ## [2.2.3.4] Data product publication: Publication - Publication on EMDS catalogue
 ### Stack: EDC + VC
 
-### Assessment Overview
+### Statement of assessment
 
 #### Environment
 - The test leverages the EDC MVD commit [8da0c4e](https://github.com/eclipse-edc/MinimumViableDataspace/commit/8da0c4e6a8921dcb6ff189c2901868979bdc9a93).
