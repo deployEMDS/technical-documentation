@@ -148,7 +148,7 @@ When querying the endpoint of the catalog, we get that quality information in th
 
 As demonstrated, the catalog returned by the EDC connector's querying endpoint conforms to the [MobilityDCAT-AP](https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/index.html) standard from a quality annotation perspective. Therefore, the following score is assigned to the test:
 
-#### Functional Suitability Quality Metric: 4
+**Functional Suitability Quality Metric: 4**
 
 #### Notes
 
