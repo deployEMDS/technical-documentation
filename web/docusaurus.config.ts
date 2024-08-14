@@ -9,15 +9,16 @@ const config: Config = {
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
-  url: 'https://deployemds.dev',
+  url: 'https://pages.github.imec.be/',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/',
+  baseUrl: '/vghelu49/temp-emds-tech-docs/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'imec-int', // Usually your GitHub org/user name.
-  projectName: 'deployEMDS', // Usually your repo name.
+  githubHost: 'github.imec.be',
+  organizationName: 'vghelu49', // Usually your GitHub org/user name.
+  projectName: 'temp-emds-tech-docs', // Usually your repo name.
 
   onBrokenAnchors: 'warn',
   onBrokenLinks: 'warn',
@@ -45,6 +46,16 @@ const config: Config = {
           customCss: './src/css/custom.css',
         },
       } satisfies Preset.Options,
+    ],
+  ],
+
+  plugins: [
+    [
+      require.resolve("@cmfcmf/docusaurus-search-local"),
+      {
+        // Options here
+        indexBlog: false,
+      },
     ],
   ],
 
