@@ -1,5 +1,5 @@
 ## [2.2.3.4] Data product publication: Publication - Publication on EMDS catalogue
-### Stack: EDC + VC
+### Stack: EDC+VC
 
 ### Statement of assessment
 
