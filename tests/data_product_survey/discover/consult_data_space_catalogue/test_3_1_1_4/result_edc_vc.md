@@ -2,7 +2,7 @@
 
 ### Stack: EDC+VC
 
-### Statement of Assessment
+### Statement of assessment
 
 #### Environment
 
