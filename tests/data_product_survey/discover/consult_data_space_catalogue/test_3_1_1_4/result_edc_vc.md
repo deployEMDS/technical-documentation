@@ -10,12 +10,12 @@
 - EDC version [0.8.2-SNAPSHOT](https://github.com/eclipse-edc/MinimumViableDataspace/blob/8da0c4e6a8921dcb6ff189c2901868979bdc9a93/gradle/libs.versions.toml#L7).
 - The test is executed in an Ubuntu environment using IntelliJ.
 
-#### Tested Quality Metric and Method
+#### Tested quality metric and method
 
 The test quality is evaluated based on the metrics defined in [iso27001_kpis_subkpis.xlsx](../../../../../design_decisions/background_info/iso27001_kpis_subkpis.xlsx).\
 For the current phase (Phase 1), the test focuses on the Functional Suitability quality metric.
 
-#### Comparative Criteria (Checklists, etc.)
+#### Comparative criteria (checklists, ...)
 
 [TODO] Describe the comparative criteria used for the test/assessment. If possible, align with the criteria used for the same test in other stack(s).
 
