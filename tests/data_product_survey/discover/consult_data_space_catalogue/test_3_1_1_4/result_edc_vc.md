@@ -19,7 +19,7 @@ For the current phase (Phase 1), the test focuses on the Functional Suitability 
 
 [TODO] Describe the comparative criteria used for the test/assessment. If possible, align with the criteria used for the same test in other stack(s).
 
-#### Expected Output
+#### Expected output
 
 The test aims to determine whether the data product specification provides the necessary metadata for quality reporting or if the catalog needs to be extended with an "-AP" profile, with the former being ranked higher. The system may offer varying levels of support for Napcore's DCAT-AP profile, such as [MobilityDCAT-AP](https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/index.html) profiles. The evaluation focuses on the level of support for the Napcore Profile and its vocabulary.
 
