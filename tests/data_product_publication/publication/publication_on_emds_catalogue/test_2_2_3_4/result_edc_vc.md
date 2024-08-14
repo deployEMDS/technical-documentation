@@ -31,7 +31,7 @@ As mentioned, the EDC framework dynamically builds the catalog, and its policy e
 Policies can be applied to catalog queries, as shown in [access control](https://github.com/eclipse-edc/MinimumViableDataspace?tab=readme-ov-file#33-access-control) from EDC MVD commit [8da0c4e](https://github.com/eclipse-edc/MinimumViableDataspace/commit/8da0c4e6a8921dcb6ff189c2901868979bdc9a93).\
 To access the catalog, a `MembershipCredential` must be presented. This means that the catalog can be hidden from specific users with the correct policy definition and policy engine implementation.
 
-#### Measured Outcomes
+#### Measured results
 As outlined above, the test results align with [test_2_2_3_1d](../test_2_2_3_1d/result_fiware.md) regarding catalog depublication. Catalog consultation restrictions can be applied to catalog queries, but require customized implementation.
 Therefore, the following score is given to the test.
 
