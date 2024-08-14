@@ -12,10 +12,10 @@
 The quality metric for this test is based on the criteria outlined in [iso27001_kpis_subkpis.xlsx](../../../../../design_decisions/background_info/iso27001_kpis_subkpis.xlsx).\
 For the current phase (Phase 1), the test focuses on the Functional Suitability metric.
 
-#### Comparative Criteria
+#### Comparative criteria (checklists, ...)
 [TODO] Provide details on the comparative criteria used for this test/assessment. Align these criteria with those used in similar tests across other stacks, if applicable.
 
-#### Expected Outcome
+#### Expected output
 This test aims to evaluate the process for de-publishing a catalog or making a catalog entry private.
 
 ### Results
