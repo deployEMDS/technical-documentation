@@ -16,20 +16,15 @@ For the current phase (Phase 1), the test focuses on the Functional Suitability 
 [TODO] Describe the comparative criteria used for the test / assessment. If possible, align with the criteria used for the same test in the other stack(s).
 #### Expected output
 The test aims to evaluate the catalog publication process for a data product under the condition that a new data product cannot be published on the catalog.
-
 ### Results
 #### Assessment
-As detailed in [test_2_2_3_1d](../test_2_2_3_1d/result_fiware.md), EDC does not offer a direct endpoint for (de)publishing a catalog. Instead, the process involves a series of API calls to publish individual components: an asset, its associated policy, and its contract. EDC then dynamically constructs a catalog by aggregating this data upon request. Therefore, publishing a data asset, along with its policy and contract, results in the creation or update of the catalog.
+As detailed in [test_2_2_3_1d](../test_2_2_3_1d/result_fiware.md), EDC does not provide a direct endpoint for (de)publishing a catalog. Instead, the process involves a sequence of API calls to publish individual components: an asset, its associated policy, and its contract. EDC then dynamically constructs a catalog by aggregating this data upon request. Therefore, publishing a data asset along with its policy and contract leads to the creation or update of the catalog.
 
-EDC's policy engine, a generic building block, processes policies written in ODRL. These policies can be applied to catalog queries, as demonstrated in the [access control](https://github.com/eclipse-edc/MinimumViableDataspace?tab=readme-ov-file#33-access-control) section of the EDC MVD commit [8da0c4e](https://github.com/eclipse-edc/MinimumViableDataspace/commit/8da0c4e6a8921dcb6ff189c2901868979bdc9a93).
+EDC's policy engine, a generic building block, processes policies written in ODRL. These policies can be applied to catalog queries, as demonstrated in the [access control](https://github.com/eclipse-edc/MinimumViableDataspace?tab=readme-ov-file#33-access-control) section of the EDC MVD commit [8da0c4e](https://github.com/eclipse-edc/MinimumViableDataspace/commit/8da0c4e6a8921dcb6ff189c2901868979bdc9a93). The demo showed a policy requiring a `MembershipCredential` to access the catalog, effectively allowing the catalog of certain products to remain unpublished for specific users.
 
-Accessing the catalog requires presenting a `MembershipCredential`, allowing the catalog to be hidden from specific users with the correct policy definition and policy engine implementation.
 Therefore, with properly defined policies, users can choose to publish the catalog based on the identification of the incoming catalog query.
-
 #### Measured results
-As outlined above, the policy engine and policies require customized implementation within the EDC framework. Therefore, the following score is assigned to the test:
-
+As outlined above, EDC supports a process where a new data product cannot be published on the catalog if proper policies are defined. However, the policy engine and policies require customized implementation within the EDC framework. Therefore, the following score is assigned to the test:\
 **Functional Suitability Quality Metric: 3**
 #### Notes
-
 EDC is a pluggable ecosystem primarily targeting Java/Kotlin developers. Some extensions are available on the market for plug-and-play, but for certain specific use cases, developers need to create their own extensions.
