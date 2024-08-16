@@ -23,6 +23,7 @@ As detailed in [test_2_2_3_1d](../test_2_2_3_1d/result_fiware.md), EDC does not 
 EDC's policy engine, a generic building block, processes policies written in ODRL. These policies can be applied to catalog queries, as demonstrated in the [access control](https://github.com/eclipse-edc/MinimumViableDataspace?tab=readme-ov-file#33-access-control) section of the EDC MVD commit [8da0c4e](https://github.com/eclipse-edc/MinimumViableDataspace/commit/8da0c4e6a8921dcb6ff189c2901868979bdc9a93). The demo showed a policy requiring a `MembershipCredential` to access the catalog, effectively allowing the catalog of certain products to remain unpublished for specific users.
 
 Therefore, with properly defined policies, users can choose to publish the catalog based on the identification of the incoming catalog query.
+
 #### Measured results
 As outlined above, EDC supports a process where a new data product cannot be published on the catalog if proper policies are defined. However, the policy engine and policies require customized implementation within the EDC framework. Therefore, the following score is assigned to the test:\
 **Functional Suitability Quality Metric: 3**
