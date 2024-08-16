@@ -13,8 +13,7 @@ The quality metric for this test is based on the criteria outlined in [iso27001_
 For the current phase (Phase 1), the test focuses on the Functional Suitability metric.
 
 #### Comparative criteria (checklists, ...)
-[TODO] Provide details on the comparative criteria used for this test/assessment. Align these criteria with those used in similar tests across other stacks, if applicable.
-
+[TODO] Describe the comparative criteria used for the test / assessment. If possible, align with the criteria used for the same test in the other stack(s).
 #### Expected output
 The test aims to evaluate the catalog publication process for a data product under the condition that a new data product cannot be published on the catalog.
 
