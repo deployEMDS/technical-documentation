@@ -19,8 +19,8 @@ For the current phase (Phase 1), the test focuses on the Functional Suitability 
 
 ### Results
 #### Assessment
-[TODO] Describe the assessment results (qualitative results), if applicable. Include screenshots, logs, etc, if necessary.
-
+As detailed in [test_2_2_3_1d](../test_2_2_3_1d/result_fiware.md), EDC does not provide a direct endpoint for (de)publishing a catalog. Instead, the process involves a sequence of API calls to publish individual components: an asset, its associated policy, and its contract. EDC then dynamically constructs a catalog by aggregating this data upon request. Therefore, publishing a data asset along with its policy and contract leads to the creation or update of the catalog.
+However, dashboards have not yet been integrated into the EDC MVD commit [8da0c4e](https://github.com/eclipse-edc/MinimumViableDataspace/commit/8da0c4e6a8921dcb6ff189c2901868979bdc9a93), and according to a Discord conversation on 07/09/2024, there is no plan from the EDC team to integrate it into the MVD due to their development team’s bandwidth constraints.
 #### Measured results
 [TODO] Describe the measured results (quantitative results), if applicable. Rank the results according to the expected output, if applicable.
 
