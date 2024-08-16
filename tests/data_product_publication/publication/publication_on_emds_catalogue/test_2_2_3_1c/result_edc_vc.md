@@ -21,7 +21,7 @@ The test aims to evaluate the catalog publication process for a data product und
 #### Assessment
 As detailed in [test_2_2_3_1d](../test_2_2_3_1d/result_fiware.md), EDC does not offer a direct endpoint for (de)publishing a catalog. Instead, the process involves a series of API calls to publish individual components: an asset, its associated policy, and its contract. EDC then dynamically constructs a catalog by aggregating this data upon request. Therefore, publishing a data asset, along with its policy and contract, results in the creation or update of the catalog.
 
-EDC's policy engine, a flexible building block, processes policies written in ODRL. These policies can be applied to catalog queries, as demonstrated in the [access control](https://github.com/eclipse-edc/MinimumViableDataspace?tab=readme-ov-file#33-access-control) section of the EDC MVD commit [8da0c4e](https://github.com/eclipse-edc/MinimumViableDataspace/commit/8da0c4e6a8921dcb6ff189c2901868979bdc9a93).
+EDC's policy engine, a generic building block, processes policies written in ODRL. These policies can be applied to catalog queries, as demonstrated in the [access control](https://github.com/eclipse-edc/MinimumViableDataspace?tab=readme-ov-file#33-access-control) section of the EDC MVD commit [8da0c4e](https://github.com/eclipse-edc/MinimumViableDataspace/commit/8da0c4e6a8921dcb6ff189c2901868979bdc9a93).
 
 Accessing the catalog requires presenting a `MembershipCredential`, allowing the catalog to be hidden from specific users with the correct policy definition and policy engine implementation.
 Therefore, with properly defined policies, users can choose to publish the catalog based on the identification of the incoming catalog query.
