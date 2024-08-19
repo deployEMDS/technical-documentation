@@ -47,7 +47,7 @@ def create_web_structure(excel_file, sheet_name, base_dir):
 
 def _sanitize_filename(name):
     """Convert a string to a valid filename."""
-    return re.sub(r'(\s|\u180B|\u200B|\u200C|\u200D|\u2060|\uFEFF|/|\.)+', '_', str(name)).lower()
+    return re.sub(r'(\s|\u180B|\u200B|\u200C|\u200D|\u2060|\uFEFF|/|\.)+', '_', str(name)).strip().lower()
 
 
 def _create_directory(path):
@@ -81,11 +81,19 @@ def _create_csj_intro_md(path, csj_title, csj_desc, phase):
 def _process_journey(row, base_dir):
     """Process a single row of data and create necessary files and directories."""
     business_capability = row['Business capability']
+    business_capability_id = f"{row['BC ID']}"
     business_capability_dir = _sanitize_filename(business_capability)
+    bc_name = f"[{business_capability_id}] {business_capability}"
+
     customer_journey = row['Customer journey']
     customer_journey_dir = _sanitize_filename(customer_journey)
+    customer_journey_id = f"{row['BC ID']}.{row['CJ ID']}"
+    cj_name = f"[{customer_journey_id}] {customer_journey}"
+
     customer_sub_journey = row['Customer sub-journey']
     customer_sub_journey_dir = _sanitize_filename(customer_sub_journey)
+    customer_sub_journey_id = f"{row['BC ID']}.{row['CJ ID']}.{row['CSJ ID']}"
+    csj_name = f"[{customer_sub_journey_id}] {customer_sub_journey}"
 
 
     bc_path = os.path.join(base_dir, business_capability_dir)
@@ -93,9 +101,9 @@ def _process_journey(row, base_dir):
     csj_path = os.path.join(cj_path, customer_sub_journey_dir)
     _create_directory(csj_path)
 
-    _create_category_json(csj_path, customer_sub_journey, row['Customer sub-journey description'], row['CSJ ID'])
-    _create_category_json(cj_path, customer_journey, row.get('Customer journey description', default='Test'), row['CJ ID'])
-    _create_category_json(bc_path, business_capability, row.get('Business capability description', default='Test'), row['BC ID'])
+    _create_category_json(csj_path, csj_name, row['Customer sub-journey description'], row['CSJ ID'])
+    _create_category_json(cj_path, cj_name, row.get('Customer journey description', default='Test'), row['CJ ID'])
+    _create_category_json(bc_path, bc_name, row.get('Business capability description', default='Test'), row['BC ID'])
     # _create_csj_intro_md(csj_path, customer_sub_journey, row['Customer sub-journey description'], row['Execution phase'])
 
     click.echo(f"Created directories for {business_capability} > {customer_journey} > {customer_sub_journey}")

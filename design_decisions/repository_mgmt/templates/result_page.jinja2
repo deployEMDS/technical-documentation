@@ -4,7 +4,7 @@ tags:
     - {{ tag.lower().replace(' ', '-') }}
 {%- endfor %}
 title: "[{{ test.id }}] {{ test.title }}"
-sidebar_label: {{ test.id }} ({{ test.num_results_done }}/{{ test.num_results }})
+sidebar_label: Test {{ test.id }} ({{ test.num_results_done }}/{{ test.num_results }})
 ---
 
 import Tabs from '@theme/Tabs';
