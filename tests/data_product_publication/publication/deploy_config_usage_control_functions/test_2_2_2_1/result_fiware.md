@@ -170,6 +170,14 @@ Policy data is persisted in a database and managed via API:
 https://github.com/FIWARE-Ops/data-space-connector/blob/adbb9488d8865703af02cf47dc571548c8d230bd/charts/data-space-connector/values.yaml#L137
 
 #### Measured results
-The Fiware implementation partially covers the usage Control Policies deployment as outlined above.
-**Functional Suitability Quality Metric: 3**
+The Fiware implementation partially covers the usage Control Policies deployment as outlined above. The criteria used to measure the results was the one specified by the Data Product Publication ISO25010 Quality file regarding Functional Suitability.
+
+| **Criterion**                | **Description**                                                                                     | **Score (0-4)** |
+|------------------------------|-----------------------------------------------------------------------------------------------------|-----------------|
+| **Functional Completeness**   | Technical requirements cover all the specified tasks and user objectives.                          | 3               |
+| **Functional Correctness**    | Technical requirements meet results with the needed degree of precision.                           | 3               |
+| **Functional Appropriateness**| Technical requirements facilitate the accomplishment of specified tasks and objectives.            | 3               |
+
+
+**Overall score: 3**
 #### Notes
