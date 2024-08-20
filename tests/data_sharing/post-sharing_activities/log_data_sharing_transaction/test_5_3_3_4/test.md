@@ -18,8 +18,9 @@ No
 Security
 Functional suitability
 Compatibility
-Maintability
+Maintainability
 Security
+
 #### ISO25010 Quality description
 [Confidentiality] The system secures shipping and access to dataspace Log collection.
 [Functional completeness] The system allows a provider/consumer to query the logs for inconsistencies, like failed data exchange, missed SLAs, violated policies.

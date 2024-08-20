@@ -19,7 +19,7 @@ How participant onboarding is made.
 Before participating in a data space, an organization needs to be onboarded at the data space's Participant List Service by registering it as trusted participant. The user invoking the onboarding process needs to present a VC issued by the organization to the user itself, a VC containing the self description of the organization and a VC issued by a trusted Compliancy Service for the organization self description.
 
 The commands used for this process are:
-
+```shell
     export ACCESS_TOKEN=$(curl --insecure -v -X POST https://keycloak.demo-portal.eu/realms/test-realm/protocol/openid-connect/token  \
         --header 'Accept: */*' \
         --header 'Content-Type: application/x-www-form-urlencoded' \
@@ -27,43 +27,43 @@ The commands used for this process are:
         --data client_id=admin-cli \
         --data username=admin-user \
         --data password=test | jq '.access_token' -r); echo ${ACCESS_TOKEN}
-
+```
 
 
 To Check credential_configuration_id from Keycloak credential issuer info endpoint:
-
+```shell
     curl --insecure -v -X GET https://keycloak.demo-portal.eu/realms/test-realm/.well-known/openid-credential-issuer
-
+```
 
 To get the offer URI:
-
+```shell
     export OFFER_URI=$(curl --insecure -s -X GET 'https://keycloak.demo-portal.eu/realms/test-realm/protocol/oid4vc/credential-offer-uri?credential_configuration_id=natural-person' \
         --header "Authorization: Bearer ${ACCESS_TOKEN}" | jq '"\(.issuer)\(.nonce)"' -r); echo ${OFFER_URI}
-
+```
 
 To get the Pre_authorized_code
-
+```shell
     export PRE_AUTHORIZED_CODE=$(curl --insecure -s -X GET ${OFFER_URI} \
                 --header "Authorization: Bearer ${ACCESS_TOKEN}" | jq '.grants."urn:ietf:params:oauth:grant-type:pre-authorized_code"."pre-authorized_code"' -r); echo ${PRE_AUTHORIZED_CODE}
-
-
+```
 
 To get the Credential Access Token:
-
+```shell
     export CREDENTIAL_ACCESS_TOKEN=$(curl --insecure -s -X POST https://keycloak.demo-portal.eu/realms/test-realm/protocol/openid-connect/token \
         --header 'Accept: */*' \
         --header 'Content-Type: application/x-www-form-urlencoded' \
         --data grant_type=urn:ietf:params:oauth:grant-type:pre-authorized_code \
         --data code=${PRE_AUTHORIZED_CODE} | jq '.access_token' -r); echo ${CREDENTIAL_ACCESS_TOKEN}
+```
 
 To get the Verifiable Credential:
-
+```shell
     export VERIFIABLE_CREDENTIAL=$(curl --insecure -s -X POST https://keycloak.demo-portal.eu/realms/test-realm/protocol/oid4vc/credential \
         --header 'Accept: */*' \
         --header 'Content-Type: application/json' \
         --header "Authorization: Bearer ${CREDENTIAL_ACCESS_TOKEN}" \
         --data '{"credential_identifier":"natural-person", "format":"jwt_vc"}' | jq '.credential' -r); echo ${VERIFIABLE_CREDENTIAL}
-
+```
 
 #### Measured results
 
