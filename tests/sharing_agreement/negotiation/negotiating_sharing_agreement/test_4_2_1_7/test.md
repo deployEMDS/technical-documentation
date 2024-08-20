@@ -23,6 +23,7 @@ The test needs to assign a numeric score based on the assessment, using the Func
 | **Partial Coverage:** Around 50% of the technical requirements are met. The solution logs some aspects of the sharing agreement process, but gaps and inconsistencies remain. | 2 |
 | **Significant Coverage:** Approximately 80% of the technical requirements are met. The solution logs most aspects of the sharing agreement process, with good traceability, though minor gaps may exist. | 3 |
 | **Full Coverage:** All technical requirements are fully met. The solution provides comprehensive, detailed, and standardized logging for the entire sharing agreement process, ensuring complete traceability and easy integration with other tools. | 4 |
+
 ### Extra information
 #### ISO25010 Quality
 Security
