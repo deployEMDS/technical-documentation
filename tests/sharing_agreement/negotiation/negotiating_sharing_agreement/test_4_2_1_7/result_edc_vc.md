@@ -8,9 +8,7 @@
 - The test is performed on an Ubuntu environment with IntelliJ.
 
 #### Tested quality metric and method
-The quality metric for this test is based on the criteria outlined in [iso27001_kpis_subkpis.xlsx](../../../../../design_decisions/background_info/iso27001_kpis_subkpis.xlsx).\
-For the current phase (Phase 1), the test focuses on the Functional Suitability metric.
-
+The quality metric for this test is based on the criteria outlined in [iso27001_kpis_subkpis.xlsx](../../../../../design_decisions/background_info/iso27001_kpis_subkpis.xlsx). In Phase 1, the focus is on the Functional Suitability metric. For detailed information, please refer to the [Evaluation Criteria](./test.md#evaluation-creteria) section in the test description.
 #### Comparative criteria (checklists, ...)
 [TODO] Describe the comparative criteria used for the test / assessment. If possible, align with the criteria used for the same test in the other stack(s).
 
@@ -59,7 +57,7 @@ DEBUG 2024-08-19T13:38:30.349225751 [CONSUMER] ContractNegotiation 5204e110-a899
 The logs capture the detailed sequence of the sharing agreement (contract negotiation) process, using a "log4j-style" logging format. This format, while not officially standardized, is a commonly used pattern in software development. The Java library is available at: [https://logging.apache.org/log4j/2.x/](https://logging.apache.org/log4j/2.x/).
 
 #### Measured results
-As described above, EDC offers an open-box solution for logging that thoroughly documents the sharing agreement process using a widely used format. Consequently, the following score is assigned to the test:
+As detailed above, EDC provides a comprehensive logging solution that accurately captures the sharing agreement process in a widely adopted format. Based on the criteria outlined in the [Evaluation Criteria](./test.md#evaluation-creteria) section of the test description, the test is assigned the following score:
 
 **Functional Suitability Quality Metric: 4**
 
