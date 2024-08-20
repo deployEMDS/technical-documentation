@@ -3,16 +3,16 @@
  
 ### Test description
 Test whether tracing of policy evaluation/observability is supported out of the box. (e.g.: creation, publication, assignment, enforcement, result of enforcement) 
-For the policies that are not supported, describe the effort of how to build them, and rank the system consequently (e.g.: create a plugin in a documented environment ranks better than integrating an external function that introduces dependencies and interface maintenance)."
+For the policies that are not supported, describe the effort of how to build them, and rank the system consequently (e.g.: create a plugin in a documented environment ranks better than integrating an external function that introduces dependencies and interface maintenance).
  
 ### Test type
-Coverage
+Coverage + Assessment
  
 ### Execution phase
 Phase 1
  
 ### Minimal?
-Yes
+No
  
 ### Extra information
 #### Comparative criteria (checklists, ...)
