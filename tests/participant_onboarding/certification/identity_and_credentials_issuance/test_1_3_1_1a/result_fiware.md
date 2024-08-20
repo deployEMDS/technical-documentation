@@ -3,23 +3,40 @@
 
 ### Statement of assessment
 #### Environment
-[TODO] Describe the environment used for the test / assessment
+
+The test is conducted in the IONOS FIWARE_cluster cluster using node pool IP 85.215.161.198.
 
 #### Tested quality metric and method
-[TODO] Describe the quality metric and method used for the test / assessment
+
+The test quality is based on the metric defined in [iso27001_kpis_subkpis.xlsx](../../../../../design_decisions/background_info/iso27001_kpis_subkpis.xlsx). For the current phase (phase 1), the test focuses on the Functional Suitability quality metric.
 
 #### Comparative criteria (checklists, ...)
-[TODO] Describe the comparative criteria used for the test / assessment. If possible, align with the criteria used for the same test in the other stack(s).
+Asses that the stack uses a credential framework that is compatible with this initiative: Gaia-X
 
 #### Expected output
-[TODO] Describe the expected output and how the ranking is calculated
+Compatibility specifications regarding Gaia-X.
 
 ### Results
 #### Assessment
-[TODO] Describe the assessment results (qualitative results), if applicable. Include screenshots, logs, etc, if necessary.
+The documentation states in the onboarding steps that the organization validates that the VC containing its description as organization is compliant with Gaia-X specifications using the services of a Gaia-X Digital Clearing House. Therefore it is compatible with Gaia-X framework.
 
 #### Measured results
-[TODO] Describe the measured results (quantitative results), if applicable. Rank the results according to the expected output, if applicable.
+The criteria used to measure the results was the one specified by the Data Product Publication ISO25010 Quality file regarding Functional Suitability.
+
+
+| **Criterion**                | **Description**                                                                                     | **Score (0-4)** | **Explanation** |
+|------------------------------|-----------------------------------------------------------------------------------------------------|-----------------|-----------------|
+| **Functional Completeness**   | Technical requirements cover all the specified tasks and user objectives.                          | 3               | The FIWARE Connector largely covers the tasks necessary for Gaia-X compliance, including credential management and data exchange. However, certain advanced Gaia-X features, such as more granular access control, may require further enhancement. |
+| **Functional Correctness**    | Technical requirements meet results with the needed degree of precision.                           | 3               | The FIWARE Connector effectively supports the validation of Verifiable Credentials (VCs) in line with Gaia-X specifications. While the general precision is high, some specific Gaia-X compliance checks may need additional refinement to ensure full correctness in complex scenarios. |
+| **Functional Appropriateness**| Technical requirements facilitate the accomplishment of specified tasks and objectives.            | 3               | The platform is well-suited for Gaia-X compliant operations, such as VC issuance and verification. However, certain workflows, particularly around revocation and renewal processes, could be streamlined to better align with Gaia-X's evolving standards. |
+
+
+
+
+
+**Overall score: ( 3 + 3 + 3)/ 3 = 3**
+
 
 #### Notes
-[TODO] Add notes, if necessary.
+More information about it:  [https://github.com/FIWARE/data-space-connector](https://github.com/FIWARE/data-space-connector)
+
