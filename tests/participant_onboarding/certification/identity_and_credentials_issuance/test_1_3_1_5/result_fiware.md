@@ -64,12 +64,20 @@ However, since the vcverifier does check the existence of a participant in the T
 
 
 #### Measured results
-
 The VC lifecycle is partially covered by the FIWARE connector as follows:
-- **Issuance and Storage**: Covered.
-- **Presentation**: Covered.
-- **Verification & Use**: Covered.
-- **Revocation/Expiration**: Not fully covered. The API does not support it but there is a way to delete participants in order to stop them from accessing. 
-- **Renewal/Re-Issuance**: Not covered, but participants can be created and deleted. 
+
+| **VC Lifecycle Stage**          | **Coverage**                                  | **Score (0-4)** |
+|---------------------------------|-----------------------------------------------|-----------------|
+| **Issuance and Storage**         | Covered                                      | 4               |
+| **Presentation**                 | Covered                                      | 4               |
+| **Verification & Use**           | Covered                                      | 4               |
+| **Revocation/Expiration**        | Not fully covered. API does not support it, but participants can be deleted to stop access. | 2               |
+| **Renewal/Re-Issuance**          | Not covered, but participants can be created and deleted. | 1               |
+
+Overall score: 3
+
+
+
+
 
 
