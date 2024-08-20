@@ -23,7 +23,18 @@ API that can embed custom usage enforcement functions so that they can be invoke
 There is no API to to embed custom usage enforcement functions that can be invoked by usage policies.
 
 #### Measured results
-0/5
+The Fiware implementation partially covers the usage Control Policies deployment as outlined above. The criteria used to measure the results was the one specified by the Data Product Publication ISO25010 Quality file regarding Functional Suitability.
+
+
+| **Criterion**                | **Description**                                                                                     | **Score (0-4)** |
+|------------------------------|-----------------------------------------------------------------------------------------------------|-----------------|
+| **Functional Completeness**   | Technical requirements cover all the specified tasks and user objectives.                          | 0               |
+| **Functional Correctness**    | Technical requirements meet results with the needed degree of precision.                           | 0               |
+| **Functional Appropriateness**| Technical requirements facilitate the accomplishment of specified tasks and objectives.            | 0               |
+
+
+**Overall score: 0**
+
 
 #### Notes
 
