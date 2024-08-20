@@ -25,7 +25,20 @@ Organizations' oboarding is done by a trust anchor, not the connector.
  
 
 #### Measured results
-( 4 + 4 + 2 + 2 + 4) / 5 = 3.2
+The criteria used to measure the results was the one specified by the Data Product Publication ISO25010 Quality file regarding Security.
+
+
+| **Criterion**          | **Description**                                                                                          | **Score (0-4)** |
+|------------------------|----------------------------------------------------------------------------------------------------------|-----------------|
+| **Confidentiality**     | The platform ensures that data are accessible only to those authorized to have access according to the data negotiation. | 4               |
+| **Integrity**          | How the platform prevents unauthorized access to, or modification of the data.                            | 4               |
+| **Non-repudiation**    | How the actions or events can be proven to have taken place so that the events or actions cannot be repudiated later. | 2               |
+| **Accountability**     | The actions of an entity can be traced uniquely to the entity.                                            | 2               |
+| **Authenticity**       | The resource can be proved to be the one claimed.                                                         | 4               |
+
+
+**Overall score: ( 4 + 4 + 2 + 2 + 4) / 5 = 3.2**
+
 
 #### Notes
 
