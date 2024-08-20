@@ -36,7 +36,7 @@ The test aims to evaluate which usage policies are supported out of the box. For
 Fiware connector by itself does not offer data usage control. However, a consumer restriction can be achieved by using the APISIX plugin consumer-restriction. This plugin allows users to configure access restrictions on Consumer, Route, Service, or Global Rule.
 
 #### Measured results
-0
+**Functional Suitability Quality Metric: 0**
 
 #### Notes
 More information on the topic:
