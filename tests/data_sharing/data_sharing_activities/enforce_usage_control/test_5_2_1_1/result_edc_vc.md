@@ -44,7 +44,7 @@ EDC has initiated a discussion to gather use cases for usage control [here](http
 IMEC has analyzed how usage control could be enforced. For example, a usage policy might specify that data must be deleted after 24 hours. If a consumer downloads a file from the provider connector to their S3 storage, trusted software can be implemented to monitor this storage (Policy Enforcement Point, or PEP). This software would automatically delete the data upon expiry and communicate this to the Policy Decision Point (PDP) and Policy Execution Point (PXP). The PDP or PXP can be part of the provider connector or communicate with connectors.
 
 #### Measured results
-As demonstrated above, there is no usage control feature currently implemented in the EDC development. Therefore, the following score is given to the test:
+As demonstrated above, there is no usage control feature currently implemented in the EDC development. As there is no implementation nor documentation, we cannot offer a +1 or +2 either. Therefore, the following score is given to the test:
 
 **Functional Suitability Quality Metric: 0**
 
