@@ -171,12 +171,12 @@ https://github.com/FIWARE-Ops/data-space-connector/blob/adbb9488d8865703af02cf47
 
 #### Measured results
 The Fiware implementation partially covers the usage Control Policies deployment as outlined above. The criteria used to measure the results was the one specified by the Data Product Publication ISO25010 Quality file regarding Functional Suitability.
+| **Criterion**                | **Description**                                                                                     | **Score (0-4)** | **Explanation** |
+|------------------------------|-----------------------------------------------------------------------------------------------------|-----------------|-----------------|
+| **Functional Completeness**   | Technical requirements cover all the specified tasks and user objectives.                          | 3               | The Fiware implementation covers the key functionalities for deploying and managing usage control policies, such as creation, binding, assignment, deletion, and persistence. However, some aspects like policy re-use and advanced binding with custom enforcement functions may not fully meet all possible use cases or require additional configuration for complete coverage. |
+| **Functional Correctness**    | Technical requirements meet results with the needed degree of precision.                           | 3               | The implementation achieves a high degree of accuracy in policy enforcement and management. While the core functionalities work as intended, there are occasional nuances in policy re-use and binding that could impact precision in certain scenarios, necessitating further refinement for full alignment with all use cases. |
+| **Functional Appropriateness**| Technical requirements facilitate the accomplishment of specified tasks and objectives.            | 3               | The platform effectively supports the primary tasks of policy creation, enforcement, and management. Nevertheless, the handling of specific policy types and the lack of built-in simulation facilities may affect the overall efficiency and appropriateness in complex or highly specific scenarios. |
 
-| **Criterion**                | **Description**                                                                                     | **Score (0-4)** |
-|------------------------------|-----------------------------------------------------------------------------------------------------|-----------------|
-| **Functional Completeness**   | Technical requirements cover all the specified tasks and user objectives.                          | 3               |
-| **Functional Correctness**    | Technical requirements meet results with the needed degree of precision.                           | 3               |
-| **Functional Appropriateness**| Technical requirements facilitate the accomplishment of specified tasks and objectives.            | 3               |
 
 
 **Overall score: 3**
