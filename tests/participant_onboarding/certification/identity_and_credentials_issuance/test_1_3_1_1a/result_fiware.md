@@ -21,7 +21,19 @@ Compatibility specifications regarding Gaia-X.
 The documentation states in the onboarding steps that the organization validates that the VC containing its description as organization is compliant with Gaia-X specifications using the services of a Gaia-X Digital Clearing House. Therefore it is compatible with Gaia-X framework.
 
 #### Measured results
-( 3 + 3 + 3)/ 3 = 3
+The criteria used to measure the results was the one specified by the Data Product Publication ISO25010 Quality file regarding Functional Suitability.
+
+
+| **Criterion**                | **Description**                                                                                     | **Score (0-4)** |
+|------------------------------|-----------------------------------------------------------------------------------------------------|-----------------|
+| **Functional Completeness**   | Technical requirements cover all the specified tasks and user objectives.                          | 3               |
+| **Functional Correctness**    | Technical requirements meet results with the needed degree of precision.                           | 3               |
+| **Functional Appropriateness**| Technical requirements facilitate the accomplishment of specified tasks and objectives.            | 3               |
+
+
+**Overall score: ( 3 + 3 + 3)/ 3 = 3**
+
+
 #### Notes
 More information about it:  [https://github.com/FIWARE/data-space-connector](https://github.com/FIWARE/data-space-connector)
 
