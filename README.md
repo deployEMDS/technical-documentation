@@ -87,7 +87,7 @@ Test overview
 This gives a quick view of the tests from Phase 1 and Phase 2 that were deemed crucial for a Minimum Viable Data Space.
 
 <!-- START_TEST_RESULTS_TABLE -->
-Last updated: 2024-08-20 14:08:17 UTC
+Last updated: 2024-08-20 14:35:52 UTC
 
 | Test | Title | Phase | Minimal | Results |
 |------|-------|-------|---------|---------|
