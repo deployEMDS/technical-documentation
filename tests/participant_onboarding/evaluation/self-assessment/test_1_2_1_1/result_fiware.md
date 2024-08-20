@@ -66,7 +66,21 @@ To get the Verifiable Credential:
 
 
 #### Measured results
-(4+3+3)/3 = 3.33
+
+The criteria used to measure the results was the one specified by the Data Product Publication ISO25010 Quality file regarding Functional Suitability.
+
+
+| **Criterion**                | **Description**                                                                                     | **Score (0-4)** |
+|------------------------------|-----------------------------------------------------------------------------------------------------|-----------------|
+| **Functional Completeness**   | Technical requirements cover all the specified tasks and user objectives.                          | 4               |
+| **Functional Correctness**    | Technical requirements meet results with the needed degree of precision.                           | 3              |
+| **Functional Appropriateness**| Technical requirements facilitate the accomplishment of specified tasks and objectives.            | 3              |
+
+
+**Overall score: (4+3+3)/3 = 3.33**
+
+
+
 
 #### Notes
 
