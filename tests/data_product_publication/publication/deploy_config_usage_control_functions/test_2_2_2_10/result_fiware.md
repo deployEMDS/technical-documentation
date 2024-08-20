@@ -24,12 +24,13 @@ The ODRL policy language, as supported by the ODRL-PAP library, is highly extens
 
 The criteria used to measure the results was the one specified by the Data Product Publication ISO25010 Quality file regarding Flexibility.
 
-| **Criterion**     | **Description**                                                                 | **Score (0-4)** |
-|-------------------|---------------------------------------------------------------------------------|-----------------|
-| **Adaptability**  | Adaptability for different or evolving hardware, software, or usage environments. | 4               |
-| **Installability**| The components of the platform are successfully installed and/or uninstalled in a specified environment. | 4               |
-| **Replaceability**| Replacement of the components for the same purpose in the same environment.       | 4               |
-| **Scalability**   | The product can handle growing to adapt its capacity.                             | 3               |
+| **Criterion**      | **Description**                                                                 | **Score (0-4)** | **Explanation** |
+|--------------------|---------------------------------------------------------------------------------|-----------------|-----------------|
+| **Adaptability**   | Adaptability for different or evolving hardware, software, or usage environments. | 4               | The ODRL policy language, supported by the ODRL-PAP library, is highly adaptable to various environments due to its extensibility and flexibility. This allows it to evolve alongside changing requirements and technologies. |
+| **Installability** | The components of the platform are successfully installed and/or uninstalled in a specified environment. | 4               | The installation process of the ODRL-PAP library and associated tools is straightforward, with comprehensive documentation available. It integrates smoothly into diverse environments, making deployment manageable and reliable. |
+| **Replaceability** | Replacement of the components for the same purpose in the same environment.       | 4               | The ODRL policy language's modularity ensures that components can be replaced or updated with minimal disruption, maintaining policy management consistency across environments. |
+| **Scalability**    | The product can handle growing to adapt its capacity.                             | 3               | While the ODRL policy language is scalable, the lack of built-in simulation facilities means that scaling operations, especially in testing environments, may require additional resources or separate environments. |
+
 
 Overall score:
 ((4) + (4) + (4) +(3) )/4 = 15/4 = 3.75
