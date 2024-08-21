@@ -6,8 +6,7 @@
 - EDC version [0.8.1-snapshot](https://github.com/eclipse-edc/MinimumViableDataspace/blob/9a5f93c89cf5624cc4bf8eaa024a29da9b8e3d12/gradle/libs.versions.toml#L7) 
 - The test is executed in an Ubuntu environment using IntelliJ.
 #### Tested quality metric and method
-The test quality is based on the metric defined in [iso27001_kpis_subkpis.xlsx](../../../../../design_decisions/background_info/iso27001_kpis_subkpis.xlsx)
-For current phase (phase 1), the test focus on the Functional suitability quality metric.
+The quality metric for this test is based on the criteria outlined in [iso27001_kpis_subkpis.xlsx](../../../../../design_decisions/background_info/iso27001_kpis_subkpis.xlsx). In Phase 1, the focus is on the Functional Suitability metric. For detailed information, please refer to the [Evaluation Criteria](./test.md#evaluation-criteria) section in the test description.
 #### Comparative criteria (checklists, ...)
 [TODO] Describe the comparative criteria used for the test / assessment. If possible, align with the criteria used for the same test in the other stack(s).
 
@@ -501,7 +500,7 @@ The response will be:
 As demonstrated in the EDC MVD commit [9a5f93c](https://github.com/eclipse-edc/MinimumViableDataspace/commit/9a5f93c89cf5624cc4bf8eaa024a29da9b8e3d12), access control can also be enforced on the view catalog scope. In the [MVD implementation](https://github.com/eclipse-edc/MinimumViableDataspace?tab=readme-ov-file#33-access-control), catalog requests require the presentation of a MembershipCredential. For more details on the implementation, please refer to [this file](https://github.com/eclipse-edc/MinimumViableDataspace/blob/main/extensions/dcp-impl/src/main/java/org/eclipse/edc/demo/dcp/policy/MembershipCredentialEvaluationFunction.java). Since catalog requests or Federated Catalogs are embedded inside a connector, the policy can be enforced by the connector identity.
 
 #### Measured results
-As demonstrated above, EDC provides an open-box process for publishing a data product (data asset along with its policies and contract). This process makes the data product available in the connector catalog or the federated catalog. Therefore, the following score is given to the test.
+As demonstrated above, EDC provides an open-box process for publishing a data product (data asset along with its policies and contract). This process makes the data product available in the connector catalog or the federated catalog. Based on the criteria outlined in the [Evaluation Criteria](./test.md#evaluation-criteria) section of the test description, the test is assigned the following score:
 
 **Functional Suitability Quality Metric: 4**
 #### Notes
