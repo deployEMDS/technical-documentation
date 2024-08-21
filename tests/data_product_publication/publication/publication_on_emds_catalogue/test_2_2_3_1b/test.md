@@ -13,7 +13,7 @@ Phase 1
 ### Minimal?
 Yes
 
-### Evaluation Criteria
+### Comparative criteria (checklists, ...)
 The test assigns a numeric score based on the assessment, using the Functional Suitability metric from [iso27001_kpis_subkpis.xlsx](../../../../../design_decisions/background_info/iso27001_kpis_subkpis.xlsx).
 
 | Criteria                                                                                                                                                        | Scoring          |
