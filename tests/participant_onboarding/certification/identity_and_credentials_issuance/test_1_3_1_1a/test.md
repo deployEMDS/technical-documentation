@@ -1,23 +1,18 @@
 ## [1.3.1.1A] Participant onboarding: Certification - Identity and credentials issuance
 
 ### Test description
-
 Prove that the stack uses a credential framework that is compatible with this initiative: Gaia-X
 
 ### Test type
-
 Test
 
 ### Execution phase
-
 Phase 1
 
 ### Minimal?
-
 Yes
 
 ### Comparative criteria
-
 The test assigns a numeric score based on the assessment, using the Functional Suitability metric from [iso27001_kpis_subkpis.xlsx](../../../../../design_decisions/background_info/iso27001_kpis_subkpis.xlsx).
 
 | **Criteria**                                                                                                                                                                                                                                                                                                                                                                                      | **Scoring** |
@@ -29,11 +24,8 @@ The test assigns a numeric score based on the assessment, using the Functional S
 | **Full Coverage:** The solution fully meets all technical requirements, the stack implements policies that can use SD classes to interpret claims and use a GXDCH clearing house for business purposes.                                                                                                                                                                                           | 4           |
 
 ### Extra information
-
 #### ISO25010 Quality
-
 Functional suitability
 
 #### ISO25010 Quality description
-
 [Completeness] The credential framework supports attestations and (multiple?) trust anchors.
