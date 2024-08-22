@@ -12,24 +12,11 @@
 
 #### Tested quality metric and method
 
-The test quality is evaluated based on the metrics defined in [iso27001_kpis_subkpis.xlsx](../../../../../design_decisions/background_info/iso27001_kpis_subkpis.xlsx).\
-For the current phase (Phase 1), the test focuses on the Functional Suitability quality metric.
-
-#### Comparative criteria (checklists, ...)
-
-[TODO] Describe the comparative criteria used for the test/assessment. If possible, align with the criteria used for the same test in other stack(s).
+The quality metric for this test is based on the criteria outlined in [iso27001_kpis_subkpis.xlsx](../../../../../design_decisions/background_info/iso27001_kpis_subkpis.xlsx). In Phase 1, the focus is on the Functional Suitability metric. For detailed information, please refer to the [Comparative criteria (checklists, ...)](./test.md#comparative-criteria-checklists-) section in the test description.
 
 #### Expected output
 
 The test aims to determine whether the data product specification provides the necessary metadata for quality reporting or if the catalog needs to be extended with an "-AP" profile, with the former being ranked higher. The system may offer varying levels of support for Napcore's DCAT-AP profile, such as [MobilityDCAT-AP](https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/index.html) profiles. The evaluation focuses on the level of support for the Napcore Profile and its vocabulary.
-
-The ranking criteria are as follows:
-
-- The implementation fully integrates Napcore's DCAT-AP profile and utilizes it for search and listing functions.
-- The implementation does not incorporate Napcore's DCAT-AP extensions but still functions correctly, with extended metadata retrievable as part of the distribution.
-- The implementation fails when Napcore's DCAT-AP is used to describe data products.
-- The implementation does not support any DCAT-AP.
-- The implementation supports the use of external vocabularies, such as Vocab-DQV.
 
 ### Results
 
@@ -146,11 +133,10 @@ When querying the endpoint of the catalog, we get that quality information in th
 
 #### Measured results
 
-As demonstrated, the catalog returned by the EDC connector's querying endpoint conforms to the [MobilityDCAT-AP](https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/index.html) standard from a quality annotation perspective. Therefore, the following score is assigned to the test:
+As demonstrated, the catalog returned by the EDC connector's querying endpoint conforms to the [MobilityDCAT-AP](https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/index.html) standard from a quality annotation perspective. Therefore, based on the criteria outlined in the [Comparative criteria (checklists, ...)](./test.md#comparative-criteria-checklists-) section of the test description, the test is assigned the following score:
 
 **Functional Suitability Quality Metric: 4**
 
 #### Notes
 
 - The EDC ecosystem primarily targets Java/Kotlin developers. Some extensions are available on the market for plug-and-play solutions, but for certain specific use cases, developers need to write their own extensions.
-
