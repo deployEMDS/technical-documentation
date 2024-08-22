@@ -6,11 +6,7 @@
 - The test utilizes the EDC MVD commit [5d58b38](https://github.com/eclipse-edc/MinimumViableDataspace/commit/5d58b3871983ce00a69a38b3215c6a8cb67d8ced).
 - The test is executed in an Ubuntu environment using IntelliJ.
 #### Tested quality metric and method
-The test quality is based on the metric defined in [iso27001_kpis_subkpis.xlsx](../../../../../design_decisions/background_info/iso27001_kpis_subkpis.xlsx). 
-For current phase (phase 1), the test focus on the Functional suitability quality metric.
-
-#### Comparative criteria (checklists, ...)
-[TODO] Describe the comparative criteria used for the test / assessment. If possible, align with the criteria used for the same test in the other stack(s).
+The quality metric for this test is based on the criteria outlined in [iso27001_kpis_subkpis.xlsx](../../../../../design_decisions/background_info/iso27001_kpis_subkpis.xlsx). In Phase 1, the focus is on the Functional Suitability metric. For detailed information, please refer to the [Comparative criteria (checklists, ...)](./test.md#comparative-criteria-checklists-) section in the test description.
 
 #### Expected output
 The expected outcome of the current test is to evaluate whether the system provides an observability trace of the sharing agreement (privacy terms of observability are out of scope).
@@ -51,17 +47,9 @@ DEBUG 2024-07-24T12:35:58.726042394 ContractNegotiation: ID c4dec03e-e21f-4103-b
 DEBUG 2024-07-24T12:35:58.726205646 [ProviderContractNegotiationManagerImpl] ContractNegotiation c4dec03e-e21f-4103-b186-6a0e8447d1fb is now in state FINALIZED
 ```
 #### Assessment
-The evaluation for this test case uses the following matrix:
-- 0: No traceability
-- 1: System logs, which record only a connection between two connectors using non-data space identifiers such as a public URL or IP address.
-- 2: Application logs that include process information, for example, "Connector control plane initiating on port..."
-- 3: Data space protocol status traces, such as "Data sharing agreement request"
-- 4: Data space protocol transaction traces, for instance, "Contract ID Op: negotiation"
-- 5: A complete data space protocol context dump, including the entire JSON dump with references.
-
 #### Measured results
 
-Based on the test results, the system is rated a **4** according to the matrix outlined above. Given the extensible nature of EDC, you can add an extension to the [logging service](https://github.com/eclipse-edc/docs/blob/3d6b6641f0c6e40c514ca52ec17ecb45ecf9d29b/developer/logging.md) to achieve a higher score.
+Based on the test results, the system is rated a **4** according to the matrix outlined at [Comparative criteria (checklists, ...)](./test.md#comparative-criteria-checklists-). Given the extensible nature of EDC, you can add an extension to the [logging service](https://github.com/eclipse-edc/docs/blob/3d6b6641f0c6e40c514ca52ec17ecb45ecf9d29b/developer/logging.md) to achieve a higher score.
 
 **Functional suitability quality metric: 4**
 
