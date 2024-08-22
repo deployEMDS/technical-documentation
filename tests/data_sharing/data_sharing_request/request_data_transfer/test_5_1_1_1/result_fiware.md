@@ -19,7 +19,7 @@ These steps include:
 2. Using the token endpoint to get the access token
 3. Using the access token to download the data
 
-#### Comparative criteria (checklists, ...)
+The quality metric for this test is based on the criteria outlined in [iso27001_kpis_subkpis.xlsx](../../../../../design_decisions/background_info/iso27001_kpis_subkpis.xlsx). In Phase 1, the focus is on the Functional Suitability metric. For detailed information, please refer to the [Comparative criteria (checklists, ...)](./test.md#comparative-criteria-checklists-) section in the test description.
 
 #### Expected output
 Since there is no Fiware Connector on the consumer side, there will be no components on the data consumer side that support the:

@@ -18,7 +18,15 @@ Phase 1
  
 ### Minimal?
 Yes
- 
+
+#### Comparative criteria (checklists, ...)
+| Requirement | Measured KPI |
+| -|-|
+| Initiate a data sharing | 4 |
+| Retrieve data sharing information and status | 1 |
+| Receive data sharing request outcome condition | 1 |
+| Retrieve data sharing information of past data sharing actions. | 1 |
+
 ### Extra information
 #### ISO25010 Quality
 Functional suitability
