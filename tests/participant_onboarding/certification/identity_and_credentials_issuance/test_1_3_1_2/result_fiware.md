@@ -3,23 +3,44 @@
 
 ### Statement of assessment
 #### Environment
-[TODO] Describe the environment used for the test / assessment
+The test is conducted in the IONOS FIWARE_cluster cluster using node pool IP 85.215.161.198.
 
 #### Tested quality metric and method
-[TODO] Describe the quality metric and method used for the test / assessment
+
+The test quality is based on the metric defined in [iso27001_kpis_subkpis.xlsx](../../../../../design_decisions/background_info/iso27001_kpis_subkpis.xlsx). For the current phase (phase 1), the test focuses on the Functional Suitability quality metric.
 
 #### Comparative criteria (checklists, ...)
-[TODO] Describe the comparative criteria used for the test / assessment. If possible, align with the criteria used for the same test in the other stack(s).
+**Levels of Assurance (LoAs)**
+
+| **Level of Assurance (LoA)** | **Description**                                                                                                 | **Score (0-4)** |                                                                                           |
+|------------------------------|-----------------------------------------------------------------------------------------------------------------|-----------------|-----------------------------------------------------------------------------------------------------------|
+| **LoA 0**                     | No assurance provided. Identity is not verified or trusted.                                                     | 0                          |
+| **LoA 1**                     | Minimal assurance. Basic identity checks are performed, such as self-assertion or simple verification.          | 1               |
+| **LoA 2**                     | Moderate assurance. Identity verification includes some trusted sources or checks, such as document verification. | 2               |
+| **LoA 3**                     | Substantial assurance. Strong identity verification processes, including in-person verification or multiple sources. | 3                |
+| **LoA 4**                     | High assurance. The highest level of identity verification, often involving biometric data or multi-factor authentication. | 4               |  |
+
+
 
 #### Expected output
-[TODO] Describe the expected output and how the ranking is calculated
+Evidence regarding one of the Levels of Assurance.
 
 ### Results
 #### Assessment
-[TODO] Describe the assessment results (qualitative results), if applicable. Include screenshots, logs, etc, if necessary.
+
+
+The FIWARE Connector typically provides **Level of Assurance (LoA) 2** to **LoA 3**. 
+
+- **LoA 2:** FIWARE supports moderate assurance through its integration with identity management solutions like Keycloak, enabling secure authentication and role-based access control.
+- **LoA 3:** With advanced features such as Attribute-Based Access Control (ABAC) using Open Policy Agent (OPA) and compliance with standards like XACML, the FIWARE Connector can offer high assurance for sensitive data exchange and access control in data spaces.
+  
+The exact LoA depends on the specific configuration and integration of the FIWARE Connector within an organization’s infrastructure.
+
 
 #### Measured results
-[TODO] Describe the measured results (quantitative results), if applicable. Rank the results according to the expected output, if applicable.
+The criteria used to measure the results was the one specified in the comparative critera section. 
+
+**Overall score:** 3
 
 #### Notes
-[TODO] Add notes, if necessary.
+
