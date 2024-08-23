@@ -8,12 +8,8 @@
 - It uses EDC version [0.8.2-SNAPSHOT](https://github.com/eclipse-edc/MinimumViableDataspace/blob/8da0c4e6a8921dcb6ff189c2901868979bdc9a93/gradle/libs.versions.toml#L7).
 - The test is performed on an Ubuntu environment with IntelliJ.
 
-#### Quality Metric and Testing Method
-The quality metric for this test is based on the criteria outlined in [iso27001_kpis_subkpis.xlsx](../../../../../design_decisions/background_info/iso27001_kpis_subkpis.xlsx).\
-For the current phase (Phase 1), the test focuses on the Functional Suitability metric.
-
-#### Comparative criteria (checklists, ...)
-[TODO] Provide details on the comparative criteria used for this test/assessment. Align these criteria with those used in similar tests across other stacks, if applicable.
+#### Tested quality metric and method
+The quality metric for this test is based on the criteria outlined in [iso27001_kpis_subkpis.xlsx](../../../../../design_decisions/background_info/iso27001_kpis_subkpis.xlsx). In Phase 1, the focus is on the Functional Suitability metric. For detailed information, please refer to the [Comparative criteria (checklists, ...)](./test.md#comparative-criteria-checklists-) section in the test description.
 
 #### Expected output
 This test aims to evaluate the process for de-publishing a catalog or making a catalog entry private.
@@ -33,9 +29,9 @@ To access the catalog, a `MembershipCredential` must be presented. This means th
 
 #### Measured results
 As outlined above, the test results align with [test_2_2_3_1d](../test_2_2_3_1d/result_fiware.md) regarding catalog depublication. Catalog consultation restrictions can be applied to catalog queries, but require customized implementation.
-Therefore, the following score is given to the test.
+Therefore, based on the criteria outlined in the [Comparative criteria (checklists, ...)](./test.md#comparative-criteria-checklists-) section of the test description, the test is assigned the following score:
 
-**Functional Suitability Quality Metric: 3**
+**Functional Suitability Quality Metric: 2**
 
 #### Notes
 EDC is a pluggable ecosystem primarily targeting Java/Kotlin developers. Some extensions are available on the market for plug-and-play, but for certain specific use cases, developers need to create their own extensions.
