@@ -5,7 +5,6 @@
 #### Environment
 The test is conducted in the IONOS FIWARE_cluster cluster using node pool IP 85.215.161.198. 
 
-
 #### Tested quality metric and method
 The test quality is based on the metric defined in [iso27001_kpis_subkpis.xlsx](../../../../../design_decisions/background_info/iso27001_kpis_subkpis.xlsx). For the current phase (phase 1), the test focuses on the Functional Suitability quality metric.
 
@@ -84,7 +83,7 @@ The VC lifecycle is partially covered by the FIWARE connector as follows:
 | **Revocation/Expiration**        | Not fully covered. API does not support it, but participants can be deleted to stop access. | 2               |
 | **Renewal/Re-Issuance**          | Not covered, but participants can be created and deleted. | 1               |
 
-Overall score: 3
+**Overall score: (4+4+4+2+1)/5 = 3**
 
 
 

@@ -7,12 +7,10 @@
 - The EDC MVD commit used is [650ed8f](https://github.com/eclipse-edc/MinimumViableDataspace/commit/650ed8fbc4b19e152ef2491d86f5ab3b316a6fec).
 
 #### Tested Quality Metric and Method
-The test quality is based on the metric defined in [iso27001_kpis_subkpis.xlsx](../../../../../design_decisions/background_info/iso27001_kpis_subkpis.xlsx). For the current phase (phase 1), the test focuses on the Functional Suitability quality metric.
-
-[TODO] Describe the comparative criteria used for the test/assessment. If possible, align with the criteria used for the same test in the other stack(s).
+The quality metric for this test is based on the criteria outlined in [iso27001_kpis_subkpis.xlsx](../../../../../design_decisions/background_info/iso27001_kpis_subkpis.xlsx). In Phase 1, the focus is on the Functional Suitability metric. For detailed information, please refer to the [Comparative criteria (checklists, ...)](./test.md#comparative-criteria-checklists-) section in the test description.
 
 #### Expected Output
-**The expected output of the test is an assessment of whether the EDC supports the full credential lifecycle, including request, issuance, validation, renewal, and revocation.**
+The expected output of the test is an assessment of whether the EDC supports the full credential lifecycle, including request, issuance, validation, renewal, and revocation.
 
 ### Results
 #### Assessment
@@ -57,8 +55,17 @@ The following sequence is performed whenever a request is received:
 - P applies the claims to the policy and makes a decision.
 
 #### Measured Results
-The EDC implementation partially covers the VC lifecycle as outlined above.
-**Functional Suitability Quality Metric: 3**
+The EDC implementation partially covers the VC lifecycle as outlined above.  Based on the criteria outlined in the [Comparative criteria (checklists, ...)](./test.md#comparative-criteria-checklists-) section of the test description, the test is assigned the following score:
+
+| **VC Lifecycle Stage**          | **Coverage**                                                       | **Score (0-4)** |
+|---------------------------------|--------------------------------------------------------------------|-----------------|
+| **Issuance and Storage**         | Available with the workaround extension function `seedCredentials`. | 0               |
+| **Presentation**                 | Covered                                                            | 4               |
+| **Verification & Use**           | Covered                                                            | 4               |
+| **Revocation/Expiration**        | Covered                                                            | 4               |
+| **Renewal/Re-Issuance**          | Not covered.           | 0               |
+
+**Overall score: (0+4+4+4+0)/5 = 2.4**
 
 #### Notes
 - EDC components are plugin-based. Support for various verifiable credential formats is possible by implementing a plugin (this applies to both decentralized as well as centralized solutions). For example, support for web DID resolution is just a preview of a method that can be created. See [docs](https://github.com/eclipse-edc/Publications/blob/main/Identity%20Management/DID_EDC.md).
