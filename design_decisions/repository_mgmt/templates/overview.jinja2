@@ -1,0 +1,5 @@
+| Test | Title | Phase | Minimal | Results |
+|------|-------|-------|---------|---------|
+{%- for result in results +%}
+| {{ result.test_id }} | {{ result.test_link }} | {{ result.phase }} | {{ result.minimal }} | {% for link in result.result_links %}[{{ link.name }}]({{ link.url }})&nbsp;{{ link.status }}<br/>{% endfor %} |
+{%- endfor -%}

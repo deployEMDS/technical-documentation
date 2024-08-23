@@ -3,11 +3,10 @@
  
 ### Test description
 Coverage test: assess that the API is available and test that a data sharing request is properly covered: 
-Initiate a data sharing 
-Retrieve data sharing information and status 
-Receive data sharing request outcome condition 
-
-Retrieve data sharing information of past data sharing actions. 
+- Initiate a data sharing 
+- Retrieve data sharing information and status 
+- Receive data sharing request outcome condition 
+- Retrieve data sharing information of past data sharing actions. 
 
 The system ranks higher if the API is secured and implements common methods, like REST.
  
@@ -18,7 +17,7 @@ Test
 Phase 1
  
 ### Minimal?
-No
+Yes
  
 ### Extra information
 #### ISO25010 Quality

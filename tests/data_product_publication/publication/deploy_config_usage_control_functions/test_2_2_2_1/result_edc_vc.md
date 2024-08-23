@@ -14,6 +14,7 @@ The following operations are tested via [API](https://app.swaggerhub.com/apis-do
 - Re-use an uploaded policy - Specify another agreement that uses the same policy
 - Persist uploaded policies - After creating the policies, restart the connector and check the policies are still there
 - Delete a policy - Delete the policy specifically created to be deleted
+- Bind a custom control function  to a policy or an operator (see corresponding paragraph).
 
 ### Results
 #### Assessment
@@ -47,3 +48,14 @@ The policy is correctly deleted.
 
 Functional Suitability Quality Metric Score: 4
 
+##### Bind a custom constraint function to a policy [[Link to EDC documentation](https://github.com/eclipse-edc/Connector/blob/main/docs/developer/policy-engine.md)]
+
+A custom constraint function is implicitely bound to a named operator, the interface is the same as the policy upload, provided the custom operator is used. The mechanism makes for a light administrative workload, but it requires knowledge of custom developed policies (i.e., there is no directory of available policies).
+
+Functional Suitability Quality Metric Score: 3
+
+#### Cumulative measured results
+The EDC implementation partially covers the deployment cyclus of Usage Control Policies, as described in the test requirements.
+**Functional Suitability Quality Metric Score: 3,2**
+
+#### Notes

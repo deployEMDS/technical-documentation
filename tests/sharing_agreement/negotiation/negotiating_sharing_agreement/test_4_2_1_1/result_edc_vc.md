@@ -6,11 +6,7 @@
 - The test utilizes the EDC MVD commit [5d58b38](https://github.com/eclipse-edc/MinimumViableDataspace/commit/5d58b3871983ce00a69a38b3215c6a8cb67d8ced).
 - The test is executed in an Ubuntu environment using IntelliJ.
 #### Tested quality metric and method
-The test quality is based on the metric defined in [iso27001_kpis_subkpis.xlsx](../../../../../design_decisions/background_info/iso27001_kpis_subkpis.xlsx)
-For current phase (phase 1), the test focus on the Functional suitability quality metric
-
-#### Comparative criteria (checklists, ...)
-[TODO] Describe the comparative criteria used for the test / assessment. If possible, align with the criteria used for the same test in the other stack(s).
+The quality metric for this test is based on the criteria outlined in [iso27001_kpis_subkpis.xlsx](../../../../../design_decisions/background_info/iso27001_kpis_subkpis.xlsx). In Phase 1, the focus is on the Functional Suitability metric. For detailed information, please refer to the [Comparative criteria (checklists, ...)](./test.md#comparative-criteria-checklists-) section in the test description.
 
 #### Expected output
 The test aims to assess the state machine implementation of the EDC ecosystem regarding the sharing negotiation.
@@ -101,7 +97,7 @@ As we can see, EDC supports several states of a contract negotiation, there are 
   Scanning through the code taught it’s not yet implemented though [commit 1ce468](https://github.com/eclipse-edc/Connector/commit/1ce4687ac4fe97e676ea04a1518668238b632b34).
 - Use [Event Subscriber](https://github.com/eclipse-edc/Connector/blob/1ce4687ac4fe97e676ea04a1518668238b632b34/docs/developer/events.md): Depending on how the EventSubscriber is registered to the EventRouter (synchronous or asynchronous), in synchronous mode, the subscriber will block the main thread until the event is dispatched, allowing a 'PENDING' state to be added to the flow. To recover the flow, [State Machine Specific Manager](https://github.com/eclipse-edc/Connector/blob/1ce4687ac4fe97e676ea04a1518668238b632b34/docs/developer/state-machine.md), specifically the `AbstractContractNegotiationManager`, runs in a loop and picks up the entity in a certain state, moving it to the next state when the PENDING tag is reset to false. The managers specific to the contract negotiation state are `ProviderContractNegotiationManagerImpl` and `ConsumerContractNegotiationManagerImpl`, both of which implement `AbstractContractNegotiationManager`.
 #### Measured results
-EDC has implemented a state machine and offers an extensible ecosystem; however, these features are not fully available out of the box and may require additional configuration and development.
+EDC has implemented a state machine and offers an extensible ecosystem; however, these features are not fully available out of the box and may require additional configuration and development. Therefore, based on the criteria outlined in the [Comparative criteria (checklists, ...)](./test.md#comparative-criteria-checklists-) section of the test description, the test is assigned the following score:
 
 **Functional suitability quality metric: 4**
 

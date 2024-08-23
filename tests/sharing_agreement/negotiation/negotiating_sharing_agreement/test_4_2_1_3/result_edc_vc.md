@@ -6,11 +6,7 @@
 - The test utilizes the EDC MVD commit [5d58b38](https://github.com/eclipse-edc/MinimumViableDataspace/commit/5d58b3871983ce00a69a38b3215c6a8cb67d8ced).
 - The test is executed in an Ubuntu environment using IntelliJ.
 #### Tested quality metric and method
-The test quality is based on the metric defined in [iso27001_kpis_subkpis.xlsx](../../../../../design_decisions/background_info/iso27001_kpis_subkpis.xlsx)
-For current phase (phase 1), the test focus on the Functional suitability quality metric.
-
-#### Comparative criteria (checklists, ...)
-[TODO] Describe the comparative criteria used for the test / assessment. If possible, align with the criteria used for the same test in the other stack(s).
+The quality metric for this test is based on the criteria outlined in [iso27001_kpis_subkpis.xlsx](../../../../../design_decisions/background_info/iso27001_kpis_subkpis.xlsx). In Phase 1, the focus is on the Functional Suitability metric. For detailed information, please refer to the [Comparative criteria (checklists, ...)](./test.md#comparative-criteria-checklists-) section in the test description.
 
 #### Expected output
 The test aims to evaluate the coverage of the following criteria on contract negotiation:
@@ -29,7 +25,7 @@ The EDC connector features a [policy engine](https://github.com/eclipse-edc/Conn
 This policy engine can be added and activated as an extension to the EDC connector services.
 
 #### EDC MVD implementation commit [5d58b38](https://github.com/eclipse-edc/MinimumViableDataspace/commit/5d58b3871983ce00a69a38b3215c6a8cb67d8ced)
-Details on how policies are defined for assets in MVC Access Control can be found [here](https://github.com/eclipse-edc/MinimumViableDataspace?tab=readme-ov-file#33-access-control).
+Details on how policies are defined for assets in MVD Access Control can be found [here](https://github.com/eclipse-edc/MinimumViableDataspace?tab=readme-ov-file#33-access-control).
 Specifically, for negotiating policy rules, an asset might require a Data Processor credential with a "level": "processing" to negotiate a contract and transfer data.
 The implementation of this requirement is explained [here](https://github.com/eclipse-edc/MinimumViableDataspace?tab=readme-ov-file#73-scope-extractor-for-dataprocessor-credentials).
 An example of a policy requiring the consumer to present a DataProcessorCredential with an access level of processing, represented in ODRL, would look like this:
@@ -157,6 +153,8 @@ The Service Agreements, specifically [TM Forum Agreement](https://datamodel.tmfo
 - [X] Usage policy rules
 - [ ] Service Agreements
 
-**Functional suitability quality metric: 4**
+Based on the criteria outlined in the [Comparative criteria (checklists, ...)](./test.md#comparative-criteria) section of the test description, the test is assigned the following score:
+
+**Functional suitability quality metric: 2**
 #### Notes
 EDC is a pluggable ecosystem primarily targeting Java/Kotlin developers. Some extensions are available on the market for plug-and-play, but for certain specific use cases, developers need to write their own extensions.
