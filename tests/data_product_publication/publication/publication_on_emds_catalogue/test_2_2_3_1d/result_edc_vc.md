@@ -10,10 +10,7 @@
 - The test is executed in an Ubuntu environment using IntelliJ.
 
 #### Tested quality metric and method
-The test quality is based on the metric defined in [iso27001_kpis_subkpis.xlsx](../../../../../design_decisions/background_info/iso27001_kpis_subkpis.xlsx). For the current phase (phase 1), the test focuses on the Functional suitability quality metric.
-
-#### Comparative criteria (checklists, ...)
-[TODO] Describe the comparative criteria used for the test / assessment. If possible, align with the criteria used for the same test in the other stack(s).
+The quality metric for this test is based on the criteria outlined in [iso27001_kpis_subkpis.xlsx](../../../../../design_decisions/background_info/iso27001_kpis_subkpis.xlsx). In Phase 1, the focus is on the Functional Suitability metric. For detailed information, please refer to the [Comparative criteria (checklists, ...)](./test.md#comparative-criteria-checklists-) section in the test description.
 
 #### Expected output
 The test aims to examine the process of catalog de-publication for a data product under the following conditions: a data product is removed (de-published) from the catalog. The EMDS catalog, as defined in the relevant documentation, refers to the Data Space-only catalog, specifically the internal EDC catalog and its federation component.
@@ -50,7 +47,7 @@ edc.catalog.cache.partition.num.crawlers
 ```
 
 #### Measured results
-As demonstrated above, EDC provides an out-of-the-box process for de-publishing a data product (including the data asset, policies, and contract) from the catalog. This de-publishing process is also reflected in the federated catalog. Therefore, the following score is given to the test.
+As demonstrated above, EDC provides an out-of-the-box process for de-publishing a data product (including the data asset, policies, and contract) from the catalog. This de-publishing process is also reflected in the federated catalog. Therefore, based on the criteria outlined in the [Comparative criteria (checklists, ...)](./test.md#comparative-criteria-checklists-) section of the test description, the test is assigned the following score:
 
 **Functional Suitability Quality Metric: 4**
 
