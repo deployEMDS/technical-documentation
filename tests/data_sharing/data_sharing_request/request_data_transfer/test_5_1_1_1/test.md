@@ -24,4 +24,11 @@ Yes
 Functional suitability
 #### ISO25010 Quality description
 [Functional completeness] The system provides a documented, programmatic interface (API) to initiate and manage a data transfer. 
-    
+
+### Evaluation Criteria
+| Requirement | Measured KPI |
+| -|-|
+| Initiate a data sharing | - |
+| Retrieve data sharing information and status | -|
+| Receive data sharing request outcome condition | - |
+| Retrieve data sharing information of past data sharing actions. | -|
