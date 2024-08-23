@@ -20,7 +20,7 @@ Functional suitability
 [Completeness] The credential framework supports EMDS-required LoAs (https://ec.europa.eu/digital-building-blocks/sites/display/DIGITAL/eIDAS+Levels+of+Assurance) 
 
 #### Evaluation Criteria
-**Levels of Assurance (LoAs)**
+**Levels of Assurance (LoAs)** 
 
 | **Level of Assurance (LoA)** | **Description**                                                                                                 | **Score (0-4)** |                                                                                           |
 |------------------------------|-----------------------------------------------------------------------------------------------------------------|-----------------|-----------------------------------------------------------------------------------------------------------|

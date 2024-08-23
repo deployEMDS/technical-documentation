@@ -40,7 +40,7 @@ The exact LoA depends on the specific configuration and integration of the FIWAR
 #### Measured results
 The criteria used to measure the results was the one specified in the comparative critera section. 
 
-**Overall score:** 3
+**Overall score:** 3 
 
 #### Notes
 
