@@ -8,11 +8,7 @@
 - The test is executed in an Ubuntu environment using IntelliJ.
 
 #### Tested quality metric and method
-The test quality is based on the metric defined in [iso27001_kpis_subkpis.xlsx](../../../../../design_decisions/background_info/iso27001_kpis_subkpis.xlsx).\
-For current phase (phase 1), the test focuses on the Functional suitability quality metric.
-
-#### Comparative criteria (checklists, ...)
-[TODO] Describe the comparative criteria used for the test / assessment. If possible, align with the criteria used for the same test in the other stack(s).
+The quality metric for this test is based on the criteria outlined in [iso27001_kpis_subkpis.xlsx](../../../../../design_decisions/background_info/iso27001_kpis_subkpis.xlsx). In Phase 1, the focus is on the Functional Suitability metric. For detailed information, please refer to the [Comparative criteria (checklists, ...)](./test.md#comparative-criteria-checklists-) section in the test description.
 
 #### Expected output
 The test aims to determine whether a native online user experience (U/X) is available and evaluate individual search features. 
@@ -44,10 +40,11 @@ IMEC has studied how to integrate the federated catalog endpoint with a hosted s
 The [DCAT-AP Feed Specification](https://semiceu.github.io/LDES-DCAT-AP-feeds/) from SEMIC details how to publish an event source API for catalog replication. Since EDC uses DCAT to represent its catalog, adhering to this specification to publish EDC's federated catalog data to [LDES](https://semiceu.github.io/LinkedDataEventStreams/) is straightforward. This allows the data to be seamlessly integrated with linked data search engines like [Comunica](https://comunica.dev/) or queried using tools such as [GraphDB](https://graphdb.ontotext.com/).
 
 In conclusion, various approaches can be applied to different metadata platforms, with the primary challenge being the complexity of each platform. However, there are no technical barriers to integrating a search tool with the EDC ecosystem.
-#### Measured results
-As demonstrated above, EDC provides an out-of-the-box solution for search tools to integrate with the catalog API. Therefore, the following score is assigned to the test:
 
-**Functional Suitability Quality Metric: 4**
+#### Measured results
+As demonstrated above, EDC provides an out-of-the-box solution for search tools to integrate with the catalog API. Therefore, based on the criteria outlined in the [Comparative criteria (checklists, ...)](./test.md#comparative-criteria-checklists-) section of the test description, the test is assigned the following score:
+
+**Functional Suitability Quality Metric: 2**
 
 
 #### Notes
