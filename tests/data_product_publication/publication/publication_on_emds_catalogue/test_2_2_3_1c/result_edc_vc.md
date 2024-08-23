@@ -9,11 +9,8 @@
 - The test is performed on an Ubuntu environment with IntelliJ.
 
 #### Tested quality metric and method
-The quality metric for this test is based on the criteria outlined in [iso27001_kpis_subkpis.xlsx](../../../../../design_decisions/background_info/iso27001_kpis_subkpis.xlsx).\
-For the current phase (Phase 1), the test focuses on the Functional Suitability metric.
+The quality metric for this test is based on the criteria outlined in [iso27001_kpis_subkpis.xlsx](../../../../../design_decisions/background_info/iso27001_kpis_subkpis.xlsx). In Phase 1, the focus is on the Functional Suitability metric. For detailed information, please refer to the [Comparative criteria (checklists, ...)](./test.md#comparative-criteria-checklists-) section in the test description.
 
-#### Comparative criteria (checklists, ...)
-[TODO] Describe the comparative criteria used for the test / assessment. If possible, align with the criteria used for the same test in the other stack(s).
 #### Expected output
 The test aims to evaluate the catalog publication process for a data product under the condition that a new data product cannot be published on the catalog.
 ### Results
@@ -25,7 +22,8 @@ EDC's policy engine, a generic building block, processes policies written in ODR
 Therefore, with properly defined policies, users can choose to publish the catalog based on the identification of the incoming catalog query.
 
 #### Measured results
-As outlined above, EDC supports a process where a new data product cannot be published on the catalog if proper policies are defined. However, the policy engine and policies require customized implementation within the EDC framework. Therefore, the following score is assigned to the test:\
-**Functional Suitability Quality Metric: 3**
+As outlined above, EDC supports a process where a new data product cannot be published on the catalog if proper policies are defined. However, the policy engine and policies require customized implementation within the EDC framework. Therefore, based on the criteria outlined in the [Comparative criteria (checklists, ...)](./test.md#comparative-criteria-checklists-) section of the test description, the test is assigned the following score:
+**Functional Suitability Quality Metric: 2**
+
 #### Notes
 EDC is a pluggable ecosystem primarily targeting Java/Kotlin developers. Some extensions are available on the market for plug-and-play, but for certain specific use cases, developers need to create their own extensions.
