@@ -24,7 +24,7 @@ The criteria used to measure the results was the one specified by the Data Produ
 
 | **Criterion**      | **Description**                                                                 | **Score (0-4)** |  |
 |--------------------|---------------------------------------------------------------------------------|-----------------|-----------------|
-| **Adaptability**   | Adaptability for different or evolving hardware, software, or usage environments. | 4               |  |
-| **Installability** | The components of the platform are successfully installed and/or uninstalled in a specified environment. | 4               | |
-| **Replaceability** | Replacement of the components for the  |
-| **Scalability**    | The product can handle growing to adapt its capacity.                             | 3               |  |
+| **Adaptability**   | Adaptability for different or evolving hardware, software, or usage environments. | -               |  |
+| **Installability** | The components of the platform are successfully installed and/or uninstalled in a specified environment. | -              | |
+| **Replaceability** | Replacement of the components for the  |-
+| **Scalability**    | The product can handle growing to adapt its capacity.                             | -             |  |
