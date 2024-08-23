@@ -7,11 +7,7 @@
 - The test uses the EDC MVD commit [84f3c5f7] (https://github.com/eclipse-edc/MinimumViableDataspace/commit/84f3c5f70b4eea94de7ebee83da377e62fc759fd)
 
 #### Tested quality metric and method
-The test quality is based on the metric defined in [iso27001_kpis_subkpis.xlsx](../../../../../design_decisions/background_info/iso27001_kpis_subkpis.xlsx)
-For current phase (phase 1), the test focus on the Functional suitability quality metric
-
-#### Comparative criteria (checklists, ...)
-[TODO] Describe the comparative criteria used for the test / assessment. If possible, align with the criteria used for the same test in the other stack(s).
+The quality metric for this test is based on the criteria outlined in [iso27001_kpis_subkpis.xlsx](../../../../../design_decisions/background_info/iso27001_kpis_subkpis.xlsx). In Phase 1, the focus is on the Functional Suitability metric. For detailed information, please refer to the [Comparative criteria (checklists, ...)](./test.md#comparative-criteria-checklists-) section in the test description.
 
 #### Expected output
 **The expected output of this test is to evaluate the level of customization required to use European/National identity provider as issuer for verifiable credentials.**
@@ -44,9 +40,18 @@ Also, the reference implementation of the EU Digital Identity Wallet targets mob
 
 
 #### Measured results
-- As stated, the EDC ecosystem has not yet fully integrated with European/National identity providers. This integration requires a DID resolver extension to resolve participants' DIDs and the implementation of an issuance flow to store and verify the verifiable credentials issued by European/National identity providers.
+- As stated, the EDC ecosystem has not yet fully integrated with European/National identity providers.This integration requires a DID resolver extension to resolve participants' DIDs and the implementation of an issuance flow to store and verify the verifiable credentials issued by European/National identity providers.
+- Therefore, based on the criteria outlined in the [Comparative criteria (checklists, ...)](./test.md#comparative-criteria-checklists-) section of the test description, and considering that the EDC ecosystem has not yet fully integrated with European/National identity providers, with the assumption that the required development will be completed to support a full verifiable credential cycle, the evaluation scores for each criterion are as follows:
 
-- **Functional suitability quality metric: 3**
+| **Criterion**          | **Description**                                                                                          | **Score (0-4)** | **Explanation**                                                                                                                                                                                             |
+|------------------------|----------------------------------------------------------------------------------------------------------|-----------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Confidentiality**    | The platform ensures that data are accessible only to those authorized to have access according to the data negotiation. | 2               | Currently, the integration with European/National identity providers is incomplete, which may impact the confidentiality of the data in certain scenarios. Once fully integrated, this score could improve. |
+| **Integrity**          | How the platform prevents unauthorized access to, or modification of the data.                            | 3               | 	The EDC solution has measures in place to protect data from unauthorized access and modification, but incomplete integration limit its effectiveness.                                                      |
+| **Non-repudiation**    | How the actions or events can be proven to have taken place so that the events or actions cannot be repudiated later. | 2               | Without full integration, ensuring non-repudiation for all actions and events with the customized DID resolver may be challenging.                                                                          |
+| **Accountability**     | The actions of an entity can be traced uniquely to the entity.                                            | 3               | 	The EDC solution provides a level of traceability for actions, but integration gaps might affect the ability to fully trace actions to entities.                                                           |
+| **Authenticity**       | The resource can be proved to be the one claimed.                                                         | 2               | The EDC system doesnt not prove authenticity fully due to incomplete integration with identity providers. This is expected to improve with extension development.                                           |
+
+Overall score: ( 2 + 3 + 2 + 3 + 2) / 5 = 2.4
 
 #### Notes
 EDC is a pluggable ecosystem primarily targeting Java/Kotlin developers. Some extensions are available on the market for plug-and-play, but for certain specific use cases, developers need to write their own extensions.

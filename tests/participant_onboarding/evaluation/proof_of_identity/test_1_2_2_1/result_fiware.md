@@ -3,16 +3,10 @@
 
 ### Statement of assessment
 #### Environment
-
 The test is conducted in the IONOS FIWARE_cluster cluster using node pool IP 85.215.161.198.
 
 #### Tested quality metric and method
-
-The test quality is based on the metric defined in [iso27001_kpis_subkpis.xlsx](../../../../../design_decisions/background_info/iso27001_kpis_subkpis.xlsx). For the current phase (phase 1), the test focuses on the Functional Suitability quality metric.
-
-
-#### Comparative criteria (checklists, ...)
-Assess if the data space can validate requestors’ real-world identities from national identity providers.
+The quality metric for this test is based on the criteria outlined in [iso27001_kpis_subkpis.xlsx](../../../../../design_decisions/background_info/iso27001_kpis_subkpis.xlsx). In Phase 1, the focus is on the Functional Suitability metric. For detailed information, please refer to the [Comparative criteria (checklists, ...)](./test.md#comparative-criteria-checklists-) section in the test description.
 
 #### Expected output
 The expected output of this test is to evaluate the level of customization required to use European/National identity provider as issuer for verifiable credentials.
@@ -25,7 +19,7 @@ Organizations' oboarding is done by a trust anchor, not the connector.
  
 
 #### Measured results
-The criteria used to measure the results was the one specified by the Data Product Publication ISO25010 Quality file regarding Security.
+The criteria used to measure the results was the one specified by the Data Product Publication ISO25010 Quality file regarding Security as detailed at  [Comparative criteria (checklists, ...)](./test.md#comparative-criteria-checklists-).
 
 
 | **Criterion**          | **Description**                                                                                          | **Score (0-4)** | **Explanation** |
