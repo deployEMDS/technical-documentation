@@ -6,10 +6,7 @@
 - The test is carried in the IONOS environment as documented in the [edc_mvd_deployment.md](../../../../../deployment/edc_vc/edc_mvd_deployment.md)
 - The test uses the EDC MVD commit [84f3c5f7] (https://github.com/eclipse-edc/MinimumViableDataspace/commit/84f3c5f70b4eea94de7ebee83da377e62fc759fd)
 #### Tested quality metric and method
-The test quality is based on the metric defined in [iso27001_kpis_subkpis.xlsx](../../../../../design_decisions/background_info/iso27001_kpis_subkpis.xlsx)
-For current phase (phase 1), the test focus on the Functional suitability quality metric
-
-[TODO] Describe the comparative criteria used for the test / assessment. If possible, align with the criteria used for the same test in the other stack(s).
+The quality metric for this test is based on the criteria outlined in [iso27001_kpis_subkpis.xlsx](../../../../../design_decisions/background_info/iso27001_kpis_subkpis.xlsx). In Phase 1, the focus is on the Functional Suitability metric. For detailed information, please refer to the [Comparative criteria (checklists, ...)](./test.md#comparative-criteria-checklists-) section in the test description.
 
 #### Expected output
 **The expected output of this test is to evaluate the level of customization required to input participants' metadata if an onboarding online facility is provided.**
@@ -50,7 +47,15 @@ Besides that, the VC insurance flow is currently missing in the Identity hub.
 **Is the feature available out of the box in EDC+VC (without the need for development)?** No, plugin adoption is required.
 **Given a development effort, is it possible to implement to the fullest extent of the spec?** Yes, but the DID resolver is context-specific.
 
-**Functional suitability quality metric: 3**
+Based on the criteria outlined in the [Comparative criteria (checklists, ...)](./test.md#comparative-criteria-checklists-) section of the test description, the test is assigned the following score:
+
+| **Criterion**                | **Description**                                                                          | **Score (0-4)** | **Explanation**                                                                                                                                                                        |
+|------------------------------|------------------------------------------------------------------------------------------|-----------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Functional Completeness**   | Technical requirements cover all the specified tasks and user objectives.                | 2               | The EDC solution only partially covers the Verifiable Credential (VC) flow, with the issuance process entirely missing.                                                                |
+| **Functional Correctness**    | Technical requirements meet results with the needed degree of precision.                 | 3               | While the existing features of the EDC solution are generally accurate, the resolver requires domain-specific customization, which may affect precision in certain contexts.           |
+| **Functional Appropriateness**| Technical requirements facilitate the accomplishment of specified tasks and objectives.  | 2               | The EDC solution requires significant customization and development work, particularly for the resolver, to fully support the required tasks and objectives within the domain context. |
+
+**Overall Score: (2+3+2)/3 = 2.33**
 
 #### Notes
 EDC is a pluggable ecosystem primarily targeting Java/Kotlin developers. Some extensions are available on the market for plug-and-play, but for certain specific use cases, developers need to write their own extensions.
