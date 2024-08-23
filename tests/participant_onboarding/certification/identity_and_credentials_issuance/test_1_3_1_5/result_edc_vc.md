@@ -10,7 +10,7 @@
 The quality metric for this test is based on the criteria outlined in [iso27001_kpis_subkpis.xlsx](../../../../../design_decisions/background_info/iso27001_kpis_subkpis.xlsx). In Phase 1, the focus is on the Functional Suitability metric. For detailed information, please refer to the [Comparative criteria (checklists, ...)](./test.md#comparative-criteria-checklists-) section in the test description.
 
 #### Expected Output
-The expected output of the test is an assessment of whether the EDC supports the full credential lifecycle, including request, issuance, validation, renewal, and revocation.**
+The expected output of the test is an assessment of whether the EDC supports the full credential lifecycle, including request, issuance, validation, renewal, and revocation.
 
 ### Results
 #### Assessment
