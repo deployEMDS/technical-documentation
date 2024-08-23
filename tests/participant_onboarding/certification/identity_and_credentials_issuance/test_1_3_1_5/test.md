@@ -12,19 +12,19 @@ Phase 1
  
 ### Minimal?
 Yes
+
+### Comparative criteria (checklists, ...)
+
+| **VC Lifecycle Stage**          | **Coverage** | **Score (0-4)** |
+|---------------------------------|--------------|-----------------|
+| **Issuance and Storage**        |              | -               |
+| **Presentation**                |              | -               |
+| **Verification & Use**          |              | -               |
+| **Revocation/Expiration**       |              | -               |
+| **Renewal/Re-Issuance**         |              | -               |
  
 ### Extra information
 #### ISO25010 Quality
 Security
 #### ISO25010 Quality description
 [Integrity] The credential issuance/verification services implements the minimum viable controls to manage the issuance and renewal/revoking of credentials and certificates.
-
-### Evaluation Criteria
-
-| **VC Lifecycle Stage**          |                                  | **Score (0-4)** |
-|---------------------------------|-----------------------------------------------|-----------------|
-| **Issuance and Storage**         |                                    | -             |
-| **Presentation**                 |                                     | -              |
-| **Verification & Use**           |                                    | -              |
-| **Revocation/Expiration**        |  | -              |
-| **Renewal/Re-Issuance**          |  | -               |
