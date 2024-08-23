@@ -57,15 +57,15 @@ The following sequence is performed whenever a request is received:
 #### Measured Results
 The EDC implementation partially covers the VC lifecycle as outlined above.  Based on the criteria outlined in the [Comparative criteria (checklists, ...)](./test.md#comparative-criteria-checklists-) section of the test description, the test is assigned the following score:
 
-| **VC Lifecycle Stage**          | **Coverage**                                                        | **Score (0-4)** |
-|---------------------------------|---------------------------------------------------------------------|-----------------|
+| **VC Lifecycle Stage**          | **Coverage**                                                       | **Score (0-4)** |
+|---------------------------------|--------------------------------------------------------------------|-----------------|
 | **Issuance and Storage**         | Available with the workaround extension function `seedCredentials`. | 0               |
-| **Presentation**                 | Covered                                                             | 4               |
-| **Verification & Use**           | Covered                                                             | 4               |
-| **Revocation/Expiration**        | Covered                                                             | 4               |
-| **Renewal/Re-Issuance**          | Not coveredd.           | 0               |
+| **Presentation**                 | Covered                                                            | 4               |
+| **Verification & Use**           | Covered                                                            | 4               |
+| **Revocation/Expiration**        | Covered                                                            | 4               |
+| **Renewal/Re-Issuance**          | Not covered.           | 0               |
 
-**Overall score: 2.4**
+**Overall score: (0+4+4+4+0)/5 = 2.4**
 
 #### Notes
 - EDC components are plugin-based. Support for various verifiable credential formats is possible by implementing a plugin (this applies to both decentralized as well as centralized solutions). For example, support for web DID resolution is just a preview of a method that can be created. See [docs](https://github.com/eclipse-edc/Publications/blob/main/Identity%20Management/DID_EDC.md).

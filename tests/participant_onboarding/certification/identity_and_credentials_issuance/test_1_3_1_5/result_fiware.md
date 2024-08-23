@@ -83,7 +83,7 @@ The VC lifecycle is partially covered by the FIWARE connector as follows:
 | **Revocation/Expiration**        | Not fully covered. API does not support it, but participants can be deleted to stop access. | 2               |
 | **Renewal/Re-Issuance**          | Not covered, but participants can be created and deleted. | 1               |
 
-Overall score: 3
+**Overall score: (4+4+4+2+1)/5 = 3**
 
 
 
