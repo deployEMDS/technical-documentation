@@ -99,9 +99,9 @@ def read_test_info(file_path, github_base_url) -> TestInformation:
         )
 
 def read_test_kpis(test_content, test_id_numeric) -> List[TestKpi]:
-    kpi_names = re.search(r"#### ISO25010 Quality\s*(.*?)(?=\n####|$)", test_content, re.DOTALL)
+    kpi_names = re.search(r"#### ISO25010 Quality\s*(.*?)(?=\n####|\n###|$)", test_content, re.DOTALL)
     kpi_names = (kpi_names.group(1) if kpi_names else '').split('\n')
-    kpi_descs = re.search(r"#### ISO25010 Quality description\s*(.*?)(?=\n####|$)", test_content, re.DOTALL)
+    kpi_descs = re.search(r"#### ISO25010 Quality description\s*(.*?)(?=\n####|\n###|$)", test_content, re.DOTALL)
     kpi_descs = (kpi_descs.group(1) if kpi_descs else '').split('\n')
     kpi_names = [name.strip() for name in kpi_names if name.strip()]
     kpi_descs = [desc.strip() for desc in kpi_descs if desc.strip()]
