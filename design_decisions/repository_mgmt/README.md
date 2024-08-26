@@ -88,10 +88,6 @@ Options:
   --help             Show this message and exit.
 ```
 
-#### Create we content
-`python create_web_content.py -i ../../tests -o ../../result --github-base-url https://github.com/imec-int/deployEMDS`
-
-
 #### File Structure
 
 The `create_repo_structure.py` script will generate the following directory structure:

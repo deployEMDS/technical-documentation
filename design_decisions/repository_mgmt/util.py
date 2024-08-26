@@ -72,10 +72,11 @@ def _is_result_file_done(file_path):
 
 
 def read_test_criteria(test_content):
-    pattern = r"###.*Comparative[^\n]*\n+(.+?)(?=\n###|$)"
+    # pattern = r"###.*Comparative[^\n]*\n+(.+?)(?=\n###|$)"
+    pattern = r"###.*criteria[^\n]*\n+(.+?)(?=\n###|$)"
     kpi_criteria = re.search(pattern, test_content, re.DOTALL)
     kpi_criteria = kpi_criteria.group(1).strip() if kpi_criteria else 'N/A'
-   # print(kpi_criteria)
+    # print(kpi_criteria)
     return kpi_criteria
 
 
@@ -93,7 +94,7 @@ def read_test_info(file_path, github_base_url) -> TestInformation:
         minimal = 'Minimal?\nYes' in test_content
         test_type = re.search(r'Test type\n(.+?)\n', test_content)
         test_type = test_type.group(1) if test_type else 'N/A'
-        dir_of_test = str(file_path).split('test/')[1]
+        dir_of_test = str(file_path).split('tests/')[1]
         last_modified = datetime.fromtimestamp(os.path.getmtime(file_path))
 
         return TestInformation(
@@ -128,7 +129,7 @@ def read_test_result(file_path, github_base_url) -> TestResult:
         result_groups = re.search(r'Statement of asses*ment\n((.|\n)*)', result_content, re.DOTALL)
         result = result_groups.group(1) if result_groups else 'N/A'
         result_done = _is_result_file_done(file_path)
-        dir_of_test_result = str(file_path).split('test/')[1]
+        dir_of_test_result = str(file_path).split('tests/')[1]
         last_modified = datetime.fromtimestamp(os.path.getmtime(file_path))
 
         return TestResult(
