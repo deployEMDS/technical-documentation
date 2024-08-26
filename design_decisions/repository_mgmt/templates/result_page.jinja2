@@ -31,6 +31,9 @@ This file was last modified at {{ test.last_modified | datetime_format }}.
     {%+ endfor +%}
 {% endif %}
 
+* Evaluation Criteria:
+{{ test.criteria }}
+
 ## Results
 <Tabs>
 {%+ for result in test.results +%}
