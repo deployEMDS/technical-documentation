@@ -89,7 +89,7 @@ Options:
 ```
 
 #### Create we content
-`python create_web_content.py -i ../../tests -o ../../result --github-base-url https://xdxxxdx.github.io/`
+`python create_web_content.py -i ../../tests -o ../../result --github-base-url https://github.com/imec-int/deployEMDS`
 
 
 #### File Structure
