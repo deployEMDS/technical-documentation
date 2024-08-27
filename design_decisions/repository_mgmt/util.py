@@ -72,8 +72,8 @@ def _is_result_file_done(file_path):
 
 
 def read_test_criteria(test_content):
-    # pattern = r"###.*Comparative[^\n]*\n+(.+?)(?=\n###|$)"
-    pattern = r"###.*criteria[^\n]*\n+(.+?)(?=\n###|$)"
+    pattern = r"###.*Comparative[^\n]*\n+(.+?)(?=\n###|$)"
+    # pattern = r"###.*criteria[^\n]*\n+(.+?)(?=\n###|$)"
     kpi_criteria = re.search(pattern, test_content, re.DOTALL)
     kpi_criteria = kpi_criteria.group(1).strip() if kpi_criteria else 'N/A'
     # print(kpi_criteria)
