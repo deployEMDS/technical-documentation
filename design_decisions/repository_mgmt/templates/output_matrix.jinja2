@@ -1,0 +1,5 @@
+| Test ID | Quality | Quality Description | EDC MVD | Fiware  | Pontux-X |
+|---------|---------|---------------------|---------|---------|----------|
+{%- for result in results +%}
+| {{ result.test_id }} | - | - | {{ result.result_edc }} | {{ result.result_fiware }} | - |
+{%- endfor -%}
