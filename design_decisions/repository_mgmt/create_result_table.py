@@ -42,6 +42,10 @@ def generate_test_results_table(base_dir, output_file, github_base_url):
                         test_content = f.read()
                         title_parts = test_content.split('\n')[1].strip('## ').split(' ')
                         title = ' '.join(title_parts[1:])
+                        pattern = r"### Test description\s*(.*?)(?=\n###|$)"
+                        match = re.search(pattern, test_content, re.DOTALL)
+                        description = match.group(1).strip() if match else 'N/A'
+                        description = description.replace('\n', '\\')
                         test_id_numeric = title_parts[0]
                         phase = re.search(r'Phase (\d+)', test_content)
                         phase = phase.group(1) if phase else 'N/A'
@@ -68,6 +72,7 @@ def generate_test_results_table(base_dir, output_file, github_base_url):
                     results.append({
                         'test_id': test_id_numeric,
                         'title': title,
+                        'description': description,
                         'path': relative_path,
                         'result_files': result_files,
                         'phase': phase,
@@ -97,8 +102,8 @@ def generate_test_results_table(base_dir, output_file, github_base_url):
 
 
 def _filter_result_data(results):
-    # return [r for r in results if (r['minimal'] == 'Yes' and r['phase'] in ['1', '2']) or r['is_one_done']]
-    return results
+    return [r for r in results if (r['minimal'] == 'Yes' and r['phase'] in ['1', '2'])]
+    #return results
 
 def _prepare_result_data(results, github_base_url):
     prepared_results = []
@@ -117,10 +122,12 @@ def _prepare_result_data(results, github_base_url):
 
         prepared_results.append({
             'test_id': result['test_id'],
-            # 'test_link': test_link,
-            # 'phase': result['phase'],
-            # 'minimal': result['minimal'],
-            # 'result_links': result_links,
+            'test_link': test_link,
+            'test_title': result['title'],
+            'description': result['description'],
+            'phase': result['phase'],
+            'minimal': result['minimal'],
+            'result_links': result_links,
             'result_edc': result['result_edc'],
             'result_fiware': result['result_fiware'],
         })
