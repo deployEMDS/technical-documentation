@@ -26,6 +26,8 @@ The FIWARE Connector provides partial coverage as it supports self-issued creden
 
 **Score:** **2 (Partial Coverage)**
 
+Functional Suitability Quality Metric Score: 2
+
 
 
 #### Notes

@@ -55,7 +55,8 @@ Based on the criteria outlined in the [Comparative criteria (checklists, ...)](.
 | **Functional Correctness**    | Technical requirements meet results with the needed degree of precision.                 | 3               | While the existing features of the EDC solution are generally accurate, the resolver requires domain-specific customization, which may affect precision in certain contexts.           |
 | **Functional Appropriateness**| Technical requirements facilitate the accomplishment of specified tasks and objectives.  | 2               | The EDC solution requires significant customization and development work, particularly for the resolver, to fully support the required tasks and objectives within the domain context. |
 
-**Overall Score: (2+3+2)/3 = 2.33**
+**Overall Calculation: (2+3+2)/3 = 2.33**
+Functional Suitability Quality Metric Score: 2.33
 
 #### Notes
 EDC is a pluggable ecosystem primarily targeting Java/Kotlin developers. Some extensions are available on the market for plug-and-play, but for certain specific use cases, developers need to write their own extensions.

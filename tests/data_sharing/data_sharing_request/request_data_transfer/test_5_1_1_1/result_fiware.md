@@ -111,5 +111,7 @@ Initiation of data sharing works. The logging features can only be used to a lim
 | Retrieve data sharing information of past data sharing actions. | 1 |
 | **Result**|**1.75**|
 
+Functional Suitability Quality Metric Score: 1.75
+
 #### Notes
 

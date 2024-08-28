@@ -37,4 +37,6 @@ None of the protocol specifies a data exchange protocol other then HTTP GET requ
 | Functional appropriateness | 4 |
 | Total | 4 |
 
+Functional Suitability Quality Metric Score: 4
+
 #### Notes

@@ -51,7 +51,9 @@ Also, the reference implementation of the EU Digital Identity Wallet targets mob
 | **Accountability**     | The actions of an entity can be traced uniquely to the entity.                                            | 3               | 	The EDC solution provides a level of traceability for actions, but integration gaps might affect the ability to fully trace actions to entities.                                                           |
 | **Authenticity**       | The resource can be proved to be the one claimed.                                                         | 2               | The EDC system doesnt not prove authenticity fully due to incomplete integration with identity providers. This is expected to improve with extension development.                                           |
 
-Overall score: ( 2 + 3 + 2 + 3 + 2) / 5 = 2.4
+Overall Calculation: ( 2 + 3 + 2 + 3 + 2) / 5 = 2.4
+
+Functional Suitability Quality Metric Score: 2.4
 
 #### Notes
 EDC is a pluggable ecosystem primarily targeting Java/Kotlin developers. Some extensions are available on the market for plug-and-play, but for certain specific use cases, developers need to write their own extensions.

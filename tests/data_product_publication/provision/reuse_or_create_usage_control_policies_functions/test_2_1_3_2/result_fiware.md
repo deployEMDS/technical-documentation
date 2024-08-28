@@ -20,6 +20,6 @@ The Fiware Connector does not offer a GUI to create, update, delete or view poli
 
 #### Measured results
 
-0
+Functional Suitability Quality Metric Score: 0
 
 #### Notes

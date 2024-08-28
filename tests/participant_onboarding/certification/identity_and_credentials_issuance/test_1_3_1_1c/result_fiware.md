@@ -31,7 +31,9 @@ The criteria used to measure the results was the one specified by the Data Produ
 | **Functional Correctness**    | Technical requirements meet results with the needed degree of precision.                           | 4               | The implementation of EBSI-compatible services is precise and reliable, correctly issuing credentials and managing identities as per the specifications. The integration is robust, with accurate handling of the trust services. |
 | **Functional Appropriateness**| Technical requirements facilitate the accomplishment of specified tasks and objectives.            | 4               | The platform’s design and functionality are well-suited to the requirements of EBSI, enabling efficient and effective credential issuance and identity management. It supports the necessary processes without unnecessary complexity, facilitating smooth operations. |
 
-**Overall score:** (4 + 4 + 4)/3 = 4 
+**Overall calculation:** (4 + 4 + 4)/3 = 4 
+
+Functional Suitability Quality Metric Score: 4
 
 
 

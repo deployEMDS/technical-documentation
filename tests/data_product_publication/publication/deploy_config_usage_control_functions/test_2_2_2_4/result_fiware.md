@@ -33,7 +33,7 @@ The Fiware implementation partially covers the usage Control Policies deployment
 | **Functional Appropriateness**| Technical requirements facilitate the accomplishment of specified tasks and objectives.            | 0               |
 
 
-**Overall score: 0**
+**Functional Suitability Quality Metric Score: 0**
 
 
 #### Notes

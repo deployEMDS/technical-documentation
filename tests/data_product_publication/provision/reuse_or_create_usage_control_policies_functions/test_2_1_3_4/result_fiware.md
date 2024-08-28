@@ -98,7 +98,7 @@ The following example response shows that multiple policies can be attached to o
 
 #### Measured results
 
-4
+Functional Suitability Quality Metric Score: 4
 
 #### Notes
 
