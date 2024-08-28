@@ -71,14 +71,16 @@ def process_test_file(test_md_path, base_path, test_id):
     result_files = list(test_id.glob('result_*.md'))
     result_edc = find_score_in_results(result_files, 'edc')
     result_fiware = find_score_in_results(result_files, 'fiware')
-
     relative_path = test_id.relative_to(base_path)
-
+    original_string = str(relative_path)
+    base_path, version_numbers = original_string.rsplit('/test_', 1)
+    formatted_version = version_numbers.replace('_', '.')
+    modified_relative_path = f"{base_path}/{formatted_version}"
     return {
         'test_id': test_id_numeric,
         'title': title,
         'description': description,
-        'path': relative_path,
+        'path': modified_relative_path,
         'result_files': result_files,
         'phase': phase,
         'minimal': minimal,
@@ -122,7 +124,7 @@ def _prepare_result_data(results, github_base_url):
     """Prepare result data for rendering in the Markdown table."""
     prepared_results = []
     for result in results:
-        test_link = f"[{result['title']}]({github_base_url}/{result['path']}/test.md)"
+        test_link = f"./{result['path']}"
         result_links = [
             {
                 'name': f.stem.replace('result_', ''),
