@@ -6,7 +6,7 @@ import { Icon } from '@iconify/react';
 const config: Config = {
   title: 'deployEMDS Technical Documentation',
   tagline: 'Towards a common European mobility data space (EMDS)',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/1048_deployEMDS_LOGO-H_RGB.svg',
 
   // Set the production url of your site here
   url: 'https://pages.github.imec.be/',
@@ -66,7 +66,7 @@ const config: Config = {
 
   themeConfig: {
     // Replace with your project's social card
-    image: 'img/mikhail-luxkstn-2NcGHHO9ukE-unsplash.jpg',
+    image: 'img/1048_deployEMDS_LOGO-H_RGB.svg',
     colorMode: {
       defaultMode: 'light',
       disableSwitch: true,

@@ -70,6 +70,16 @@ def _is_result_file_done(file_path):
         todo_count = content.count('[TODO]')
         return todo_count <= 6  # Consider done if 6 or fewer TODOs remain
 
+
+def read_test_criteria(test_content):
+    pattern = r"###.*Comparative[^\n]*\n+(.+?)(?=\n###|$)"
+    # pattern = r"###.*criteria[^\n]*\n+(.+?)(?=\n###|$)"
+    kpi_criteria = re.search(pattern, test_content, re.DOTALL)
+    kpi_criteria = kpi_criteria.group(1).strip() if kpi_criteria else 'N/A'
+    return kpi_criteria
+
+
+
 def read_test_info(file_path, github_base_url) -> TestInformation:
     with open(file_path, 'r') as f:
         test_content = f.read()
@@ -95,7 +105,8 @@ def read_test_info(file_path, github_base_url) -> TestInformation:
             minimal=minimal,
             last_modified=last_modified,
             path=f"{github_base_url}/{dir_of_test}",
-            kpis=read_test_kpis(test_content, test_id_numeric)
+            kpis=read_test_kpis(test_content, test_id_numeric),
+            criteria=read_test_criteria(test_content)
         )
 
 def read_test_kpis(test_content, test_id_numeric) -> List[TestKpi]:
