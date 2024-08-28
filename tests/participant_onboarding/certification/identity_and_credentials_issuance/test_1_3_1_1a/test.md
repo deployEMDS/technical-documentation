@@ -1,3 +1,4 @@
+
 ## [1.3.1.1A] Participant onboarding: Certification - Identity and credentials issuance
 
 ### Test description
