@@ -1,0 +1,39 @@
+---
+sidebar_position: 3
+---
+
+# Comparative Result Matrix (Phase 1 and Phase 2)
+
+| Test ID | Test Description | Quality Description | EDC MVD | Fiware  | Pontux-X |
+|---------|---------|---------------------|---------|---------|----------|
+| [1.1.1.1] | The system provides the means to build an online resource centre and its onboarding documentation. | - | N/A | N/A | - |
+| [1.2.1.1] | If an onboarding online facility is provided, evaluate the level of customisation required to input participants’ metadata. | - | N/A | N/A | - |
+| [1.2.2.1] | Describe how the data space could validate requestors’ real-world identities from national identity providers. | - | N/A | N/A | - |
+| [1.3.1.1A] | Prove that the stack uses a credential framework that is compatible with this initiative: Gaia-X | - | 2 | N/A | - |
+| [1.3.1.5] | Assess the coverage of a minimally viable credential lifecycle is supported: request (credentials), issuance, validation, renewal, revocation. | - | N/A | N/A | - |
+| [2.1.1.3] | Assess the availability of multiple data planes that support multiple protocols. Refer to D2.1 for an overview of the most used protocols. The higher the coverage, the higher the ranking. | - | 4 | N/A | - |
+| [2.1.2.1] | Test that the vocabulary hub's assets are available to every data space participant. Rank higher if the reference to a vocabulary asset is integrated in the data sharing process. | - | N/A | N/A | - |
+| [2.1.2.2] | Test that a data space participant can publish new vocabularies (test vocabulary), and the vocabulary hub returns convenient feedback on the operation | - | N/A | N/A | - |
+| [2.1.2.4] | Assess that the vocabulary hub covers semantic or domain standards for the metadata. The more coverage of relevant standards, the higher the ranking. | - | N/A | N/A | - |
+| [2.1.3.1] | Assess how Usage Control Policies are deployed. Rank the result by API coverage and ease of use (i.e. avoiding multiple calls with parameter passing) | - | 2 | N/A | - |
+| [2.1.3.2] | Assess how Usage Control Policies are deployed. Rank the result by GUI coverage and ease of use (i.e. autocompletion, validation, interface to the policy repository is available, etc.) | - | 1 | N/A | - |
+| [2.2.2.10] | Assess that the policy language is extensible and score the results by flexibility and availability of development and testing facilities for new operators. | - | 1 | N/A | - |
+| [2.2.2.1] | Assess the completeness of the administrative interface (either API or GUI) so that it covers the most needed use cases for the deployment of usage policies: upload a new policy, (optional) bind a policy with a custom enforcement function, assign a policy to a sharing agreement, delete a policy, re-use an uploaded policy, persist uploaded policies. | - | 4 | N/A | - |
+| [2.2.2.4] | Expandability assessment: Assess if the system provides an API or libraries to embed custom usage enforcement functions that can be invoked by usage policies. | - | 2 | N/A | - |
+| [2.2.3.1A] | Test the process of catalogue publication for a data product under the following conditions: a new data product is published in the catalogue | - | 4 | N/A | - |
+| [2.2.3.1B] | Test the process of catalogue publication for a data product under the following conditions: an existing data product is published on the catalogue | - | 4 | N/A | - |
+| [2.2.3.1D] | Test the process of catalogue publication for a data product under the following conditions: a data product is de-published. | - | 4 | N/A | - |
+| [2.2.4.1] | Assess if the stack provides an interface to 3rd party catalogues.<br />If not, what is the effort to build one? Rank in terms of technical debt (relative to the rest of selected stacks being analysed). | - | N/A | N/A | - |
+| [2.2.4.2] | Assess that publishing to a 3rd party catalogue or search tool doesn’t add technical debt. Configuration, and policy setting are not technical debt. Metadata translation IS technical debt. | - | N/A | N/A | - |
+| [3.1.1.1] | Assessment: If an Online U/X is natively available, evaluate individual search features. If the Data space catalogue exposes an API, assess the technical debt to integrate it with a data search tool that is representative for EU projects. Criteria are: Open Source, hosted solution or EU-driven project. | - | 2 | N/A | - |
+| [4.2.1.1] | Test completeness: Two connectors can negotiate a data sharing agreement that supports a defined minimal state machine (the definition of the minimal state machine must be agreed beforehand). | - | 4 | N/A | - |
+| [4.2.1.3A] | Prove that the negotiation can use (one or more of) the following assets and parameters to define a contract:<br />- Claim verification<br />- Usage policy rules<br />- Service Agreements<br /><br />The larger the coverage (i.e. more possibilities), the higher the rank. | - | 2 | N/A | - |
+| [4.2.1.6] | Validate that the data sharing protocol is compatible with channel encryption (e.g. TLS), that a connector authentication has taken place exclusively for the data sharing negotiation. | - | 4 | N/A | - |
+| [4.2.3.1] | Check whether the negotiation API, or the status messages, or the negotiation logs, are not accessible to entities other than the negotiating participants and the system admin (privileged role). | - | 4 | N/A | - |
+| [4.2.3.2] | Check whether the system provides a observability trace of the sharing agreement (privacy terms of observability are out of scope here). | - | 4 | N/A | - |
+| [4.3.2.1] | Verify and document the existence (and functionalities) of a rating and billing capability. | - | N/A | N/A | - |
+| [5.1.1.1] | Coverage test: assess that the API is available and test that a data sharing request is properly covered: <br />- Initiate a data sharing <br />- Retrieve data sharing information and status <br />- Receive data sharing request outcome condition <br />- Retrieve data sharing information of past data sharing actions. <br /><br />The system ranks higher if the API is secured and implements common methods, like REST. | - | N/A | N/A | - |
+| [5.1.1.2] | Coverage test: for each data plane available, test a minimal data sharing and identify possible inconsistencies with the original data product protocol endpoint (e.g., during data querying, we aren’t allowed to send http headers to the data source). | - | N/A | N/A | - |
+| [5.2.1.1] | Test the policies that are supported out of the box.  <br />For the policies that are not supported, describe the effort of how to build them, and rank the system consequently (e.g.: create a plugin in a documented environment ranks better than integrating an external function that introduces dependencies and interface maintenance). | - | 0 | 0 | - |
+| [5.3.3.1] | Analyse the mechanism that allow to switch off and on logs during a data sharing request. If a mechanism requires intervention of a connector administrator, it ranks less than an API that a user can call. | - | N/A | N/A | - |
+| [5.3.3.2] | Analyse if the formats can be parsed by commonly used tracing programs (see incumbent formats). | - | N/A | N/A | - |
