@@ -76,18 +76,29 @@ def process_test_file(test_md_path, base_path, test_id):
     base_path, version_numbers = original_string.rsplit('/test_', 1)
     formatted_version = version_numbers.replace('_', '.')
     modified_relative_path = f"{base_path}/{formatted_version}"
+    customer_journey = format_path(modified_relative_path)
     return {
         'test_id': test_id_numeric,
         'title': title,
         'description': description,
         'path': modified_relative_path,
         'result_files': result_files,
+        'customer_journey': customer_journey,
         'phase': phase,
         'minimal': minimal,
         'result_edc': result_edc,
         'result_fiware': result_fiware,
     }
 
+
+def format_path(path):
+    path_str = str(path)
+    path_str = path_str.lstrip('./')
+    path_str = re.split(r'/\d+\.\d+\.\d+\.\d+$', path_str)[0]  # Remove the trailing version part
+    path_str = path_str.replace('_', ' ')
+    path_str = path_str.title()
+    path_str = path_str.replace('/', ' - ')
+    return path_str
 
 def extract_description(test_content):
     """Extract test description from the test content."""
@@ -139,6 +150,7 @@ def _prepare_result_data(results, github_base_url):
             'test_title': result['title'],
             'description': result['description'],
             'phase': result['phase'],
+            'customer_journey': result['customer_journey'],
             'minimal': result['minimal'],
             'result_links': result_links,
             'result_edc': result['result_edc'],
