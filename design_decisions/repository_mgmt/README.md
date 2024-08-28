@@ -89,7 +89,7 @@ Options:
 ```
 #### Create Comparative Matrix Table
 
-`python create_result_table.py --base-dir ../../tests --output-file ../../web/docs/tech-testing/output.mdx --github-base-url https://github.com/imec-int/deployEMDS`
+`python create_result_table.py --base-dir ../../tests --output-file ../../web/docs/tech-testing/overview_matrix.mdx --github-base-url https://github.com/imec-int/deployEMDS`
 
 #### File Structure
 
