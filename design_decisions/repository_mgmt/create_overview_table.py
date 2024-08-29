@@ -115,13 +115,5 @@ def _prepare_result_data(results, github_base_url):
     return prepared_results
 
 
-def _is_result_file_done(file_path):
-    """Check if a result file is done by counting TODO entries."""
-    with open(file_path, 'r') as f:
-        content = f.read()
-        todo_count = content.count('[TODO]')
-        return todo_count <= 6  # Consider done if 6 or fewer TODOs remain
-
-
 if __name__ == '__main__':
     generate_test_results_table()
