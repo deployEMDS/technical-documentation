@@ -65,7 +65,8 @@ The EDC implementation partially covers the VC lifecycle as outlined above.  Bas
 | **Revocation/Expiration**        | Covered                                                            | 4               |
 | **Renewal/Re-Issuance**          | Not covered.           | 0               |
 
-**Overall score: (0+4+4+4+0)/5 = 2.4**
+**Overall Calculation: (0+4+4+4+0)/5 = 2.4**
+Functional Suitability Quality Metric Score: 2.4
 
 #### Notes
 - EDC components are plugin-based. Support for various verifiable credential formats is possible by implementing a plugin (this applies to both decentralized as well as centralized solutions). For example, support for web DID resolution is just a preview of a method that can be created. See [docs](https://github.com/eclipse-edc/Publications/blob/main/Identity%20Management/DID_EDC.md).

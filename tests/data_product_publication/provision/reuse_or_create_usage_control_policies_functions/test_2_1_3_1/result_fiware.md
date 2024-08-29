@@ -34,6 +34,6 @@ The API provides the basic functionality expected.
 
 #### Measured results
 
-4
+Functional Suitability Quality Metric Score: 4
 
 #### Notes

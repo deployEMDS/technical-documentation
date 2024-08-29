@@ -32,7 +32,8 @@ The criteria used to measure the results was the one specified by the Data Produ
 
 
 
-**Overall score: ( 4 + 4 + 2 + 2 + 4) / 5 = 3.2**
+**Overall Calculation: ( 4 + 4 + 2 + 2 + 4) / 5 = 3.2**
+Functional Suitability Quality Metric Score: 3.2
 
 
 #### Notes

@@ -38,7 +38,7 @@ An administrator can therefore:
 
 #### Measured results
 
-4
+Functional Suitability Quality Metric Score: 4
 
 #### Notes
 

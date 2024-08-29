@@ -71,12 +71,9 @@ The criteria used to measure the results was the one specified by the Data Produ
 | **Functional Correctness**    | Technical requirements meet results with the needed degree of precision.                           | 3               | While the onboarding process is generally accurate, there may be some areas where precision could be improved, particularly in handling edge cases or specific configurations. However, the core functionalities perform as expected. |
 | **Functional Appropriateness**| Technical requirements facilitate the accomplishment of specified tasks and objectives.            | 3               | The process is appropriate for the task, enabling organizations to onboard effectively. However, some steps could be streamlined to enhance efficiency, such as reducing the complexity of commands or improving the integration with identity providers. |
 
-**Overall score: (4+3+3)/3 = 3.33**
+**Overall Calculation: (4+3+3)/3 = 3.33**
 
-
-
-
-
+Functional Suitability Quality Metric Score: 3.33
 
 #### Notes
 

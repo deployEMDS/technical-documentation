@@ -32,8 +32,10 @@ The criteria used to measure the results was the one specified by the Data Produ
 | **Scalability**    | The product can handle growing to adapt its capacity.                             | 3               | While the ODRL policy language is scalable, the lack of built-in simulation facilities means that scaling operations, especially in testing environments, may require additional resources or separate environments. |
 
 
-Overall score:
+Overall Calculation:
 ((4) + (4) + (4) +(3) )/4 = 15/4 = 3.75
+
+Functional Suitability Quality Metric Score: 3.75
 
 #### Notes
 

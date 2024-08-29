@@ -87,6 +87,9 @@ Options:
   --stack TEXT       List of stacks to process  [default: EDC+VC, Fiware]
   --help             Show this message and exit.
 ```
+#### Create Comparative Matrix Table
+
+`python create_result_table.py --base-dir ../../tests --output-file ../../web/docs/tech-testing/results/overview_matrix.mdx --github-base-url https://github.com/imec-int/deployEMDS`
 
 #### File Structure
 

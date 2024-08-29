@@ -23,6 +23,7 @@ A test environment is needed. Information provided in the following github repo:
 
 
 #### Measured results
-0/4
+
+Functional Suitability Quality Metric Score: 0
 
 #### Notes

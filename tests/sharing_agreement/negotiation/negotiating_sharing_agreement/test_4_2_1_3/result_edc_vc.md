@@ -1,4 +1,4 @@
-## [4.2.1.1] Sharing agreement: Negotiation - Negotiating sharing agreement
+## [4.2.1.3] Sharing agreement: Negotiation - Negotiating sharing agreement
 ### Stack: EDC+VC
 
 ### Statement of assessment

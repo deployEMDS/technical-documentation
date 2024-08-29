@@ -179,5 +179,5 @@ The Fiware implementation partially covers the usage Control Policies deployment
 
 
 
-**Overall score: 3**
+**Functional Suitability Quality Metric Score: 3**
 #### Notes

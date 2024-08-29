@@ -74,7 +74,8 @@ The criteria used to measure the results was the one specified by the Data Produ
 | **Functional Correctness**    | Technical requirements meet results with the needed degree of precision.                           | 4               | The manual policy creation process works accurately and consistently as demonstrated by the example command. The policies created meet the expected format and enforce the required rules. |
 | **Functional Appropriateness**| Technical requirements facilitate the accomplishment of specified tasks and objectives.            | 3               | While the manual input method is effective, the lack of external input support limits the platform's flexibility, making it less appropriate for diverse deployment scenarios. |
 
-**Overall score:** (2 + 4 + 3)/3 = 3
+**Overall calculation:** (2 + 4 + 3)/3 = 3
+Functional Suitability Quality Metric Score: 3
 
 #### Notes
 The Fiware connector shows strong capability in manual policy creation, but its functional completeness is hindered by the absence of support for external input methods. This affects its overall flexibility and appropriateness in broader usage scenarios.

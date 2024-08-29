@@ -21,7 +21,7 @@ Evidence proving that is compatible with mentioned framework.
 Currently this is not scope of the connector, as it is part of onboarding organizations, done by a Trust anchor. 
 
 #### Measured results
-0
+Functional Suitability Quality Metric Score: 0
 
 #### Notes
 
