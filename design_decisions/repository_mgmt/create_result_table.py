@@ -116,7 +116,7 @@ def extract_phase(test_content):
 
 def find_score_in_results(result_files, keyword):
     """Find score in the result files based on a keyword."""
-    score_pattern = re.compile(r"Metric(?: Score)?:\s*(\d+)", re.IGNORECASE)
+    score_pattern = re.compile(r"Metric(?: Score)?:\s*(\d+(\.\d+)?)", re.IGNORECASE)
     for result_file in result_files:
         if keyword in str(result_file):
             with open(result_file, 'r') as f:
