@@ -9,7 +9,6 @@ export default function Link({ children }) {
         color: 'blue', // Set text color to blue
         padding: '0.2rem',
         fontWeight: 'bold', // Make font bold
-        fontStyle: 'italic', // Make font italic
       }}
     >
       {children}
