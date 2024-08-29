@@ -1,12 +1,13 @@
 ---
 sidebar_position: 0
 ---
+
 import Link from '@site/src/components/Link';
 
-# Score matrix
+# Score Matrix
 
 | Test ID | Customer Journey | Test Description | EDC MVD | Fiware  | Pontus-X |
-|---------|---------|---------------------|---------|---------|----------|
-{%- for result in results +%}
-| <Link color="#25c2a0"> [{{ result.test_id }}]({{ result.test_link }})</Link>| {{ result.customer_journey }} | {{ result.description }} | {{ result.result_edc }} | {{ result.result_fiware }} | {{result.result_pontus_x}}|
-{%- endfor -%}
+|---------|------------------|------------------|---------|---------|----------|
+{%- for result in results %}
+| <Link color="#25c2a0" to="{{ result.test_link }}">{{ result.test_id }}</Link> | {{ result.customer_journey }} | {{ result.description }} | {{ result.result_edc }} | {{ result.result_fiware }} | {{ result.result_pontus_x }} |
+{%- endfor %}
