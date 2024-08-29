@@ -163,7 +163,7 @@ def _prepare_result_data(results, github_base_url):
 def render_markdown_table(prepared_results, output_file):
     """Render the Markdown table using the Jinja2 template."""
     template_data = {'results': prepared_results}
-    markdown_table = template_env.get_template('output_matrix.jinja2').render(**template_data)
+    markdown_table = template_env.get_template('score_matrix.jinja2').render(**template_data)
 
     with open(output_file, 'w') as f:
         f.write(markdown_table)
