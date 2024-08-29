@@ -1,7 +1,7 @@
 ## [1.3.1.5] Participant Onboarding: Certification - Identity and Credentials Issuance
 ### Stack: EDC + VC
 
-### Assessment Statement
+### Statement of assessment
 #### Environment
 - The test is conducted in a local environment using IntelliJ IDE.
 - The EDC MVD commit used is [650ed8f](https://github.com/eclipse-edc/MinimumViableDataspace/commit/650ed8fbc4b19e152ef2491d86f5ab3b316a6fec).

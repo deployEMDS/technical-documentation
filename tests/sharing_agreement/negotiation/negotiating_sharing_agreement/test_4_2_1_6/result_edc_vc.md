@@ -2,8 +2,7 @@
 
 ### Stack: EDC+VC
 
-### Statement of Assessment
-
+### Statement of assessment
 #### Environment
 - The test utilizes the EDC MVD commit [9a5f93c](https://github.com/eclipse-edc/MinimumViableDataspace/commit/9a5f93c89cf5624cc4bf8eaa024a29da9b8e3d12).
 - The test is executed in an Ubuntu environment using IntelliJ.
