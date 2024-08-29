@@ -89,6 +89,13 @@ def _filter_result_data(results):
     return [r for r in results if (r['minimal'] == 'Yes' and r['phase'] in ['1', '2']) or r['is_one_done']]
 
 
+def _is_result_file_done(file_path):
+    """Check if a result file is done by counting TODO entries."""
+    with open(file_path, 'r') as f:
+        content = f.read()
+        todo_count = content.count('[TODO]')
+        return todo_count <= 6  # Consider done if 6 or fewer TODOs remain
+
 def _prepare_result_data(results, github_base_url):
     prepared_results = []
     for result in results:
