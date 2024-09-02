@@ -2,7 +2,20 @@
 ## [2.1.3.1] Data product publication: Provision - Reuse or create usage control policies / functions
  
 ### Test description
-Assess how Usage Control Policies are deployed. Rank the result by API coverage and ease of use (i.e. avoiding multiple calls with parameter passing)
+Assess how Usage Control Policies are deployed. Rank the result by API coverage and ease of use (i.e. avoiding multiple calls with parameter passing) by scoring the following actions
+
+1. Create a new policy
+2. Assign a usage policy to a sharing agreement
+3. Delete a sharing agreement
+4. Delete a usage policy
+5. Update existing sharing agreement
+6. Update existing usage policy
+7. Extend the usage policy language
+7. Create new policy enforcement functions
+
+The score will be as follows
+- 1/4 if the action can't be executed via APIs
+- 4/4N if the action can be executed with N calls
  
 ### Test type
 Assessment
