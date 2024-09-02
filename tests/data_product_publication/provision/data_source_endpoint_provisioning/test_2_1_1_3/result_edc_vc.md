@@ -66,4 +66,14 @@ We can create an artifact with
 - Attribute `dataAddress.baseUrl` storing a URL
 - Attribute `privateProperties.privateKey` storing an API key
 
+#### Measured results
+
+The criteria used to measure the results was the one specified by the Data Product Publication ISO25010 Quality file regarding Functional Suitability.
+
+| **Criterion**                | **Description**                                                                                     | **Score (0-4)** | **Explanation** |
+|------------------------------|-----------------------------------------------------------------------------------------------------|-----------------|-----------------|
+| **Functional Completeness**   | Technical requirements cover all the specified tasks and user objectives.                          | 4               | Artifacts can store a URL to any file format |
+| **Functional Correctness**    | Technical requirements meet results with the needed degree of precision.                           | 4               | Artifacts correctly store a URL to any file format |
+| **Functional Appropriateness**| Technical requirements facilitate the accomplishment of specified tasks and objectives.            | 4               | The URL is stored by setting the field `dataAddress.baseUrl` |
+
 Functional Suitability Quality Metric Score: 4
