@@ -30,50 +30,65 @@ All the tests are stored under [this folder](https://www.postman.com/i2cat-dev/w
 A single, parameterized call is used for the entire batch of tests.
 Execute this tests by running the entire folder at once.
 
-##### GTFS
-
-We can create an artifact with attribute `dataAddress.baseUrl` storing a URL to this resource.
-
-Functional Suitability Quality Metric Score: 4
-
-##### GTFS-RT
-
-We can create an artifact with attribute `dataAddress.baseUrl` storing a URL to this resource.
-
-Functional Suitability Quality Metric Score: 4
-
-##### DATEX-II
-
-We can create an artifact with attribute `dataAddress.baseUrl` storing a URL to this resource.
-
-Functional Suitability Quality Metric Score: 4
-
-##### GBFS
-
-We can create an artifact with attribute `dataAddress.baseUrl` storing a URL to this resource.
-
-Functional Suitability Quality Metric Score: 4
-
-##### WMS/WFS
-
-We can create an artifact with attribute `dataAddress.baseUrl` storing a URL to this resource.
-
-Functional Suitability Quality Metric Score: 4
-
-##### REST API + Api Key
-
-We can create an artifact with
-- Attribute `dataAddress.baseUrl` storing a URL
-- Attribute `privateProperties.privateKey` storing an API key
-
 #### Measured results
 
 The criteria used to measure the results was the one specified by the Data Product Publication ISO25010 Quality file regarding Functional Suitability.
+
+Criteria | Scoring
+-- | --
+No data planes supported out of the box, and no possibility to develop others | 0
+No data planes supported out of the box, but they can be developed ad-hoc. Coverage unknown | 1
+1 or 2 data planes covered out of the box | 2
+3 data planes covered out of the box | 3
+4 or 5 data planes covered out of the box | 4
+Ad-hoc customization of existing data plane(s) is possible (through configuration, not code) without having to build a new one | +1
+
+##### GTFS
 
 | **Criterion**                | **Description**                                                                                     | **Score (0-4)** | **Explanation** |
 |------------------------------|-----------------------------------------------------------------------------------------------------|-----------------|-----------------|
 | **Functional Completeness**   | Technical requirements cover all the specified tasks and user objectives.                          | 4               | Artifacts can store a URL to any file format |
 | **Functional Correctness**    | Technical requirements meet results with the needed degree of precision.                           | 4               | Artifacts correctly store a URL to any file format |
 | **Functional Appropriateness**| Technical requirements facilitate the accomplishment of specified tasks and objectives.            | 4               | The URL is stored by setting the field `dataAddress.baseUrl` |
+
+##### GTFS-RT
+
+| **Criterion**                | **Description**                                                                                     | **Score (0-4)** | **Explanation** |
+|------------------------------|-----------------------------------------------------------------------------------------------------|-----------------|-----------------|
+| **Functional Completeness**   | Technical requirements cover all the specified tasks and user objectives.                          | 4               | Artifacts can store a URL to any file format |
+| **Functional Correctness**    | Technical requirements meet results with the needed degree of precision.                           | 4               | Artifacts correctly store a URL to any file format |
+| **Functional Appropriateness**| Technical requirements facilitate the accomplishment of specified tasks and objectives.            | 4               | The URL is stored by setting the field `dataAddress.baseUrl` |
+
+##### DATEX-II
+
+| **Criterion**                | **Description**                                                                                     | **Score (0-4)** | **Explanation** |
+|------------------------------|-----------------------------------------------------------------------------------------------------|-----------------|-----------------|
+| **Functional Completeness**   | Technical requirements cover all the specified tasks and user objectives.                          | 4               | Artifacts can store a URL to any file format |
+| **Functional Correctness**    | Technical requirements meet results with the needed degree of precision.                           | 4               | Artifacts correctly store a URL to any file format |
+| **Functional Appropriateness**| Technical requirements facilitate the accomplishment of specified tasks and objectives.            | 4               | The URL is stored by setting the field `dataAddress.baseUrl` |
+
+##### GBFS
+
+| **Criterion**                | **Description**                                                                                     | **Score (0-4)** | **Explanation** |
+|------------------------------|-----------------------------------------------------------------------------------------------------|-----------------|-----------------|
+| **Functional Completeness**   | Technical requirements cover all the specified tasks and user objectives.                          | 4               | Artifacts can store a URL to any file format |
+| **Functional Correctness**    | Technical requirements meet results with the needed degree of precision.                           | 4               | Artifacts correctly store a URL to any file format |
+| **Functional Appropriateness**| Technical requirements facilitate the accomplishment of specified tasks and objectives.            | 4               | The URL is stored by setting the field `dataAddress.baseUrl` |
+
+##### WMS/WFS
+
+| **Criterion**                | **Description**                                                                                     | **Score (0-4)** | **Explanation** |
+|------------------------------|-----------------------------------------------------------------------------------------------------|-----------------|-----------------|
+| **Functional Completeness**   | Technical requirements cover all the specified tasks and user objectives.                          | 4               | Artifacts can store a URL to any file format |
+| **Functional Correctness**    | Technical requirements meet results with the needed degree of precision.                           | 4               | Artifacts correctly store a URL to any file format |
+| **Functional Appropriateness**| Technical requirements facilitate the accomplishment of specified tasks and objectives.            | 4               | The URL is stored by setting the field `dataAddress.baseUrl` |
+
+##### REST API + Api Key
+
+| **Criterion**                | **Description**                                                                                     | **Score (0-4)** | **Explanation** |
+|------------------------------|-----------------------------------------------------------------------------------------------------|-----------------|-----------------|
+| **Functional Completeness**   | Technical requirements cover all the specified tasks and user objectives.                          | 4               | Artifacts can store a URL to any file format |
+| **Functional Correctness**    | Technical requirements meet results with the needed degree of precision.                           | 4               | Artifacts correctly store a URL to any file format |
+| **Functional Appropriateness**| Technical requirements facilitate the accomplishment of specified tasks and objectives.            | 4               | The URL is stored by setting the field `dataAddress.baseUrl`, attribute `privateProperties.privateKey` can store an API key |
 
 Functional Suitability Quality Metric Score: 4
