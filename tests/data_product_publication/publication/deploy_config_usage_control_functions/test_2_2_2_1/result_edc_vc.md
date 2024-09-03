@@ -25,41 +25,6 @@ The following operations are tested via [API](https://app.swaggerhub.com/apis-do
 
 #### Measured results
 
-<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
-
-
-<colgroup>
-<col  class="org-left" />
-
-<col  class="org-left" />
-</colgroup>
-<thead>
-<tr>
-<th scope="col" class="org-left"><b>Criterion</b></th>
-<th scope="col" class="org-left"><b>Description</b></th>
-</tr>
-</thead>
-
-<tbody>
-<tr>
-<td class="org-left"><b>Functional Completeness</b></td>
-<td class="org-left">Technical requirements cover all the specified tasks and user objectives.</td>
-</tr>
-
-
-<tr>
-<td class="org-left"><b>Functional Correctness</b></td>
-<td class="org-left">Technical requirements meet results with the needed degree of precision.</td>
-</tr>
-
-
-<tr>
-<td class="org-left"><b>Functional Appropriateness</b></td>
-<td class="org-left">Technical requirements facilitate the accomplishment of specified tasks and objectives.</td>
-</tr>
-</tbody>
-</table>
-
 The criteria used to measure the results was the one specified by the Data Product Publication ISO25010 Quality file regarding Functional Suitability.
 
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
