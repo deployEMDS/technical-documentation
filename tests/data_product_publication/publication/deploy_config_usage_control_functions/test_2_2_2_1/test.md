@@ -16,43 +16,16 @@ No
 ### Extra information
 #### ISO25010 Quality
 Functional suitability
-
-<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
-
-
-<colgroup>
-<col  class="org-left" />
-
-<col  class="org-left" />
-</colgroup>
-<thead>
-<tr>
-<th scope="col" class="org-left"><b>Criterion</b></th>
-<th scope="col" class="org-left"><b>Description</b></th>
-</tr>
-</thead>
-
-<tbody>
-<tr>
-<td class="org-left"><b>Functional Completeness</b></td>
-<td class="org-left">Technical requirements cover all the specified tasks and user objectives.</td>
-</tr>
-
-
-<tr>
-<td class="org-left"><b>Functional Correctness</b></td>
-<td class="org-left">Technical requirements meet results with the needed degree of precision.</td>
-</tr>
-
-
-<tr>
-<td class="org-left"><b>Functional Appropriateness</b></td>
-<td class="org-left">Technical requirements facilitate the accomplishment of specified tasks and objectives.</td>
-</tr>
-</tbody>
-</table>
-
-
 #### ISO25010 Quality description
 The administrative interface allows the producer to deploy and configure usage control policies.
+
+### Evaluation Criteria 
+The criteria used to measure the results was the one specified by the Data Product Publication ISO25010 Quality file regarding Functional Suitability.
+
+
+| **Criterion**                | **Description**                                                                                     | **Score (0-4)** |
+|------------------------------|-----------------------------------------------------------------------------------------------------|-----------------|
+| **Functional Completeness**   | Technical requirements cover all the specified tasks and user objectives.                          | -              |
+| **Functional Correctness**    | Technical requirements meet results with the needed degree of precision.                           | -              |
+| **Functional Appropriateness**| Technical requirements facilitate the accomplishment of specified tasks and objectives.            | -           |
     
