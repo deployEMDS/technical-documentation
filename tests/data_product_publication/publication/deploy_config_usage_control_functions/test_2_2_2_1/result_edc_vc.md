@@ -27,59 +27,12 @@ The following operations are tested via [API](https://app.swaggerhub.com/apis-do
 
 The criteria used to measure the results was the one specified by the Data Product Publication ISO25010 Quality file regarding Functional Suitability.
 
-<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
+| **Assessment**              | **Functional Completeness** | **Functional Correctness** | **Functional Appropriateness**  | **Explanation**                                                                                                                                                                                                                                               |
+|-----------------------------|-----------------------------|----------------------------|---------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Upload a new policy          | 4/4                         | 4/4                        | 4/4                             |                                                                                                                                                                                                                                                                |
+| Re-use an uploaded policy    | 4/4                         | 4/4                        | 3/4                             | A contract definition requires both an access policy and a contract policy. This limitation forces the user to provide both.                                                                                                                                                                                    |
+| Persist uploaded policies    | 1/4                         | 1/4                        | 1/4                             | By default, the connector doesn’t persist data. From the [connector developers documentation](https://github.com/eclipse-edc/Connector/blob/0bb741787fd0abc2a6a8a883a6fafdbf3b795c29/docs/developer/default_provider_methods.md?plain=1#L21): *"Fallbacks are meant as safety net, in case developers forget or don’t want to add a specific implementation for a service. It is there so as not to end up without an implementation for a service interface. A good example for this are in-memory store implementations. It is expected that an actual persistence implementation is contributed by another extension.”* |
+| Delete a policy              | 4/4                         | 4/4                        | 4/4                             |                                                                                                                                                                                                                                                                |
 
-<colgroup>
-<col  class="org-left" />
-
-<col  class="org-left" />
-
-<col  class="org-left" />
-
-<col  class="org-left" />
-</colgroup>
-<thead>
-<tr>
-<th scope="col" class="org-left"><b>Assessment</b></th>
-<th scope="col" class="org-left"><b>Functional Completeness</b></th>
-<th scope="col" class="org-left"><b>Functional Correctness</b></th>
-<th scope="col" class="org-left"><b>Functional Appropriateness</b></th>
-</tr>
-</thead>
-
-<tbody>
-<tr>
-<td class="org-left">Upload a new policy</td>
-<td class="org-left">4/4</td>
-<td class="org-left">4/4</td>
-<td class="org-left">4/4</td>
-</tr>
-
-
-<tr>
-<td class="org-left">Re-use an uploaded policy</td>
-<td class="org-left">4/4</td>
-<td class="org-left">4/4</td>
-<td class="org-left">3/4 - A contract definition requires both an access policy and a contract policy</td>
-</tr>
-
-
-<tr>
-<td class="org-left">Persist uploaded policies</td>
-<td class="org-left">1/4 - By default, the connector doesn&rsquo;t persist data. From the <a href="https://github.com/eclipse-edc/Connector/blob/0bb741787fd0abc2a6a8a883a6fafdbf3b795c29/docs/developer/default_provider_methods.md?plain=1#L21">connector developers documentation</a>, &ldquo;<i>Fallbacks are meant as safety net, in case developers forget or don&rsquo;t want to add a specific implementation for a service. It is there so as not to end up without an implementation for a service interface. A good example for this are in-memory store implementations. It is expected that an actual persistence implementation is contributed by another extension.&ldquo;</i></td>
-<td class="org-left">1/4</td>
-<td class="org-left">1/4</td>
-</tr>
-
-
-<tr>
-<td class="org-left">Delete a policy</td>
-<td class="org-left">4/4</td>
-<td class="org-left">4/4</td>
-<td class="org-left">4/4</td>
-</tr>
-</tbody>
-</table>
-
-Functional Suitability Quality Metric Score: 3/4
+**Functional Suitability Quality Metric Score: 3/4**
