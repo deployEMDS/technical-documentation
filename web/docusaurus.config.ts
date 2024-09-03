@@ -57,6 +57,7 @@ const config: Config = {
         indexBlog: false,
       },
     ],
+    ['drawio', {}],
   ],
 
   markdown: {
