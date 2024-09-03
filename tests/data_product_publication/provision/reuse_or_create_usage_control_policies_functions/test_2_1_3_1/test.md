@@ -31,4 +31,13 @@ No
 Functional suitability
 #### ISO25010 Quality description
 The data producer uses an API to deploy and configure usage control policies.
-    
+
+### Evaluation Criteria 
+The criteria used to measure the results was the one specified by the Data Product Publication ISO25010 Quality file regarding Functional Suitability.
+
+
+| **Criterion**                | **Description**                                                                                     | **Score (0-4)** |
+|------------------------------|-----------------------------------------------------------------------------------------------------|-----------------|
+| **Functional Completeness**   | Technical requirements cover all the specified tasks and user objectives. The scores reflects the number of actions that can be successfully executed.                          | -              |
+| **Functional Correctness**    | Technical requirements meet results with the needed degree of precision. The scores reflects the number of actions that are correctly executed.                          | -              |
+| **Functional Appropriateness**| Technical requirements facilitate the accomplishment of specified tasks and objectives. The score decreases by the number of API calls required to complete an action.           | -              |
