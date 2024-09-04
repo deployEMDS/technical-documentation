@@ -16,6 +16,7 @@ No
 ### Extra information
 #### ISO25010 Quality
 Reliability
+Reliability
 #### ISO25010 Quality description
 [Recoverability] The system provides a recovery mechanism of the transferring session.
 [Faultlessness] The system supports asynchronous or long-running data sharing executions, with variable throughput and response times. 

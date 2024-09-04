@@ -1,0 +1,13 @@
+---
+tags:
+{%- for tag in tags %}
+    - {{ tag.lower().replace(' ', '-') }}
+{%- endfor %}
+title: "{{ customer_sub_journey_title }}"
+sidebar_position: 0
+---
+
+# {{ customer_sub_journey_title }}
+* **Phase** {{ execution_phase }}
+
+{{ customer_sub_journey_description }}

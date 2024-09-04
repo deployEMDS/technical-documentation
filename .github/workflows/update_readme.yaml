@@ -1,0 +1,39 @@
+name: Update README
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  update-readme:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.x'
+
+      - name: Install dependencies
+        working-directory: design_decisions/repository_mgmt
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Run overview table script
+        working-directory: design_decisions/repository_mgmt
+        run: |
+          python create_overview_table.py --base-dir ../../tests/ --output-file ../../overview.tmp.md --github-base-url https://github.com/imec-int/deployEMDS/tree/main/tests
+
+      - name: Update README
+        working-directory: design_decisions/repository_mgmt
+        run: python update_readme.py --readme-path ../../README.md --overview-path ../../overview.tmp.md
+
+      - name: Commit and push if changed
+        run: |
+          git config --global user.email "action@github.com"
+          git config --global user.name "GitHub Action"
+          git add README.md
+          git diff --quiet && git diff --staged --quiet || (git commit -m "Update README with latest test results" && git push)
