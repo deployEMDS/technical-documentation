@@ -43,52 +43,13 @@ No data planes supported out of the box, but they can be developed ad-hoc. Cover
 4 or 5 data planes covered out of the box | 4
 Ad-hoc customization of existing data plane(s) is possible (through configuration, not code) without having to build a new one | +1
 
-##### GTFS
-
-| **Criterion**                | **Description**                                                                                     | **Score (0-4)** | **Explanation** |
-|------------------------------|-----------------------------------------------------------------------------------------------------|-----------------|-----------------|
-| **Functional Completeness**   | Technical requirements cover all the specified tasks and user objectives.                          | 4               | Artifacts can store a URL to any file format |
-| **Functional Correctness**    | Technical requirements meet results with the needed degree of precision.                           | 4               | Artifacts correctly store a URL to any file format |
-| **Functional Appropriateness**| Technical requirements facilitate the accomplishment of specified tasks and objectives.            | 4               | The URL is stored by setting the field `dataAddress.baseUrl` |
-
-##### GTFS-RT
-
-| **Criterion**                | **Description**                                                                                     | **Score (0-4)** | **Explanation** |
-|------------------------------|-----------------------------------------------------------------------------------------------------|-----------------|-----------------|
-| **Functional Completeness**   | Technical requirements cover all the specified tasks and user objectives.                          | 4               | Artifacts can store a URL to any file format |
-| **Functional Correctness**    | Technical requirements meet results with the needed degree of precision.                           | 4               | Artifacts correctly store a URL to any file format |
-| **Functional Appropriateness**| Technical requirements facilitate the accomplishment of specified tasks and objectives.            | 4               | The URL is stored by setting the field `dataAddress.baseUrl` |
-
-##### DATEX-II
-
-| **Criterion**                | **Description**                                                                                     | **Score (0-4)** | **Explanation** |
-|------------------------------|-----------------------------------------------------------------------------------------------------|-----------------|-----------------|
-| **Functional Completeness**   | Technical requirements cover all the specified tasks and user objectives.                          | 4               | Artifacts can store a URL to any file format |
-| **Functional Correctness**    | Technical requirements meet results with the needed degree of precision.                           | 4               | Artifacts correctly store a URL to any file format |
-| **Functional Appropriateness**| Technical requirements facilitate the accomplishment of specified tasks and objectives.            | 4               | The URL is stored by setting the field `dataAddress.baseUrl` |
-
-##### GBFS
-
-| **Criterion**                | **Description**                                                                                     | **Score (0-4)** | **Explanation** |
-|------------------------------|-----------------------------------------------------------------------------------------------------|-----------------|-----------------|
-| **Functional Completeness**   | Technical requirements cover all the specified tasks and user objectives.                          | 4               | Artifacts can store a URL to any file format |
-| **Functional Correctness**    | Technical requirements meet results with the needed degree of precision.                           | 4               | Artifacts correctly store a URL to any file format |
-| **Functional Appropriateness**| Technical requirements facilitate the accomplishment of specified tasks and objectives.            | 4               | The URL is stored by setting the field `dataAddress.baseUrl` |
-
-##### WMS/WFS
-
-| **Criterion**                | **Description**                                                                                     | **Score (0-4)** | **Explanation** |
-|------------------------------|-----------------------------------------------------------------------------------------------------|-----------------|-----------------|
-| **Functional Completeness**   | Technical requirements cover all the specified tasks and user objectives.                          | 4               | Artifacts can store a URL to any file format |
-| **Functional Correctness**    | Technical requirements meet results with the needed degree of precision.                           | 4               | Artifacts correctly store a URL to any file format |
-| **Functional Appropriateness**| Technical requirements facilitate the accomplishment of specified tasks and objectives.            | 4               | The URL is stored by setting the field `dataAddress.baseUrl` |
-
-##### REST API + Api Key
-
-| **Criterion**                | **Description**                                                                                     | **Score (0-4)** | **Explanation** |
-|------------------------------|-----------------------------------------------------------------------------------------------------|-----------------|-----------------|
-| **Functional Completeness**   | Technical requirements cover all the specified tasks and user objectives.                          | 4               | Artifacts can store a URL to any file format |
-| **Functional Correctness**    | Technical requirements meet results with the needed degree of precision.                           | 4               | Artifacts correctly store a URL to any file format |
-| **Functional Appropriateness**| Technical requirements facilitate the accomplishment of specified tasks and objectives.            | 4               | The URL is stored by setting the field `dataAddress.baseUrl`, attribute `privateProperties.privateKey` can store an API key |
+| **Assessment**              | **Functional Completeness** | **Functional Correctness** | **Functional Appropriateness**  | **Explanation**                                                                                                                                               |
+|-----------------------------|----------------------------|----------------------------|---------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **GTFS**                    | 4                          | 4                          | 4                               | Artifacts can store a URL to any file format. The URL is stored by setting the field `dataAddress.baseUrl`.                                                    |
+| **GTFS-RT**                 | 4                          | 4                          | 4                               | Artifacts can store a URL to any file format. The URL is stored by setting the field `dataAddress.baseUrl`.                                                    |
+| **DATEX-II**                | 4                          | 4                          | 4                               | Artifacts can store a URL to any file format. The URL is stored by setting the field `dataAddress.baseUrl`.                                                    |
+| **GBFS**                    | 4                          | 4                          | 4                               | Artifacts can store a URL to any file format. The URL is stored by setting the field `dataAddress.baseUrl`.                                                    |
+| **WMS/WFS**                 | 4                          | 4                          | 4                               | Artifacts can store a URL to any file format. The URL is stored by setting the field `dataAddress.baseUrl`.                                                    |
+| **REST API + API Key**       | 4                          | 4                          | 4                               | Artifacts can store a URL to any file format. The URL is stored by setting the field `dataAddress.baseUrl`, and attribute `privateProperties.privateKey` can store an API key. |
 
 Functional Suitability Quality Metric Score: 4
