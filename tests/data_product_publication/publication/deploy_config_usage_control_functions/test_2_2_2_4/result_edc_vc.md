@@ -29,4 +29,5 @@ The criteria used to measure the results was the one specified by the Data Produ
 | **Functional Appropriateness**| Technical requirements facilitate the accomplishment of specified tasks and objectives.            | 1               |
 
 Overall score calculation: (3 + 4 + 1) / 3 = 3.17
+
 **Functional Suitability Quality Metric Score: 2.67**
