@@ -32,24 +32,12 @@ Execute this tests by running the entire folder at once.
 
 #### Measured results
 
-The criteria used to measure the results was the one specified by the Data Product Publication ISO25010 Quality file regarding Functional Suitability.
+The EDC-VC stack fully supports all 6 types of data planes explained in this test. As such, it is evaluated with the highest score in each of the criteria used to evaluate this test as shown in the table below.
 
-Criteria | Scoring
--- | --
-No data planes supported out of the box, and no possibility to develop others | 0
-No data planes supported out of the box, but they can be developed ad-hoc. Coverage unknown | 1
-1 or 2 data planes covered out of the box | 2
-3 data planes covered out of the box | 3
-4 or 5 data planes covered out of the box | 4
-Ad-hoc customization of existing data plane(s) is possible (through configuration, not code) without having to build a new one | +1
+| **Criterion**                | **Description**                                                                                     | **Score (0-4)** | **Explanation** |
+|------------------------------|-----------------------------------------------------------------------------------------------------|-----------------|-------------|
+| **Functional Completeness**   | Technical requirements cover all the specified tasks and user objectives.                          | 4               | Artifacts can store a URL to any file format. The URL is stored by setting the field `dataAddress.baseUrl`. |
+| **Functional Correctness**    | Technical requirements meet results with the needed degree of precision.                           | 4               | Both publicly-accessible as well as private artifacts are supported. For the latter, different authentication methods are also provided, such as access through API keys which is supported through the attribute `privateProperties.privateKey` |
+| **Functional Appropriateness**| Technical requirements facilitate the accomplishment of specified tasks and objectives.            | 4               | All artifacts were created easily through a single API call passing the required information. |
 
-| **Assessment**              | **Functional Completeness** | **Functional Correctness** | **Functional Appropriateness**  | **Explanation**                                                                                                                                               |
-|-----------------------------|----------------------------|----------------------------|---------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **GTFS**                    | 4                          | 4                          | 4                               | Artifacts can store a URL to any file format. The URL is stored by setting the field `dataAddress.baseUrl`.                                                    |
-| **GTFS-RT**                 | 4                          | 4                          | 4                               | Artifacts can store a URL to any file format. The URL is stored by setting the field `dataAddress.baseUrl`.                                                    |
-| **DATEX-II**                | 4                          | 4                          | 4                               | Artifacts can store a URL to any file format. The URL is stored by setting the field `dataAddress.baseUrl`.                                                    |
-| **GBFS**                    | 4                          | 4                          | 4                               | Artifacts can store a URL to any file format. The URL is stored by setting the field `dataAddress.baseUrl`.                                                    |
-| **WMS/WFS**                 | 4                          | 4                          | 4                               | Artifacts can store a URL to any file format. The URL is stored by setting the field `dataAddress.baseUrl`.                                                    |
-| **REST API + API Key**       | 4                          | 4                          | 4                               | Artifacts can store a URL to any file format. The URL is stored by setting the field `dataAddress.baseUrl`, and attribute `privateProperties.privateKey` can store an API key. |
-
-Functional Suitability Quality Metric Score: 4
+**Functional Suitability Quality Metric Score: 4**
