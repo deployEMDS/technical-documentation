@@ -40,4 +40,6 @@ The EDC-VC stack fully supports all 6 types of data planes explained in this tes
 | **Functional Correctness**    | Technical requirements meet results with the needed degree of precision.                           | 4               | Both publicly-accessible as well as private artifacts are supported. For the latter, different authentication methods are also provided, such as access through API keys which is supported through the attribute `privateProperties.privateKey` |
 | **Functional Appropriateness**| Technical requirements facilitate the accomplishment of specified tasks and objectives.            | 4               | All artifacts were created easily through a single API call passing the required information. |
 
+Overall score calculation: (4 + 4 + 4) / 3 = 4
+
 **Functional Suitability Quality Metric Score: 4**
