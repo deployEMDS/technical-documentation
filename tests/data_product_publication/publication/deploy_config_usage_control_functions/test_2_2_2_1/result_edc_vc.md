@@ -25,7 +25,7 @@ The following operations are tested via [API](https://app.swaggerhub.com/apis-do
 
 #### Measured results
 
-The criteria used to measure the results was the one specified by the Data Product Publication ISO25010 Quality file regarding Functional Suitability.
+The criteria used to measure the results was the one specified by the Data Product Publication ISO25010 Quality file regarding Functional Suitability. Individual scores per action are detailed in the table below, as some actions received different scores according to the defined criteria.
 
 
 | **Assessment**              | **Functional Completeness** | **Functional Correctness** | **Functional Appropriateness**  | **Explanation**                                                                                                                                                                                                                                               |
