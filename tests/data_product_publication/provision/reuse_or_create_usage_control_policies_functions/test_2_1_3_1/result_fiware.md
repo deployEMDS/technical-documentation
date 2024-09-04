@@ -1,25 +1,39 @@
 ## [2.1.3.1] Data product publication: Provision - Reuse or create usage control policies / functions
+
 ### Stack: Fiware
 
 ### Statement of assessment
+
 #### Environment
-[TODO] Describe the environment used for the test / assessment
+
+This functionality has been tested in the [IONOS Deployment](/deployment/fiware/fiware_deployment.md)
+
 
 #### Tested quality metric and method
-[TODO] Describe the quality metric and method used for the test / assessment
+
+It was assesed if standard create, read, update and delete (CRUD) functionality is available for policies.
 
 #### Comparative criteria (checklists, ...)
-[TODO] Describe the comparative criteria used for the test / assessment. If possible, align with the criteria used for the same test in the other stack(s).
+
 
 #### Expected output
-[TODO] Describe the expected output and how the ranking is calculated
+
+It is assumed that basic functionality is available.
 
 ### Results
+
 #### Assessment
-[TODO] Describe the assessment results (qualitative results), if applicable. Include screenshots, logs, etc, if necessary.
+
+For managing policies, the Fiware controller offers a Policy Administration and Information Point (PAP).
+
+A administrator can add, query, update and delete policies on the PAP. Policies are created using the ODRL language and are basically JSON text files.
+
+The [PAP Repo](https://github.com/wistefan/odrl-pap) contains [OpenAPI specification](https://github.com/wistefan/odrl-pap/blob/main/api/odrl.yaml) of its interface.
+
+The API provides the basic functionality expected.
 
 #### Measured results
-[TODO] Describe the measured results (quantitative results), if applicable. Rank the results according to the expected output, if applicable.
+
+Functional Suitability Quality Metric Score: 4
 
 #### Notes
-[TODO] Add notes, if necessary.

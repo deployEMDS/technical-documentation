@@ -3,23 +3,25 @@
 
 ### Statement of assessment
 #### Environment
-[TODO] Describe the environment used for the test / assessment
+
+The test is conducted in the IONOS FIWARE_cluster cluster using node pool IP 85.215.161.198.
 
 #### Tested quality metric and method
-[TODO] Describe the quality metric and method used for the test / assessment
+
+The test quality is based on the metric defined in [iso27001_kpis_subkpis.xlsx](../../../../../design_decisions/background_info/iso27001_kpis_subkpis.xlsx). For the current phase (phase 1), the test focuses on the Functional Suitability quality metric.
 
 #### Comparative criteria (checklists, ...)
-[TODO] Describe the comparative criteria used for the test / assessment. If possible, align with the criteria used for the same test in the other stack(s).
+Asses that the stack uses a credential framework that is compatible with this initiative: eIDAS
 
 #### Expected output
-[TODO] Describe the expected output and how the ranking is calculated
+Evidence proving that is compatible with mentioned framework.
 
 ### Results
 #### Assessment
-[TODO] Describe the assessment results (qualitative results), if applicable. Include screenshots, logs, etc, if necessary.
+Currently this is not scope of the connector, as it is part of onboarding organizations, done by a Trust anchor. 
 
 #### Measured results
-[TODO] Describe the measured results (quantitative results), if applicable. Rank the results according to the expected output, if applicable.
+Functional Suitability Quality Metric Score: 0
 
 #### Notes
-[TODO] Add notes, if necessary.
+

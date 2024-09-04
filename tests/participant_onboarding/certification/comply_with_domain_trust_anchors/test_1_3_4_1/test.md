@@ -16,6 +16,8 @@ No
 ### Extra information
 #### ISO25010 Quality
 Security
+Security
+Security
 #### ISO25010 Quality description
 [Confidentiality] The credentials framework has mechanisms to protect confidential data and attestations from data leaks (principle of selective disclosure or only need to know) 
 [Integrity] The IAM and credential frameworks have mechanisms to guarantee attestations cannot be tampered.
