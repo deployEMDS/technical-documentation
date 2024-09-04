@@ -18,4 +18,23 @@ No
 Functional suitability
 #### ISO25010 Quality description
 Can the provider integrate different data source methods (APIs, data bases, file systems, etc.)
+
+### Evaluation Criteria 
+The criteria used to measure the results was the one specified by the Data Product Publication ISO25010 Quality file regarding Functional Suitability.
+
+
+| **Criterion**                | **Description**                                                                                     | **Score (0-4)** |
+|------------------------------|-----------------------------------------------------------------------------------------------------|-----------------|
+| **Functional Completeness**   | Technical requirements cover all the specified tasks and user objectives.                          | -              |
+| **Functional Correctness**    | Technical requirements meet results with the needed degree of precision.                           | -              |
+| **Functional Appropriateness**| Technical requirements facilitate the accomplishment of specified tasks and objectives.            | -           |
+
+Criteria | Scoring
+-- | --
+No data planes supported out of the box, and no possibility to develop others | 0
+No data planes supported out of the box, but they can be developed ad-hoc. Coverage unknown | 1
+1 or 2 data planes covered out of the box | 2
+3 data planes covered out of the box | 3
+4 or 5 data planes covered out of the box | 4
+Ad-hoc customization of existing data plane(s) is possible (through configuration, not code) without having to build a new one | +1
     
