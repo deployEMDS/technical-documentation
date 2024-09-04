@@ -11,11 +11,19 @@ Test
 Phase 2
  
 ### Minimal?
-No
+Yes
  
 ### Extra information
 #### ISO25010 Quality
-nan
+Flexibility
+
+Functional sustainability
+
+Flexibility
+
 #### ISO25010 Quality description
-2 - 4
-    
+Can the data provider choose from different standardized vocabulary that meet the requirements of the data source?
+
+Can the data provider submit custom metadata fields and link their semantic definition?
+
+Can the data provider access standardize vocabularies to then use them in the data source before provisioning the data?

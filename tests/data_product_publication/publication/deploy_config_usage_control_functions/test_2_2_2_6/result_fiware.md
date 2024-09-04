@@ -3,23 +3,27 @@
 
 ### Statement of assessment
 #### Environment
-[TODO] Describe the environment used for the test / assessment
+
+The test is conducted in the IONOS FIWARE_cluster cluster using node pool IP 85.215.161.198.
 
 #### Tested quality metric and method
-[TODO] Describe the quality metric and method used for the test / assessment
+
+The test quality is based on the metric defined in [iso27001_kpis_subkpis.xlsx](../../../../../design_decisions/background_info/iso27001_kpis_subkpis.xlsx). For the current phase (phase 1), the test focuses on the Functional Suitability quality metric.
 
 #### Comparative criteria (checklists, ...)
-[TODO] Describe the comparative criteria used for the test / assessment. If possible, align with the criteria used for the same test in the other stack(s).
+Assess if the system provides a built-in facility to simulate policies (max score), or if a separate test environment (min score) is required.
 
 #### Expected output
-[TODO] Describe the expected output and how the ranking is calculated
+To be able to test a policy without deploying a test environment.
 
 ### Results
 #### Assessment
-[TODO] Describe the assessment results (qualitative results), if applicable. Include screenshots, logs, etc, if necessary.
+A test environment is needed. Information provided in the following github repo:
+[https://github.com/wistefan/odrl-pap/tree/main?tab=readme-ov-file#api](https://github.com/wistefan/odrl-pap/tree/main?tab=readme-ov-file#api)
+
 
 #### Measured results
-[TODO] Describe the measured results (quantitative results), if applicable. Rank the results according to the expected output, if applicable.
+
+Functional Suitability Quality Metric Score: 0
 
 #### Notes
-[TODO] Add notes, if necessary.

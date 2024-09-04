@@ -3,23 +3,20 @@
 
 ### Statement of assessment
 #### Environment
-[TODO] Describe the environment used for the test / assessment
+
+EDC Connector v.0.7.1 within a local testbed.
 
 #### Tested quality metric and method
-[TODO] Describe the quality metric and method used for the test / assessment
 
-#### Comparative criteria (checklists, ...)
-[TODO] Describe the comparative criteria used for the test / assessment. If possible, align with the criteria used for the same test in the other stack(s).
-
-#### Expected output
-[TODO] Describe the expected output and how the ranking is calculated
+The system provides an API or libraries to embed custom usage enforcement functions that can be invoked by usage policies.
 
 ### Results
 #### Assessment
-[TODO] Describe the assessment results (qualitative results), if applicable. Include screenshots, logs, etc, if necessary.
 
-#### Measured results
-[TODO] Describe the measured results (quantitative results), if applicable. Rank the results according to the expected output, if applicable.
+As explained in [this sample](https://github.com/eclipse-edc/Samples/tree/main/policy/policy-01-policy-enforcement#policy-enforcement), the EDC connector does support custom usage enforcement functions.
+This feature allows users to define and enforce their own specific policies regarding data usage. However, leveraging this advanced capability is not straightforward and involves a more intricate process.
+Users must implement the custom usage enforcement functionality themselves, which entails writing and integrating code that defines the desired enforcement policies.
+Additionally, once the custom functionality is developed, the EDC connector needs to be rebuilt to include this new extension.
+This process requires a thorough understanding of the EDC connector’s architecture and extension mechanisms.
 
-#### Notes
-[TODO] Add notes, if necessary.
+Functional Suitability Quality Metric Score: 2

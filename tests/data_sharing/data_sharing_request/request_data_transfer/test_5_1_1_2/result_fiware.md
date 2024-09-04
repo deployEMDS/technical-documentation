@@ -3,23 +3,40 @@
 
 ### Statement of assessment
 #### Environment
-[TODO] Describe the environment used for the test / assessment
+
 
 #### Tested quality metric and method
-[TODO] Describe the quality metric and method used for the test / assessment
+
+The respective issue [#258](https://github.com/imec-int/deployEMDS/issues/285) additionally mentions the following protocols to be tested:
+    GTFS
+    GTFS-RT
+    DATEX-II
+    DATX II Light
+    GBFS
+    WMS/WFS
+
 
 #### Comparative criteria (checklists, ...)
-[TODO] Describe the comparative criteria used for the test / assessment. If possible, align with the criteria used for the same test in the other stack(s).
 
 #### Expected output
-[TODO] Describe the expected output and how the ranking is calculated
+
+Regarding the protocols mentioned in [#258](https://github.com/imec-int/deployEMDS/issues/285), all these protocols describe the data format. Eg. GTFS provides data in a zip file and the file contains multiple text files in a comma separated style. Or e.g. GBFS specifies the data format to be Json.
+
+None of the protocol specifies a data exchange protocol other then HTTP GET requests. Since data sources can be naturally provided with an HTTP Proxy like APISIX, the Fiware connector supports all of these formats.
 
 ### Results
 #### Assessment
-[TODO] Describe the assessment results (qualitative results), if applicable. Include screenshots, logs, etc, if necessary.
+
 
 #### Measured results
-[TODO] Describe the measured results (quantitative results), if applicable. Rank the results according to the expected output, if applicable.
+
+| Characteristic | Score |
+|-|-|
+| Functional completeness | 4 |
+| Functional correctness | 4 |
+| Functional appropriateness | 4 |
+| Total | 4 |
+
+Functional Suitability Quality Metric Score: 4
 
 #### Notes
-[TODO] Add notes, if necessary.

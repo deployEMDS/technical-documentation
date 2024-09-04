@@ -1,25 +1,25 @@
 ## [2.1.3.2] Data product publication: Provision - Reuse or create usage control policies / functions
+
 ### Stack: Fiware
 
 ### Statement of assessment
+
 #### Environment
-[TODO] Describe the environment used for the test / assessment
 
 #### Tested quality metric and method
-[TODO] Describe the quality metric and method used for the test / assessment
 
 #### Comparative criteria (checklists, ...)
-[TODO] Describe the comparative criteria used for the test / assessment. If possible, align with the criteria used for the same test in the other stack(s).
 
 #### Expected output
-[TODO] Describe the expected output and how the ranking is calculated
 
 ### Results
+
 #### Assessment
-[TODO] Describe the assessment results (qualitative results), if applicable. Include screenshots, logs, etc, if necessary.
+
+The Fiware Connector does not offer a GUI to create, update, delete or view policies.
 
 #### Measured results
-[TODO] Describe the measured results (quantitative results), if applicable. Rank the results according to the expected output, if applicable.
+
+Functional Suitability Quality Metric Score: 0
 
 #### Notes
-[TODO] Add notes, if necessary.
