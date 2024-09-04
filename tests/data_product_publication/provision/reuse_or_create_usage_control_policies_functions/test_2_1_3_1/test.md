@@ -40,6 +40,10 @@ The criteria used to measure the results was the one specified by the Data Produ
 
 In order to assign a score between 0 and 4, the following metric was used by calculating the number of API calls that are needed to execute each of the actions included in the test.
 
-The score will be as follows
-- 0 if the action can't be executed via APIs
-- 1/N if the action can be executed with `N` API calls
+  Description | Scoring
+-- | --
+The action cannot be executed via API calls | 0
+The action can be partially executed via API calls, but still requires manual code or configuration updates  | 1
+The action can be fully executed via API calls, but requires more than 4 API calls | 2
+The action can be fully executed with 2 - 3 API calls | 3
+The action can be fully executed with a single API call | 4
