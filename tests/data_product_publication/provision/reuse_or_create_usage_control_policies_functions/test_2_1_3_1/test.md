@@ -12,10 +12,6 @@ Assess how Usage Control Policies are deployed. Rank the result by API coverage 
 6. Update existing usage policy
 7. Extend the usage policy language
 7. Create new policy enforcement functions
-
-The score will be as follows
-- 1/4 if the action can't be executed via APIs
-- 4/4N if the action can be executed with N calls
  
 ### Test type
 Assessment
@@ -38,6 +34,12 @@ The criteria used to measure the results was the one specified by the Data Produ
 
 | **Criterion**                | **Description**                                                                                     | **Score (0-4)** |
 |------------------------------|-----------------------------------------------------------------------------------------------------|-----------------|
-| **Functional Completeness**   | Technical requirements cover all the specified tasks and user objectives. The scores reflects the number of actions that can be successfully executed.                          | -              |
+| **Functional Completeness**   | Technical requirements cover all the specified tasks and user objectives. The scores reflects the number of actions that can be executed.                          | -              |
 | **Functional Correctness**    | Technical requirements meet results with the needed degree of precision. The scores reflects the number of actions that are correctly executed.                          | -              |
 | **Functional Appropriateness**| Technical requirements facilitate the accomplishment of specified tasks and objectives. The score decreases by the number of API calls required to complete an action.           | -              |
+
+In order to assign a score between 0 and 4, the following metric was used by calculating the number of API calls that are needed to execute each of the actions included in the test.
+
+The score will be as follows
+- 0 if the action can't be executed via APIs
+- 1/N if the action can be executed with `N` API calls
