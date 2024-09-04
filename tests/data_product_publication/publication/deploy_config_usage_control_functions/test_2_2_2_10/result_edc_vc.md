@@ -86,8 +86,7 @@ The criteria used to measure the results was the one specified by the Data Produ
 
 | **Criterion**      | **Description**                                                                 | **Score (0-4)** | **Explanation** |
 |--------------------|---------------------------------------------------------------------------------|-----------------|-----------------|
-| **Adaptability**   | Adaptability for different or evolving hardware, software, or usage environments. | 4               | 
-The ODRL policy language is versatile enough easily adapt to these changes. |
+| **Adaptability**   | Adaptability for different or evolving hardware, software, or usage environments. | 4               | The ODRL policy language is versatile enough easily adapt to these changes. |
 | **Installability** | The components of the platform are successfully installed and/or uninstalled in a specified environment. | 3               | Extensive installation documentation is available to the user. |
 | **Replaceability** | Replacement of the components for the same purpose in the same environment.       | 3               | High modularity of the ODRL policy language. |
 | **Scalability**    | The product can handle growing to adapt its capacity.                             | 3               | ODRL testing is non-trivial and may require ad-hoc environments. |
