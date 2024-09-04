@@ -118,7 +118,7 @@ def process_urls(content, file_path):
         return f"[{text}]({upgraded_link})"
 
     updated_content = re.sub(pattern, replace_link, content)
-    return content
+    return updated_content
 
 
 def read_test_info(file_path, github_base_url) -> TestInformation:
