@@ -16,6 +16,8 @@ This effort involves not only the capability to implement and deploy custom func
 
 #### Measured results
 
+The criteria used to measure the results was the one specified by the Data Product Publication ISO25010 Quality file regarding Functional Suitability. Individual scores per action are detailed in the table below, as some actions received different scores according to the defined criteria.
+
 | Action                                       | **Functional Completeness** | **Functional Correctness** | **Functional Appropriateness** | Explanation                                                   |
 |----------------------------------------------|-----------------------------|----------------------------|--------------------------------|---------------------------------------------------------------|
 | Create a new policy                          | 4                         |  4                       | 4                            |                                                               |
