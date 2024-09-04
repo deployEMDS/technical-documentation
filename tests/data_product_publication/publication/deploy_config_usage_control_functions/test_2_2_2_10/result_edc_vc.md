@@ -80,4 +80,16 @@ In conclusion, although the policy language can be extended as described, these 
 Additionally, a deep understanding of ODRL and ODRL Profiles is necessary to effectively expand the default set of operations provided by the policy.
 Finally, this complexity surpasses the abilities of a non-technical profile.
 
-Flexibility Quality Metric Score: 1
+#### Measured results
+
+The criteria used to measure the results was the one specified by the Data Product Publication ISO25010 Quality file regarding Flexibility.
+
+| **Criterion**      | **Description**                                                                 | **Score (0-4)** | **Explanation** |
+|--------------------|---------------------------------------------------------------------------------|-----------------|-----------------|
+| **Adaptability**   | Adaptability for different or evolving hardware, software, or usage environments. | 4               | 
+The ODRL policy language is versatile enough easily adapt to these changes. |
+| **Installability** | The components of the platform are successfully installed and/or uninstalled in a specified environment. | 3               | Extensive installation documentation is available to the user. |
+| **Replaceability** | Replacement of the components for the same purpose in the same environment.       | 3               | High modularity of the ODRL policy language. |
+| **Scalability**    | The product can handle growing to adapt its capacity.                             | 3               | ODRL testing is non-trivial and may require ad-hoc environments. |
+
+Functional Suitability Quality Metric Score: 3.25 (arithmetic mean of criterions scores)
