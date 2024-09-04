@@ -28,5 +28,8 @@ The criteria used to measure the results was the one specified by the Data Produ
 | Update existing policy                       |    4                          |    4                         | 4                            |                                                               |
 | Extend the usage policy language             |  1                            |   1                          | 1                            | Requires both API calls and manual deployment of new implementation files.                                                              |
 | Create new policy enforcement functions      |  1                            |   1                          | 1                            | Requires both API calls and manual deployment of new implementation files                                                              |
+| **Overall**      |  **(4 * 6 + 1 * 2) / 8 = 3.25**                            |   **(4 * 6 + 1 * 2) / 8 = 3.25**                          | **(4 * 4 + 3 + 2 + 1 * 2) / 8 = 2.875**                            |                                       |
 
-**Functional Suitability Quality Metric Score: 3**
+Overall score calculation: (3.25 + 3.25 + 2.875) / 3 = 3.125
+
+**Functional Suitability Quality Metric Score: 3.125**
