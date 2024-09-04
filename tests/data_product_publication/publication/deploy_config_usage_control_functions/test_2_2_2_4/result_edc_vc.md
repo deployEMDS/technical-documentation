@@ -24,9 +24,9 @@ The criteria used to measure the results was the one specified by the Data Produ
 
 | **Criterion**                | **Description**                                                                                     | **Score (0-4)** |
 |------------------------------|-----------------------------------------------------------------------------------------------------|-----------------|
-| **Functional Completeness**   | Technical requirements cover all the specified tasks and user objectives.                          | 1               |
-| **Functional Correctness**    | Technical requirements meet results with the needed degree of precision.                           | 1               |
+| **Functional Completeness**   | Technical requirements cover all the specified tasks and user objectives.                          | 3               |
+| **Functional Correctness**    | Technical requirements meet results with the needed degree of precision.                           | 4               |
 | **Functional Appropriateness**| Technical requirements facilitate the accomplishment of specified tasks and objectives.            | 1               |
 
-
-**Functional Suitability Quality Metric Score: 1**
+Overall score calculation: (3 + 4 + 1) / 3 = 3.17
+**Functional Suitability Quality Metric Score: 2.67**
