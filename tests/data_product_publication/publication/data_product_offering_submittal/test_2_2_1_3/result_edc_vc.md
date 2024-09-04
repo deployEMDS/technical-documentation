@@ -36,4 +36,6 @@ The EDC-VC stack fully supports all the actions tested above through simple API 
 | **Functional Correctness**    | Technical requirements meet results with the needed degree of precision.                           | 4               | The connector corrently returns information about all the collections loaded into the connector via API. |
 | **Functional Appropriateness**| Technical requirements facilitate the accomplishment of specified tasks and objectives.            | 2               | The connector does not have out-of-the-box support for a GUI to access the overview information. |
 
-**Functional Suitability Quality Metric Score: 3**
+Overall score calculation: (4 + 4 + 2) / 3 = 3.33
+
+**Functional Suitability Quality Metric Score: 3.33**
