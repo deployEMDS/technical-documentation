@@ -91,4 +91,7 @@ The criteria used to measure the results was the one specified by the Data Produ
 | **Replaceability** | Replacement of the components for the same purpose in the same environment.       | 3               | High modularity of the ODRL policy language. |
 | **Scalability**    | The product can handle growing to adapt its capacity.                             | 3               | ODRL testing is non-trivial and may require ad-hoc environments. |
 
-Functional Suitability Quality Metric Score: 3.25 (arithmetic mean of criterions scores)
+
+Overall score calculation: (4 + 3 + 3 + 3) / 4 = 3.25
+
+**Functional Suitability Quality Metric Score: 3.25**
