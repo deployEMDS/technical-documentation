@@ -1,0 +1,62 @@
+/**
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
+ */
+@import url('https://fonts.googleapis.com/css2?family=Anybody:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anybody:ital,wght@0,100..900;1,100..900&family=Bellota+Text:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+/* You can override the default Infima variables here. */
+:root {
+  --ifm-color-primary: #00406f;
+  --ifm-color-primary-dark: #003a64;
+  --ifm-color-primary-darker: #00365e;
+  --ifm-color-primary-darkest: #002d4e;
+  --ifm-color-primary-light: #00467a;
+  --ifm-color-primary-lighter: #004a80;
+  --ifm-color-primary-lightest: #005390;
+  --ifm-code-font-size: 95%;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  --ifm-link-color: #662483;
+  --ifm-footer-background-color: var(--ifm-color-primary) !important;
+  --ifm-footer-link-color: white;
+  --ifm-footer-title-color: white;
+  --ifm-footer-color: white;
+  .footer img {
+    background-color: white;
+  }
+  .footer a, .hero a {
+    color: white;
+  }
+
+
+  font-family: "Bellota Text", "Arial", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+
+  h1, h2, h3, h4, h5 {
+    font-family: "Anybody", "Arial", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+  }
+}
+
+/* For readability concerns, you should choose a lighter palette in dark mode. */
+[data-theme='dark'] {
+  --ifm-color-primary: #ffd803;
+  --ifm-color-primary-dark: #e8c400;
+  --ifm-color-primary-darker: #dbb900;
+  --ifm-color-primary-darkest: #b59900;
+  --ifm-color-primary-light: #ffdc1d;
+  --ifm-color-primary-lighter: #ffde2a;
+  --ifm-color-primary-lightest: #ffe450;
+  --ifm-background-color: #00406f;
+  .footer {
+    background-color: #00406f;
+  }
+
+  --ifm-footer-background-color: var(--ifm-color-primary) !important;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+}

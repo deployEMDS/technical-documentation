@@ -3,23 +3,38 @@
 
 ### Statement of assessment
 #### Environment
-[TODO] Describe the environment used for the test / assessment
+The test is conducted in the IONOS FIWARE_cluster cluster using node pool IP 85.215.161.198.
 
 #### Tested quality metric and method
-[TODO] Describe the quality metric and method used for the test / assessment
-
-#### Comparative criteria (checklists, ...)
-[TODO] Describe the comparative criteria used for the test / assessment. If possible, align with the criteria used for the same test in the other stack(s).
+The quality metric for this test is based on the criteria outlined in [iso27001_kpis_subkpis.xlsx](../../../../../design_decisions/background_info/iso27001_kpis_subkpis.xlsx). In Phase 1, the focus is on the Functional Suitability metric. For detailed information, please refer to the [Comparative criteria (checklists, ...)](./test.md#comparative-criteria-checklists-) section in the test description.
 
 #### Expected output
-[TODO] Describe the expected output and how the ranking is calculated
+The expected output of this test is to evaluate the level of customization required to use European/National identity provider as issuer for verifiable credentials.
 
 ### Results
 #### Assessment
-[TODO] Describe the assessment results (qualitative results), if applicable. Include screenshots, logs, etc, if necessary.
+The connector only addresses natural persons, and to do so it utilizes tools such as Keycloak to issue certificates. 
+Organizations' oboarding is done by a trust anchor, not the connector. 
+
+ 
 
 #### Measured results
-[TODO] Describe the measured results (quantitative results), if applicable. Rank the results according to the expected output, if applicable.
+The criteria used to measure the results was the one specified by the Data Product Publication ISO25010 Quality file regarding Security as detailed at  [Comparative criteria (checklists, ...)](./test.md#comparative-criteria-checklists-).
+
+
+| **Criterion**          | **Description**                                                                                          | **Score (0-4)** | **Explanation** |
+|------------------------|----------------------------------------------------------------------------------------------------------|-----------------|-----------------|
+| **Confidentiality**    | The platform ensures that data are accessible only to those authorized to have access according to the data negotiation. | 4               | The Fiware connector uses Keycloak for issuing certificates, which enforces strong access controls and ensures that data access is restricted to authorized entities only. This level of confidentiality aligns with best practices for data protection. |
+| **Integrity**          | How the platform prevents unauthorized access to, or modification of the data.                            | 4               | The system maintains high data integrity by preventing unauthorized modifications. Keycloak and other tools are used to enforce strict data protection measures, ensuring that data remains accurate and unaltered. |
+| **Non-repudiation**    | How the actions or events can be proven to have taken place so that the events or actions cannot be repudiated later. | 2               | While the platform provides mechanisms for tracking actions, the current implementation does not fully support non-repudiation. For example, the integration with identity providers may lack comprehensive logging and proof mechanisms for all actions. |
+| **Accountability**     | The actions of an entity can be traced uniquely to the entity.                                            | 2               | The system’s ability to trace actions back to specific entities is limited. Although Keycloak facilitates identity management, additional measures may be needed to fully track and attribute all actions to individual entities, especially for organizations. |
+| **Authenticity**       | The resource can be proved to be the one claimed.                                                         | 4               | The platform effectively ensures the authenticity of resources through the use of Keycloak for issuing verifiable credentials. This approach provides strong evidence that resources are as claimed, supporting robust identity verification processes. |
+
+
+
+**Overall Calculation: ( 4 + 4 + 2 + 2 + 4) / 5 = 3.2**
+Functional Suitability Quality Metric Score: 3.2
+
 
 #### Notes
-[TODO] Add notes, if necessary.
+
