@@ -89,6 +89,7 @@ def read_test_criteria(test_content):
 
 convert_url_map = {
     "./test.md#comparative-criteria-checklists-": "#Information",
+    "../../../../../design_decisions/background_info/iso27001_kpis_subkpis.xlsx": "https://github.com/imec-int/deployEMDS/raw/main/design_decisions/background_info/iso27001_kpis_subkpis.xlsx",
 }
 
 
