@@ -30,40 +30,16 @@ All the tests are stored under [this folder](https://www.postman.com/i2cat-dev/w
 A single, parameterized call is used for the entire batch of tests.
 Execute this tests by running the entire folder at once.
 
-##### GTFS
+#### Measured results
 
-We can create an artifact with attribute `dataAddress.baseUrl` storing a URL to this resource.
+The EDC-VC stack fully supports all 6 types of data planes explained in this test. As such, it is evaluated with the highest score in each of the criteria used to evaluate this test as shown in the table below.
 
-Functional Suitability Quality Metric Score: 4
+| **Criterion**                | **Description**                                                                                     | **Score (0-4)** | **Explanation** |
+|------------------------------|-----------------------------------------------------------------------------------------------------|-----------------|-------------|
+| **Functional Completeness**   | Technical requirements cover all the specified tasks and user objectives.                          | 4               | Artifacts can store a URL to any file format. The URL is stored by setting the field `dataAddress.baseUrl`. |
+| **Functional Correctness**    | Technical requirements meet results with the needed degree of precision.                           | 4               | Both publicly-accessible as well as private artifacts are supported. For the latter, different authentication methods are also provided, such as access through API keys which is supported through the attribute `privateProperties.privateKey` |
+| **Functional Appropriateness**| Technical requirements facilitate the accomplishment of specified tasks and objectives.            | 4               | All artifacts were created easily through a single API call passing the required information. |
 
-##### GTFS-RT
+Overall score calculation: (4 + 4 + 4) / 3 = 4
 
-We can create an artifact with attribute `dataAddress.baseUrl` storing a URL to this resource.
-
-Functional Suitability Quality Metric Score: 4
-
-##### DATEX-II
-
-We can create an artifact with attribute `dataAddress.baseUrl` storing a URL to this resource.
-
-Functional Suitability Quality Metric Score: 4
-
-##### GBFS
-
-We can create an artifact with attribute `dataAddress.baseUrl` storing a URL to this resource.
-
-Functional Suitability Quality Metric Score: 4
-
-##### WMS/WFS
-
-We can create an artifact with attribute `dataAddress.baseUrl` storing a URL to this resource.
-
-Functional Suitability Quality Metric Score: 4
-
-##### REST API + Api Key
-
-We can create an artifact with
-- Attribute `dataAddress.baseUrl` storing a URL
-- Attribute `privateProperties.privateKey` storing an API key
-
-Functional Suitability Quality Metric Score: 4
+**Functional Suitability Quality Metric Score: 4**
