@@ -102,3 +102,17 @@
    - Expected result in terminal: __ingress.networking.k8s.io/mydsc-apisix-control-plane replaced__
 
 Congratulations! You have the FIWARE setup up and running.
+
+#### Run tests ####
+
+Before you run the tests, make sure your current environment has all environment variables available. You can do this by running
+
+        ./fw_env.sh
+
+Then you can follow the documentation in [Fiware Setup](doc/fiware_setup.txt) to run the tests.
+
+#### Shut down #####
+
+To undeploy the environment run
+
+        ./fw_shutdown_all.sh

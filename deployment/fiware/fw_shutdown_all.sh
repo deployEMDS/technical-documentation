@@ -1,3 +1,5 @@
+source fw_env.sh
+
 echo ""
 echo "-- Installation will take around 15mins, be patient"
 echo ""
