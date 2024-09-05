@@ -2,7 +2,7 @@
 ### Deployment Architecture Overview
 **This deployment aims to deploy [https://github.com/FIWARE/data-space-connector](https://github.com/FIWARE/data-space-connector) in the IONOS environment.**
  
-![fiware_dc.PNG](fiware_dc.PNG)
+![doc/fiware_dc.PNG](doc/fiware_dc.PNG)
 
 #### Deployed IONOS Components:
 
@@ -30,47 +30,24 @@
 
 #### Deployment ##### 
 
-1. Download the following files in your computer:
-    - `values_ionos_ta.yaml`
-    - `values_ionos.yaml`
-    - `redeploy.sh`
-    - `letsencrypt_staging.yaml`
-    - `letsencrypt_production.yaml`
+1. Install helm following instructions in [https://helm.sh/docs/intro/install/](https://helm.sh/docs/intro/install/) 
 
-2. Install helm following instructions in [https://helm.sh/docs/intro/install/](https://helm.sh/docs/intro/install/) 
+2. Add the FIWARE helm repository 
 
+        helm repo add dsc https://fiware.github.io/data-space-connector/ --force-update
 
-
-3. Add helm repository 
-
-        helm repo add dsc https://fiware-ops.github.io/data-space-connector/
-
-4. Install trust-anchor
-
-    - Use the following command: 
-
-            helm install mytrustanchor dsc/trust-anchor -n trust-anchor --create-namespace -f values_ionos_ta.yaml
-    - Verify installation: 
-
-            kubectl get all -n trust-anchor
-
-5. Install FIWARE Dataspace Connector 
-    - Use the following command:
+3. Update your environment: This folder contains a file named **fw_env.sh.example**. Copy this file to **fw_env.sh** and set the **partner_suffix** to the deployment name (e.g. -ntt). Then source the file into your environment
         
-            helm install mydsc dsc/data-space-connector -n dsc --create-namespace -f values_ionos.yaml
-    - Verify installation: 
+        source fw_env.sh
 
-            kubectl get all -n dsc
-
-
-6. Install ngix as Ingress Controller 
+4. Install ngix as Ingress Controller 
 
         helm upgrade --install ingress-nginx ingress-nginx \
         --repo https://kubernetes.github.io/ingress-nginx \
         --namespace ingress-nginx --create-namespace
 
 
-7. Install Cert-Manager 
+5. Install Cert-Manager 
     - Add repo 
 
             helm repo add jetstack https://charts.jetstack.io --force-update 
@@ -84,7 +61,7 @@
             --version v1.15.1 \
             --set crds.enabled=true
 
-8. Deploy cluster isssuers 
+6. Deploy cluster isssuers 
 
 
     - Open `letsencrypt_staging.yaml` and
@@ -100,7 +77,28 @@
 
           kubectl get clusterissuer --all-namespaces
 
-- Networks:
-  - Name: N\A
-  - Type:  Internet Access (via LAN2)
+7. Deploy the FIWARE environment
+
+        ./fw_deploy_all.sh
+
+   This will deploy the **provider** namespace, including TM Forum APIs (the marketplace) and the provider components, and a **consumer** namespace.
   
+8. Fix ingress routes
+
+   - Download wrong ingress file
+
+                kubectl get ingress myprovider-apisix-control-plane -n provider -o yaml > myprovider-apisix-control-plane-ingress.yaml
+
+   - Open downloaded file with text editor
+
+                nano myprovider-apisix-control-plane-ingress.yaml
+
+   - Change spec.rules.http.paths.backend.service.port.name and save the file after **http-admin** to **http-admin-api**
+
+   - Reupload changed ingress file
+
+                kubectl replace -f myprovider-apisix-control-plane-ingress.yaml
+
+   - Expected result in terminal: __ingress.networking.k8s.io/mydsc-apisix-control-plane replaced__
+
+Congratulations! You have the FIWARE setup up and running.

@@ -1,3 +1,29 @@
+# -- configuration to be shared between the trust-anchor components
+generatePasswords:
+  # -- should a password for the database connection of trust-anchor components be generated in the cluster
+  enabled: true
+  #-- name of the secret to put the generated password into
+  secretName: mysql-database-secret
+
+
+
+# -- configuration for the mysql to be deployed as part of the trust-anchor, see https://github.com/bitnami/charts/tree/main/bitnami/mysql for all options
+mysql:
+  # -- should it be enabled? set to false if one outside the chart is used.
+  enabled: true
+  # -- allows to set a fixed name for the services
+  fullnameOverride: trust-anchor-mysql
+  # -- configure authentication to mysql
+  auth:
+    # -- name of the secret to take the passowrds from
+    existingSecret: mysql-database-secret
+  # -- scripts to be executed on db startup
+  initdbScripts:
+    create.sql: |
+      CREATE DATABASE tirdb;
+
+
+      
 # -- configuration for the trusted-issuers-list to be deployed as part of the trust-anchor, see https://github.com/FIWARE/helm-charts/tree/main/charts/trusted-issuers-list for all options
 trusted-issuers-list:
   # -- should it be enabled? set to false if one outside the chart is used.
@@ -31,10 +57,10 @@ trusted-issuers-list:
         kubernetes.io/ingress.class: "nginx"
       #  cert-manager.io/cluster-issuer: "letsencrypt-staging"
       hosts:
-        - host: til-ta.demo-portal.eu
+        - host: til-ta${partner_suffix}.demo-portal.eu
       #tls:
       #  - hosts: 
-      #    - til-ta.demo-portal.eu
+      #    - til-ta${partner_suffix}.demo-portal.eu
       #    secretName: til-ta-tls-secret
       
     tir:
@@ -47,36 +73,11 @@ trusted-issuers-list:
         kubernetes.io/ingress.class: "nginx"
       #  cert-manager.io/cluster-issuer: "letsencrypt-staging"
       hosts:
-        - host: tir-ta.demo-portal.eu
+        - host: tir-ta${partner_suffix}.demo-portal.eu
       #tls:
       #  - hosts: 
-      #    - tir-ta.demo-portal.eu
+      #    - tir-ta${partner_suffix}.demo-portal.eu
       #    secretName: tir-ta-tls-secret
 
 
 
-# XXX SECRETS AND PASSWORD
-# -- configuration to be shared between the trust-anchor components
-generatePasswords:
-  # -- should a password for the database connection of trust-anchor components be generated in the cluster
-  enabled: true
-  #-- name of the secret to put the generated password into
-  secretName: mysql-database-secret
-
-
-
-# XXX DATABASES
-# -- configuration for the mysql to be deployed as part of the trust-anchor, see https://github.com/bitnami/charts/tree/main/bitnami/mysql for all options
-mysql:
-  # -- should it be enabled? set to false if one outside the chart is used.
-  enabled: true
-  # -- allows to set a fixed name for the services
-  fullnameOverride: trust-anchor-mysql
-  # -- configure authentication to mysql
-  auth:
-    # -- name of the secret to take the passowrds from
-    existingSecret: mysql-database-secret
-  # -- scripts to be executed on db startup
-  initdbScripts:
-    create.sql: |
-      CREATE DATABASE tirdb;
