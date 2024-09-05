@@ -27,3 +27,9 @@ The criteria used to measure the results was the one specified by the Data Produ
 | **Functional Completeness**   | Technical requirements cover all the specified tasks and user objectives.                          | -              | |
 | **Functional Correctness**    | Technical requirements meet results with the needed degree of precision.                           | -               |  |
 | **Functional Appropriateness**| Technical requirements facilitate the accomplishment of specified tasks and objectives.            | -               |  |
+=======
+| **Criterion**                | **Description**                                                                                     | **Score (0-4)** |
+|------------------------------|-----------------------------------------------------------------------------------------------------|-----------------|
+| **Functional Completeness**   | Technical requirements cover all the specified tasks and user objectives.                          | -              |
+| **Functional Correctness**    | Technical requirements meet results with the needed degree of precision.                           | -              |
+| **Functional Appropriateness**| Technical requirements facilitate the accomplishment of specified tasks and objectives.            | -           |
