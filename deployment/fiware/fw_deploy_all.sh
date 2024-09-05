@@ -1,8 +1,8 @@
 # create site specific values
 source fw_env.sh
-cat values_consumer.yaml | envsubst > values_consumer-site.yaml
-cat values_provider.yaml | envsubst > values_provider-site.yaml
-cat values_trustanchor.yaml | envsubst > values_trustanchor-site.yaml
+cat values_consumer.yaml | envsubst '$partner_suffix' > values_consumer-site.yaml
+cat values_provider.yaml | envsubst '$partner_suffix' > values_provider-site.yaml
+cat values_trustanchor.yaml | envsubst '$partner_suffix' > values_trustanchor-site.yaml
 
 # Install trust anchor
 helm install mytrustanchor dsc/trust-anchor -n trust-anchor --create-namespace -f values_trustanchor-site.yaml
@@ -62,7 +62,7 @@ sleep 5
 
 
 echo ""
-echo "-- dsc2 issuance-secret"
+echo "-- dsc issuance-secret"
 echo ""
 
 kubectl get secret issuance-secret -n dsc -o jsonpath="{.data}"
