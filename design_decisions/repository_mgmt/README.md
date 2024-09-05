@@ -115,5 +115,12 @@ You can customize the output of both scripts by modifying the template files in 
 
 These templates use Jinja2 syntax for dynamic content.
 
+#### Updating Links
+
+In some cases, Markdown links to relative resources may not be compatible with the generated structure.
+You can customize the `convert_url_map` dictionary in `design_decisions/repository_mgmt/util.py` in order to
+have specific links replaced. For example, occurrences of `./test.md#comparative-criteria-checklists-` are replaced with
+`#Information` which corresponds to a heading in the same page in the final documentation build.
+
 ## Contributing
 Feel free to submit issues or pull requests if you have suggestions for improvements or encounter any problems.
