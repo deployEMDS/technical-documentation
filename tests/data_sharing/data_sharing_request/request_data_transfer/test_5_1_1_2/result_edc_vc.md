@@ -7,14 +7,19 @@
 EDC Connector v.0.7.1 within a local testbed.
 The tests are available in [this](https://www.postman.com/i2cat-dev/workspace/deployemds) Postman workspace.
 
-#### Tested quality metric and method
-[TODO] Describe the quality metric and method used for the test / assessment
-
-#### Comparative criteria (checklists, ...)
-[TODO] Describe the comparative criteria used for the test / assessment. If possible, align with the criteria used for the same test in the other stack(s).
-
 #### Expected output
-[TODO] Describe the expected output and how the ranking is calculated
+
+Evaluate the support of a minimal data sharing for the following data formats
+
+- GTFS - [Public dataset](https://opendata-ajuntament.barcelona.cat/data/dataset/c46503e3-cec6-4032-894d-1063b7a365ee/resource/1c92542e-0346-4df5-9824-d7753ab02e33/download) with direct download via HTTPS
+- GTFS-RT - [Public dataset](https://api.data.gov.my/gtfs-realtime/vehicle-position/ktmb/) via APIs
+- DATEX-II - [Public dataset](https://opendata.emel.pt/cycling/biciparks?skip=1&limit=1) via APIs
+- DATX II Light - No available datasets for this data format, tests are skipped
+- GBFS - [Public dataset](https://opendata.emel.pt/cycling/biciparks?skip=1&limit=1) via APIs
+- WMS/WFS - [Public dataset](https://openmaps.gov.bc.ca/geo/ows?SERVICE=WMS&REQUEST=GetCapabilities) via APIs
+
+Also access through APIs.
+Access to private APIs is tested using the AMB mobilitat endpoint.
 
 ### Results
 #### Assessment
