@@ -3,7 +3,9 @@
 
 ### Statement of assessment
 #### Environment
-[TODO] Describe the environment used for the test / assessment
+
+EDC Connector v.0.7.1 within a local testbed.
+The tests are available in [this](https://www.postman.com/i2cat-dev/workspace/deployemds) Postman workspace.
 
 #### Tested quality metric and method
 [TODO] Describe the quality metric and method used for the test / assessment
