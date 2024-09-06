@@ -39,12 +39,12 @@ jobs:
       - name: Run web content script
         working-directory: design_decisions/repository_mgmt
         run: |
-          python create_web_content.py -i ../../tests -o ../../web/docs/tech-testing/results --github-base-url ${{ variables.REPO_TESTS_BASE_URL }}
+          python create_web_content.py -i ../../tests -o ../../web/docs/tech-testing/results --github-base-url ${{ env.REPO_TESTS_BASE_URL }}
 
       - name: Run score matrix script
         working-directory: design_decisions/repository_mgmt
         run: |
-          python create_result_table.py --base-dir ../../tests/ --output-file ../../web/docs/tech-testing/results/score_matrix.mdx --github-base-url ${{ variables.REPO_BASE_URL }}
+          python create_result_table.py --base-dir ../../tests/ --output-file ../../web/docs/tech-testing/results/score_matrix.mdx --github-base-url ${{ env.REPO_BASE_URL }}
 
       - name: Build And Deploy Docusaurus
         id: builddeploy
