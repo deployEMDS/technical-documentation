@@ -4,3 +4,4 @@ kubeconfig*.yaml
 cert.pfx
 did.json
 *-site.y?ml
+myprovider-apisix-control-plane-ingress.yaml
