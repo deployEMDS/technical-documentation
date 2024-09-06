@@ -1,0 +1,48 @@
+{
+  "routes": [
+    {
+      "route": "/.auth/*",
+      "allowedRoles": [
+        "authenticated"
+      ]
+    },
+    {
+      "route": "/*",
+      "allowedRoles": [
+        "authenticated"
+      ]
+    }
+  ],
+  "responseOverrides": {
+    "401": {
+      "statusCode": 302,
+      "redirect": "/.auth/login/keycloak"
+    }
+  },
+  "auth": {
+    "identityProviders": {
+      "customOpenIdConnectProviders": {
+        "keycloak": {
+          "registration": {
+            "clientIdSettingName": "CLIENT_ID_SETTING_NAME",
+            "clientCredential": {
+              "clientSecretSettingName": "CLIENT_SECRET_SETTING_NAME"
+            },
+            "openIdConnectConfiguration": {
+              "wellKnownOpenIdConfiguration": "https://keycloak.ops.ai-data.imec.be/realms/deployEMDS/.well-known/openid-configuration"
+            }
+          },
+          "login": {
+            "nameClaimType": "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name",
+            "scopes": [
+              "openid",
+              "profile",
+              "email"
+            ],
+            "loginParameterNames": []
+          }
+        }
+      }
+    }
+  }
+}
