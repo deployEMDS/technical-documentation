@@ -410,7 +410,7 @@ List TM Forum offerings
 
 ```sh
 curl -v -X GET "${tmf_api_complete_url}/tmf-api/productCatalogManagement/v4/productOffering" \
-    -H "Authorization: Bearer ${SERVICE_ACCESS_TOKEN}"
+    -H "Authorization: Bearer ${SERVICE_ACCESS_TOKEN}" | jq
 ```
 
 Choose one of the TM Forum offerings, in the demo, there is only 1

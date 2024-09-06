@@ -29,7 +29,7 @@ export PAYLOAD=$(echo -n "{\"iss\": \"${HOLDER_DID}\", \"sub\": \"${HOLDER_DID}\
 
 
 # Create Signature for JWT Token with embedded VP
-export SIGNATURE=$(echo -n "${JWT_HEADER}.${PAYLOAD}" | openssl dgst -sha256 -binary -sign private-key.pem | base64 -w0 | sed s/\+/-/g | sed 's/\//_/g' | sed -E s/=+$//); echo ""; echo Signature: ${SIGNATURE}; echo ""
+export SIGNATURE=$(echo -n "${JWT_HEADER}.${PAYLOAD}" | openssl dgst -sha256 -binary -sign private-key.pem | base64 -w 0 | sed s/\+/-/g | sed 's/\//_/g' | sed -E s/=+$//); echo ""; echo Signature: ${SIGNATURE}; echo ""
 
 # export SIGNATURE=$(echo -n "${JWT_HEADER}.${PAYLOAD}" | openssl dgst -sha256 -binary -sign private-key.pem | base64 -b 0 | sed s/\+/-/g | sed 's/\//_/g' | sed -E s/=+$//); echo ""; echo Signature: ${SIGNATURE}; echo ""
 
