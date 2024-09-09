@@ -32,9 +32,9 @@ Note that while most artifacts point to plain text files, GTFS and GTFS-RT use b
 
 | Test        | Functional Completeness | Functional Correctness	 | Functional Appropriateness | Score (0/4) | Explanation                                          |
 |-------------|-------------------------|-------------------------|----------------------------|-------------|-------------------------------------------------------|
-| GTFS        | 4                       | 4                       | 4                          | 4           |                                                       |
-| GTFS-RT     | 4                       | 4                       | 4                          | 4           |                                                       |
-| DATEX-II    | 4                       | 4                       | 4                          | 4           |                                                       |
-| GBFS        | 4                       | 4                       | 4                          | 4           |                                                       |
-| WMS/WFS     | 4                       | 4                       | 4                          | 4           |                                                       |
+| GTFS        | 3                       | 4                       | 4                          | 4           |  Can't perform queries against the data product       |
+| GTFS-RT     | 3                       | 4                       | 4                          | 4           |  Can't perform queries against the data product       |
+| DATEX-II    | 3                       | 4                       | 4                          | 4           |  Can't perform queries against the data product       |
+| GBFS        | 3                       | 4                       | 4                          | 4           |  Can't perform queries against the data product       |
+| WMS/WFS     | 3                       | 4                       | 4                          | 4           |  Can't perform queries against the data product       |
 | Private key | 1                       | 1                       | 1                          | 1           | Transfer process status is TERMINATED, logs are empty | 
