@@ -38,7 +38,7 @@ Note that while most artifacts point to plain text files, GTFS and GTFS-RT use b
 | GBFS        | 3                       | 4                       | 4                          |  Can't perform queries against the data product       |
 | WMS/WFS     | 3                       | 4                       | 4                          |  Can't perform queries against the data product       |
 | Private key | 1                       | 1                       | 1                          | Transfer process status is TERMINATED, logs are empty |
-| Overall     | (3*5+1)/6 = 2.5         | (4*5+1)/6 = 3.5         | (4*5+1)/6 = 3.5            | Transfer process status is TERMINATED, logs are empty |
+| Overall     | (3*5+1)/6 = 2.5         | (4*5+1)/6 = 3.5         | (4*5+1)/6 = 3.5            |                                                       |
 
 Overall score calculation: (2.5 + 3.5 + 3.5) / 3 = 3.167
  
