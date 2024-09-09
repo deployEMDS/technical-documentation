@@ -25,20 +25,23 @@ Access to private APIs is tested using the AMB mobilitat endpoint.
 #### Assessment
 
 All the tests are stored under [this](https://www.postman.com/i2cat-dev/workspace/deployemds/folder/36812968-ceed2125-10e2-48fa-91c9-8bf1f05aa7e8?action=share&source=copy-link&creator=36812968&ctx=documentation) folder.
-A simple http server is used as destination of the artifact. The server receives a file and logs its content in the standard output.
-Note that while most artifacts point to plain text files, GTFS and GTFS-RT use binary files that can't be properly printed in standard output.
+A simple http server is used as destination of the artifact (consumer data plane). The server receives a file and logs its content in the standard output.
+Note that while most artifacts point to plain text files, GTFS and GTFS-RT use binary files that can't be properly printed in standard output. This is not a limitation of the EDC+VC stack per se, but rather of the sample consumer data plane used in these tests, and thus this did not affect the evaluation score.
 
 #### Measured results
 
 | Test        | Functional Completeness | Functional Correctness	 | Functional Appropriateness | Explanation                                          |
 |-------------|-------------------------|-------------------------|----------------------------|------------------------------------------------------|
-| GTFS        | 3                       | 4                       | 4                          |  Can't perform queries against the data product       |
+| GTFS        | 4                       | 4                       | 4                          |  -       |
 | GTFS-RT     | 3                       | 4                       | 4                          |  Can't perform queries against the data product       |
 | DATEX-II    | 3                       | 4                       | 4                          |  Can't perform queries against the data product       |
 | GBFS        | 3                       | 4                       | 4                          |  Can't perform queries against the data product       |
 | WMS/WFS     | 3                       | 4                       | 4                          |  Can't perform queries against the data product       |
 | Private key | 1                       | 1                       | 1                          | Transfer process status is TERMINATED, logs are empty |
-| Overall     | (3*5+1)/6 = 2.5         | (4*5+1)/6 = 3.5         | (4*5+1)/6 = 3.5            |                                                       |
+| Overall     | (4+3*4+1)/6 = 2.83         | (4*5+1)/6 = 3.5         | (4*5+1)/6 = 3.5            |                                                       |
 
-Overall score calculation: (2.5 + 3.5 + 3.5) / 3 = 3.167
- 
+Overall score calculation: (2.83 + 3.5 + 3.5) / 3 = 3.28
+
+**Functional Suitability Quality Metric Score: 3.28**
+
+
