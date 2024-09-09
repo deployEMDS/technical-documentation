@@ -23,10 +23,18 @@ Access to private APIs is tested using the AMB mobilitat endpoint.
 
 ### Results
 #### Assessment
-[TODO] Describe the assessment results (qualitative results), if applicable. Include screenshots, logs, etc, if necessary.
+
+All the tests are stored under [this](https://www.postman.com/i2cat-dev/workspace/deployemds/folder/36812968-ceed2125-10e2-48fa-91c9-8bf1f05aa7e8?action=share&source=copy-link&creator=36812968&ctx=documentation) folder.
+A simple http server is used as destination of the artifact. The server receives a file and logs its content in the standard output.
+Note that while most artifacts point to plain text files, GTFS and GTFS-RT use binary files that can't be properly printed in standard output.
 
 #### Measured results
-[TODO] Describe the measured results (quantitative results), if applicable. Rank the results according to the expected output, if applicable.
 
-#### Notes
-[TODO] Add notes, if necessary.
+| Test        | Functional Completeness | Functional Correctness	 | Functional Appropriateness | Score (0/4) | Explanation                                          |
+|-------------|-------------------------|-------------------------|----------------------------|-------------|-------------------------------------------------------|
+| GTFS        | 4                       | 4                       | 4                          | 4           |                                                       |
+| GTFS-RT     | 4                       | 4                       | 4                          | 4           |                                                       |
+| DATEX-II    | 4                       | 4                       | 4                          | 4           |                                                       |
+| GBFS        | 4                       | 4                       | 4                          | 4           |                                                       |
+| WMS/WFS     | 4                       | 4                       | 4                          | 4           |                                                       |
+| Private key | 1                       | 1                       | 1                          | 1           | Transfer process status is TERMINATED, logs are empty | 
