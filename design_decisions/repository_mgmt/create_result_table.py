@@ -72,6 +72,7 @@ def process_test_file(test_md_path, base_path, test_id):
     result_edc = find_score_in_results(result_files, 'edc')
     result_fiware = find_score_in_results(result_files, 'fiware')
     result_pontus_x = find_score_in_results(result_files, 'pontus_x')
+    result_simpl = find_score_in_results(result_files, 'simpl')
     relative_path = test_id.relative_to(base_path)
     original_string = str(relative_path)
     base_path, version_numbers = original_string.rsplit('/test_', 1)
@@ -90,6 +91,7 @@ def process_test_file(test_md_path, base_path, test_id):
         'result_edc': result_edc,
         'result_pontus_x': result_pontus_x,
         'result_fiware': result_fiware,
+        'result_simpl': result_simpl,
     }
 
 

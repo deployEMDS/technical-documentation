@@ -19,4 +19,15 @@ Users must implement the custom usage enforcement functionality themselves, whic
 Additionally, once the custom functionality is developed, the EDC connector needs to be rebuilt to include this new extension.
 This process requires a thorough understanding of the EDC connector’s architecture and extension mechanisms.
 
-Functional Suitability Quality Metric Score: 2
+#### Measured results
+The criteria used to measure the results was the one specified by the Data Product Publication ISO25010 Quality file regarding Functional Suitability.
+
+| **Criterion**                | **Description**                                                                                     | **Score (0-4)** |
+|------------------------------|-----------------------------------------------------------------------------------------------------|-----------------|
+| **Functional Completeness**   | Technical requirements cover all the specified tasks and user objectives.                          | 3               |
+| **Functional Correctness**    | Technical requirements meet results with the needed degree of precision.                           | 4               |
+| **Functional Appropriateness**| Technical requirements facilitate the accomplishment of specified tasks and objectives.            | 1               |
+
+Overall score calculation: (3 + 4 + 1) / 3 = 2.67
+
+**Functional Suitability Quality Metric Score: 2.67**

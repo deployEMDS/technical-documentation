@@ -1,0 +1,43 @@
+.container {
+    text-align: center;
+}
+
+.image {
+    width: 80%;
+    max-width: 800px;
+    margin: 20px 0;
+}
+
+.thumbnails {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.descriptionSection {
+    max-width: 1000px;
+    text-align: left;
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: #333;
+    line-height: 1.6;
+    margin: 10px 0;
+}
+
+.thumbnail {
+    width: 100px;
+    cursor: pointer;
+    opacity: 0.6;
+    transition: opacity 0.3s ease;
+}
+
+.thumbnail:hover {
+    opacity: 1;
+}
+
+.activeThumbnail {
+    width: 100px;
+    border: 2px solid #0078e7;
+    opacity: 1;
+}
