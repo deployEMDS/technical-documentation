@@ -17,7 +17,7 @@ Yes
 #### ISO25010 Quality
 Functional suitability
 #### ISO25010 Quality description
-[Functional completeness] The system supports multiple protocols and the ability to perform queries  against the data products endpoint. 
+The system supports multiple protocols and the ability to perform queries against the data products endpoint when the endpoint offers that capability. 
 
 ### Evaluation Criteria
 The criteria used to measure the results was the one specified by the Data Product Publication ISO25010 Quality file regarding Functional Suitability.
