@@ -131,8 +131,8 @@ def find_score_in_results(result_files, keyword):
 
 
 def _filter_result_data(results):
-    """Filter results to include only those that are minimal and in phase 1 or 2."""
-    return [r for r in results if (r['minimal'] == 'Yes' and r['phase'] in ['1', '2'])]
+    """Filter results to include only those that are minimal and in phase 1 or that have at least one valid result"""
+    return [r for r in results if ((r['minimal'] == 'Yes' and r['phase'] in ['1']) or (r['result_edc'] != 'N/A' or r['result_fiware'] != 'N/A'))]
 
 
 def _prepare_result_data(results, github_base_url):
