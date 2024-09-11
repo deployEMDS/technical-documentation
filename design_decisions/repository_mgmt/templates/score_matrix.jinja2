@@ -6,8 +6,8 @@ import Link from '@site/src/components/Link';
 
 # Score matrix
 
-| Test ID | Customer Journey | Test Description | EDC MVD | Fiware  | Simpl Agent |
-|---------|------------------|------------------|---------|---------|-------------|
+| Test ID | Customer Journey | Test Description | Phase | EDC MVD | Fiware  | Simpl Agent |
+|---------|------------------|------------------|-------|---------|---------|-------------|
 {%- for result in results %}
-| <Link color="#25c2a0">[{{ result.test_id }}]({{ result.test_link }})</Link> | {{ result.customer_journey }} | {{ result.description }} | {{ result.result_edc }} | {{ result.result_fiware }} | {{ result.result_simpl }} |
+| <Link color="#25c2a0">[{{ result.test_id }}]({{ result.test_link }})</Link> | {{ result.customer_journey }} | {{ result.description }} | {{result.phase}} {% if result.minimal == "Yes" %}Minimal{% else %}Extended{% endif %} | {{ result.result_edc }} | {{ result.result_fiware }} | {{ result.result_simpl }} |
 {%- endfor %}
