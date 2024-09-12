@@ -1,0 +1,34 @@
+# envVars for use case data service
+# partner_suffix for NTT "-ntt" would result in e.g. http://deployemds-data-service-ntt.demo-portal.eu
+export partner_suffix=""
+export data_service_scheme="http://"
+export data_service_name="deployemds-data-service"
+export usecase_domain="demo-portal.eu"
+
+# envVars for use case tm forum api
+export tmf_api_scheme="http://"
+export tmf_api_name="deployemds-tmf-api"
+
+# envVars for admin api key
+export admin_api_key="9Bn1Qme3CNajoHR2QKeGPoU7TmeOcOFO"
+
+# envVars for more standard components
+export apisix_control_api_prefix="http://apisix-control"
+export apisix_dashboard_prefix="http://apisix-dashboard"
+export keycloak_url_prefix="https://keycloak"
+export odrl_pap_url_prefix="http://odrl-pap"
+export scorpio_direct_url_prefix="http://scorpio-direct"
+export tmf_api_direct_url_prefix="http://tmf-api-direct"
+export tir_ta_url_prefix="http://tir-ta"
+export til_ta_url_prefix="http://til-ta"
+export did_helper_consumer_url_prefix="http://did-helper-consumer"
+
+# envVars for complete urls
+export data_service_complete_url=$data_service_scheme$data_service_name$partner_suffix.$usecase_domain
+export tmf_api_complete_url=$tmf_api_scheme$tmf_api_name$partner_suffix.$usecase_domain
+export tmf_api_direct_complete_url=${tmf_api_direct_url_prefix}${partner_suffix}.${usecase_domain}
+export apisix_control_api_complete_url=${apisix_control_api_prefix}${partner_suffix}.${usecase_domain}"/apisix/admin"
+export odrl_pap_complete_url=${odrl_pap_url_prefix}${partner_suffix}.${usecase_domain}
+export scorpio_complete_url=${scorpio_direct_url_prefix}${partner_suffix}.${usecase_domain}
+export keycloak_complete_url=${keycloak_url_prefix}${partner_suffix}.${usecase_domain}
+export did_helper_consumer_complete_url=${did_helper_consumer_url_prefix}${partner_suffix}.${usecase_domain}

@@ -1,0 +1,7 @@
+fw_env.sh
+kubeconfig*.yaml
+*.pem
+cert.pfx
+did.json
+*-site.y?ml
+myprovider-apisix-control-plane-ingress.yaml

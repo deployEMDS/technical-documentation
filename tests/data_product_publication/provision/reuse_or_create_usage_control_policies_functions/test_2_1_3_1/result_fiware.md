@@ -6,7 +6,7 @@
 
 #### Environment
 
-This functionality has been tested in the [IONOS Deployment](/deployment/fiware/fiware_deployment.md)
+This functionality has been tested in the [IONOS Deployment](/deployment/fiware/README.md)
 
 
 #### Tested quality metric and method
