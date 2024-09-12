@@ -1,0 +1,8 @@
+{
+  "label": "EDC MVD",
+  "position": 1,
+  "link": {
+    "type": "generated-index",
+    "description": "EDC Minimum Viable Data Space Deployment documentation"
+  }
+}
