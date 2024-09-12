@@ -1,25 +1,29 @@
 ## [2.2.3.1B] Data product publication: Publication - Publication on EMDS catalogue
+
 ### Stack: Fiware
 
 ### Statement of assessment
+
 #### Environment
-[TODO] Describe the environment used for the test / assessment
+
+The test environment Fiware v0.2 was used as described in [Fiware Deployment v0.2](/deployment/fiware/README.md)
 
 #### Tested quality metric and method
-[TODO] Describe the quality metric and method used for the test / assessment
 
-#### Comparative criteria (checklists, ...)
-[TODO] Describe the comparative criteria used for the test / assessment. If possible, align with the criteria used for the same test in the other stack(s).
+The quality metric for this test is based on the criteria outlined in [iso27001_kpis_subkpis.xlsx](../../../../../design_decisions/background_info/iso27001_kpis_subkpis.xlsx). In Phase 1, the focus is on the Functional Suitability metric. For detailed information, please refer to the [Comparative criteria (checklists, ...)](./test.md#comparative-criteria-checklists-) section in the test description.
 
 #### Expected output
-[TODO] Describe the expected output and how the ranking is calculated
+
+Publishing any product specifications or offerings in the catalog does not depend on the availability of the product within or without any connector.
+Technically, the contents or information presented by the TM Forum API are independent of any connector.
+Therefore there is no difference in publication of an existing or non-existent product.
 
 ### Results
+
 #### Assessment
-[TODO] Describe the assessment results (qualitative results), if applicable. Include screenshots, logs, etc, if necessary.
+
+The assessment and outcomes are exactly the same as for [FIWARE 2.2.3.1a](/tests/data_product_publication/publication/publication_on_emds_catalogue/test_2_2_3_1a/result_fiware.md)
 
 #### Measured results
-[TODO] Describe the measured results (quantitative results), if applicable. Rank the results according to the expected output, if applicable.
 
-#### Notes
-[TODO] Add notes, if necessary.
+Based on the criteria outlined in the [Comparative criteria (checklists, ...)](./test.md#comparative-criteria-checklists-) section of the test description, the test is assigned the following score: **Functional Suitability Quality Metric: 4**
