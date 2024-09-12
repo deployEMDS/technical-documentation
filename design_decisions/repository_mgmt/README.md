@@ -122,5 +122,77 @@ You can customize the `convert_url_map` dictionary in `design_decisions/reposito
 have specific links replaced. For example, occurrences of `./test.md#comparative-criteria-checklists-` are replaced with
 `#Information` which corresponds to a heading in the same page in the final documentation build.
 
+#### Keycloak Account Creation
+
+This guide explains how to use the Keycloak Account Creation script (`add_keycloak_users.py`) to create user accounts in a Keycloak realm.
+
+1. Fill the `.env` file in the same directory as the script with the following content:
+
+   ```
+   KEYCLOAK_URL=https://your-keycloak-server-url/
+   REALM_NAME=your-realm-name
+   KEYCLOAK_ADMIN_TOKEN=your-admin-token
+   LOGIN_URL=https://your-login-url
+   ```
+
+   Replace the placeholders with your actual Keycloak server details.
+
+2. Create a text file (e.g., `email_list.txt`) containing the email addresses of the users you want to create, one per line:
+
+   ```
+   user1@example.com
+   user2@example.com
+   user3@example.com
+   ```
+
+3. Run the script by providing the email list file as an argument:
+
+```
+python create_keycloak_users.py email_list.txt
+```
+
+This command will use the settings from your `.env` file.
+
+##### Advanced Usage
+
+You can override any of the settings from the `.env` file by providing them as command-line options:
+
+```
+python create_keycloak_users.py \
+  --keycloak-url=https://your-keycloak-url \
+  --realm-name=your-realm \
+  --admin-token=your-token \
+  --login-url=https://your-login-url \
+  email_list.txt
+```
+
+##### Command-Line Options
+
+- `--keycloak-url`: The URL of your Keycloak server
+- `--realm-name`: The name of the Keycloak realm where users will be created
+- `--admin-token`: The admin token for authentication
+- `--login-url`: The URL where users will log in (used in the email message)
+
+##### Output
+
+For each email address in the input file, the script will:
+
+1. Create a user account in Keycloak
+2. Generate a temporary password
+3. Print a success or failure message
+4. For successful creations, print an email message containing the login instructions
+
+##### Troubleshooting
+
+- If you encounter a "Permission denied" error, make sure your admin token has the necessary permissions to create users in the specified realm.
+- If the script fails to connect to the Keycloak server, check that the `KEYCLOAK_URL` is correct and the server is accessible.
+- Ensure that all email addresses in the input file are valid and properly formatted.
+
+##### Security Notes
+
+- Keep your `.env` file and admin token secure. Do not share them or commit them to version control.
+- The script generates temporary passwords. Ensure that users change these passwords upon their first login.
+
 ## Contributing
 Feel free to submit issues or pull requests if you have suggestions for improvements or encounter any problems.
+
