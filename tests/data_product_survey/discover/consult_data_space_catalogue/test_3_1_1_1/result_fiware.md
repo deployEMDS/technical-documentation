@@ -20,7 +20,7 @@ The quality metric for this test is based on the criteria outlined in [iso27001_
 
 The Fiware connector does not have a UI for interactive and complex searches.
 
-The Fiware connector or its TM Forum catalog implementation provides a REST API to query the contents of the catalog. There are predefined query parameters to narrow the search for a specific product description or - offering. As the [TMF620 Product Catalog Management API User Guide v5.0.0](https://www.tmforum.org/resources/specifications/tmf620-product-catalog-management-api-user-guide-v5-0-0/#) states, Attribute selection is enabled for all first level
+The Fiware connector or its TM Forum catalog implementation provides a REST API to query the contents of the catalog. There are predefined query parameters to narrow the search for a specific product description or - offering. As the [TMF620 Product Catalog Management API User Guide v4.0.0](https://www.tmforum.org/resources/standard/tmf633-service-catalog-api-user-guide-v4-0-0/) states, Attribute selection is enabled for all first level
 attributes of a product offering or description.
 
 The TM Forum specification has a detailed description of handling multiple catalogs and catalog copies. The specification assumes that multiple independent catalogs can coexist independent of each other. The specification explains that difference product specifications and -offerings with different version can exist in the different, independent catalogs.
@@ -41,6 +41,8 @@ The catalog can be synchronized with other catalogs.
 
 Therefore we see a significant coverage of expected catalog features.
 
-**Functional Suitability Quality Metric: 3**
+Because of time constraints we did **NOT** actually test a synchronization of the FIWARE TM Forum catalog to an external catalog.
+
+**Functional Suitability Quality Metric: 2**
 
 #### Notes
