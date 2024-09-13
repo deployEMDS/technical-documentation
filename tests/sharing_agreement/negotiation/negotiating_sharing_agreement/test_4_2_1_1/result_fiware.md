@@ -6,8 +6,7 @@
 
 #### Environment
 
-- The test utilizes the EDC MVD commit [5d58b38](https://github.com/eclipse-edc/MinimumViableDataspace/commit/5d58b3871983ce00a69a38b3215c6a8cb67d8ced).
-- The test is executed in an Ubuntu environment using IntelliJ.
+The test environment Fiware v0.2 was used as described in [Fiware Deployment v0.2](/deployment/fiware/README.md)
 
 #### Tested quality metric and method
 
