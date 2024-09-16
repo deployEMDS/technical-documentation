@@ -290,7 +290,7 @@ Open downloaded file with text editor
 nano did-helper-ingress.yaml
 ```
 
-Change spec.rules.http.paths.backend.service.port.name and save the file after add annotation:
+Add the following annotation:
 
 kubernetes.io/ingress.class: nginx
 
