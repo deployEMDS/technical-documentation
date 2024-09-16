@@ -137,7 +137,7 @@ Before you run the tests, make sure your current environment has all environment
 ./fw_env.sh
 ```
 
-Then you can follow the documentation in [Fiware Setup](doc/fiware_setup.txt) to run the tests.
+Then you can follow the documentation in [Fiware Setup](doc/fiware_setup.md) to run the tests.
 
 ### Shut down
 
