@@ -3,23 +3,16 @@
 
 ### Statement of assessment
 #### Environment
-[TODO] Describe the environment used for the test / assessment
+Because it has not been possible to carry out the deployment with all its characteristics, it has not been possible to evaluate this feature.
 
 #### Tested quality metric and method
-[TODO] Describe the quality metric and method used for the test / assessment
-
-#### Comparative criteria (checklists, ...)
-[TODO] Describe the comparative criteria used for the test / assessment. If possible, align with the criteria used for the same test in the other stack(s).
-
-#### Expected output
-[TODO] Describe the expected output and how the ranking is calculated
-
-### Results
-#### Assessment
-[TODO] Describe the assessment results (qualitative results), if applicable. Include screenshots, logs, etc, if necessary.
+The quality metric for this test is based on the criteria outlined in [iso27001_kpis_subkpis.xlsx](../../../../../design_decisions/background_info/iso27001_kpis_subkpis.xlsx). In Phase 1, the focus is on the Functional Suitability metric. For detailed information, please refer to the [Comparative criteria (checklists, ...)](./test.md#comparative-criteria-checklists-) section in the test description.
 
 #### Measured results
-[TODO] Describe the measured results (quantitative results), if applicable. Rank the results according to the expected output, if applicable.
+
+Based on the criteria outlined in the [Comparative criteria (checklists, ...)](./test.md#comparative-criteria) section of the test description, the test is assigned the following score:
+
+**Functional Suitability Quality Metric: 0**
 
 #### Notes
-[TODO] Add notes, if necessary.
+
