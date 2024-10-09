@@ -143,7 +143,7 @@ def _prepare_result_data(results, github_base_url):
         result_links = [
             {
                 'name': f.stem.replace('result_', ''),
-                'url': f"{github_base_url}/{result['path']}/{f.name}",
+                'url': f"{github_base_url}/{result['path']}/{f.name.upper()}",
             }
             for f in result['result_files']
         ]
