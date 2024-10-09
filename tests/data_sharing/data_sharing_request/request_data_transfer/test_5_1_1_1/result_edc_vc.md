@@ -44,12 +44,12 @@ As demonstrated above, all the following aspects of the transfer API coverage ar
 | Requirement | Measured KPI |
 | -|--------------|
 | Initiate a data sharing | 4            |
-| Retrieve data sharing information and status | 1            |
-| Receive data sharing request outcome condition | 1            |
-| Retrieve data sharing information of past data sharing actions. | 1            |
+| Retrieve data sharing information and status | 3            |
+| Receive data sharing request outcome condition | 3            |
+| Retrieve data sharing information of past data sharing actions. | 3            |
 
-**Overall Calculation: (4+1+1+1)/4 = 1.75**
-Functional Suitability Quality Metric Score: 1.75
+**Overall Calculation: (4+3+3+3)/4 = 3.25**
+Functional Suitability Quality Metric Score: 3.25
 
 #### Notes
 EDC is a pluggable ecosystem primarily targeting Java/Kotlin developers. Some extensions are available on the market for plug-and-play, but for certain specific use cases, developers need to create their own extensions.
