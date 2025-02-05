@@ -1,5 +1,5 @@
 ## [1.1.1.1] Participant onboarding: Registration - Gather information
-### Stack: Fiware
+### Stack: SIMPL
 
 ### Statement of assessment
 #### Environment
