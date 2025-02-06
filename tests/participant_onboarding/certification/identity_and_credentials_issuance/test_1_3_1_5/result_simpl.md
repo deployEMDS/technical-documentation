@@ -3,23 +3,31 @@
 
 ### Statement of assessment
 #### Environment
-[TODO] Describe the environment used for the test / assessment
+The testing environment is an IMEC self-deployed instances of Simpl-Open on an IONOS Kubernetes cluster, the version used is 1.0.
 
 #### Tested quality metric and method
-[TODO] Describe the quality metric and method used for the test / assessment
-
-#### Comparative criteria (checklists, ...)
-[TODO] Describe the comparative criteria used for the test / assessment. If possible, align with the criteria used for the same test in the other stack(s).
+The quality metric for this test is based on the criteria outlined in [iso27001_kpis_subkpis.xlsx](../../../../../design_decisions/background_info/iso27001_kpis_subkpis.xlsx). In Phase 1, the focus is on the Functional Suitability metric. For detailed information, please refer to the [Comparative criteria (checklists, ...)](./test.md#comparative-criteria-checklists-) section in the test description.
 
 #### Expected output
-[TODO] Describe the expected output and how the ranking is calculated
+The expected output of the test is an assessment of whether the SIMPL supports the full credential lifecycle, including request, issuance, validation, renewal, and revocation.
+
 
 ### Results
 #### Assessment
-[TODO] Describe the assessment results (qualitative results), if applicable. Include screenshots, logs, etc, if necessary.
+SIMPL doesn't support Verifiable Credential as identity for authentication and authoritarian of Data Space flow,
+The Verifiable Credential life cycle is not supported by SIMPL as identity management.
+
 
 #### Measured results
-[TODO] Describe the measured results (quantitative results), if applicable. Rank the results according to the expected output, if applicable.
+The EDC implementation partially covers the VC lifecycle as outlined above.  Based on the criteria outlined in the [Comparative criteria (checklists, ...)](./test.md#comparative-criteria-checklists-) section of the test description, the test is assigned the following score:
 
-#### Notes
-[TODO] Add notes, if necessary.
+| **VC Lifecycle Stage**          | **Coverage**                                                       | **Score (0-4)** |
+|---------------------------------|--------------------------------------------------------------------|-----------------|
+| **Issuance and Storage**         | Available with the workaround extension function `seedCredentials`. | 0               |
+| **Presentation**                 | Covered                                                            | 0               |
+| **Verification & Use**           | Covered                                                            | 0               |
+| **Revocation/Expiration**        | Covered                                                            | 0               |
+| **Renewal/Re-Issuance**          | Not covered.           | 0               |
+
+**Overall Calculation: (0+0+0+0+0)/5 = 0**
+Functional Suitability Quality Metric Score: 0
