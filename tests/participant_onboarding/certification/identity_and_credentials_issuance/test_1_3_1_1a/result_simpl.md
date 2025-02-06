@@ -3,23 +3,41 @@
 
 ### Statement of assessment
 #### Environment
-[TODO] Describe the environment used for the test / assessment
+The testing environment is an IMEC self-deployed instances of Simpl-Open on an IONOS Kubernetes cluster, the version used is 1.0.
 
 #### Tested quality metric and method
-[TODO] Describe the quality metric and method used for the test / assessment
-
-#### Comparative criteria (checklists, ...)
-[TODO] Describe the comparative criteria used for the test / assessment. If possible, align with the criteria used for the same test in the other stack(s).
+The quality metric for this test is based on the criteria outlined in [iso27001_kpis_subkpis.xlsx](../../../../../design_decisions/background_info/iso27001_kpis_subkpis.xlsx). In Phase 1, the focus is on the Functional Suitability metric. For detailed information, please refer to the [Comparative criteria (checklists, ...)](./test.md#comparative-criteria-checklists-) section in the test description.
 
 #### Expected output
-[TODO] Describe the expected output and how the ranking is calculated
+**The expected output of this test is to evaluate the level of customization required to integrate Gaia-X issued VC to SIMPL**
 
 ### Results
 #### Assessment
-[TODO] Describe the assessment results (qualitative results), if applicable. Include screenshots, logs, etc, if necessary.
+SIMPL doesn't support Verifiable Credential as identity for authentication and authoritarian of Data Space flow, therefore it is not compatible with Gaia-X framework
+as identity management framework.
+However, SIMPL uses Verifiable Credential as Catalog for Data Space, which is using the [Gaia-X framework](https://gaia-x.eu/news-press/gaia-x-and-catalogues/).
 
 #### Measured results
-[TODO] Describe the measured results (quantitative results), if applicable. Rank the results according to the expected output, if applicable.
+
+Based on the criteria outlined in the [Comparative criteria (checklists, ...)](./test.md#comparative-criteria) section of the test description, the test is assigned the following score:
+
+[x] Does the stack support VC? - As stated, SIMPL doesn't support VC as identity for authentication and authoritarian of Data Space flow.
+
+[] The stack supports self-issued VCs 
+
+[] The stack supports self-issued VCs with support for SD classes? 
+
+[] The stack supports self-issued VCs where SD classes don't break the VC manager, a GAIA-X compatible DID method can
+be used. No compliance or claim verification are mandatory, just a smoke test. 
+
+[] The stack uses GAIA-X trust anchors.
+
+[] The stack has a service that verifies credential compliance and a connector has policies to ensure a participant has
+compliant GAIA-X descriptors 
+
+[] The stack implements policies that can use SD classes to interpret claims and use a GXDCH clearing house for business
+purposes
+
+#### Functional suitability quality metric: 0
 
 #### Notes
-[TODO] Add notes, if necessary.
