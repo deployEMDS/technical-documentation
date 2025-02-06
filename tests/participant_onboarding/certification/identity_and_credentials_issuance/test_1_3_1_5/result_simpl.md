@@ -11,7 +11,6 @@ The quality metric for this test is based on the criteria outlined in [iso27001_
 #### Expected output
 The expected output of the test is an assessment of whether the SIMPL supports the full credential lifecycle, including request, issuance, validation, renewal, and revocation.
 
-
 ### Results
 #### Assessment
 SIMPL doesn't support Verifiable Credential as identity for authentication and authoritarian of Data Space flow,
