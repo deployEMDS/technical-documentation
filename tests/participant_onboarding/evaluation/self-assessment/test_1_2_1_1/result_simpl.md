@@ -3,7 +3,7 @@
 
 ### Statement of assessment
 #### Environment
-The testing environment is an IMEC self-deployed instance of Simpl-Open on an IONOS Kubernetes cluster. The Simpl-Open instance is deployed with the default configuration, and the version used is 1.0.
+The testing environment is an IMEC self-deployed instances of Simpl-Open on an IONOS Kubernetes cluster, the version used is 1.0.
 
 #### Tested quality metric and method
 The quality metric for this test is based on the criteria outlined in [iso27001_kpis_subkpis.xlsx](../../../../../design_decisions/background_info/iso27001_kpis_subkpis.xlsx). In Phase 1, the focus is on the Functional Suitability metric. For detailed information, please refer to the [Comparative criteria (checklists, ...)](./test.md#comparative-criteria-checklists-) section in the test description.

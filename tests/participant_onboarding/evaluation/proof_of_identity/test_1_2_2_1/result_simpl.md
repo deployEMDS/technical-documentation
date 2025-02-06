@@ -3,23 +3,33 @@
 
 ### Statement of assessment
 #### Environment
-[TODO] Describe the environment used for the test / assessment
+The testing environment is an IMEC self-deployed instances of Simpl-Open on an IONOS Kubernetes cluster, the version used is 1.0.
 
 #### Tested quality metric and method
-[TODO] Describe the quality metric and method used for the test / assessment
-
-#### Comparative criteria (checklists, ...)
-[TODO] Describe the comparative criteria used for the test / assessment. If possible, align with the criteria used for the same test in the other stack(s).
+The quality metric for this test is based on the criteria outlined in [iso27001_kpis_subkpis.xlsx](../../../../../design_decisions/background_info/iso27001_kpis_subkpis.xlsx). In Phase 1, the focus is on the Functional Suitability metric. For detailed information, please refer to the [Comparative criteria (checklists, ...)](./test.md#comparative-criteria-checklists-) section in the test description.
 
 #### Expected output
-[TODO] Describe the expected output and how the ranking is calculated
+**The expected output of this test is to evaluate the level of customization required to use European/National identity provider as issuer for verifiable credentials.**
 
 ### Results
 #### Assessment
-[TODO] Describe the assessment results (qualitative results), if applicable. Include screenshots, logs, etc, if necessary.
+The participant within SIMPL is not identified by a Verifiable Credential, and the authentication authorization flow does not follow the typical VC process. 
+However, as detailed in the [test_1_2_1_1](../../self-assessment/test_1_2_1_1/result_simpl.md), the authority can establish onboarding procedures for each participant role and may require a specific type of European/National identity in Verifiable Credential format for the onboarding process.
+To validate that VC, SIMPL requires a manual or additional extension, as the current onboarding process is with manual approval by the authority (Notary).
 
 #### Measured results
-[TODO] Describe the measured results (quantitative results), if applicable. Rank the results according to the expected output, if applicable.
+
+| **Criterion**          | **Description**                                                                                          | **Score (0-4)** | **Explanation**                                                                                                                                        |
+|------------------------|----------------------------------------------------------------------------------------------------------|-----------------|--------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Confidentiality**    | The platform ensures that data are accessible only to those authorized to have access according to the data negotiation. | 4               |                                                                                                                                                        |
+| **Integrity**          | How the platform prevents unauthorized access to, or modification of the data.                            | 3               | 	  |
+| **Non-repudiation**    | How the actions or events can be proven to have taken place so that the events or actions cannot be repudiated later. | 2               |                   |
+| **Accountability**     | The actions of an entity can be traced uniquely to the entity.                                            | 3               | 	    |
+| **Authenticity**       | The resource can be proved to be the one claimed.                                                         | 2               |  |
+
+Overall Calculation: ( 4 + 4 + 4 + 4 + 4) / 5 = 2.4
+
+Functional Suitability Quality Metric Score: 2.4
 
 #### Notes
 [TODO] Add notes, if necessary.
