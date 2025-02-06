@@ -3,23 +3,21 @@
 
 ### Statement of assessment
 #### Environment
-[TODO] Describe the environment used for the test / assessment
+The testing environment is an IMEC self-deployed instances of Simpl-Open on an IONOS Kubernetes cluster, the version used is 1.0.
 
 #### Tested quality metric and method
-[TODO] Describe the quality metric and method used for the test / assessment
+The quality metric for this test is based on the criteria outlined in [iso27001_kpis_subkpis.xlsx](../../../../../design_decisions/background_info/iso27001_kpis_subkpis.xlsx). In Phase 1, the focus is on the Functional Suitability metric. For detailed information, please refer to the [Comparative criteria (checklists, ...)](./test.md#comparative-criteria-checklists-) section in the test description.
 
-#### Comparative criteria (checklists, ...)
-[TODO] Describe the comparative criteria used for the test / assessment. If possible, align with the criteria used for the same test in the other stack(s).
-
-#### Expected output
-[TODO] Describe the expected output and how the ranking is calculated
+#### Expected outputTest the process of catalogue publication for a data product under the following conditions: an existing data product is published on the catalogue
+The EMDS catalog, as defined in the relevant documentation, refers to the Data Space-only catalog, specifically the internal EDC catalog and its federation component.
 
 ### Results
 #### Assessment
-[TODO] Describe the assessment results (qualitative results), if applicable. Include screenshots, logs, etc, if necessary.
+SIMPL does not provide an endpoint to publish a catalog directly. The process involves data provider create a self-description of the data offering, set access policy to define who can access the dataset, and publish the data offering.
+Publish the data offering will make the data product available in target user's federated catalog.
+As a result, current test yields the same outcome as [Test 2.2.3.1a](..\test_2_2_3_1a\result_simpl.md). Since the catalog is built from the existing data product when a request is triggered, there is no difference between a newly published data product and one that already exists.
 
 #### Measured results
-[TODO] Describe the measured results (quantitative results), if applicable. Rank the results according to the expected output, if applicable.
+As demonstrated above, current test shares the same result as [Test 2.2.3.1a](..\test_2_2_3_1a\result_simpl.md). 
+**Functional Suitability Quality Metric: 4**
 
-#### Notes
-[TODO] Add notes, if necessary.
