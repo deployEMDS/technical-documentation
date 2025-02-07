@@ -8,8 +8,9 @@ The testing environment is an IMEC self-deployed instances of Simpl-Open on an I
 #### Tested quality metric and method
 The quality metric for this test is based on the criteria outlined in [iso27001_kpis_subkpis.xlsx](../../../../../design_decisions/background_info/iso27001_kpis_subkpis.xlsx). In Phase 1, the focus is on the Functional Suitability metric. For detailed information, please refer to the [Comparative criteria (checklists, ...)](./test.md#comparative-criteria-checklists-) section in the test description.
 
-#### Expected outputTest the process of catalogue publication for a data product under the following conditions: an existing data product is published on the catalogue
-The EMDS catalog, as defined in the relevant documentation, refers to the Data Space-only catalog, specifically the internal EDC catalog and its federation component.
+#### Expected output
+Test the process of catalogue publication for a data product under the following conditions: an existing data product is published on the catalogue
+The EMDS catalog, as defined in the relevant documentation, refers to the Data Space-only catalog, specifically the SIMPL's federation component.
 
 ### Results
 #### Assessment
