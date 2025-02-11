@@ -20,11 +20,11 @@ SIMPL Provider 3 types of Services offering described by self-description:
 - Infrastructure offering
 - Data offering
 When creating the data offering, the data provider could set access policy to define who can access the dataset.
-![SIMPL_access_policy.png](SIMPL_access_policy.png)
+![SIMPL_access_policy.png](images/SIMPL_access_policy.png)
 As the example above, only consumer role user can search the dataset from its catalog.
 
 Once the data offering is published, the consumer can go to its catalog to search the dataset. SIMPL provides a user-friendly interface for the consumer to search the dataset.
-![SIMPL_search_dataset.png](SIMPL_search_dataset.png)
+![SIMPL_search_dataset.png](images/SIMPL_search_dataset.png)
 
 #### Measured results
 As demonstrated above, SIMPL provides an open-box process for publishing a data product (data asset along with its policies and contract). This process makes the data product available in the connector catalog or the federated catalog. Based on the criteria outlined in the [Comparative criteria (checklists, ...)](./test.md#comparative-criteria-checklists-) section of the test description, the test is assigned the following score:

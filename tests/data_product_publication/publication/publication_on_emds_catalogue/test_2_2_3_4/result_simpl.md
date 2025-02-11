@@ -16,7 +16,7 @@ This test aims to evaluate the process for de-publishing a catalog or making a c
 Currently, SIMPL does not offer a user interface to de-publish a data product from the catalog. Although SIMPL 1.0 uses EDC as a connector, which has an API endpoint for de-publishing datasets, SIMPL primarily provides its own data offering and catalog UI. Therefore, it lacks a user interface for de-publishing data products from the catalog.
 
 As mentioned in the previous test, when creating a self-description of a data offering, SIMPL provides access policies for dataset search. Consequently, there is a possibility that the data product may not be visible as private.
-![simpl_offering.png](simpl_offering.png)
+![simpl_offering.png](images/simpl_offering.png)
 
 #### Measured results
 As mentioned earlier, SIMPL offers a basic UI function to define access policies for data offerings. However, it lacks a user interface for de-publishing a data product from the catalog. Consequently, based on the criteria outlined in the [Comparative criteria (checklists, ...)](./test.md#comparative-criteria-checklists-) section of the test description, the test is assigned the following score:
