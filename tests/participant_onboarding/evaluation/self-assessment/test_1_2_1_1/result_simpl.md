@@ -16,23 +16,31 @@ The quality metric for this test is based on the criteria outlined in [iso27001_
 The onboarding process is an interaction between the new applicant and the authority within the SIMPL context. The procedure involves the following steps:
 
 - **Authority:** The authority responsible for a specific data space must create onboarding procedures for each participant role.
+
 ![onboarding_SIMPL.png](onboarding_SIMPL.png)
 
 - **Participant:** The participant submits an onboarding request by visiting the onboarding request page, completing the form, and creating their participant profile.**
+
 ![onboarding_SIMPL_1.png](onboarding_SIMPL_1.png)
 
 - **Participant:** Using the newly created participant profile, the participant logs in to the SIMPL authority system to finalize the onboarding application as an applicant.:
+
 ![onboarding_SIMPL_2](onboarding_SIMPL_2.png)
 
 - **Authority:** The authority logs in to the frontend as a notary to approve the onboarding application and confirm the selected identity attributes.
+
 ![onboarding_SIMPL_3](onboarding_SIMPL_3.png)
 
 - **Authority:** The authority logs in to the frontend as a notary to approve the onboarding application and confirm the selected identity attributes.
+
 ![onboarding_SIMPL_4](onboarding_SIMPL_4.png)
 
 - **Participant:** The participant uploads the provided keypair by logging into the authority frontend with the newly created deployEMDS user, submitting the CSR credential request.
+
 ![onboarding_SIMPL_5](onboarding_SIMPL_5.png)
+
 Then, the participant downloads the credentials from the authority and imports them into the participant-utility frontend.
+
 ![onboarding_SIMPL_6.png](onboarding_SIMPL_6.png)
 
 Once completed, the participant is successfully onboarded and can interact with other agents within the Data Space.
