@@ -17,31 +17,31 @@ The onboarding process is an interaction between the new applicant and the autho
 
 - **Authority:** The authority responsible for a specific data space must create onboarding procedures for each participant role.
 
-![onboarding_SIMPL.png](onboarding_SIMPL.png)
+![onboarding_SIMPL.png](images/onboarding_SIMPL.png)
 
 - **Participant:** The participant submits an onboarding request by visiting the onboarding request page, completing the form, and creating their participant profile.**
 
-![onboarding_SIMPL_1.png](onboarding_SIMPL_1.png)
+![onboarding_SIMPL_1.png](images/onboarding_SIMPL_1.png)
 
 - **Participant:** Using the newly created participant profile, the participant logs in to the SIMPL authority system to finalize the onboarding application as an applicant.:
 
-![onboarding_SIMPL_2](onboarding_SIMPL_2.png)
+![onboarding_SIMPL_2](images/onboarding_SIMPL_2.png)
 
 - **Authority:** The authority logs in to the frontend as a notary to approve the onboarding application and confirm the selected identity attributes.
 
-![onboarding_SIMPL_3](onboarding_SIMPL_3.png)
+![onboarding_SIMPL_3](images/onboarding_SIMPL_3.png)
 
 - **Authority:** The authority logs in to the frontend as a notary to approve the onboarding application and confirm the selected identity attributes.
 
-![onboarding_SIMPL_4](onboarding_SIMPL_4.png)
+![onboarding_SIMPL_4](images/onboarding_SIMPL_4.png)
 
 - **Participant:** The participant uploads the provided keypair by logging into the authority frontend with the newly created deployEMDS user, submitting the CSR credential request.
 
-![onboarding_SIMPL_5](onboarding_SIMPL_5.png)
+![onboarding_SIMPL_5](images/onboarding_SIMPL_5.png)
 
 Then, the participant downloads the credentials from the authority and imports them into the participant-utility frontend.
 
-![onboarding_SIMPL_6.png](onboarding_SIMPL_6.png)
+![onboarding_SIMPL_6.png](images/onboarding_SIMPL_6.png)
 
 Once completed, the participant is successfully onboarded and can interact with other agents within the Data Space.
 #### Measured results
@@ -62,3 +62,4 @@ Based on the criteria outlined in the [Comparative criteria (checklists, ...)](.
 Functional Suitability Quality Metric Score: 4
 
 #### Notes
+The current testing version of SIMPL is a very basic Minimum Viable Product solution, version 1.0.   
