@@ -29,7 +29,7 @@ The system will score higher if the API is secured and utilizes standard methods
 ### Results
 #### Assessment
 
-[Simpl-Open](https://code.europa.eu/simpl/simpl-open) utilizes the [EDC connector](https://code.europa.eu/simpl/simpl-open/development/gaia-x-edc/simpl-edc) for implementing data space protocols, including managing data sharing requests. The EDC connector offers management API endpoints for handling data transfer processes, as detailed in [test_5_1_1_1_result_edc_vc.md](result_edc_vc.md).
+[Simpl-Open](https://code.europa.eu/simpl/simpl-open) utilizes the [EDC connector](https://code.europa.eu/simpl/simpl-open/development/gaia-x-edc/simpl-edc) for implementing [Dataspace Protocol](https://docs.internationaldataspaces.org/ids-knowledgebase/dataspace-protocol), including managing data sharing requests. The EDC connector offers management API endpoints for handling data transfer processes, as detailed in [test_5_1_1_1_result_edc_vc.md](result_edc_vc.md).
 
 [Simpl-Open](https://code.europa.eu/simpl/simpl-open) also features a [catalog UI](https://code.europa.eu/simpl/simpl-open/development/gaia-x-edc/simpl-catalogue-client) built on top of the EDC connector, providing a user-friendly interface for managing data sharing requests.
 

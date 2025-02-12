@@ -22,9 +22,10 @@ The expected outcome of the current test is to evaluate whether the system provi
 ### Results
 #### Assessment
 
-Since [Simpl-Open](https://code.europa.eu/simpl/simpl-open) utilizes the [EDC connector](https://code.europa.eu/simpl/simpl-open/development/gaia-x-edc/simpl-edc) for data space protocol implementation (including sharing agreement establishment), 
+Since [Simpl-Open](https://code.europa.eu/simpl/simpl-open) utilizes the [EDC connector](https://code.europa.eu/simpl/simpl-open/development/gaia-x-edc/simpl-edc) for [Dataspace Protocol](https://docs.internationaldataspaces.org/ids-knowledgebase/dataspace-protocol) implementation (including sharing agreement establishment), 
 the trace mentioned in [test_4_2_3_2_result_edc_vc.md](result_edc_vc.md) is also available in SIMPL. 
-Additionally, SIMPL-OPEN offers a UI to display the negotiation status and uses Filebeat to collect logs and send them to the ELK stack for further analysis, 
+
+Additionally, [Simpl-Open](https://code.europa.eu/simpl/simpl-open) offers a UI to display the negotiation status and uses Filebeat to collect logs and send them to the ELK stack for further analysis, 
 as detailed in [test_4_2_1_7_result_simpl.md](../../negotiating_sharing_agreement/test_4_2_1_7/result_simpl.md).
 
 #### Measured results

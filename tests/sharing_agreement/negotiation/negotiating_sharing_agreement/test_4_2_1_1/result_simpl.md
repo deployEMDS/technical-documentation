@@ -15,7 +15,7 @@ The test aims to assess the state machine implementation of the SIMPL ecosystem 
 
 ### Results
 #### Assessment
-[Simpl-Open](https://code.europa.eu/simpl/simpl-open) uses the EDC connector as its data space connector, thus sharing the same state machine for data sharing contract establishment as described in [result_edc_vc.md](result_edc_vc.md). SIMPL aims to provide interoperability between different data spaces, making its state machine for data sharing contracts based on the data space protocol, which can be considered an EU reference. 
+[Simpl-Open](https://code.europa.eu/simpl/simpl-open) uses the EDC connector as its data space connector, thus sharing the same state machine for data sharing contract establishment as described in [result_edc_vc.md](result_edc_vc.md). SIMPL aims to provide interoperability between different data spaces, making its state machine for data sharing contracts based on the [Dataspace Protocol](https://docs.internationaldataspaces.org/ids-knowledgebase/dataspace-protocol), which can be considered an EU reference. 
 SIMPL provides UI front end for data sharing contract negotiation within catalog UI. When a consumer logs into the catalog UI and locates the desired data offering, the consumer can click the `Request Resource` button to initiate the negotiation process.
 ![simpl_resource_catalog.png](images/simpl_resource_catalog.png)
 

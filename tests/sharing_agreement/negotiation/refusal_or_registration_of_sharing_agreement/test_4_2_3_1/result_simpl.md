@@ -31,7 +31,7 @@ Users with certain privileges can access specific UIs of the participants or hav
 create self-description, etc.
 Therefore, in the context of [Simpl-Open](https://code.europa.eu/simpl/simpl-open), users are the participants in the
 context of the current test.
-[Simpl-Open](https://code.europa.eu/simpl/simpl-open) uses the EDC connection for handling data space protocols, thus it
+[Simpl-Open](https://code.europa.eu/simpl/simpl-open) uses the EDC connection for handling [Dataspace Protocol](https://docs.internationaldataspaces.org/ids-knowledgebase/dataspace-protocol), thus it
 also includes EDC APIs for contract negotiation, status messages, and logs.
 [Simpl-Open](https://code.europa.eu/simpl/simpl-open) also provides a UI to reflect the negotiation status as follows:
 

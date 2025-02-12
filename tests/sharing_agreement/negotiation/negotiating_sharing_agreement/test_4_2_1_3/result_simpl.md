@@ -16,9 +16,12 @@ The test aims to evaluate the coverage of the following criteria on contract neg
 
 ### Results
 #### Assessment
-Simpl-Open provides a SIMPL agent to facilitate the establishment and interoperability of data spaces. 
-For data providers, Simpl-Open uses the EDC connector to implement the data space protocol, including the contract negotiation process and its state machines. 
-As explained in the [result_edc_vc.md](result_edc_vc.md), EDC requires implementation extensions to apply specific policy rules.
+[Simpl-Open](https://code.europa.eu/simpl/simpl-open) provides [SIMPL agents](https://code.europa.eu/simpl/simpl-open/development/agents) to facilitate the establishment and interoperability of data spaces. 
+
+For data providers, Simpl-Open uses the EDC connector to implement the [Dataspace Protocol](https://docs.internationaldataspaces.org/ids-knowledgebase/dataspace-protocol), including the contract negotiation process and its state machines. 
+
+As explained in the [result_edc_vc.md](result_edc_vc.md), EDC requires extensions implementation to apply specific policy rules.
+
 SIMPL provides predefined access and usage rules via its data provider UI when creating the Self Description of the Service offering, enhancing the user experience on top of the EDC layer.
 
 ![SIMPL_polices.png](images/SIMPL_polices.png)

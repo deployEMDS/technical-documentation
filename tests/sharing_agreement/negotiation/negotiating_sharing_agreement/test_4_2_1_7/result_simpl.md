@@ -17,7 +17,7 @@ The test aims to verify that the system generates logs detailing the sharing agr
 ### Results
 #### Assessment
 
-[Simpl-Open](https://code.europa.eu/simpl/simpl-open) uses the EDC connector for data space protocol implementation. 
+[Simpl-Open](https://code.europa.eu/simpl/simpl-open) uses the EDC connector for [Dataspace Protocol](https://docs.internationaldataspaces.org/ids-knowledgebase/dataspace-protocol) implementation. 
 Consequently, the console logs from the EDC connector are also available within the [Simpl-Open](https://code.europa.eu/simpl/simpl-open) project.
 However, since the current deployment primarily consists of microservices on a Kubernetes cluster, maintaining constant visibility on the logs is challenging.
 To address this lack of transparency, SIMPL uses Elasticsearch and Kibana to store and visualize the logs. 
