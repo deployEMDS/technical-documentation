@@ -19,15 +19,19 @@ description.
 
 The expected outcome of the current test is to evaluate whether the system provides an observability trace of the sharing agreement (privacy terms of observability are out of scope).
 
-#### Expected output
-[TODO] Describe the expected output and how the ranking is calculated
-
 ### Results
 #### Assessment
-[TODO] Describe the assessment results (qualitative results), if applicable. Include screenshots, logs, etc, if necessary.
+
+Since [Simpl-Open](https://code.europa.eu/simpl/simpl-open) utilizes the EDC connector for data space protocol implementation (including sharing agreement establishment), 
+the trace mentioned in [test_4_2_3_2_result_edc_vc.md](result_edc_vc.md) is also available in SIMPL. 
+Additionally, SIMPL-OPEN offers a UI to display the negotiation status and uses Filebeat to collect logs and send them to the ELK stack for further analysis, 
+as detailed in [test_4_2_1_7_result_simpl.md](../../negotiating_sharing_agreement/test_4_2_1_7/result_simpl.md).
 
 #### Measured results
-[TODO] Describe the measured results (quantitative results), if applicable. Rank the results according to the expected output, if applicable.
+
+Based on the criteria outlined in the [Comparative criteria (checklists, ...)](./test.md#comparative-criteria-checklists-) section of the test description, the test is assigned the following score:
+
+**Functional Suitability Quality Metric: 4**
 
 #### Notes
 
