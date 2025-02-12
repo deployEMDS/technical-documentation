@@ -40,7 +40,9 @@ The test aims to evaluate which usage policies are supported out of the box. For
 
 [Simpl-Open](https://code.europa.eu/simpl/simpl-open) offers a data offering UI named [SD Tooling Application](https://code.europa.eu/simpl/simpl-open/development/data1/sdtooling-api-be/-/tree/main/documents?ref_type=heads) for creating data offerings.
 The application allows users to create usage policies when making self-declarations for data offerings, such as requiring the consumer to delete the data after usage:
+
 ![SIMPL_usage_policy.png](images/SIMPL_usage_policy.png)
+
 SIMPL also utilizes the [edc-ionos-s3](https://github.com/Digital-Ecosystems/edc-ionos-s3/tree/main) extension to interact with IONOS S3 storage. 
 However, we have not observed the enforcement of usage policies after the transfer process with the current version of [Simpl-Open](https://code.europa.eu/simpl/simpl-open).
 
