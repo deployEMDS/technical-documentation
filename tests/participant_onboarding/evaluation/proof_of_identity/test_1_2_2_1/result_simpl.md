@@ -13,9 +13,11 @@ The quality metric for this test is based on the criteria outlined in [iso27001_
 
 ### Results
 #### Assessment
-The participant within SIMPL is not identified by a Verifiable Credential, and the authentication authorization flow does not follow the typical VC process. 
+The participant within [Simpl-Open](https://code.europa.eu/simpl/simpl-open) is not identified by a Verifiable Credential, and the authentication authorization flow does not follow the typical VC process. 
+
 However, as detailed in the [test_1_2_1_1](../../self-assessment/test_1_2_1_1/result_simpl.md), the authority can establish onboarding procedures for each participant role and may require a specific type of European/National identity in Verifiable Credential format for the onboarding process.
-To validate that VC, SIMPL requires a manual or additional extension, as the current onboarding process is with manual approval by the authority (Notary).
+
+To validate that verifiable credential, [Simpl-Open](https://code.europa.eu/simpl/simpl-open) requires a manual approval or additional extension, the current onboarding process is with manual approval by the authority (Notary).
 
 #### Measured results
 
@@ -32,4 +34,4 @@ Overall Calculation: ( 4 + 4 + 4 + 4 + 4) / 5 = 2.4
 Functional Suitability Quality Metric Score: 2.4
 
 #### Notes
-[TODO] Add notes, if necessary.
+The current testing version of SIMPL is a very basic Minimum Viable Product solution, version 1.0.   
