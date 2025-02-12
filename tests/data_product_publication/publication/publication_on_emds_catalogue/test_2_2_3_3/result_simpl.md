@@ -13,7 +13,7 @@ The test aims to verify the availability of a GUI for publishing a data product 
 
 ### Results
 #### Assessment
-SIMPL is a project aimed at providing facilities for data spaces. It includes a data offering UI for participants, which can publish the following types of data projects:
+[Simpl-Open](https://code.europa.eu/simpl/simpl-open) is a project aimed at providing facilities for data spaces. It includes a data offering UI for participants, which can publish the following types of data projects:
 - Services
   - Infrastructure offering
   - Application offering
@@ -25,11 +25,13 @@ The SIMPL UI also includes functionality to validate the input information (Self
 For dataset discovery, SIMPL provides a UI that allows users to search for datasets based on the dataset name or perform advanced searches based on shapes, etc.
 ![simpl_catalog.png](images/simpl_catalog.png)
 
+However, the [simpl-sd-ui](https://code.europa.eu/simpl/simpl-open/development/gaia-x-edc/simpl-sd-ui) and [simpl-catalogue-client](https://code.europa.eu/simpl/simpl-open/development/gaia-x-edc/simpl-catalogue-client) have very limited functionality. They do not support viewing published offerings or transfer history. Additionally, there is no URL redirection for logging back in after a user logs out. The UI is very minimal, featuring only the SIMPL logo and a few options.
 
 #### Measured results
-Based on the previous explanation, SIMPL offers a native GUI for data offering and catalog searching. However, as it is a minimum viable product, the UI is not tailored at all, lacking delete functionality, session management, etc. The website only supports basic functions. Therefore, the following score has been assigned to the test:
-       
-**Functional Suitability Quality Metric: 2**
+
+Based on the previous explanation, SIMPL offers a native GUI for data offering and catalog searching. However, as a minimum viable product, the UI only supports basic functions and lacks features such as delete functionality, session management, and the ability to consult transfer or negotiation histories. Therefore, the following score has been assigned to the test:
+
+**Functional Suitability Quality Metric: 1**
 
 #### Notes
 The current testing version of SIMPL is a very basic Minimum Viable Product solution, version 1.0.
