@@ -17,6 +17,7 @@ The test aims to assess whether the data sharing protocol is compatible with cha
 ### Results
 #### Assessment
 The deployment of [Simpl-Open](https://code.europa.eu/simpl/simpl-open) fully utilizes TLS communication.
+
 The onboarding process for participants in the [Simpl-Open](https://code.europa.eu/simpl/simpl-open) involves receiving X.509 certificates from the data space authority to establish secure communication with the other participants.
 [Simpl-Open](https://code.europa.eu/simpl/simpl-open) also provides a UI-based onboarding process to facilitate this, as detailed in [TEST_1.2.2.1_result_simpl.md](../../../../participant_onboarding/evaluation/self-assessment/test_1_2_1_1/result_simpl.md).
 
