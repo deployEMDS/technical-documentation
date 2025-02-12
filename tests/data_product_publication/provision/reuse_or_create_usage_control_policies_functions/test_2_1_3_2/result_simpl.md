@@ -13,11 +13,15 @@ The test aims to assess the ease of use of deploying Usage Control Policies in r
 
 ### Results
 #### Assessment
-SIMPL provide a user interface for deploying Usage Control Policies when the data provider publish a data offereing.
+[Simpl-Open](https://code.europa.eu/simpl/simpl-open) provide a user interface for deploying Usage Control Policies when the data provider publish a data offering.
 Several pre-defined policies are available in the UI.
-![simpl_policy.ui.png](simpl_policy_ui.png)
+![simpl_policy.ui.png](images/simpl_policy_ui.png)
 
 #### Measured results
 As demonstrated, SIMPL offers a user interface for adding policies, allowing multiple policies to be added or deleted before the data offering is published. However, policies are not manageable after submission.
 
 **Functional Suitability Quality Metric: 3**
+
+#### Notes
+
+The current testing version of SIMPL is a very basic Minimum Viable Product solution, version 1.0.   
