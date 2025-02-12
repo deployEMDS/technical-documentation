@@ -19,7 +19,7 @@ The test aims to assess the state machine implementation of the SIMPL ecosystem 
 SIMPL provides UI front end for data sharing contract negotiation within catalog UI. When a consumer logs into the catalog UI and locates the desired data offering, the consumer can click the `Request Resource` button to initiate the negotiation process.
 ![simpl_resource_catalog.png](images/simpl_resource_catalog.png)
 
-afterward, the catalog UI opens a new window to update the status of the contract negotiation.
+Afterward, the catalog UI opens a new window to update the status of the contract negotiation.
 ![contract_negotiation_SIMPL.png](images/contract_negotiation_SIMPL.png)
 
 #### Measured results
