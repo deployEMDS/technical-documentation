@@ -13,9 +13,8 @@ The expected output of the test is an assessment of whether the SIMPL supports t
 
 ### Results
 #### Assessment
-SIMPL doesn't support Verifiable Credential as identity for authentication and authoritarian of Data Space flow,
-The Verifiable Credential life cycle is not supported by SIMPL as identity management.
-
+[Simpl-Open](https://code.europa.eu/simpl/simpl-open) does not support Verifiable Credentials for identity authentication and authorization in Data Space flow. 
+The Verifiable Credential lifecycle is not supported by [Simpl-Open](https://code.europa.eu/simpl/simpl-open) for identity management.
 
 #### Measured results
 The EDC implementation partially covers the VC lifecycle as outlined above.  Based on the criteria outlined in the [Comparative criteria (checklists, ...)](./test.md#comparative-criteria-checklists-) section of the test description, the test is assigned the following score:
@@ -30,3 +29,6 @@ The EDC implementation partially covers the VC lifecycle as outlined above.  Bas
 
 **Overall Calculation: (0+0+0+0+0)/5 = 0**
 Functional Suitability Quality Metric Score: 0
+
+#### Notes
+The current testing version of SIMPL is a very basic Minimum Viable Product solution, version 1.0.   
