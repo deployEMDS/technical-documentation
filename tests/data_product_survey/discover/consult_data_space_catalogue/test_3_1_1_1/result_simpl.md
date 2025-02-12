@@ -18,17 +18,20 @@ The criteria for evaluation include being open-source, a hosted solution, or par
 
 ### Results
 #### Assessment
-SIMPL provides a user interface for searching the data space catalog. The search functionality is based on the dataset name and allows for advanced searches based on shapes, etc. 
+[Simpl-Open](https://code.europa.eu/simpl/simpl-open) provides a user interface for searching the data space catalog. The search functionality is based on the dataset name and allows for advanced searches based on shapes, etc. 
 ##### Quick search
 The search is based on the data offering name.
 ![quick_search_simpl.png](images/quick_search_simpl.png)
 
 ##### Advanced search
 The advanced search in language, keywords, shapes and other criteria.
+
 ![advanced_search_simpl.png](images/advanced_search_simpl.png)
 
 ###### EU-Driven Project
 SIMPL is an EU-driven project aimed at facilitating interoperability among data spaces. Therefore, integrating with the SIMPL catalog involves referencing other data spaces. In the SIMPL Open example, the connector used is EDC, and other connectors are also expected to be interoperable with SIMPL.
+
+However, [simpl-catalogue-client](https://code.europa.eu/simpl/simpl-open/development/gaia-x-edc/simpl-catalogue-client) has very limited functionality. They do not support viewing transfer history. Additionally, there is no URL redirection for logging back in after a user logs out. The UI is very minimal, featuring only the SIMPL logo and a few options.
 
 #### Measured results
 SIMPL offers a native GUI for data offering and catalog searching. However, as it is a minimum viable product, the UI is not tailored at all, lacking delete functionality, session management, etc. The website only supports basic functions. Therefore, the following score has been assigned to the test:
