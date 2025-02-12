@@ -59,6 +59,7 @@ Based on the criteria outlined in the [Comparative criteria (checklists, ...)](.
 | **Functional Appropriateness**| Technical requirements facilitate the accomplishment of specified tasks and objectives.  | 4               | SIMPL Solution is with user-friendly flow, no technical requirement is here once the solution is correctly deployed. |
 
 **Overall Calculation: (4+4+4)/3 = 4**
+
 Functional Suitability Quality Metric Score: 4
 
 #### Notes
