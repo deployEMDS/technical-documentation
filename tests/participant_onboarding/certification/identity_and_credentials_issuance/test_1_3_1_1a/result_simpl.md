@@ -13,9 +13,11 @@ The quality metric for this test is based on the criteria outlined in [iso27001_
 
 ### Results
 #### Assessment
-SIMPL doesn't support Verifiable Credential as identity for authentication and authoritarian of Data Space flow, therefore it is not compatible with Gaia-X framework
-as identity management framework.
-However, SIMPL uses Verifiable Credential as Catalog for Data Space, which is using the [Gaia-X framework](https://gaia-x.eu/news-press/gaia-x-and-catalogues/).
+
+[Simpl-Open](https://code.europa.eu/simpl/simpl-open) doesn't use Verifiable Credential as identity for authentication and authorization of Data Space flow.
+However, [Simpl-Open](https://code.europa.eu/simpl/simpl-open) uses Verifiable Credential as Catalog for Data Space, which is using the [Gaia-X framework](https://gaia-x.eu/news-press/gaia-x-and-catalogues/).
+[Simpl-Open](https://code.europa.eu/simpl/simpl-open) includes [poc-gaia-edc](https://code.europa.eu/simpl/simpl-open/development/gaia-x-edc/poc-gaia-edc) uses [GAIA-X Service Characteristics](https://gitlab.eclipse.org/eclipse/xfsc/self-description-tooling/sd-schemas/sd-schemas) to
+develop compliant Gaia-X Credentials which is part of [poc-gaia-edc](https://gitlab.eclipse.org/eclipse/xfsc/self-description-tooling), the self-description here is used for creating service offering or contract.
 
 #### Measured results
 
@@ -41,3 +43,5 @@ purposes
 #### Functional suitability quality metric: 0
 
 #### Notes
+
+The current testing version of SIMPL is a very basic Minimum Viable Product solution, version 1.0.   
