@@ -15,18 +15,26 @@ refers to the Data Space-only catalog, specifically the internal SIMPL catalog a
 ### Results
 #### Assessment
 
-SIMPL Provider 3 types of Services offering described by self-description:
+[Simpl-Open](https://code.europa.eu/simpl/simpl-open) Provider 3 types of Services offering described by self-description:
 - Application offering
 - Infrastructure offering
 - Data offering
+
 When creating the data offering, the data provider could set access policy to define who can access the dataset.
 ![SIMPL_access_policy.png](images/SIMPL_access_policy.png)
-As the example above, only consumer role user can search the dataset from its catalog.
+
+As shown above, only users with the consumer role can search the dataset from the catalog. Other access policies are provided by [Simpl-Open](https://code.europa.eu/simpl/simpl-open) as described at [simple-edc](https://code.europa.eu/simpl/simpl-open/development/gaia-x-edc/simpl-edc), but they are not integrated into the [simpl-sd-ui](https://code.europa.eu/simpl/simpl-open/development/gaia-x-edc/simpl-sd-ui).
 
 Once the data offering is published, the consumer can go to its catalog to search the dataset. SIMPL provides a user-friendly interface for the consumer to search the dataset.
 ![SIMPL_search_dataset.png](images/SIMPL_search_dataset.png)
 
+The component is [simpl-catalogue-client](https://code.europa.eu/simpl/simpl-open/development/gaia-x-edc/simpl-catalogue-client)
+
+
 #### Measured results
-As demonstrated above, SIMPL provides an open-box process for publishing a data product (data asset along with its policies and contract). This process makes the data product available in the connector catalog or the federated catalog. Based on the criteria outlined in the [Comparative criteria (checklists, ...)](./test.md#comparative-criteria-checklists-) section of the test description, the test is assigned the following score:
+As demonstrated above, [Simpl-Open](https://code.europa.eu/simpl/simpl-open) provides an open-box process for publishing a data product (data asset along with its policies and contract). This process makes the data product available in the connector catalog or the federated catalog. Based on the criteria outlined in the [Comparative criteria (checklists, ...)](./test.md#comparative-criteria-checklists-) section of the test description, the test is assigned the following score:
 
 **Functional Suitability Quality Metric: 4**
+
+#### Notes
+The current testing version of SIMPL is a very basic Minimum Viable Product solution, version 1.0.   
