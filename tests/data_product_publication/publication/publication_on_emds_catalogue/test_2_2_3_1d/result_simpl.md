@@ -14,7 +14,7 @@ The test aims to examine the process of catalog de-publication for a data produc
 ### Results
 #### Assessment
 SIMPL doesn't provide any user interface to de-publish a data product from the catalog.
-As SIMPL-OPEN uses EDC connector as data space connector, EDC provides an API to de-publish a dataset, therefore with the help of EDC API, the data provider can de-publish the dataset from the catalog.
+As [Simpl-Open](https://code.europa.eu/simpl/simpl-open) uses [EDC connector](https://code.europa.eu/simpl/simpl-open/development/gaia-x-edc/simpl-edc) as data space connector, EDC provides an API to de-publish a dataset, therefore with the help of EDC API, the data provider can de-publish the dataset from the catalog.
 But this requires knowledge of the EDC API and deployment details of SIMPL.
 
 #### Measured results
