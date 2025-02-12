@@ -19,7 +19,7 @@ The test aims to determine whether the data product specification provides the n
 #### Assessment
 
 As mentioned in the [result_edc_vc](result_edc_vc.md), [MobilityDCAT-AP](https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/index.html) uses ontologies from [Vocab-DQV (namespace: dqv)](https://www.w3.org/TR/vocab-dqv/) and [Web Annotation Vocabulary (namespace: oa)](https://www.w3.org/TR/annotation-vocab/) to describe quality annotations for datasets. 
-In the SIMPL-OPEN implementation, templates are used for creating self-descriptions when creating a data offering. 
+In the [Simpl-Open](https://code.europa.eu/simpl/simpl-open) implementation, templates are used for creating self-descriptions when creating a data offering. 
 There are a few predefined SHACL shapes available for different types of offerings, as stated [here](https://code.europa.eu/simpl/simpl-open/development/data1/sdtooling-api-be/-/tree/main/shapes/simpl/Service). 
 It is also possible to add more shapes to meet the quality requirements of [MobilityDCAT-AP](https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/index.html). 
 e.g. a `DataOfferingShape-MobilityDCAT-AP` shape rquires quality ontologies from MobilityDCAT-AP, such as
@@ -60,9 +60,11 @@ These predefined and customized shapes will be shared via NFS through multiple p
 
 #### Measured results
 
-As demonstrated, the catalog returned by the EDC connector's querying endpoint conforms to the [MobilityDCAT-AP](https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/index.html) standard from a quality annotation perspective. Therefore, based on the criteria outlined in the [Comparative criteria (checklists, ...)](./test.md#comparative-criteria-checklists-) section of the test description, the test is assigned the following score:
+As demonstrated, the catalog returned by the EDC connector's querying endpoint conforms to the [MobilityDCAT-AP](https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/index.html) standard from a quality annotation perspective.
+However, development and deployment work is required to define proper shapes for that integration.
+Based on the criteria outlined in the [Comparative criteria (checklists, ...)](./test.md#comparative-criteria-checklists-) section of the test description, the test is assigned the following score:
 
-**Functional Suitability Quality Metric: 4**
+**Functional Suitability Quality Metric: 3**
 
 #### Notes                                                                                             
 The current testing version of SIMPL is a very basic Minimum Viable Product solution, version 1.0.   
