@@ -1,7 +1,6 @@
 ## [2.2.2.10] Data product publication: Publication - Deploy/config usage control functions
 ### Stack: SIMPL
 
-
 ### Statement of assessment
 #### Environment
 
