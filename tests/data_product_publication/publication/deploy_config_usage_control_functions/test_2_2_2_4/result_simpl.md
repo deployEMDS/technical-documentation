@@ -29,17 +29,17 @@ However, SIMPL focuses on providing production-grade components with user interf
 The SIMPL solution only includes a UI for selecting predefined policies, not for customization.
 
 #### Measured results
-THe follow scores is given to the test:
+SIMPL's contributions to the Dataspace ecosystem lie in its UI features. Therefore, this test will be evaluated based on its UI features. The following scores are assigned to the test:
 
 
 | **Criterion**                | **Description**                                                                                     | **Score (0-4)** |
 |------------------------------|-----------------------------------------------------------------------------------------------------|-----------------|
 | **Functional Completeness**   | Technical requirements cover all the specified tasks and user objectives.                          | 1               |
-| **Functional Correctness**    | Technical requirements meet results with the needed degree of precision.                           | 0               |
-| **Functional Appropriateness**| Technical requirements facilitate the accomplishment of specified tasks and objectives.            | 0               |
+| **Functional Correctness**    | Technical requirements meet results with the needed degree of precision.                           | 1               |
+| **Functional Appropriateness**| Technical requirements facilitate the accomplishment of specified tasks and objectives.            | 1               |
 
 
-**Functional Suitability Quality Metric Score: 0.33**
+**Functional Suitability Quality Metric Score: 1**
 
 
 #### Notes
