@@ -1,8 +1,6 @@
 ## [2.1.2.2] Data product publication: Provision - Submit vocabulary artifacts
 ### Stack: SIMPL
 
-### Stack: SIMPL
-
 #### Tested quality metric and method
 
 The quality metric for this test is based on the criteria outlined in [iso27001_kpis_subkpis.xlsx](../../../../../design_decisions/background_info/iso27001_kpis_subkpis.xlsx).
@@ -33,6 +31,9 @@ As stated above, we have not seen the possibility for a data provider to publish
 - Can the data provider access standardize vocabularies to then use them in the data source before provisioning the data? - No
 - Does the EMDS interoperability facility validate the vocabulary used at the data source? - No
 - Does the system provide feedback or error messages if a vocabulary submission fails validation? - No 
+
+
+**Functional Suitability Quality Metric Score: 0**
 
 #### Notes
 The current testing version of SIMPL is a very basic Minimum Viable Product solution, version 1.0. 
