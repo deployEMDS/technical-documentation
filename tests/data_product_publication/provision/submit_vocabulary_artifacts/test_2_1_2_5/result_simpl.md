@@ -11,7 +11,6 @@ The test aims to assess that the vocabulary hub validates a new entry (or modifi
 
 ### Results
 #### Assessment
-### Useful Links
 
 As mentioned in the [test_2.1.1.2_result_simpl.md](../test_2_1_2_1/result_simpl.md), 
 SIMPL currently does not have an implementation for a vocabulary hub for data sharing. 
@@ -24,7 +23,7 @@ the service validates the self-description against the SHACL shapes and returns 
 The detailed flow can be found [here](https://gaia-x.gitlab.io/data-infrastructure-federation-services/cat/architecture-document/architecture/catalogue-architecture.html#_adding_a_self_description_for_an_offering).
 
 #### Measured results
-As mentioned earlier, there is no possibility for a data provider to get validation results for sharing data. However, schema validation feedback is available in the data offering process in SIMPL for the offering itself.
+As mentioned above, there is no possibility for a data provider to get validation results for sharing data. However, schema validation feedback is available in the data offering process in SIMPL for the offering itself.
 Therefore, based on the [Evaluation Criteria](./test.md#evaluation-criteria-), the following scores are assigned to the test:
 
 - Does the vocabulary hub validate new entries or modifications to existing vocabularies? -> No, not for data sharing process
