@@ -28,7 +28,7 @@ Can the data provider submit custom metadata fields and link their semantic defi
 
 Can the data provider access standardize vocabularies to then use them in the data source before provisioning the data?
 
-### Evaluation Criteria 
+### Comparative criteria (checklists, ...)
 
 - Can the data provider submit a new vocabulary?
 - Can the data provider choose from different standardized vocabulary that meet the requirements of the data source?

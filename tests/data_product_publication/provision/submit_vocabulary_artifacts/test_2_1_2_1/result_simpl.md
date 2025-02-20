@@ -4,7 +4,7 @@
 #### Tested quality metric and method
 
 The quality metric for this test is based on the criteria outlined in [iso27001_kpis_subkpis.xlsx](../../../../../design_decisions/background_info/iso27001_kpis_subkpis.xlsx). In Phase 1,
-the focus is on the Functional Suitability metric. For detailed information, please refer to the [Evaluation Criteria](./test.md#evaluation-criteria-) section in the test description.
+the focus is on the Functional Suitability metric. For detailed information, please refer to the [Comparative criteria (checklists, ...)](./test.md#comparative-criteria-checklists-) section in the test description.
 
 #### Expected output
 The test aims to assess that if the vocabulary hub's assets are available to every data space participant. Rank higher if the reference to a vocabulary asset is integrated in the data sharing process.

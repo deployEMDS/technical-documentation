@@ -19,7 +19,7 @@ Functional suitability
 #### ISO25010 Quality description
 Can the provider integrate different data source methods (APIs, data bases, file systems, etc.)
 
-### Evaluation Criteria 
+### Comparative criteria (checklists, ...)
 The criteria used to measure the results was the one specified by the Data Product Publication ISO25010 Quality file regarding Functional Suitability.
 
 
