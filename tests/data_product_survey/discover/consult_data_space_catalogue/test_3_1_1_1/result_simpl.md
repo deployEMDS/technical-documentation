@@ -1,9 +1,6 @@
 ## [3.1.1.1] Data product survey: Discover - Consult data space catalogue
 ### Stack: SIMPL
 
-## [2.2.3.1D] Data product publication: Publication - Publication on EMDS catalogue
-### Stack: SIMPL
-
 ### Statement of assessment
 #### Environment
 The testing environment is an IMEC self-deployed instances of [Simpl-Open](https://code.europa.eu/simpl/simpl-open) on an IONOS Kubernetes cluster, the version used is 1.0.
