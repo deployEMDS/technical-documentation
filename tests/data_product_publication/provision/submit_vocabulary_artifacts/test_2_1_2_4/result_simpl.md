@@ -1,8 +1,6 @@
 ## [2.1.2.4] Data product publication: Provision - Submit vocabulary artifacts
 ### Stack: SIMPL
 
-### Stack: SIMPL
-
 #### Tested quality metric and method
 
 The quality metric for this test is based on the criteria outlined in [iso27001_kpis_subkpis.xlsx](../../../../../design_decisions/background_info/iso27001_kpis_subkpis.xlsx). In Phase 1,
