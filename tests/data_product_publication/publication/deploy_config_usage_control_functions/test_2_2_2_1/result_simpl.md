@@ -23,7 +23,7 @@ thus SIMPL shares the same API functions for managing policies as described in [
 
 Additionally, the [SIMPL EDC Connection](https://code.europa.eu/simpl/simpl-open/development/gaia-x-edc/simpl-edc) implements the EDC policy engine for [consumption access constraints](https://code.europa.eu/simpl/simpl-open/development/gaia-x-edc/simpl-edc/-/blob/main/src/main/java/eu/europa/ec/simpl/ConsumptionConstraintFunction.java?ref_type=heads) and [location access constraints](https://code.europa.eu/simpl/simpl-open/development/gaia-x-edc/simpl-edc/-/blob/main/src/main/java/eu/europa/ec/simpl/LocationConstraintFunction.java?ref_type=heads).
 
-To facilitate the creation of policy, SIMPL offers the [SIMPL Self Description UI](https://code.europa.eu/simpl/simpl-open/development/gaia-x-edc/simpl-sd-ui), which assists data providers in creating a self-description of the data product. This self-description includes access and usage policies, and the UI contains predefined policies.
+To facilitate the creation of policies, SIMPL offers the [SIMPL Self Description UI](https://code.europa.eu/simpl/simpl-open/development/gaia-x-edc/simpl-sd-ui), which assists data providers in creating a self-description of the data product. This self-description includes access and usage policies, and the UI contains predefined policies.
 
 ![SIMPL_usage_policy.png](images/SIMPL_usage_policy.png)
 
