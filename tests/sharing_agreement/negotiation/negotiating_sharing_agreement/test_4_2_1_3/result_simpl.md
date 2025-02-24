@@ -37,5 +37,9 @@ However, the Service Agreements, specifically [TM Forum Agreement](https://datam
 - [X] Usage policy rules
 - [ ] Service Agreements
 
+Based on the criteria outlined in the [Comparative criteria (checklists, ...)](./test.md#comparative-criteria) section of the test description, the test is assigned the following score:
+
+**Functional suitability quality metric: 2**
+
 #### Notes
 The current testing version of SIMPL is a very basic Minimum Viable Product solution, version 1.0.   
