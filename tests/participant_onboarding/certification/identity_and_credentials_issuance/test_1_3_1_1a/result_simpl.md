@@ -23,7 +23,7 @@ develop compliant Gaia-X Credentials which is part of [poc-gaia-edc](https://git
 
 Based on the criteria outlined in the [Comparative criteria (checklists, ...)](./test.md#comparative-criteria) section of the test description, the test is assigned the following score:
 
-[x] Does the stack support VC? - As stated, SIMPL doesn't support VC as identity for authentication and authoritarian of Data Space flow.
+[] Does the stack support VC? - As stated, SIMPL doesn't support VC as identity for authentication and authoritarian of Data Space flow.
 
 [] The stack supports self-issued VCs 
 
