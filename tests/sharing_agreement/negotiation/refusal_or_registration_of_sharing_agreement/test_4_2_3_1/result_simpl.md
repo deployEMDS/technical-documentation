@@ -1,5 +1,5 @@
 ## [4.2.3.1] Sharing agreement: Negotiation - Refusal or registration of sharing agreement
-### Stack: SIMPL
+### Stack: Simpl
 
 ### Statement of assessment
 #### Environment
@@ -24,7 +24,7 @@ necessarily that of a participant.
 ### Results
 #### Assessment
 
-In the context of [Simpl-Open](https://code.europa.eu/simpl/simpl-open), participants are the SIMPL agents representing
+In the context of [Simpl-Open](https://code.europa.eu/simpl/simpl-open), participants are the Simpl agents representing
 the data space components. Users are the actor role accounts on each participant's side.
 Users are managed by the Keycloak instance deployed on each participant's side.
 Users with certain privileges can access specific UIs of the participants or have certain UI functions such as search,
@@ -35,17 +35,17 @@ context of the current test.
 also includes EDC APIs for contract negotiation, status messages, and logs.
 [Simpl-Open](https://code.europa.eu/simpl/simpl-open) also provides a UI to reflect the negotiation status as follows:
 
-![SIMPL_catalog_UI.png](images/SIMPL_catalog_UI.png)
+![Simpl_catalog_UI.png](images/Simpl_catalog_UI.png)
 
 The above page is only visible to users with certain roles in the catalog UI. In this case, it is only visible to users with
 the `CATALOG_R` role.
 
-![SIMPL_keycloak_reader.png](images/SIMPL_keycloak_reader.png)
+![Simpl_keycloak_reader.png](images/Simpl_keycloak_reader.png)
 
 #### Measured results
 
 As previously mentioned, [Simpl-Open](https://code.europa.eu/simpl/simpl-open) includes EDC's built-in extensions to
-secure API endpoints and restrict logging access. Additionally, SIMPL offers role-based user accounts for managing
+secure API endpoints and restrict logging access. Additionally, Simpl offers role-based user accounts for managing
 certain UI access.
 
 Based on the criteria outlined in
@@ -56,4 +56,4 @@ description, the test is assigned the following score:
 
 #### Notes
 
-The current testing version of SIMPL is a very basic Minimum Viable Product solution, version 1.0.   
+The current testing version of Simpl is a very basic Minimum Viable Product solution, version 1.0.   

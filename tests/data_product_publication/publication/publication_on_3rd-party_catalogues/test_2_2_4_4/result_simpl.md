@@ -1,5 +1,5 @@
 ## [2.2.4.4] Data product publication: Publication - Publication on 3rd-party catalogues
-### Stack: SIMPL
+### Stack: Simpl
 
 ### Statement of assessment
 #### Environment

@@ -1,5 +1,5 @@
 ## [1.3.1.1A] Participant onboarding: Certification - Identity and credentials issuance
-### Stack: SIMPL
+### Stack: Simpl
 
 ### Statement of assessment
 #### Environment
@@ -9,7 +9,7 @@ The testing environment is an IMEC self-deployed instances of [Simpl-Open](https
 The quality metric for this test is based on the criteria outlined in [iso27001_kpis_subkpis.xlsx](../../../../../design_decisions/background_info/iso27001_kpis_subkpis.xlsx). In Phase 1, the focus is on the Functional Suitability metric. For detailed information, please refer to the [Comparative criteria (checklists, ...)](./test.md#comparative-criteria-checklists-) section in the test description.
 
 #### Expected output
-**The expected output of this test is to evaluate the level of customization required to integrate Gaia-X issued VC to SIMPL**
+**The expected output of this test is to evaluate the level of customization required to integrate Gaia-X issued VC to Simpl**
 
 ### Results
 #### Assessment

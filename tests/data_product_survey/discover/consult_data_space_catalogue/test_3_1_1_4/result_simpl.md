@@ -1,5 +1,5 @@
 ## [3.1.1.4] Data product survey: Discover - Consult data space catalogue
-### Stack: SIMPL
+### Stack: Simpl
 
 ### Statement of assessment
 #### Environment
@@ -67,4 +67,4 @@ Based on the criteria outlined in the [Comparative criteria (checklists, ...)](.
 **Functional Suitability Quality Metric: 3**
 
 #### Notes                                                                                             
-The current testing version of SIMPL is a very basic Minimum Viable Product solution, version 1.0.   
+The current testing version of Simpl is a very basic Minimum Viable Product solution, version 1.0.   

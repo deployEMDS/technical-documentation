@@ -1,5 +1,5 @@
 ## [3.1.2.1] Data product survey: Discover - Consult 3rd-party catalogues
-### Stack: SIMPL
+### Stack: Simpl
 
 ### Statement of assessment
 #### Environment

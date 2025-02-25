@@ -1,5 +1,5 @@
 ## [2.1.2.4] Data product publication: Provision - Submit vocabulary artifacts
-### Stack: SIMPL
+### Stack: Simpl
 
 #### Tested quality metric and method
 
@@ -11,16 +11,16 @@ The test aims to assess that the vocabulary hub covers semantic or domain standa
 
 ### Results
 #### Assessment
-As stated in [test_2.1.2.1_result_simpl.md](../test_2_1_2_1/result_simpl.md), SIMPL currently lacks integration of a vocabulary hub for validating the data sharing process.
+As stated in [test_2.1.2.1_result_simpl.md](../test_2_1_2_1/result_simpl.md), Simpl currently lacks integration of a vocabulary hub for validating the data sharing process.
 
-Schema validation is only performed for the data product offering part using predefined SHACL shapes. SIMPL provides a sample shape: [merged-shapes.ttl](https://code.europa.eu/simpl/simpl-open/development/data1/sdtooling-sd-schemas/-/raw/main/merged-shapes.ttl) for the data offering self-description. This shape is customized for SIMPL as self-explained.
+Schema validation is only performed for the data product offering part using predefined SHACL shapes. Simpl provides a sample shape: [merged-shapes.ttl](https://code.europa.eu/simpl/simpl-open/development/data1/sdtooling-sd-schemas/-/raw/main/merged-shapes.ttl) for the data offering self-description. This shape is customized for Simpl as self-explained.
 
 For metadata standards, we mostly refer to DCAT, which is a W3C recommendation. 
 The DCAT vocabulary is an RDF vocabulary designed to facilitate interoperability between data catalogs published on the Web. 
-The shapes presented in the SIMPL example [yaml2shape](https://code.europa.eu/simpl/simpl-open/development/data1/sdtooling-sd-schemas/-/tree/main/yaml2shape?ref_type=heads)  and its merged version:  [merged-shapes.ttl](https://code.europa.eu/simpl/simpl-open/development/data1/sdtooling-sd-schemas/-/raw/main/merged-shapes.ttl) do not validate against DCAT.
+The shapes presented in the Simpl example [yaml2shape](https://code.europa.eu/simpl/simpl-open/development/data1/sdtooling-sd-schemas/-/tree/main/yaml2shape?ref_type=heads)  and its merged version:  [merged-shapes.ttl](https://code.europa.eu/simpl/simpl-open/development/data1/sdtooling-sd-schemas/-/raw/main/merged-shapes.ttl) do not validate against DCAT.
 
 #### Measured results
-As mentioned earlier, the current phase of SIMPL does not provide any vocabulary validation on the shared or sharing data itself. Therefore, based on the [Evaluation Criteria](./test.md#evaluation-criteria-), the following scores are assigned to the test:
+As mentioned earlier, the current phase of Simpl does not provide any vocabulary validation on the shared or sharing data itself. Therefore, based on the [Evaluation Criteria](./test.md#evaluation-criteria-), the following scores are assigned to the test:
 
 - Does the vocabulary hub cover relevant semantic standards for the metadata? - No
 - Does the vocabulary hub cover relevant domain standards for the metadata? - No
@@ -32,4 +32,4 @@ As mentioned earlier, the current phase of SIMPL does not provide any vocabulary
 
 **Functional Suitability Quality Metric Score: 0**
 #### Notes
-The current testing version of SIMPL is a very basic Minimum Viable Product solution, version 1.0. 
+The current testing version of Simpl is a very basic Minimum Viable Product solution, version 1.0. 

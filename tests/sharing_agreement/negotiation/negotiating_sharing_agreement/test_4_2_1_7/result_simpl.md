@@ -23,7 +23,7 @@ However, since the current deployment primarily consists of microservices on a K
 To address this lack of transparency, SIMPL uses Elasticsearch and Kibana to store and visualize the logs. 
 The logs are collected by [Filebeat](https://www.elastic.co/blog/kubernetes-observability-tutorial-k8s-log-monitoring-and-analysis-elastic-stack) and sent to Elasticsearch. 
 Kibana is used to visualize the logs as explained in the [SIMPL-Open\monitor](https://code.europa.eu/simpl/simpl-open/development/monitoring). 
-![SIMPL_elastic_search.png](images/SIMPL_elastic_search.png)
+![Simpl_elastic_search.png](images/Simpl_elastic_search.png)
 The default deployed Elasticsearch and Kibana are not properly configured to clearly visualize the logs, and the logs are not filtered correctly. 
 This is a configuration task that will be addressed as the project progresses.
 

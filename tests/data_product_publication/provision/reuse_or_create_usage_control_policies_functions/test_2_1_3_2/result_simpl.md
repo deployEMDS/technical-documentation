@@ -1,5 +1,5 @@
 ## [2.1.3.2] Data product publication: Provision - Reuse or create usage control policies / functions
-### Stack: SIMPL
+### Stack: Simpl
 
 ### Statement of assessment
 #### Environment
@@ -18,10 +18,10 @@ Several pre-defined policies are available in the UI.
 ![simpl_policy.ui.png](images/simpl_policy_ui.png)
 
 #### Measured results
-As demonstrated, SIMPL offers a user interface for adding policies, allowing multiple policies to be added or deleted before the data offering is published. However, policies are not manageable after submission.
+As demonstrated, Simpl offers a user interface for adding policies, allowing multiple policies to be added or deleted before the data offering is published. However, policies are not manageable after submission.
 
 **Functional Suitability Quality Metric: 3**
 
 #### Notes
 
-The current testing version of SIMPL is a very basic Minimum Viable Product solution, version 1.0.   
+The current testing version of Simpl is a very basic Minimum Viable Product solution, version 1.0.   

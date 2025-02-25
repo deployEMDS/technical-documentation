@@ -1,5 +1,5 @@
 ## [2.1.1.4] Data product publication: Provision - Data source endpoint provisioning
-### Stack: SIMPL
+### Stack: Simpl
 
 ### Statement of assessment
 #### Environment

@@ -1,5 +1,5 @@
 ## [2.2.3.1B] Data product publication: Publication - Publication on EMDS catalogue
-### Stack: SIMPL
+### Stack: Simpl
 
 ### Statement of assessment
 #### Environment
@@ -10,7 +10,7 @@ The quality metric for this test is based on the criteria outlined in [iso27001_
 
 #### Expected output
 Test the process of catalogue publication for a data product under the following conditions: an existing data product is published on the catalogue
-The EMDS catalog, as defined in the relevant documentation, refers to the Data Space-only catalog, specifically the SIMPL's federation component.
+The EMDS catalog, as defined in the relevant documentation, refers to the Data Space-only catalog, specifically the Simpl's federation component.
 
 ### Results
 #### Assessment
@@ -25,4 +25,4 @@ As demonstrated above, current test shares the same result as [Test 2.2.3.1a](..
 **Functional Suitability Quality Metric: 4**
 
 #### Notes
-The current testing version of SIMPL is a very basic Minimum Viable Product solution, version 1.0.   
+The current testing version of Simpl is a very basic Minimum Viable Product solution, version 1.0.   

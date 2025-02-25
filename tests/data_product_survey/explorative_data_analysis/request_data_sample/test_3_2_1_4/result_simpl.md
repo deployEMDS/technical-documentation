@@ -1,5 +1,5 @@
 ## [3.2.1.4] Data product survey: Explorative data analysis - Request data sample
-### Stack: SIMPL
+### Stack: Simpl
 
 ### Statement of assessment
 #### Environment

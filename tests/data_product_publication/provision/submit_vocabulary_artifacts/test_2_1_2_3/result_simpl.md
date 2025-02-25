@@ -1,5 +1,5 @@
 ## [2.1.2.3] Data product publication: Provision - Submit vocabulary artifacts
-### Stack: SIMPL
+### Stack: Simpl
 
 #### Tested quality metric and method
 
@@ -12,7 +12,7 @@ The test aims to assess if and how a change in a vocabulary hub asset is execute
 ### Results
 #### Assessment
 As mentioned in [test_2.1.2.1_result_simpl.md](../test_2_1_2_1/result_simpl.md), 
-SIMPL currently does not integrate a vocabulary hub for validating data sharing process.
+Simpl currently does not integrate a vocabulary hub for validating data sharing process.
 
 Schema validation only occurs for the data product offering part with seeded SHACL shapes. 
 These shapes can be published via the API of the [simpl-fc-service](https://code.europa.eu/simpl/simpl-open/development/gaia-x-edc/simpl-fc-service). 
@@ -21,9 +21,9 @@ The new publication of the data offering self-description is validated against c
 which composites the RDF graph.
 
 #### Measured results
-As mentioned earlier, the current phase of SIMPL does not provide any vocabulary validation on the shared or sharing data itself. Therefore, based on the [Evaluation Criteria](./test.md#evaluation-criteria-), the following scores are assigned to the test:
+As mentioned earlier, the current phase of Simpl does not provide any vocabulary validation on the shared or sharing data itself. Therefore, based on the [Evaluation Criteria](./test.md#evaluation-criteria-), the following scores are assigned to the test:
 
-- Can the data provider request to update/modify a vocabulary asset? - No, the vocabulary hub is not available in the current version of SIMPL for data sharing.
+- Can the data provider request to update/modify a vocabulary asset? - No, the vocabulary hub is not available in the current version of Simpl for data sharing.
 - Is the change in the vocabulary hub asset executed successfully? - No
 - Are integrity controls in place to ensure the accuracy and consistency of the vocabulary asset changes? - No
 - Does the system provide feedback or error messages if the update/modification fails? - No
@@ -33,4 +33,4 @@ As mentioned earlier, the current phase of SIMPL does not provide any vocabulary
 **Functional Suitability Quality Metric Score: 0**
 
 #### Notes
-The current testing version of SIMPL is a very basic Minimum Viable Product solution, version 1.0. 
+The current testing version of Simpl is a very basic Minimum Viable Product solution, version 1.0. 

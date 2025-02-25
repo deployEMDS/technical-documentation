@@ -1,5 +1,5 @@
 ## [2.1.3.1] Data product publication: Provision - Reuse or create usage control policies / functions
-### Stack: SIMPL
+### Stack: Simpl
 
 ### Statement of assessment
 #### Environment
@@ -14,16 +14,16 @@ The test aims to assess how Usage Control Policies are deployed.
 ### Results
 #### Assessment
 
-[Simpl-Open](https://code.europa.eu/simpl/simpl-open) utilizes the [SIMPL EDC Connection](https://code.europa.eu/simpl/simpl-open/development/gaia-x-edc/simpl-edc) to handle the [Dataspace Protocol](https://docs.internationaldataspaces.org/ids-knowledgebase/dataspace-protocol). 
-The [SIMPL EDC Connection](https://code.europa.eu/simpl/simpl-open/development/gaia-x-edc/simpl-edc) includes the management API and policy engines of EDC. 
+[Simpl-Open](https://code.europa.eu/simpl/simpl-open) utilizes the [Simpl EDC Connection](https://code.europa.eu/simpl/simpl-open/development/gaia-x-edc/simpl-edc) to handle the [Dataspace Protocol](https://docs.internationaldataspaces.org/ids-knowledgebase/dataspace-protocol). 
+The [Simpl EDC Connection](https://code.europa.eu/simpl/simpl-open/development/gaia-x-edc/simpl-edc) includes the management API and policy engines of EDC. 
 
-Consequently, from an API perspective, SIMPL shares the same API functions for managing policies as detailed in [result_edc_vc.md](result_edc_vc.md). 
+Consequently, from an API perspective, Simpl shares the same API functions for managing policies as detailed in [result_edc_vc.md](result_edc_vc.md). 
 
-However, based on observations, the development focus of SIMPL are on user interfaces, such as [simpl-sd-ui](https://code.europa.eu/simpl/simpl-open/development/gaia-x-edc/simpl-sd-ui), which allows data providers to create a self-description of the data product, including access and usage policies. 
+However, based on observations, the development focus of Simpl are on user interfaces, such as [simpl-sd-ui](https://code.europa.eu/simpl/simpl-open/development/gaia-x-edc/simpl-sd-ui), which allows data providers to create a self-description of the data product, including access and usage policies. 
 These user interfaces do not support functions for deletion or extending usage functions.
 
 #### Measured results
-Since SIMPL's is packaged for Kubernetes, API access is challenging for its target users. However, as it uses EDC component's management APIs, the same API functions are available, and similar results should be shared between these two stacks. Therefore, the following scores are assigned to the test:
+Since Simpl's is packaged for Kubernetes, API access is challenging for its target users. However, as it uses EDC component's management APIs, the same API functions are available, and similar results should be shared between these two stacks. Therefore, the following scores are assigned to the test:
 The criteria used to measure the results was the one specified by the Data Product Publication ISO25010 Quality file regarding Functional Suitability. Individual scores per action are detailed in the table below, as some actions received different scores according to the defined criteria.
 
 | Action                                       | **Functional Completeness**    | **Functional Correctness**     | **Functional Appropriateness**            | Explanation |
@@ -43,4 +43,4 @@ Overall score calculation: (3.25 + 3.25 + 2.875) / 3 = 3.125
 **Functional Suitability Quality Metric Score: 3.125**
 #### Notes
 
-The current testing version of SIMPL is a very basic Minimum Viable Product solution, version 1.0.   
+The current testing version of Simpl is a very basic Minimum Viable Product solution, version 1.0.   

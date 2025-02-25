@@ -1,5 +1,5 @@
 ## [2.2.3.1A] Data product publication: Publication - Publication on EMDS catalogue
-### Stack: SIMPL
+### Stack: Simpl
 
 ### Statement of assessment
 #### Environment
@@ -10,7 +10,7 @@ The quality metric for this test is based on the criteria outlined in [iso27001_
 
 #### Expected output
 The test aims to examine the process of catalog publication for a data product under the following conditions: a new data product is added to the catalog. The EMDS catalog, as defined in the relevant documentation,
-refers to the Data Space-only catalog, specifically the internal SIMPL catalog and its federation component.
+refers to the Data Space-only catalog, specifically the internal Simpl catalog and its federation component.
 
 ### Results
 #### Assessment
@@ -21,7 +21,7 @@ refers to the Data Space-only catalog, specifically the internal SIMPL catalog a
 - Data offering
 
 When creating the data offering in [simpl-sd-ui](https://code.europa.eu/simpl/simpl-open/development/gaia-x-edc/simpl-sd-ui), the data provider could set access policy to define who can access the dataset.
-![SIMPL_access_policy.png](images/SIMPL_access_policy.png)
+![Simpl_access_policy.png](images/Simpl_access_policy.png)
 
 After the data offering is created, it will be validated by the [sdtooling-validation-api-be](https://code.europa.eu/simpl/simpl-open/development/data1/sdtooling-validation-api-be/-/tree/main/documents?ref_type=heads), 
 the [sd-creation-wizard-api](https://code.europa.eu/simpl/simpl-open/development/data1/sdtooling-api-be/-/tree/main/documents?ref_type=heads) calls the `/self-descriptions` endpoint of the [fc-service](https://gitlab.eclipse.org/eclipse/xfsc/cat/fc-service) to publish the self-description to the catalog. 
@@ -64,8 +64,8 @@ The catalog is published to the [simpl-fc-service](https://code.europa.eu/simpl/
 
 As shown above, the SD requires only users with the consumer role can search the dataset from the catalog. Other access policies are provided by [Simpl-Open](https://code.europa.eu/simpl/simpl-open) as described at [simple-edc](https://code.europa.eu/simpl/simpl-open/development/gaia-x-edc/simpl-edc), but they are not integrated into the [simpl-sd-ui](https://code.europa.eu/simpl/simpl-open/development/gaia-x-edc/simpl-sd-ui).
 
-Once the data offering is published to the federeated catalog, the consumer can go to its [simpl-catalogue-client](https://code.europa.eu/simpl/simpl-open/development/gaia-x-edc/simpl-catalogue-client) to search the dataset. SIMPL provides a user-friendly interface for the consumer to search the dataset.
-![SIMPL_search_dataset.png](images/SIMPL_search_dataset.png)
+Once the data offering is published to the federeated catalog, the consumer can go to its [simpl-catalogue-client](https://code.europa.eu/simpl/simpl-open/development/gaia-x-edc/simpl-catalogue-client) to search the dataset. Simpl provides a user-friendly interface for the consumer to search the dataset.
+![Simpl_search_dataset.png](images/Simpl_search_dataset.png)
 
 
 #### Measured results
@@ -74,4 +74,4 @@ As demonstrated above, [Simpl-Open](https://code.europa.eu/simpl/simpl-open) pro
 **Functional Suitability Quality Metric: 4**
 
 #### Notes
-The current testing version of SIMPL is a very basic Minimum Viable Product solution, version 1.0.   
+The current testing version of Simpl is a very basic Minimum Viable Product solution, version 1.0.   

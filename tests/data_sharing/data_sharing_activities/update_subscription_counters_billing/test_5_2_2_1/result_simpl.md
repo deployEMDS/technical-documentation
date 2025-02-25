@@ -1,5 +1,5 @@
 ## [5.2.2.1] Data sharing: Data sharing activities - Update subscription / counters / billing
-### Stack: SIMPL
+### Stack: Simpl
 
 ### Statement of assessment
 #### Environment

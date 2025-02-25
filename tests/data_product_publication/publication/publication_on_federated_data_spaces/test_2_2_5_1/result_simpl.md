@@ -1,5 +1,5 @@
 ## [2.2.5.1] Data product publication: Publication - Publication on federated data spaces
-### Stack: SIMPL
+### Stack: Simpl
 
 ### Statement of assessment
 #### Environment

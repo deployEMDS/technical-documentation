@@ -1,5 +1,5 @@
 ## [5.2.1.3] Data sharing: Data sharing activities - Enforce usage control
-### Stack: SIMPL
+### Stack: Simpl
 
 ### Statement of assessment
 #### Environment

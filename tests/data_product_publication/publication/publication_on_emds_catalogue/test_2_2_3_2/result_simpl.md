@@ -1,5 +1,5 @@
 ## [2.2.3.2] Data product publication: Publication - Publication on EMDS catalogue
-### Stack: SIMPL
+### Stack: Simpl
 
 ### Statement of assessment
 #### Environment

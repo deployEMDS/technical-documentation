@@ -1,5 +1,5 @@
 ## [5.1.1.1] Data sharing: Data sharing request - Request data transfer
-### Stack: SIMPL
+### Stack: Simpl
 
 ### Statement of assessment
 #### Environment
@@ -34,10 +34,10 @@ The system will score higher if the API is secured and utilizes standard methods
 [Simpl-Open](https://code.europa.eu/simpl/simpl-open) also features a [catalog UI](https://code.europa.eu/simpl/simpl-open/development/gaia-x-edc/simpl-catalogue-client) built on top of the EDC connector, providing a user-friendly interface for managing data sharing requests.
 
 The catalog UI can initiate a contract transfer request, allow users to input their object store location and necessary information, and track the status of the transfer.
-![transfer_SIMPL.png](images/transfer_SIMPL.png)
-![transfer_status_SIMPL.png](images/transfer_status_SIMPL.png)
+![transfer_Simpl.png](images/transfer_Simpl.png)
+![transfer_status_Simpl.png](images/transfer_status_Simpl.png)
 
-However, the catalog UI is quite basic, as SIMPL is currently a very basic Minimum Viable Product solution, version 1.0. The UI does not provide any records of past negotiations, and sessions can only be consulted with the specific session ID. Additionally, the UI lacks user account management features, such as URL redirection when logging out and logging back in with a different user role.
+However, the catalog UI is quite basic, as Simpl is currently a very basic Minimum Viable Product solution, version 1.0. The UI does not provide any records of past negotiations, and sessions can only be consulted with the specific session ID. Additionally, the UI lacks user account management features, such as URL redirection when logging out and logging back in with a different user role.
 
 #### Measured results
 
@@ -45,7 +45,7 @@ However, the catalog UI is quite basic, as SIMPL is currently a very basic Minim
 
 However, [Simpl-Open](https://code.europa.eu/simpl/simpl-open) is distributed with a packaged Kubernetes deployment, which makes the API less accessible, and the UI is quite basic and minimalistic as previously mentioned. 
 From an API standpoint, the test results are identical to those for EDC. 
-However, since the UI features the SIMPL project, there is no straightforward way to consult past transfers solely from the SIMPL perspective. Therefore, the following scores are assigned to the test:
+However, since the UI features the Simpl project, there is no straightforward way to consult past transfers solely from the Simpl perspective. Therefore, the following scores are assigned to the test:
 
 | Requirement | Measured KPI |
 | -|--------------|
@@ -60,4 +60,4 @@ However, since the UI features the SIMPL project, there is no straightforward wa
 
 #### Notes
 
-The current testing version of SIMPL is a very basic Minimum Viable Product solution, version 1.0.   
+The current testing version of Simpl is a very basic Minimum Viable Product solution, version 1.0.   

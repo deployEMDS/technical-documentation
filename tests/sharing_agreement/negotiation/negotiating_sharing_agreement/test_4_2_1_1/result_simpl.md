@@ -20,7 +20,7 @@ SIMPL provides UI front end for data sharing contract negotiation within catalog
 ![simpl_resource_catalog.png](images/simpl_resource_catalog.png)
 
 Afterward, the catalog UI opens a new window to update the status of the contract negotiation.
-![contract_negotiation_SIMPL.png](images/contract_negotiation_SIMPL.png)
+![contract_negotiation_Simpl.png](images/contract_negotiation_Simpl.png)
 
 #### Measured results
 

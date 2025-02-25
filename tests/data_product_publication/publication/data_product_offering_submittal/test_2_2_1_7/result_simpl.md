@@ -1,5 +1,5 @@
 ## [2.2.1.7] Data product publication: Publication - Data product offering submittal
-### Stack: SIMPL
+### Stack: Simpl
 
 ### Statement of assessment
 #### Environment

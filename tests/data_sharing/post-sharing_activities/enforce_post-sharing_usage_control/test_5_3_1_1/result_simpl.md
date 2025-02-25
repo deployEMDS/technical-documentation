@@ -1,5 +1,5 @@
 ## [5.3.1.1] Data sharing: Post-sharing activities - Enforce post-sharing usage control
-### Stack: SIMPL
+### Stack: Simpl
 
 ### Statement of assessment
 #### Environment

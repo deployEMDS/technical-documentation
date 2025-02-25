@@ -1,5 +1,5 @@
 ## [2.1.1.3] Data product publication: Provision - Data source endpoint provisioning
-### Stack: SIMPL
+### Stack: Simpl
 
 ### Statement of assessment
 #### Environment
@@ -32,14 +32,14 @@ The HttpData Plane used in the EDC test for all the above formats is also integr
 
 Therefore, from a functional perspective, [Simpl-Open](https://code.europa.eu/simpl/simpl-open) supports the above formats as the EDC connector does. 
 
-However, the main implementation of SIMPL for data space focuses on user interface facilities.
+However, the main implementation of Simpl for data space focuses on user interface facilities.
 The current built-in data offering template checks for IonosS3 storage data address, not HttpData. 
 
 But the above resources can be stored in and consumer to IonosS3: [edc-ionos-s3](https://github.com/Digital-Ecosystems/edc-ionos-s3/tree/main) without any problem.
 
 #### Measured results
 
-The SIMPL stack fully supports all six types of data planes, same to the EDC, as explained in this test. Consequently, it is evaluated with the highest score in each of the criteria used to evaluate this test, as shown in the table below.
+The Simpl stack fully supports all six types of data planes, same to the EDC, as explained in this test. Consequently, it is evaluated with the highest score in each of the criteria used to evaluate this test, as shown in the table below.
 
 | **Criterion**                | **Description**                                                                                     | **Score (0-4)** | **Explanation**                                                                  |
 |------------------------------|-----------------------------------------------------------------------------------------------------|-----------------|----------------------------------------------------------------------------------|
@@ -49,4 +49,4 @@ The SIMPL stack fully supports all six types of data planes, same to the EDC, as
 
 **Functional Suitability Quality Metric Score: 4**
 #### Notes
-The current testing version of SIMPL is a very basic Minimum Viable Product solution, version 1.0.   
+The current testing version of Simpl is a very basic Minimum Viable Product solution, version 1.0.   

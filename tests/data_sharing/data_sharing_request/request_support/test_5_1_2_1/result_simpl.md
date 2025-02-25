@@ -1,5 +1,5 @@
 ## [5.1.2.1] Data sharing: Data sharing request - Request support
-### Stack: SIMPL
+### Stack: Simpl
 
 ### Statement of assessment
 #### Environment

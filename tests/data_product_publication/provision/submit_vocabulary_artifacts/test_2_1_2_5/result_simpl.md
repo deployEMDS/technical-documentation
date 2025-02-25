@@ -1,5 +1,5 @@
 ## [2.1.2.5] Data product publication: Provision - Submit vocabulary artifacts
-### Stack: SIMPL
+### Stack: Simpl
 
 #### Tested quality metric and method
 
@@ -13,9 +13,9 @@ The test aims to assess that the vocabulary hub validates a new entry (or modifi
 #### Assessment
 
 As mentioned in the [test_2.1.1.2_result_simpl.md](../test_2_1_2_1/result_simpl.md), 
-SIMPL currently does not have an implementation for a vocabulary hub for data sharing. 
+Simpl currently does not have an implementation for a vocabulary hub for data sharing. 
 
-However, SIMPL utilizes the Gaia-X federated catalog service [simpl-fc-service](https://code.europa.eu/simpl/simpl-open/development/gaia-x-edc/simpl-fc-service) for schema validation of ontologies and vocabularies during data product offerings.
+However, Simpl utilizes the Gaia-X federated catalog service [simpl-fc-service](https://code.europa.eu/simpl/simpl-open/development/gaia-x-edc/simpl-fc-service) for schema validation of ontologies and vocabularies during data product offerings.
 This service provides an API to publish a self-description (a type of verifiable presentation). When calling the specific API for publishing `/self-descriptions`, 
 the service validates the self-description against the SHACL shapes and returns the validation result, as shown below:
 
@@ -23,7 +23,7 @@ the service validates the self-description against the SHACL shapes and returns 
 The detailed flow can be found [here](https://gaia-x.gitlab.io/data-infrastructure-federation-services/cat/architecture-document/architecture/catalogue-architecture.html#_adding_a_self_description_for_an_offering).
 
 #### Measured results
-As mentioned above, there is no possibility for a data provider to get validation results for sharing data. However, schema validation feedback is available in the data offering process in SIMPL for the offering itself.
+As mentioned above, there is no possibility for a data provider to get validation results for sharing data. However, schema validation feedback is available in the data offering process in Simpl for the offering itself.
 Therefore, based on the [Evaluation Criteria](./test.md#evaluation-criteria-), the following scores are assigned to the test:
 
 - Does the vocabulary hub validate new entries or modifications to existing vocabularies? -> No, not for data sharing process
@@ -36,4 +36,4 @@ Therefore, based on the [Evaluation Criteria](./test.md#evaluation-criteria-), t
 **Functional Suitability Quality Metric Score: 0**
 
 #### Notes
-The current testing version of SIMPL is a very basic Minimum Viable Product solution, version 1.0. 
+The current testing version of Simpl is a very basic Minimum Viable Product solution, version 1.0. 

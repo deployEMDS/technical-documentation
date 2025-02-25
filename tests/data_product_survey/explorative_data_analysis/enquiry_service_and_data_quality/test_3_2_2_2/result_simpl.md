@@ -1,5 +1,5 @@
 ## [3.2.2.2] Data product survey: Explorative data analysis - Enquiry service and data quality
-### Stack: SIMPL
+### Stack: Simpl
 
 ### Statement of assessment
 #### Environment

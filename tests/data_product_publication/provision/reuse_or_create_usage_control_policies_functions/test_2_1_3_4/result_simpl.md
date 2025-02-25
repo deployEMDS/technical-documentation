@@ -1,5 +1,5 @@
 ## [2.1.3.4] Data product publication: Provision - Reuse or create usage control policies / functions
-### Stack: SIMPL
+### Stack: Simpl
 
 ### Statement of assessment
 #### Environment

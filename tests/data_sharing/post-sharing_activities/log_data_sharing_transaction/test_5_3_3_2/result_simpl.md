@@ -1,5 +1,5 @@
 ## [5.3.3.2] nan: nan - Log data sharing transaction 
-### Stack: SIMPL
+### Stack: Simpl
 
 ### Statement of assessment
 #### Environment

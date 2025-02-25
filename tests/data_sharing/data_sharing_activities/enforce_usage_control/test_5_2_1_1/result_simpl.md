@@ -1,5 +1,5 @@
 ## [5.2.1.1] Data sharing: Data sharing activities - Enforce usage control
-### Stack: SIMPL
+### Stack: Simpl
 
 ### Statement of assessment
 #### Environment
@@ -41,17 +41,17 @@ The test aims to evaluate which usage policies are supported out of the box. For
 [Simpl-Open](https://code.europa.eu/simpl/simpl-open) offers a data offering UI named [SD Tooling Application](https://code.europa.eu/simpl/simpl-open/development/data1/sdtooling-api-be/-/tree/main/documents?ref_type=heads) for creating data offerings.
 The application allows users to create usage policies when making self-declarations for data offerings, such as requiring the consumer to delete the data after usage:
 
-![SIMPL_usage_policy.png](images/SIMPL_usage_policy.png)
+![Simpl_usage_policy.png](images/Simpl_usage_policy.png)
 
-SIMPL also utilizes the [edc-ionos-s3](https://github.com/Digital-Ecosystems/edc-ionos-s3/tree/main) extension to interact with IONOS S3 storage. 
+Simpl also utilizes the [edc-ionos-s3](https://github.com/Digital-Ecosystems/edc-ionos-s3/tree/main) extension to interact with IONOS S3 storage. 
 However, we have not observed the enforcement of usage policies after the transfer process with the current version of [Simpl-Open](https://code.europa.eu/simpl/simpl-open).
 
 #### Measured results
 
-As demonstrated above, SIMPL provides a template for users to create a usage policy "deletion after usage", but the enforcement of this policy has not been observed in [Simpl-Open](https://code.europa.eu/simpl/simpl-open). The following score is given to the test:
+As demonstrated above, Simpl provides a template for users to create a usage policy "deletion after usage", but the enforcement of this policy has not been observed in [Simpl-Open](https://code.europa.eu/simpl/simpl-open). The following score is given to the test:
 
 **Functional Suitability Quality Metric: 1**
 
 #### Notes
 
-The current testing version of SIMPL is a very basic Minimum Viable Product solution, version 1.0.   
+The current testing version of Simpl is a very basic Minimum Viable Product solution, version 1.0.   

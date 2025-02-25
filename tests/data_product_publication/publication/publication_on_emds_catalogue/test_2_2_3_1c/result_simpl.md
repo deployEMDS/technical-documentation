@@ -1,5 +1,5 @@
 ## [2.2.3.1C] Data product publication: Publication - Publication on EMDS catalogue
-### Stack: SIMPL
+### Stack: Simpl
 
 ### Statement of assessment
 #### Environment
@@ -12,12 +12,12 @@ The quality metric for this test is based on the criteria outlined in [iso27001_
 The test aims to evaluate the catalog publication process for a data product under the condition that a new data product cannot be published on the catalog.
 
 ### Results
-During the [data offering process](https://code.europa.eu/simpl/simpl-open/development/data1/sdtooling-api-be/-/blob/main/README.md?ref_type=heads#access-policies), the data provider can set access policies to specify which user roles can search the dataset from their catalog. Once the data offering is published, only users with the appropriate roles can search for the dataset in their catalog. Therefore, in the context of SIMPL, certain offers may not be visible in some users' catalogs, resulting in the data product not being published for those participants.
+During the [data offering process](https://code.europa.eu/simpl/simpl-open/development/data1/sdtooling-api-be/-/blob/main/README.md?ref_type=heads#access-policies), the data provider can set access policies to specify which user roles can search the dataset from their catalog. Once the data offering is published, only users with the appropriate roles can search for the dataset in their catalog. Therefore, in the context of Simpl, certain offers may not be visible in some users' catalogs, resulting in the data product not being published for those participants.
 
 #### Measured results
-As outlined above, SIMPL supports a process where a new data product cannot be published on the catalog if proper policies are defined. SIMPL provides a user-friendly interface for provider defines access policies. Therefore, the test is assigned the following score:
+As outlined above, Simpl supports a process where a new data product cannot be published on the catalog if proper policies are defined. Simpl provides a user-friendly interface for provider defines access policies. Therefore, the test is assigned the following score:
 
 **Functional Suitability Quality Metric: 4**
 
 #### Notes
-The current testing version of SIMPL is a very basic Minimum Viable Product solution, version 1.0.
+The current testing version of Simpl is a very basic Minimum Viable Product solution, version 1.0.

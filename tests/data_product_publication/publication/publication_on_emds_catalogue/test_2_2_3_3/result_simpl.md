@@ -1,5 +1,5 @@
 ## [2.2.3.3] Data product publication: Publication - Publication on EMDS catalogue
-### Stack: SIMPL
+### Stack: Simpl
 
 ### Statement of assessment
 #### Environment
@@ -19,19 +19,19 @@ The test aims to verify the availability of a GUI for publishing a data product 
   - Application offering
   - Data offering
 - Contract
-The SIMPL UI also includes functionality to validate the input information (Self Description) for each product type, using web page input validation and the SHACL shapes validation defined for each product type.
+The Simpl UI also includes functionality to validate the input information (Self Description) for each product type, using web page input validation and the SHACL shapes validation defined for each product type.
 ![simple_offering.png](images/simple_offering.png)
 
-For dataset discovery, SIMPL provides a UI that allows users to search for datasets based on the dataset name or perform advanced searches based on shapes, etc.
+For dataset discovery, Simpl provides a UI that allows users to search for datasets based on the dataset name or perform advanced searches based on shapes, etc.
 ![simpl_catalog.png](images/simpl_catalog.png)
 
-However, the [simpl-sd-ui](https://code.europa.eu/simpl/simpl-open/development/gaia-x-edc/simpl-sd-ui) and [simpl-catalogue-client](https://code.europa.eu/simpl/simpl-open/development/gaia-x-edc/simpl-catalogue-client) have very limited functionality. They do not support viewing published offerings or transfer history. Additionally, there is no URL redirection for logging back in after a user logs out. The UI is very minimal, featuring only the SIMPL logo and a few options.
+However, the [simpl-sd-ui](https://code.europa.eu/simpl/simpl-open/development/gaia-x-edc/simpl-sd-ui) and [simpl-catalogue-client](https://code.europa.eu/simpl/simpl-open/development/gaia-x-edc/simpl-catalogue-client) have very limited functionality. They do not support viewing published offerings or transfer history. Additionally, there is no URL redirection for logging back in after a user logs out. The UI is very minimal, featuring only the Simpl logo and a few options.
 
 #### Measured results
 
-Based on the previous explanation, SIMPL offers a native GUI for data offering and catalog searching. However, as a minimum viable product, the UI only supports basic functions and lacks features such as delete functionality, session management, and the ability to consult transfer or negotiation histories. Therefore, the following score has been assigned to the test:
+Based on the previous explanation, Simpl offers a native GUI for data offering and catalog searching. However, as a minimum viable product, the UI only supports basic functions and lacks features such as delete functionality, session management, and the ability to consult transfer or negotiation histories. Therefore, the following score has been assigned to the test:
 
 **Functional Suitability Quality Metric: 1**
 
 #### Notes
-The current testing version of SIMPL is a very basic Minimum Viable Product solution, version 1.0.
+The current testing version of Simpl is a very basic Minimum Viable Product solution, version 1.0.

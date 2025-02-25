@@ -1,5 +1,5 @@
 ## [3.1.1.5] Data product survey: Discover - Consult data space catalogue
-### Stack: SIMPL
+### Stack: Simpl
 
 ### Statement of assessment
 #### Environment

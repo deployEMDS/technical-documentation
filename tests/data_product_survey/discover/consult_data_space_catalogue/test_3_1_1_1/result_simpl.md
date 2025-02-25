@@ -1,5 +1,5 @@
 ## [3.1.1.1] Data product survey: Discover - Consult data space catalogue
-### Stack: SIMPL
+### Stack: Simpl
 
 ### Statement of assessment
 #### Environment
@@ -26,13 +26,13 @@ The advanced search in language, keywords, shapes and other criteria.
 ![advanced_search_simpl.png](images/advanced_search_simpl.png)
 
 ###### EU-Driven Project
-SIMPL is an EU-driven project aimed at facilitating interoperability among data spaces. Therefore, integrating with the SIMPL catalog involves referencing other data spaces. In the SIMPL Open example, the connector used is EDC, and other connectors are also expected to be interoperable with SIMPL.
+Simpl is an EU-driven project aimed at facilitating interoperability among data spaces. Therefore, integrating with the Simpl catalog involves referencing other data spaces. In the Simpl Open example, the connector used is EDC, and other connectors are also expected to be interoperable with Simpl.
 
-However, [simpl-catalogue-client](https://code.europa.eu/simpl/simpl-open/development/gaia-x-edc/simpl-catalogue-client) has very limited functionality. They do not support viewing transfer history. Additionally, there is no URL redirection for logging back in after a user logs out. The UI is very minimal, featuring only the SIMPL logo and a few options.
+However, [simpl-catalogue-client](https://code.europa.eu/simpl/simpl-open/development/gaia-x-edc/simpl-catalogue-client) has very limited functionality. They do not support viewing transfer history. Additionally, there is no URL redirection for logging back in after a user logs out. The UI is very minimal, featuring only the Simpl logo and a few options.
 
 #### Measured results
-SIMPL offers a native GUI for data offering and catalog searching. However, as it is a minimum viable product, the UI is not tailored at all, lacking delete functionality, session management, etc. The website only supports basic functions. Therefore, the following score has been assigned to the test:
+Simpl offers a native GUI for data offering and catalog searching. However, as it is a minimum viable product, the UI is not tailored at all, lacking delete functionality, session management, etc. The website only supports basic functions. Therefore, the following score has been assigned to the test:
 **Functional Suitability Quality Metric: 2**
 
 #### Notes                                                                                             
-The current testing version of SIMPL is a very basic Minimum Viable Product solution, version 1.0.     
+The current testing version of Simpl is a very basic Minimum Viable Product solution, version 1.0.     

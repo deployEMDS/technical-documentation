@@ -1,5 +1,5 @@
 ## [2.1.2.1] Data product publication: Provision - Submit vocabulary artifacts
-### Stack: SIMPL
+### Stack: Simpl
 
 #### Tested quality metric and method
 
@@ -14,17 +14,17 @@ The test aims to assess that if the vocabulary hub's assets are available to eve
 #### Data sharing process - vocabulary hub - interoperability
 
 In the definition of a vocabulary hub in [IDSA RAM 4.0](https://docs.internationaldataspaces.org/knowledge-base/ids-ram-4.0), it is a component that possesses a list of controlled terms to enhance the interoperability of data assets.
-In the SIMPL implementation, we have not seen a separate component working on the semantic interoperability of sharing or shared data itself, as seen in the TNO products: [https://www.semantic-treehouse.nl/docs/use-sth/login](https://www.semantic-treehouse.nl/docs/use-sth/login),
-nor has it been integrated into the SIMPL solution.
+In the Simpl implementation, we have not seen a separate component working on the semantic interoperability of sharing or shared data itself, as seen in the TNO products: [https://www.semantic-treehouse.nl/docs/use-sth/login](https://www.semantic-treehouse.nl/docs/use-sth/login),
+nor has it been integrated into the Simpl solution.
 
-The main expected function of a vocabulary hub, which enforces the semantic interoperability of certain data models to the data source or provides annotations for qualified datasets, is not seen in the data transfer procedure of SIMPL at this time.
+The main expected function of a vocabulary hub, which enforces the semantic interoperability of certain data models to the data source or provides annotations for qualified datasets, is not seen in the data transfer procedure of Simpl at this time.
 
 #### offering data products - vocabulary hub - interoperability
 
-SIMPL forked the GAIA-X federated catalog services: [simpl-fc-service](https://code.europa.eu/simpl/simpl-open/development/gaia-x-edc/simpl-fc-service) to orchestrate data offerings. 
+Simpl forked the GAIA-X federated catalog services: [simpl-fc-service](https://code.europa.eu/simpl/simpl-open/development/gaia-x-edc/simpl-fc-service) to orchestrate data offerings. 
 This service includes the validation of the self-description of the data offering against certain schemas (represented by a SHACL shape). 
 This component only validates against the SHACL shapes, not ontologies or vocabularies. 
-SIMPL provides an example SHACL shape: [merged-shapes.ttl](https://code.europa.eu/simpl/simpl-open/development/data1/sdtooling-sd-schemas/-/raw/main/merged-shapes.ttl), which details how:
+Simpl provides an example SHACL shape: [merged-shapes.ttl](https://code.europa.eu/simpl/simpl-open/development/data1/sdtooling-sd-schemas/-/raw/main/merged-shapes.ttl), which details how:
 
 - ApplicationOffering
 - DataOffering
@@ -46,9 +46,9 @@ The shapes and ontologies can be populated to the [simpl-fc-service](https://cod
 The schema publication and validation flow within [simpl-fc-service](https://code.europa.eu/simpl/simpl-open/development/gaia-x-edc/simpl-fc-service) is described in [Adding a Self-Description for an Offering](https://gaia-x.gitlab.io/data-infrastructure-federation-services/cat/architecture-document/architecture/catalogue-architecture.html#_adding_a_self_description_for_an_offering).
 
 #### Measured results
-As mentioned earlier, the current phase of SIMPL does not provide any vocabulary validation on the shared or sharing data itself. Therefore, based on the [Evaluation Criteria](./test.md#evaluation-criteria-), the following scores are assigned to the test:
+As mentioned earlier, the current phase of Simpl does not provide any vocabulary validation on the shared or sharing data itself. Therefore, based on the [Evaluation Criteria](./test.md#evaluation-criteria-), the following scores are assigned to the test:
 
-- Can the data provider submit a new vocabulary? - No, the vocabulary hub is not available in the current version of SIMPL.
+- Can the data provider submit a new vocabulary? - No, the vocabulary hub is not available in the current version of Simpl.
 - Can the data provider choose from different standardized vocabulary that meet the requirements of the data source? - No
 - Can the data provider submit custom metadata fields and link their semantic definition? - No
 - Can the data provider access standardize vocabularies to then use them in the data source before provisioning the data? - No
@@ -58,4 +58,4 @@ As mentioned earlier, the current phase of SIMPL does not provide any vocabulary
 **Functional Suitability Quality Metric Score: 0**
 
 #### Notes
-The current testing version of SIMPL is a very basic Minimum Viable Product solution, version 1.0.   
+The current testing version of Simpl is a very basic Minimum Viable Product solution, version 1.0.   
