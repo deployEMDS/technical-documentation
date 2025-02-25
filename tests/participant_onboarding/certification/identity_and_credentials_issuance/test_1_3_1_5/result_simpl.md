@@ -13,7 +13,7 @@ The expected output of the test is an assessment of whether the SIMPL supports t
 
 ### Results
 #### Assessment
-[Simpl-Open](https://code.europa.eu/simpl/simpl-open) does not support Verifiable Credentials for identity authentication and authorization in Data Space flow. 
+[Simpl-Open](https://code.europa.eu/simpl/simpl-open) does not yet support Verifiable Credentials for identity authentication and authorization in Data Space flow. 
 The Verifiable Credential lifecycle is not supported by [Simpl-Open](https://code.europa.eu/simpl/simpl-open) for identity management for now.
 
 In the design of tier 2 layer of the identity, which is based on Attribute-Based Access Control, the SIMPL agent receives an x.509 certificate from the authority agent to establish mTLS communication with the other agents. 
