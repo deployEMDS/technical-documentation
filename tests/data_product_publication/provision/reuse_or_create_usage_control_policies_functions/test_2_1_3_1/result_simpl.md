@@ -27,22 +27,21 @@ Since SIMPL's contribution is based on its own development and is packaged for K
 
 The criteria used to measure the results was the one specified by the Data Product Publication ISO25010 Quality file regarding Functional Suitability. Individual scores per action are detailed in the table below, as some actions received different scores according to the defined criteria.
 
-| Action                                       | **Functional Completeness** | **Functional Correctness** | **Functional Appropriateness** | Explanation                                           |
-|----------------------------------------------|-----------------------------|----------------------------|--------------------------------|-------------------------------------------------------|
-| Create a new policy                          | 4                           | 4                          | 4                              |                                                       |
-| Assign a usage policy to a sharing agreement | 4                           | 4                          | 4                              |                                                       |
-| Delete a sharing agreement                   | 0                           | 0                          | 0                              | Function not supported by the current user interface. |
-| Delete a usage policy                        | 0                           | 0                          | 0                              | Function not supported by the current user interface. |
-| Update existing sharing agreement            | 0                           | 0                          | 0                              | Function not supported by the current user interface. |
-| Update existing policy                       | 0                           | 0                          | 0                              | Function not supported by the current user interface. |
-| Extend the usage policy language             | 0                           | 0                          | 0                              | Function not supported by the current user interface. |
-| Create new policy enforcement functions      | 0                           | 0                          | 0                              | Function not supported by the current user interface. |
-| **Overall**                                  | **(4+4) / 8 = 1**           | **(4+4) / 8 = 1**          | **(4+4) / 8 = 1**              |                                                       | 
+| Action                                       | **Functional Completeness**    | **Functional Correctness**     | **Functional Appropriateness**            | Explanation |
+|----------------------------------------------|--------------------------------|--------------------------------|-------------------------------------------|-------------|
+| Create a new policy                          | 4                              | 4                              | 4                                         |             |
+| Assign a usage policy to a sharing agreement | 4                              | 4                              | 4                                         |             |
+| Delete a sharing agreement                   | 4                              | 4                              | 4                                         |             |
+| Delete a usage policy                        | 4                              | 4                              | 2                                         |             |
+| Update existing sharing agreement            | 4                              | 4                              | 3                                         |             |
+| Update existing policy                       | 4                              | 4                              | 4                                         |             |
+| Extend the usage policy language             | 1                              | 1                              | 1                                         |             |
+| Create new policy enforcement functions      | 1                              | 1                              | 1                                         |             |
+| **Overall**      | **(4 * 6 + 1 * 2) / 8 = 3.25** | **(4 * 6 + 1 * 2) / 8 = 3.25** | **(4 * 4 + 3 + 2 + 1 * 2) / 8 = 2.875**   |             |
+ 
+Overall score calculation: (3.25 + 3.25 + 2.875) / 3 = 3.125
 
-Overall score calculation: (1+1+1)/3 = 0.33
-
-**Functional Suitability Quality Metric Score: 0.33**
-
+**Functional Suitability Quality Metric Score: 3.125**
 #### Notes
 
 The current testing version of SIMPL is a very basic Minimum Viable Product solution, version 1.0.   
