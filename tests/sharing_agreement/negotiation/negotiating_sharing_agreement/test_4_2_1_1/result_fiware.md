@@ -13,7 +13,7 @@ The test environment Fiware v0.2 was used as described in [Fiware Deployment v0.
 The quality metric for this test is based on the criteria outlined in [iso27001_kpis_subkpis.xlsx](../../../../../design_decisions/background_info/iso27001_kpis_subkpis.xlsx). In Phase 1, the focus is on the Functional Suitability metric. For detailed information, please refer to the [Comparative criteria (checklists, ...)](./test.md#comparative-criteria-checklists-) section in the test description.
 
 #### Expected output
-The test aims to assess the state machine implementation of the Simpl ecosystem regarding the sharing negotiation.
+The test aims to assess the state machine implementation of the Fiware ecosystem regarding the sharing negotiation.
 
 ### Results
 
