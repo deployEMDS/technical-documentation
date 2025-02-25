@@ -32,15 +32,15 @@ Also, since SIMPL is deployed within a Kubernetes cluster, customizing policies 
 The following score are assigned to the test with the above assessment:
 The following scores are assigned to the test based on the above assessment:
 
-| **Criterion**      | **Description**                                                                                          | **Score (0-4)** |                                                                                                            |
-|--------------------|----------------------------------------------------------------------------------------------------------|-----------------|------------------------------------------------------------------------------------------------------------|
-| **Adaptability**   | Adaptability for different or evolving hardware, software, or usage environments.                        | -   4           | ODRL and EDC policy engine are adaptable for future changes, the SIMPL UI is also flexible to be extended. |
-| **Installability** | The components of the platform are successfully installed and/or uninstalled in a specified environment. | -   4           | The component can be packaged and deployed in any circumstances.                                           |
-| **Replaceability** | Replacement of the components for the same purpose in the same environment.                              | -   0           | For now we have not seen SIMPL UI works with other data space connectors.                                  |              
-| **Scalability**    | The product can handle growing to adapt its capacity.                                                    | -   2           | EDC and SIMPL are both open source and have extensibilities.                                               |
+| **Criterion**      | **Description**                                                                                          | **Score (0-4)** |                                                                                                                        |
+|--------------------|----------------------------------------------------------------------------------------------------------|-----------------|------------------------------------------------------------------------------------------------------------------------|
+| **Adaptability**   | Adaptability for different or evolving hardware, software, or usage environments.                        | -   4           | ODRL and EDC policy engine are adaptable for future changes, the SIMPL UI is also flexible to be extended.             |
+| **Installability** | The components of the platform are successfully installed and/or uninstalled in a specified environment. | -   4           | The component can be packaged and deployed in any circumstances.                                                       |
+| **Replaceability** | Replacement of the components for the same purpose in the same environment.                              | -   0           | For now we have not seen SIMPL UI works with other data space connectors.                                              |              
+| **Scalability**    | The product can handle growing to adapt its capacity.                                                    | -   4           | SIMPL's development is targeting high volumes, particularly with its two-tier IAA system incorporating RBAC and ABAC.  |
 
-Overall score calculation: (4 + 4 + 0 + 2) / 4 = 2.5
-**Functional Suitability Quality Metric Score: 2.5**
+Overall score calculation: (4 + 4 + 0 + 4) / 4 = 3
+**Functional Suitability Quality Metric Score: 3**
 
 #### Notes
 The current testing version of SIMPL is a very basic Minimum Viable Product solution, version 1.0.   
