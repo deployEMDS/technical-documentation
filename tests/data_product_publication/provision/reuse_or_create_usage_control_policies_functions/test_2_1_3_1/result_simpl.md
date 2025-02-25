@@ -23,8 +23,7 @@ However, based on observations, the development focus of SIMPL are on user inter
 These user interfaces do not support functions for deletion or extending usage functions.
 
 #### Measured results
-Since SIMPL's contribution is based on its own development and is packaged for Kubernetes, API access is challenging for its target users. Therefore, the following scores are assigned to the test:
-
+Since SIMPL's is packaged for Kubernetes, API access is challenging for its target users. However, as it uses EDC component's management APIs, the same API functions are available, and similar results should be shared between these two stacks. Therefore, the following scores are assigned to the test:
 The criteria used to measure the results was the one specified by the Data Product Publication ISO25010 Quality file regarding Functional Suitability. Individual scores per action are detailed in the table below, as some actions received different scores according to the defined criteria.
 
 | Action                                       | **Functional Completeness**    | **Functional Correctness**     | **Functional Appropriateness**            | Explanation |
