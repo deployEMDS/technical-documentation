@@ -29,7 +29,7 @@ apisix:
   controlPlane:
     enabled: true
     resourcesPreset: micro
-    apiTokenAdmin: ***REMOVED***
+    apiTokenAdmin: 9Bn1Qme3CNajoHR2QKeGPoU7TmeOcOFO
     tls: 
       enabled: false
     ingress:

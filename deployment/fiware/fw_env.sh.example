@@ -10,7 +10,7 @@ export tmf_api_scheme="http://"
 export tmf_api_name="deployemds-tmf-api"
 
 # envVars for admin api key
-export admin_api_key="***REMOVED***"
+export admin_api_key="9Bn1Qme3CNajoHR2QKeGPoU7TmeOcOFO"
 
 # envVars for more standard components
 export apisix_control_api_prefix="http://apisix-control"

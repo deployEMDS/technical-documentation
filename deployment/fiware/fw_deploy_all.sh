@@ -75,7 +75,7 @@ echo ""
 curl -v POST "${til_ta_url_prefix}${partner_suffix}.${usecase_domain}/issuer" \
     --header 'Content-Type: application/json' \
     --data '{
-      "did": "did:key:***REMOVED***",
+      "did": "did:key:zDnaewkzcKUEUvBcGdpEqxjdeP9Nudy6tic8smf7ZmhXEhsCS",
       "credentials": []
     }'
 
