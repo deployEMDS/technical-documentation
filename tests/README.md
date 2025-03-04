@@ -19,3 +19,5 @@ Definitions and deliverables and are organized in a tree that reflects the proje
 ```
 
 The structure will be used to implement comparative reviews to align the results of testing facilities. For this reason, it is advisable to follow the publication guidelines, although improvements are always welcome, and they can be requested via issues.
+
+Please notice: any secret keys have been intentionally redacted and will need to be replaced by user-provided keys to ensure functionality

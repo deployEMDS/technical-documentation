@@ -29,7 +29,7 @@ apisix:
   controlPlane:
     enabled: true
     resourcesPreset: micro
-    apiTokenAdmin: 9Bn1Qme3CNajoHR2QKeGPoU7TmeOcOFO
+    apiTokenAdmin: REDACTED
     tls: 
       enabled: false
     ingress:
@@ -442,7 +442,7 @@ vcverifier:
       level: DEBUG
     verifier:
       tirAddress: http://tir.trust-anchor.svc.cluster.local:8080
-      did: did:key:zDnaecDCWgeitzMX55oNoVneg3uN6AyesyTpfKSb6AU53Yb6Y
+      did: did:key:REDACTED
     server:
       host: http://verifier${partner_suffix}.demo-portal.eu
     configRepo:
