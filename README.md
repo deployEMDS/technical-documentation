@@ -149,3 +149,5 @@ GitHub may be utilized for version control; however, code should be treated as a
 In accordance with the [deployEMDS Information Security Policy](https://acatechev.sharepoint.de/:b:/r/sites/EuropeanMobilityDataSpaceDeploymentConsortiumspace/Freigegebene%20Dokumente/General/07_Security%20Policy/2024-02-16%20Information%20security%20policy_DeployEMDS_V1.5_CLEAN.pdf?csf=1&web=1&e=SwIPb1), section 7.1 "Information asset protection responsibility," we are required to evaluate all information assets used or created during the project. This evaluation should adhere to the checklist provided in the risk assessment template (Annex 1, pp. 15) . The Security Advisory Board (SAB) and Project Security Officer (PSO) should only be consulted if information security concerns arise, such as when any question on the checklist is answered affirmatively.
 
 This process ensures compliance with our security protocols and safeguards the intellectual property and sensitive information.
+
+Please note: secret keys have been redacted in this repository and must be replaced with user-provided keys to ensure functionality.
