@@ -10,7 +10,7 @@ Jinja2==3.1.4
 MarkupSafe==2.1.5
 numpy==2.0.0
 openpyxl==3.1.4
-pandas==2.2.2
+pandas==2.2.3
 pycparser==2.22
 PyGithub==2.3.0
 PyJWT==2.8.0
