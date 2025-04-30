@@ -142,6 +142,9 @@ Last updated: 2024-09-06 13:16:10 UTC
 | [5.3.3.2] | [Data sharing: Post-sharing activities - Log data sharing transaction](https://github.com/imec-int/deployEMDS/tree/main/tests/data_sharing/post-sharing_activities/log_data_sharing_transaction/test_5_3_3_2/test.md) | 2 | Yes | [fiware](https://github.com/imec-int/deployEMDS/tree/main/tests/data_sharing/post-sharing_activities/log_data_sharing_transaction/test_5_3_3_2/result_fiware.md)&nbsp;❌<br/>[edc_vc](https://github.com/imec-int/deployEMDS/tree/main/tests/data_sharing/post-sharing_activities/log_data_sharing_transaction/test_5_3_3_2/result_edc_vc.md)&nbsp;❌<br/> |
 <!-- END_TEST_RESULTS_TABLE -->
 
+**Disclaimer**  
+The results presented in this document reflect a snapshot in time of the **_[Simpl OPEN](https://code.europa.eu/simpl/simpl-open) version 1.0_**, as of **_February 2025_**. Please note that Simpl is a continuously evolving project. Future updates will introduce new features, enhancements, and improvements, addressing any identified limitations and expanding its capabilities over time.
+
 Information security
 ====================
 GitHub may be utilized for version control; however, code should be treated as an information asset. Prior to publication, all code must undergo a thorough assessment in addition to standard code review procedures. This assessment aims to prevent the unintended disclosure of sensitive information, such as credentials, to the repository.
