@@ -15,7 +15,19 @@ No
  
 ### Extra information
 #### ISO25010 Quality
-nan
+
+- Functional sustainability
+- Flexibility
+- Integrity
+- Interoperability
+
 #### ISO25010 Quality description
-5 - 7
-    
+Does the vocabulary hub provide information about the validation result?
+
+### Comparative criteria (checklists, ...)
+- Does the vocabulary hub validate new entries or modifications to existing vocabularies?
+- Is the validation process for new or modified vocabularies executed successfully?
+- Does the system provide feedback or error messages if the validation fails?
+- Can the data provider view the validation status of the submitted or modified vocabulary?
+- Are there mechanisms in place to handle validation errors and provide corrective actions?
+- Is there a log or audit trail available for the validation process of vocabulary entries or modifications?
