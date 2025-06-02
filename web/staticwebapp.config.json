@@ -9,6 +9,7 @@
     {
       "route": "/*",
       "allowedRoles": [
+        "anonymous",
         "authenticated"
       ]
     }
