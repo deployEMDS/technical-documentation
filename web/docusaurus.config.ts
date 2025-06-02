@@ -148,7 +148,7 @@ const config: Config = {
         {
           title: 'Contact',
           items: [{
-            html: `<span style="display: block; height: 32px">Coordinator: Lucie Kirstein, acatech</span>`
+            html: `<span style="display: block; height: 32px">Coordinator: Christopher Newman, acatech</span>`
           }, {
             html: `<span style="display: block; height: 32px"><a href="mailto:info@deployemds.eu">info@deployemds.eu</a></span>`
           }],
