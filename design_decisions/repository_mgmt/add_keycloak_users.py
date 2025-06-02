@@ -50,7 +50,7 @@ def create_user(email, temporary_password, keycloak_url, realm_name, access_toke
 
 def format_email(email, temporary_password, login_url, realm_name):
     return f"""
-Dear {email},
+Dear {email.split('.')[0].capitalize()},
 
 You can login to {login_url} with the following details. You will be prompted to change this password after the first login.
 
