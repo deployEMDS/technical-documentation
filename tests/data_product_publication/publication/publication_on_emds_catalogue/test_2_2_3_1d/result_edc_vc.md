@@ -36,7 +36,7 @@ The test demonstrates that de-publishing an asset will remove it from the catalo
 #### Federated Catalog
 As mentioned in [Test 2.2.3.1a](../test_2_2_3_1a/result_edc_vc.md), EDC provides a ready-to-use [Federated Catalog Solution](https://github.com/eclipse-edc/FederatedCatalog). This solution employs a set number of crawlers to periodically scan the dataspace, request catalogs from each participant in a predefined list, and consolidate them into a local persistence. The federated catalog also offers [API endpoints](https://github.com/eclipse-edc/FederatedCatalog/blob/gh-pages/openapi/management-api/0.8.1-SNAPSHOT/management-api.yaml) for querying the catalogs. The Federated Catalog is integrated into the EDC MVD commit [9a5f93c](https://github.com/eclipse-edc/MinimumViableDataspace/commit/9a5f93c89cf5624cc4bf8eaa024a29da9b8e3d12) within the connector. \
 Test results from the MVD indicate that the Federated Catalog has its own local persistence. 
-![fc-db.png](image/fc-db.png)
+![fc-db.png](images/fc-db.png)
 The persistence can be saved in the database, as shown above, identified by the DSP endpoint. De-publishing a data asset will result in the catalog being refreshed at the result of DSP query endpoint, as explained above. Therefore, the asset will also be removed from the Federated Catalog.
 The crawling pace can be configured with following keys:
 

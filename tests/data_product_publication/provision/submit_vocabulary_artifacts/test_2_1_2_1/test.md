@@ -27,3 +27,12 @@ Can the data provider choose from different standardized vocabulary that meet th
 Can the data provider submit custom metadata fields and link their semantic definition?
 
 Can the data provider access standardize vocabularies to then use them in the data source before provisioning the data?
+
+### Comparative criteria (checklists, ...)
+
+- Can the data provider submit a new vocabulary?
+- Can the data provider choose from different standardized vocabulary that meet the requirements of the data source?
+- Can the data provider submit custom metadata fields and link their semantic definition?
+- Can the data provider access standardize vocabularies to then use them in the data source before provisioning the data?
+- Does the EMDS interoperability facility validate the vocabulary used at the data source?
+- Does the system provide feedback or error messages if a vocabulary submission fails validation?

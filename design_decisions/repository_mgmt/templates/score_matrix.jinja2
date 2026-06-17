@@ -6,8 +6,12 @@ import Link from '@site/src/components/Link';
 
 # Score matrix
 
-| Test ID | Customer Journey | Test Description | Phase | EDC MVD | Fiware  | Simpl Agent |
+| Test ID | Customer Journey | Test Description | Phase | EDC MVD | Fiware  | Simpl Agent\* |
 |---------|------------------|------------------|-------|---------|---------|-------------|
 {%- for result in results %}
 | <Link color="#25c2a0">[{{ result.test_id }}]({{ result.test_link }})</Link> | {{ result.customer_journey }} | {{ result.description }} | Phase {{result.phase}} {% if result.minimal == "Yes" %}Minimal{% else %}Extended{% endif %} | {{ result.result_edc }} | {{ result.result_fiware }} | {{ result.result_simpl }} |
 {%- endfor %}
+
+**Disclaimer:**
+
+\* The results presented in this document reflect a snapshot in time of the **_[Simpl OPEN](https://code.europa.eu/simpl/simpl-open) version 1.0_**, as of **_February 2025_**. Please note that Simpl is a continuously evolving project. Future updates will introduce new features, enhancements, and improvements, addressing any identified limitations and expanding its capabilities over time.

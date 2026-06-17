@@ -15,22 +15,14 @@ Yes
  
 ### Extra information
 #### ISO25010 Quality
-Functional sustainability
 
-Flexibility
-
-Integrity
-
-Functional suitability
-
-Functional suitability
-
-Functional suitability
-
-Interoperability
+- Functional sustainability
+- Flexibility
+- Integrity
+- Interoperability
 
 #### ISO25010 Quality description
-'Can the data provider submit custom metadata fields and link their semantic definition?
+Can the data provider submit custom metadata fields and link their semantic definition?
 
 Can the data provider access standardize vocabularies to then use them in the data source before provisioning the data?
 
@@ -43,3 +35,13 @@ Can the data provider view the validation status of used vocabularies at the dat
 Can the data provider request to update/modify a vocabulary standard?
 
 Does the metadata associated to the data product follows a given standard or model from the data space?
+
+### Comparative criteria (checklists, ...)
+
+- Does the vocabulary hub cover relevant semantic standards for the metadata?
+- Does the vocabulary hub cover relevant domain standards for the metadata?
+- Is there a comprehensive list of supported standards available?
+- Can the data provider easily find and use the relevant standards in the vocabulary hub?
+- Are there mechanisms in place to update and expand the coverage of standards in the vocabulary hub?
+- Does the system provide feedback or error messages if a standard is not supported?
+- Can the data provider view the status and details of the standards covered by the vocabulary hub?

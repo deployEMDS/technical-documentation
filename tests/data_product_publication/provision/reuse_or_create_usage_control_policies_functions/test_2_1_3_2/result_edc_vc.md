@@ -17,7 +17,7 @@ For current phase (phase 1), the test focus on the Functional suitability qualit
 
 #### Expected output
 
-The test aims to assess the ease of use of deploying Usage Control Policies in regards to the availability of a user interface.
+The test aims to assess the ease of use of deploying Usage Control Policies in regard to the availability of a user interface.
 
 ### Results
 

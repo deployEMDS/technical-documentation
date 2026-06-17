@@ -9,8 +9,6 @@
 
 #### Tested quality metric and method
 The quality metric for this test is based on the criteria outlined in [iso27001_kpis_subkpis.xlsx](../../../../../design_decisions/background_info/iso27001_kpis_subkpis.xlsx). In Phase 1, the focus is on the Functional Suitability metric. For detailed information, please refer to the [Evaluation Criteria](./test.md#evaluation-criteria) section in the test description.
-#### Comparative criteria (checklists, ...)
-[TODO] Describe the comparative criteria used for the test / assessment. If possible, align with the criteria used for the same test in the other stack(s).
 
 #### Expected output
 The test aims to verify that the system generates logs detailing the sharing agreement process. A higher rank will be given if these logs include business information in a standardized format.

@@ -28,7 +28,7 @@ Functional suitability
 #### ISO25010 Quality description
 The data producer uses an API to deploy and configure usage control policies.
 
-### Evaluation Criteria 
+### Comparative criteria (checklists, ...)
 The criteria used to measure the results was the one specified by the Data Product Publication ISO25010 Quality file regarding Functional Suitability.
 
 

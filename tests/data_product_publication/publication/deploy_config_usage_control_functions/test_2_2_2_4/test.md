@@ -19,7 +19,7 @@ Functional suitability
 #### ISO25010 Quality description
 The data producer can deploy custom usage enforcement functions.
 
-### Evaluation Criteria 
+### Comparative criteria (checklists, ...)
 The criteria used to measure the results was the one specified by the Data Product Publication ISO25010 Quality file regarding Functional Suitability.
 
 

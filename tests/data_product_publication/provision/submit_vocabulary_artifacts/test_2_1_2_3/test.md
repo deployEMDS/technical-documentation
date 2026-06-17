@@ -18,4 +18,12 @@ No
 Functional suitability
 #### ISO25010 Quality description
 Can the data provider request to update/modify a vocabulary asset?
-    
+
+### Comparative criteria (checklists, ...)
+
+- Can the data provider request to update/modify a vocabulary asset?
+- Is the change in the vocabulary hub asset executed successfully?
+- Are integrity controls in place to ensure the accuracy and consistency of the vocabulary asset changes?
+- Does the system provide feedback or error messages if the update/modification fails?
+- Can the data provider view the status of the requested changes to the vocabulary asset?
+- Are there logs or audit trails available for the changes made to the vocabulary hub asset?
