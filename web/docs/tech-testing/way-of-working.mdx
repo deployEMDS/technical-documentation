@@ -1,13 +1,14 @@
 ---
-sidebar_position: 1
----
+
+## sidebar_position: 1
 
 # Way of working
 
 ## Repository
+
 The [**deployEMDS** GitHub repository](https://github.com/imec-int/deployEMDS) is the reference container of a thorough assessment of multiple data space technology stacks, more in detail:
 
-* The technical implementations of the `test facilities`_(see infra)_
+* The technical implementations of the `test facilities` *(see infra)*
 * The test environment, where reference data sources, data schemas, vocabularies, and usage control policies are shared across all tests.
 * The tests and assessments, these are linked to the data space participants' customer journeys covering the essential data space capabilities.
 
@@ -18,8 +19,7 @@ Each test facility develops tests adapted to the data space's technology. The te
 
 The test results can be found in the `tests/` directory of the repository, and have the following directory structure. This structure was used to implement comparative reviews to align the results of testing facilities.
 
-
-```.
+```text
 |-  Business capabilities (i.e. data_product_publication)
 |  |-- Customer journeys (i.e. provision)
 |  |  |-- Sub-customer journeys (i.e. data_source_endpoint_provisioning)
@@ -35,39 +35,83 @@ The test results can be found in the `tests/` directory of the repository, and h
 |  |  |  |  |-- resources-facility B (i.e. resources-fiware)
 ```
 
-
 ## Workflow
+
 A **sandbox environment** is provided by IONOS to deploy data space stacks. SaaS providers must make sure that their services are accessible from this environment.
 
-A **data space stack** is the combination of technical building blocks, and it might span over more than one framework (e.g., EDC + iShare). The choice of the stack is delegated to the EMDS Building Block Working Group. The deployment of the stack should result in a mock data space.
+A **data space stack** is the combination of technical building blocks, and it might span over more than one framework, for example EDC + iShare. The choice of the stack is delegated to the EMDS Building Block Working Group. The deployment of the stack should result in a mock data space.
 
-The **testing facility** is the composition of infrastructure, data space stack, and test squad (team). We define one stack per test facility, and the mock data space should be consistent for each testing facility. They should have:
-- The same participants and their identities.
-- The same data product(s) being shared.
-- The same usage policies.
-- The same data planes.
-- The same root taxonomies and vocabularies describing the data product(s).
-- The same certificate authority.
+The **testing facility** is the composition of infrastructure, data space stack, and test squad/team. We define one stack per test facility, and the mock data space should be consistent for each testing facility. They should have:
 
-The testing facilities will use a phased or agile approach,  where in each phase specific components are deployed and tested.
-The progress of each testing facility will be tracked by use of reporting tools, _in casu_ the [GitHub issues](https://github.com/imec-int/deployEMDS/issues) of the GitHub repository.
+* The same participants and their identities.
+* The same data product(s) being shared.
+* The same usage policies.
+* The same data planes.
+* The same root taxonomies and vocabularies describing the data product(s).
+* The same certificate authority.
+
+The testing facilities will use a phased or agile approach, where in each phase specific components are deployed and tested.
+
+The progress of each testing facility will be tracked by use of reporting tools, *in casu* the [GitHub issues](https://github.com/imec-int/deployEMDS/issues) of the GitHub repository.
 
 ![deployEMDS workflow](./assets/workflow_overview.png)
 
 ## Planning
+
 The deployEMDS testing is planned to be executed in three phases:
- 1. **Phase 1**: 2024-07-01 - 2024-07-19
- * _[Minimal](https://github.com/imec-int/deployEMDS/issues?q=is%3Aopen+is%3Aissue+milestone%3A%22Phase+1%22+label%3Aminimal)_: The minimal set of tests to be executed in each testing facility.
- * _[Extended](https://github.com/imec-int/deployEMDS/issues?q=is%3Aopen+is%3Aissue+milestone%3A%22Phase+1%22+-label%3Aminimal)_: The extended set of tests to be executed in each testing facility, should time allow.
- 2. **Phase 2**: 2024-07-22 - 2024-08-09
- * _Minimal_: The minimal set of tests to be executed in each testing facility.
- * _Extended_: The extended set of tests to be executed in each testing facility, should time allow.
+
+1. **Phase 1**: 2024-07-01 - 2024-07-19
+
+   * *[Minimal](https://github.com/imec-int/deployEMDS/issues?q=is%3Aopen+is%3Aissue+milestone%3A%22Phase+1%22+label%3Aminimal)*: The minimal set of tests to be executed in each testing facility.
+   * *[Extended](https://github.com/imec-int/deployEMDS/issues?q=is%3Aopen+is%3Aissue+milestone%3A%22Phase+1%22+-label%3Aminimal)*: The extended set of tests to be executed in each testing facility, should time allow.
+
+2. **Phase 2**: 2024-07-22 - 2024-08-09
+
+   * *Minimal*: The minimal set of tests to be executed in each testing facility.
+   * *Extended*: The extended set of tests to be executed in each testing facility, should time allow.
+
+## Integration phase assessment
+
+Following the initial stack-comparison testing campaign, the existing deployEMDS technology testing catalogue may also be reused during the integration phase.
+
+The objective of this integration phase assessment is not to compare alternative testing facilities, but to assess the selected EMDS technical infrastructure and its readiness to support the expected data space capabilities.
+
+For this purpose, selected existing tests may include an additional result perspective:
+
+```text
+EMDS Final Stack
+```
+
+This result perspective should be added next to the historical stack-specific result files.
+
+Example:
+
+```text
+test.md
+result_edc_vc.md
+result_fiware.md
+result_emds_final_stack.md
+```
+
+The existing test definition remains unchanged. The additional result file captures the assessment of the current EMDS final technical infrastructure using the same requirement structure and 0–4 scoring approach.
+
+The assessment should distinguish the deployment model used for the evidence collected:
+
+| Deployment model | Meaning                                   |
+| ---------------- | ----------------------------------------- |
+| CaaS             | IONOS-managed deployment                  |
+| On-premise       | Deployment managed in a local environment |
+
+The integration phase assessment should be supported by consolidated technical evidence, such as endpoint responses, logs, screenshots, Postman/curl executions, GitHub/Jira references, deployment status or confirmation from the relevant component owner.
+
+This approach keeps the historical EDC+VC and Fiware results unchanged while allowing the project to document the integration readiness of the selected EMDS technical infrastructure.
 
 ## Testing facilities
+
 The following testing facilities are currently proposed:
 
 | Facility Name     | Stack                                               | Components available                                       | Technical buddy                        | Test squad 1   | Test squad 2                  | Status                                                                                                                                            |
-|-------------------|-----------------------------------------------------|------------------------------------------------------------|----------------------------------------|----------------|-------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------|
+| ----------------- | --------------------------------------------------- | ---------------------------------------------------------- | -------------------------------------- | -------------- | ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
 | EDC+VC            | EDC v0.7 with Verifiable Credentials                | TBD                                                        |                                        | imec           | i2cat (ph 1), NTTDATA (ph 2)  | [Ready to start](https://github.com/imec-int/deployEMDS/issues?q=is%3Aopen+is%3Aissue+milestone%3A%22Phase+1%22+label%3Aedc%2Bvc+label%3Aminimal) |
 | Fiware            | Fiware with Verifiable Credentials                  | TBD                                                        | Gernot (Fiware)                        | Fraunhofer     | Cefriel                       | [Ready to start](https://github.com/imec-int/deployEMDS/issues?q=is%3Aopen+is%3Aissue+milestone%3A%22Phase+1%22+label%3Afiware+label%3Aminimal+)  |
 | Pontus-X          | Gaia-X compliant decentralized data economy toolbox | TBD                                                        | TBD                                    | TBD            | TBD                           | Interview had, seems interesting (?)                                                                                                              |
@@ -75,6 +119,7 @@ The following testing facilities are currently proposed:
 | ~~EDC+iShare~~    | ~~EDC v0.7 with iShare~~                            | ~~TBD~~                                                    | ~~Ferdinand (Fairsfair)~~              | ~~Fraunhofer~~ | ~~NTTDATA~~                   | ~~Not developed~~ yet                                                                                                                             |
 | ~~Fiware+iShare~~ | ~~i4Trust~~                                         | ~~TBD~~                                                    | ~~Gernot (Fiware)~~                    | ~~imec~~       | ~~Cefriel~~                   | ~~Deprecated, will not test~~                                                                                                                     |
 | ~~EDC+XFSC~~      | ~~EDC v0.7 with some XFSC components~~              | ~~Catalog, identity provider, wallet from XFSC (Eclipse)~~ | ~~Christoph Lange-Bever (Fraunhofer)~~ | ~~TBD~~        | ~~TBD~~                       | ~~Info session completed, difficult deployment and lower maturity~~                                                                               |
+
 * **Technical buddies** are either commercial providers or experienced partners who help deploying the stacks.
-* The **Test squads** are deployEMDS WP2 workgroup _"Building blocks"_ partners that are responsible for phase 0 and phase 1.
+* The **Test squads** are deployEMDS WP2 workgroup *"Building blocks"* partners that are responsible for phase 0 and phase 1.
 * Please notice: any secret keys have been intentionally redacted and will need to be replaced by user-provided keys to ensure functionality.
