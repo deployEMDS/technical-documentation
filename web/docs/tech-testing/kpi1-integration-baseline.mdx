@@ -1,0 +1,136 @@
+---
+sidebar_position: 3
+---
+
+# KPI1 Integration Baseline
+
+## Objective
+
+This page proposes a simplified baseline approach for **KPI1: maturity, reliability and security of the common technical infrastructure building blocks deployed**.
+
+The objective is not to repeat the initial stack comparison exercise. Instead, the proposal reuses the existing deployEMDS technology testing catalogue and adapts it to the current project need: monitoring the integration readiness of the selected EMDS technical infrastructure.
+
+## Rationale
+
+The original technology testing methodology was designed to compare testing facilities such as EDC+VC and Fiware using common, stack-agnostic test definitions and stack-specific result files.
+
+For KPI1, the same evidence-based logic can be reused, but with a different purpose:
+
+- focus on the **EMDS final / integrated stack**, not on comparing alternative stacks;
+- assess **integration readiness**, not only isolated component availability;
+- distinguish between **UC validation** and **technical validation**;
+- distinguish between **CaaS**, **on-premise** and **mixed** installation models;
+- keep the historical EDC+VC and Fiware results unchanged.
+
+## Proposed result perspective
+
+A new result perspective should be added to selected existing tests:
+
+```text
+EMDS Final Stack
+```
+
+This perspective should be documented as a new result file next to the historical EDC+VC and Fiware results, for example:
+
+```text
+tests/data_sharing/data_sharing_request/request_data_transfer/test_5_1_1_1/result_emds_final_stack.md
+```
+
+This does not replace the historical results. It adds a new baseline view for the current EMDS integrated infrastructure.
+
+## Scope of KPI1
+
+The KPI1 baseline should focus on a limited set of integration areas:
+
+| KPI1 area | Main purpose |
+|---|---|
+| Participant onboarding and identity | Validate whether participants can be onboarded and represented in the trust framework |
+| Connector and data plane | Validate whether the connector and data transfer mechanisms are available and usable |
+| Catalogue and metadata | Validate whether data offers can be published, discovered and described with appropriate metadata |
+| Sharing agreement and negotiation | Validate whether agreement flows can be initiated and traced |
+| Data sharing and transfer | Validate whether test or real data payloads can be transferred |
+| Observability and logging | Validate whether failures, transactions and component health can be monitored |
+| Security and access control | Validate whether authentication, authorization and policy mechanisms are applied |
+| Blockers and support needs | Track unresolved dependencies, ownership and next actions |
+
+## Assessment levels
+
+KPI1 should not be completed only by use cases or only by technical teams. It should combine two complementary levels.
+
+| Level | Completed by | Purpose |
+|---|---|---|
+| UC validation | Use case technical experts / tech buddies | Validate whether the use case can use the stack in practice |
+| Technical validation | Component owners / infrastructure teams | Validate whether the common building blocks are deployed, integrated, reliable and secured |
+
+The UC questionnaire should be treated as an operational input to KPI1, not as the KPI1 assessment itself.
+
+## Installation models
+
+The KPI1 baseline should explicitly distinguish the installation model used by each use case.
+
+| Installation model | Meaning | Main responsibility |
+|---|---|---|
+| CaaS | IONOS-managed deployment | IONOS and relevant component owners validate infrastructure, endpoints and operational evidence |
+| On-premise | Deployment managed in the UC local environment | UC technical team validates infrastructure, network, firewall, DNS, certificates and local deployment |
+| Mixed | Combination of CaaS and local/on-premise components | Shared responsibility between the UC team, IONOS and component owners |
+
+## ISO/IEC 25010 mapping
+
+The KPI1 baseline should not try to cover the complete ISO/IEC 25010 model. For the current integration monitoring purpose, the following quality characteristics are sufficient:
+
+| ISO/IEC 25010 characteristic | KPI1 interpretation |
+|---|---|
+| Functional suitability | The building block provides the required capability |
+| Compatibility / interoperability | The building block integrates with related components and external participants |
+| Reliability | The capability is stable, repeatable and observable enough to support testing |
+| Security | Authentication, authorization, trust and policy controls are in place |
+| Maintainability | Configuration, deployment, versioning and troubleshooting evidence are available |
+
+## Simplified scoring
+
+The baseline should reuse the 0–4 scoring principle from the existing technology testing results, but simplify the interpretation for integration readiness.
+
+| Score | Meaning for KPI1 |
+|---:|---|
+| 0 | Not available / not attempted / no evidence |
+| 1 | Available conceptually or blocked |
+| 2 | Deployed or in progress, but only partially tested |
+| 3 | Working with evidence in a local or controlled context |
+| 4 | Integrated with the common/federated infrastructure, secured, stable and repeatable |
+
+Scores of 3 or 4 should require supporting evidence such as an endpoint response, screenshot, GitHub/Jira issue, log, test execution result, deployment status, or confirmation from the relevant component owner.
+
+## Proposed dynamic tracker
+
+A shared Excel Online / SharePoint tracker can be used to connect the weekly WP2 questionnaire updates with KPI1 consolidation.
+
+Suggested tabs:
+
+| Tab | Purpose |
+|---|---|
+| Weekly UC questionnaire | Raw weekly responses from use cases and tech buddies |
+| KPI1 mapping | Mapping between questionnaire questions, existing test IDs and KPI1 areas |
+| KPI1 scoring | Consolidated score by week, UC, installation model, area and evidence |
+| Blockers and actions | Blocker, owner, priority, status and next action |
+| Dashboard | Pivot views by UC, component area, installation model and blocker owner |
+
+## Proposed minimum test set
+
+The initial KPI1 baseline should reuse a small subset of the existing deployEMDS tests, rather than creating a new test catalogue.
+
+| KPI1 area | Example existing test IDs |
+|---|---|
+| Participant onboarding and identity | 1.2.1.1, 1.3.1.5 |
+| Connector and data plane | 2.1.1.3 |
+| Policies and usage control | 2.1.3.1, 2.2.2.1 |
+| Catalogue and metadata | 2.2.3.1A/B/D, 3.1.1.1, 3.1.1.4 |
+| Sharing agreement and negotiation | 4.2.1.1, 4.2.1.6, 4.2.1.7, 4.2.3.1, 4.2.3.2 |
+| Data sharing and transfer | 5.1.1.1, 5.1.1.2, 5.2.1.1 |
+
+## Proposed decision
+
+The WP2 questionnaire and KPI1 should be aligned through a common tracking format, but not fully merged conceptually.
+
+The questionnaire provides the weekly operational input from the use cases. KPI1 provides the consolidated assessment of maturity, reliability and security of the common technical infrastructure.
+
+The existing EDC+VC and Fiware results should remain as historical stack-comparison evidence. A new `EMDS Final Stack` result perspective should be added to selected tests to support the KPI1 integration baseline.
