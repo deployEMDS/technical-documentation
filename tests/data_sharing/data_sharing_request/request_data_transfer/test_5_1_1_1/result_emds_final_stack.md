@@ -1,102 +1,114 @@
-# Result: EMDS Final Stack
+## [5.1.1.1] Data sharing: Data sharing request - Request data transfer
 
-## Information
+### Stack: EMDS Final Stack (EDC-based)
 
-| Field | Value |
-|---|---|
-| Result perspective | EMDS Final Stack |
-| Existing test ID | 5.1.1.1 |
-| Existing test name | Request data transfer |
-| KPI | KPI1 - Maturity, reliability and security of the common technical infrastructure building blocks deployed |
-| Assessment purpose | Integration readiness baseline |
-| Assessment level | UC validation + technical validation |
-| Installation model | CaaS / On-premise / Mixed |
-| Status | Draft baseline template |
+### Statement of assessment
 
-## Context
+#### Environment
 
-This result file does not replace the historical EDC+VC or Fiware test results. It adds a new result perspective for the current EMDS integrated technical infrastructure.
+- The assessment targets the current EMDS integrated technical infrastructure.
+- The stack is based on the EDC connector and the common/federated EMDS building blocks selected for the current project phase.
+- The assessment should distinguish between the following installation models:
+  - CaaS: IONOS-managed deployment.
+  - On-premise: deployment managed by the local UC technical team.
+  - Mixed: combination of CaaS and local/on-premise components.
+- The exact EDC version, deployment environment, release and component configuration must be confirmed during the KPI1 baseline execution.
+- This result perspective does not replace the historical EDC+VC or Fiware results. It introduces an EMDS Final Stack perspective focused on integration readiness.
 
-The purpose is to reuse the existing deployEMDS technology testing catalogue for KPI1, while adapting the assessment to the current project phase. The focus is not stack comparison, but the integration readiness of the selected common infrastructure.
+#### Tested quality metric and method
 
-## Quality model mapping
+The quality metric for this test is based on the criteria outlined in [iso27001_kpis_subkpis.xlsx](../../../../../design_decisions/background_info/iso27001_kpis_subkpis.xlsx).
 
-For KPI1, this test is mapped to the following ISO/IEC 25010 characteristics:
+For the KPI1 baseline, the original evidence-based technology testing approach is reused and simplified. The objective is no longer to compare stacks, but to assess the maturity, reliability and security of the common EMDS technical infrastructure building blocks deployed.
 
-| ISO/IEC 25010 characteristic | Interpretation for this test |
-|---|---|
-| Functional suitability | The stack provides a mechanism to request and manage data transfer |
-| Compatibility / interoperability | The transfer process can operate across relevant EMDS components and participants |
-| Reliability | Transfer status, results and past actions can be retrieved or traced |
-| Security | The transfer request and related APIs are protected by the expected access control mechanisms |
-| Maintainability | Evidence is available to troubleshoot and repeat the test |
+The assessment is mapped to selected ISO/IEC 25010 quality characteristics:
 
-## Expected capability
+- Functional suitability: the transfer request capability provides the expected functionality.
+- Compatibility / interoperability: the transfer flow integrates with the relevant EMDS components and data planes.
+- Reliability: the transfer request can be executed and monitored in a repeatable way.
+- Security: the API and related flows are authenticated, authorised and protected.
+- Maintainability: the flow can be configured, monitored, troubleshot and documented.
 
-The EMDS final stack should provide a documented and secured mechanism to:
+The result should be informed by two complementary validation levels:
+
+| Level | Completed by | Purpose |
+|---|---|---|
+| UC validation | Use case technical experts / tech buddies | Validate whether the use case can execute or use the transfer flow in practice |
+| Technical validation | Component owners / infrastructure teams | Validate whether the common building blocks are deployed, integrated, reliable and secured |
+
+#### Expected Output
+
+The test aims to provide a comprehensive evaluation of the following aspects:
+
+- **Assess the availability of the data transfer API:** Ensure that the relevant API or transfer mechanism is accessible and functional in the EMDS final stack.
+- **Test data sharing requests:** Verify that data sharing requests are correctly processed, covering these steps:
+  - Initiating a data sharing request.
+  - Retrieving information and status of the data sharing request.
+  - Receiving the outcome of the data sharing request, including conditions.
+  - Accessing information on past data sharing activities.
+- **Distinguish local and federated execution:** Identify whether the transfer flow works only locally, through the common/federated infrastructure, or across sites.
+- **Capture evidence:** Collect endpoint responses, screenshots, logs, GitHub/Jira references, deployment status or confirmation from the relevant component owner.
+- **Identify blockers:** Record technical, organisational, infrastructure, security or documentation blockers.
+
+The system will score higher if the transfer request is integrated with the common/federated EMDS infrastructure, secured, stable, repeatable and supported by evidence.
+
+### Results
+
+#### Assessment
+
+The EMDS Final Stack assessment reuses this existing test definition to validate whether the current EDC-based EMDS infrastructure can support data transfer requests from an integration-readiness perspective.
+
+The assessment should verify whether the selected deployment model, CaaS, on-premise or mixed, can support the following capabilities:
 
 - initiate a data sharing request;
 - retrieve data sharing information and status;
-- receive or inspect the outcome of the request;
-- retrieve information about past data sharing actions;
-- provide enough operational evidence through API responses, logs, screenshots, GitHub/Jira issues, deployment status or test execution records.
+- receive the outcome of the request;
+- retrieve information about previous data sharing actions;
+- provide sufficient logs or operational evidence to troubleshoot the flow;
+- confirm whether the flow is local, federated or cross-site.
 
-## Assessment dimensions
+For CaaS deployments, infrastructure availability, endpoint exposure, access credentials and logs are mainly validated by IONOS and the relevant component owners.
 
-| Dimension | Question |
-|---|---|
-| UC validation | Can the use case or tech buddy execute or observe the data transfer flow in practice? |
-| Technical validation | Is the underlying common infrastructure deployed, integrated, secured and technically verifiable? |
-| Installation model | Is the evidence coming from CaaS, on-premise or a mixed setup? |
-| Evidence | Is there a concrete artefact supporting the score? |
+For on-premise deployments, the UC technical team validates the local installation, network configuration, firewall/DNS/certificate constraints and connectivity with the common/federated infrastructure.
 
-## Scoring scale
+#### Measured results
 
-| Score | Meaning for KPI1 |
+| Requirement | UC validation | Technical validation | Evidence | Measured KPI |
+|---|---|---|---|---:|
+| Initiate a data sharing request | To be completed | To be completed | TBD | TBD |
+| Retrieve data sharing information and status | To be completed | To be completed | TBD | TBD |
+| Receive data sharing request outcome condition | To be completed | To be completed | TBD | TBD |
+| Retrieve data sharing information of past data sharing actions | To be completed | To be completed | TBD | TBD |
+
+**Overall Calculation:** TBD  
+**Functional Suitability Quality Metric Score:** TBD
+
+#### KPI1 scoring interpretation
+
+For the KPI1 baseline, the following simplified 0-4 scale is proposed:
+
+| Score | Meaning |
 |---:|---|
 | 0 | Not available / not attempted / no evidence |
 | 1 | Available conceptually or blocked |
-| 2 | Deployed or in progress, but only partially tested |
-| 3 | Working with evidence in a local or controlled context |
+| 2 | Deployed or in progress, but partially tested |
+| 3 | Working with evidence in local or controlled context |
 | 4 | Integrated with the common/federated infrastructure, secured, stable and repeatable |
 
-Scores of 3 or 4 require supporting evidence.
+A score of 3 or higher should be supported by evidence.
 
-## Results
+#### Notes
 
-| Requirement | UC validation | Technical validation | Installation model | Evidence | Score |
-|---|---|---|---|---|---:|
-| Initiate a data sharing request | To be completed | To be completed | CaaS / On-premise / Mixed | TBD | TBD |
-| Retrieve data sharing information and status | To be completed | To be completed | CaaS / On-premise / Mixed | TBD | TBD |
-| Receive or inspect the data sharing request outcome | To be completed | To be completed | CaaS / On-premise / Mixed | TBD | TBD |
-| Retrieve information about past data sharing actions | To be completed | To be completed | CaaS / On-premise / Mixed | TBD | TBD |
-| Access logs, status or operational evidence for troubleshooting | To be completed | To be completed | CaaS / On-premise / Mixed | TBD | TBD |
+This result perspective is intended as a baseline template for the EMDS Final Stack.
 
-## Installation model considerations
+It should be completed during the KPI1 assessment using evidence from:
 
-### CaaS
+- WP2 questionnaire updates;
+- UC validation tests;
+- technical validation by component owners;
+- IONOS CaaS deployment status, where applicable;
+- on-premise deployment evidence, where applicable;
+- GitHub/Jira issues;
+- logs, screenshots, endpoint responses or test execution records.
 
-For CaaS deployments, the infrastructure availability, endpoint exposure, service health, logs and operational evidence should mainly be validated by IONOS and the relevant component owners. The UC or tech buddy validates whether the capability can be used from the use case perspective.
-
-### On-premise
-
-For on-premise deployments, the UC technical team validates local installation, network access, firewall/DNS/certificate constraints and connectivity with the common or federated infrastructure. Component owners support the validation of integration points.
-
-### Mixed
-
-For mixed setups, evidence should explicitly state which part of the flow is running in CaaS and which part is running locally.
-
-## KPI1 assessment
-
-| Item | Value |
-|---|---|
-| Overall score | TBD |
-| Main maturity gap | TBD |
-| Main reliability gap | TBD |
-| Main security gap | TBD |
-| Main blocker | TBD |
-| Owner / next action | TBD |
-
-## Notes
-
-This file is intended as a draft template to demonstrate how KPI1 can be integrated into the existing deployEMDS testing structure without changing the historical EDC+VC and Fiware results.
+The result should not be interpreted as a new stack comparison. It is an integration-readiness assessment of the selected EMDS technical infrastructure.
