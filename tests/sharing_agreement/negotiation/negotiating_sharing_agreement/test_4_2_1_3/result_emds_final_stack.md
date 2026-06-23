@@ -1,4 +1,4 @@
-## [5.1.1.1] Data sharing: Data sharing request - Request data transfer
+## [4.2.1.3] Sharing agreement: Negotiation - Negotiating sharing agreement
 
 ### Stack: EMDS Final Stack (EDC-based)
 
@@ -13,12 +13,12 @@ This section identifies the technical context in which the EMDS Final Stack asse
 | Assessment context | Integration phase assessment of the EMDS final technical infrastructure |
 | Result perspective | `emds_final_stack` |
 | Stack under assessment | EMDS Final Stack (EDC-based) |
-| KPI1 area | Data sharing request |
-| Existing test ID | `5.1.1.1` |
-| Level | UC + Technical |
-| ISO/IEC 25010 mapping | Functional suitability, Reliability, Security |
-| Owner (tentative) | Casper (imec) |
-| Reviewer | Wilhelm |
+| KPI1 area | Sharing agreement |
+| Existing test ID | `4.2.1.3` |
+| Level | Technical |
+| ISO/IEC 25010 mapping | Functional suitability, Compatibility, Security |
+| Owner (tentative) | Xavier (Eurocat) |
+| Reviewer | TBD |
 | Deployment model assessed | TBD |
 | Target environment | TBD |
 | EDC version / release | TBD |
@@ -39,25 +39,19 @@ The quality metric, expected output and comparative criteria remain those define
 
 #### Test-specific assessment scope
 
-Coverage test: assess that the API is available and test that a data sharing request is properly covered: 
-- Initiate a data sharing 
-- Retrieve data sharing information and status 
-- Receive data sharing request outcome condition 
-- Retrieve data sharing information of past data sharing actions. 
+Prove that the negotiation can use (one or more of) the following assets and parameters to define a contract:
+- Claim verification
+- Usage policy rules
+- Service Agreements
 
-The system ranks higher if the API is secured and implements common methods, like REST.
+The larger the coverage (i.e. more possibilities), the higher the rank.
 
 #### Expected Output
 
-The test aims to provide a comprehensive evaluation of the following aspects:
-
-- **Assess the Availability of the API:** Ensure that the API is accessible and functional.
-- **Test Data Sharing Requests:** Verify that data sharing requests are correctly processed, covering these steps:
-    - Initiating a data sharing request.
-    - Retrieving information and status of the data sharing request.
-    - Receiving the outcome of the data sharing request, including conditions.
-    - Accessing information on past data sharing activities.
-The system will score higher if the API is secured and utilizes standard methods, such as REST.
+The test aims to evaluate the coverage of the following criteria on contract negotiation:
+- Claim verification
+- Usage policy rules
+- Service Agreements
 
 ### Results
 
@@ -78,19 +72,19 @@ The result should clearly indicate which deployment model was assessed. It is ac
 
 #### Measured results
 
-| Requirement | Measured KPI |
-| -|--------------|
-| Initiate a data sharing | TBD |
-| Retrieve data sharing information and status | TBD |
-| Receive data sharing request outcome condition | TBD |
-| Retrieve data sharing information of past data sharing actions. | TBD |
+| **Criteria** | Measured KPI | Evidence | Notes |
+| --- | ---: | --- | --- |
+| **No Proof:** The solution does not demonstrate the ability to use any of the specified assets or parameters (Claim Verification, Usage Policy Rules, Service Agreements) in the negotiation process to define a contract. | TBD | TBD | Pending EMDS Final Stack assessment. |
+| **Limited Proof:** The solution demonstrates the ability to use only one of the specified assets or parameters in the negotiation process to define a contract. | TBD | TBD | Pending EMDS Final Stack assessment. |
+| **Moderate Proof:** The solution demonstrates the ability to use two of the specified assets or parameters in the negotiation process to define a contract. | TBD | TBD | Pending EMDS Final Stack assessment. |
+| **Extensive Proof:** The solution demonstrates the ability to use all three specified assets or parameters in the negotiation process to define a contract, though with some limitations in coverage or flexibility. | TBD | TBD | Pending EMDS Final Stack assessment. |
+| **Comprehensive Proof:** The solution fully demonstrates the ability to use all three specified assets or parameters (Claim Verification, Usage Policy Rules, Service Agreements) in a flexible and comprehensive negotiation process, effectively covering a wide range of possibilities to define and manage contracts. | TBD | TBD | Pending EMDS Final Stack assessment. |
 
-**Overall Calculation:** TBD
-**Functional Suitability Quality Metric Score:** TBD
+**Functional suitability quality metric:** TBD
 
 #### Notes
 
-This result introduces an **EMDS Final Stack** perspective for the existing test `5.1.1.1` under the KPI1 area **Data sharing request**.
+This result introduces an **EMDS Final Stack** perspective for the existing test `4.2.1.3` under the KPI1 area **Sharing agreement**.
 
 This result should not be interpreted as part of the original Phase 1 / Phase 2 stack-comparison campaign. It is intended as an integration phase assessment of the current EMDS final technical infrastructure.
 

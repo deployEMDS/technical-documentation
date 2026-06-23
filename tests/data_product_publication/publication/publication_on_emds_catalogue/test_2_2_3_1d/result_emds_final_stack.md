@@ -1,4 +1,4 @@
-## [5.1.1.1] Data sharing: Data sharing request - Request data transfer
+## [2.2.3.1D] Data product publication: Publication - Publication on EMDS catalogue
 
 ### Stack: EMDS Final Stack (EDC-based)
 
@@ -13,12 +13,12 @@ This section identifies the technical context in which the EMDS Final Stack asse
 | Assessment context | Integration phase assessment of the EMDS final technical infrastructure |
 | Result perspective | `emds_final_stack` |
 | Stack under assessment | EMDS Final Stack (EDC-based) |
-| KPI1 area | Data sharing request |
-| Existing test ID | `5.1.1.1` |
+| KPI1 area | Catalogue publication |
+| Existing test ID | `2.2.3.1D` |
 | Level | UC + Technical |
-| ISO/IEC 25010 mapping | Functional suitability, Reliability, Security |
-| Owner (tentative) | Casper (imec) |
-| Reviewer | Wilhelm |
+| ISO/IEC 25010 mapping | Functional suitability, Compatibility |
+| Owner (tentative) | Alessio (Cefriel) / Wilhelm |
+| Reviewer | Alessio |
 | Deployment model assessed | TBD |
 | Target environment | TBD |
 | EDC version / release | TBD |
@@ -39,25 +39,11 @@ The quality metric, expected output and comparative criteria remain those define
 
 #### Test-specific assessment scope
 
-Coverage test: assess that the API is available and test that a data sharing request is properly covered: 
-- Initiate a data sharing 
-- Retrieve data sharing information and status 
-- Receive data sharing request outcome condition 
-- Retrieve data sharing information of past data sharing actions. 
-
-The system ranks higher if the API is secured and implements common methods, like REST.
+Test the process of catalogue publication for a data product under the following conditions: a data product is de-published.
 
 #### Expected Output
 
-The test aims to provide a comprehensive evaluation of the following aspects:
-
-- **Assess the Availability of the API:** Ensure that the API is accessible and functional.
-- **Test Data Sharing Requests:** Verify that data sharing requests are correctly processed, covering these steps:
-    - Initiating a data sharing request.
-    - Retrieving information and status of the data sharing request.
-    - Receiving the outcome of the data sharing request, including conditions.
-    - Accessing information on past data sharing activities.
-The system will score higher if the API is secured and utilizes standard methods, such as REST.
+The test aims to examine the process of catalog de-publication for a data product under the following conditions: a data product is removed (de-published) from the catalog. The EMDS catalog, as defined in the relevant documentation, refers to the Data Space-only catalog, specifically the internal EDC catalog and its federation component.
 
 ### Results
 
@@ -78,19 +64,19 @@ The result should clearly indicate which deployment model was assessed. It is ac
 
 #### Measured results
 
-| Requirement | Measured KPI |
-| -|--------------|
-| Initiate a data sharing | TBD |
-| Retrieve data sharing information and status | TBD |
-| Receive data sharing request outcome condition | TBD |
-| Retrieve data sharing information of past data sharing actions. | TBD |
+| **Criteria** | Measured KPI | Evidence | Notes |
+| --- | ---: | --- | --- |
+| **No Coverage:** The solution does not provide any functionality for de-publishing a data product from the catalog. Users cannot remove or hide a data product once it is published, and achieving this requires extensive custom development or workarounds. | TBD | TBD | Pending EMDS Final Stack assessment. |
+| **Minimal Coverage:** The solution meets up to 25% of the evaluation criteria. It may offer basic de-publication functionality, but this is not fully operational out of the box and requires significant technical effort or development to implement. The process is cumbersome and not intuitive for end users. | TBD | TBD | Pending EMDS Final Stack assessment. |
+| **Partial Coverage:** The solution satisfies approximately 50% of the evaluation criteria. It allows for de-publishing of data products but requires some degree of customization or development to function correctly. Additionally, the process may be partially intuitive but could still pose challenges for end users in terms of usability. | TBD | TBD | Pending EMDS Final Stack assessment. |
+| **Significant Coverage:** The solution covers about 80% of the evaluation criteria. It provides effective de-publication functionality with minimal development required. The de-publication process is mostly intuitive and user-friendly, with only minor usability issues or adjustments needed. | TBD | TBD | Pending EMDS Final Stack assessment. |
+| **Full Coverage:** The solution fully meets all evaluation criteria. It offers complete, out-of-the-box functionality for de-publishing a data product, allowing users to easily remove or hide a data product from the catalog. The process is straightforward, intuitive, and requires no additional development or technical modifications. | TBD | TBD | Pending EMDS Final Stack assessment. |
 
-**Overall Calculation:** TBD
-**Functional Suitability Quality Metric Score:** TBD
+**Functional Suitability Quality Metric:** TBD
 
 #### Notes
 
-This result introduces an **EMDS Final Stack** perspective for the existing test `5.1.1.1` under the KPI1 area **Data sharing request**.
+This result introduces an **EMDS Final Stack** perspective for the existing test `2.2.3.1D` under the KPI1 area **Catalogue publication**.
 
 This result should not be interpreted as part of the original Phase 1 / Phase 2 stack-comparison campaign. It is intended as an integration phase assessment of the current EMDS final technical infrastructure.
 

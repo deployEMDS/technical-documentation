@@ -1,4 +1,4 @@
-## [5.1.1.1] Data sharing: Data sharing request - Request data transfer
+## [2.2.3.3] Data product publication: Publication - Publication on EMDS catalogue
 
 ### Stack: EMDS Final Stack (EDC-based)
 
@@ -13,12 +13,12 @@ This section identifies the technical context in which the EMDS Final Stack asse
 | Assessment context | Integration phase assessment of the EMDS final technical infrastructure |
 | Result perspective | `emds_final_stack` |
 | Stack under assessment | EMDS Final Stack (EDC-based) |
-| KPI1 area | Data sharing request |
-| Existing test ID | `5.1.1.1` |
+| KPI1 area | Catalogue publication |
+| Existing test ID | `2.2.3.3` |
 | Level | UC + Technical |
-| ISO/IEC 25010 mapping | Functional suitability, Reliability, Security |
-| Owner (tentative) | Casper (imec) |
-| Reviewer | Wilhelm |
+| ISO/IEC 25010 mapping | Functional suitability, Compatibility |
+| Owner (tentative) | Alessio (Cefriel) / Wilhelm |
+| Reviewer | Alessio |
 | Deployment model assessed | TBD |
 | Target environment | TBD |
 | EDC version / release | TBD |
@@ -39,25 +39,11 @@ The quality metric, expected output and comparative criteria remain those define
 
 #### Test-specific assessment scope
 
-Coverage test: assess that the API is available and test that a data sharing request is properly covered: 
-- Initiate a data sharing 
-- Retrieve data sharing information and status 
-- Receive data sharing request outcome condition 
-- Retrieve data sharing information of past data sharing actions. 
-
-The system ranks higher if the API is secured and implements common methods, like REST.
+Assess that a GUI for the functionality to publish a data product offering into the catalogue and discovery tools is available.
 
 #### Expected Output
 
-The test aims to provide a comprehensive evaluation of the following aspects:
-
-- **Assess the Availability of the API:** Ensure that the API is accessible and functional.
-- **Test Data Sharing Requests:** Verify that data sharing requests are correctly processed, covering these steps:
-    - Initiating a data sharing request.
-    - Retrieving information and status of the data sharing request.
-    - Receiving the outcome of the data sharing request, including conditions.
-    - Accessing information on past data sharing activities.
-The system will score higher if the API is secured and utilizes standard methods, such as REST.
+The test aims to verify the availability of a GUI for publishing a data product offering into the catalog and discovery tools.
 
 ### Results
 
@@ -78,19 +64,19 @@ The result should clearly indicate which deployment model was assessed. It is ac
 
 #### Measured results
 
-| Requirement | Measured KPI |
-| -|--------------|
-| Initiate a data sharing | TBD |
-| Retrieve data sharing information and status | TBD |
-| Receive data sharing request outcome condition | TBD |
-| Retrieve data sharing information of past data sharing actions. | TBD |
+| Criteria | Measured KPI | Evidence | Notes |
+| --- | ---: | --- | --- |
+| **No Coverage:** No technical requirements are met. The solution does not have a GUI tool for publishing a data product offering into the catalogue and enabling discovery. The system does not provide any GUI means for users to interact with or manage data product offerings. | TBD | TBD | Pending EMDS Final Stack assessment. |
+| **Minimal Coverage:** Up to 25% of the technical requirements are met. The solution provides limited functionality, such as a basic GUI tool with minimal features, allowing for partial publication of data products but lacks robust discovery options. User interface might be clunky, and only a few essential functions are available. | TBD | TBD | Pending EMDS Final Stack assessment. |
+| **Partial Coverage:** Approximately 50% of the technical requirements are met. The solution includes a GUI tool that allows for the publication of data products and some discovery features. However, it lacks advanced functionality, such as customizable search options, detailed metadata management, or integration with other systems. Usability and user experience are moderately acceptable. | TBD | TBD | Pending EMDS Final Stack assessment. |
+| **Significant Coverage:** About 80% of the technical requirements are met. The solution offers a comprehensive GUI tool with most required features, such as advanced publication workflows, robust discovery capabilities, customizable search filters, and metadata management. Integration with other systems and platforms is partially supported, and the user experience is generally smooth. However, some advanced features or full system integration might still be lacking. | TBD | TBD | Pending EMDS Final Stack assessment. |
+| **Full Coverage:** All technical requirements are fully met. The solution includes a fully featured GUI tool for publishing data product offerings into the catalogue, complete with advanced discovery features, customizable search options, detailed metadata management, and full integration with other systems. The user interface is intuitive and user-friendly, providing an excellent user experience. | TBD | TBD | Pending EMDS Final Stack assessment. |
 
-**Overall Calculation:** TBD
-**Functional Suitability Quality Metric Score:** TBD
+**Functional Suitability Quality Metric:** TBD
 
 #### Notes
 
-This result introduces an **EMDS Final Stack** perspective for the existing test `5.1.1.1` under the KPI1 area **Data sharing request**.
+This result introduces an **EMDS Final Stack** perspective for the existing test `2.2.3.3` under the KPI1 area **Catalogue publication**.
 
 This result should not be interpreted as part of the original Phase 1 / Phase 2 stack-comparison campaign. It is intended as an integration phase assessment of the current EMDS final technical infrastructure.
 

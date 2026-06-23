@@ -1,4 +1,4 @@
-## [5.1.1.1] Data sharing: Data sharing request - Request data transfer
+## [5.2.1.1] Data sharing: Data sharing activities - Enforce usage control
 
 ### Stack: EMDS Final Stack (EDC-based)
 
@@ -13,12 +13,12 @@ This section identifies the technical context in which the EMDS Final Stack asse
 | Assessment context | Integration phase assessment of the EMDS final technical infrastructure |
 | Result perspective | `emds_final_stack` |
 | Stack under assessment | EMDS Final Stack (EDC-based) |
-| KPI1 area | Data sharing request |
-| Existing test ID | `5.1.1.1` |
-| Level | UC + Technical |
-| ISO/IEC 25010 mapping | Functional suitability, Reliability, Security |
-| Owner (tentative) | Casper (imec) |
-| Reviewer | Wilhelm |
+| KPI1 area | Usage control enforcement |
+| Existing test ID | `5.2.1.1` |
+| Level | Technical |
+| ISO/IEC 25010 mapping | Security, Maintainability |
+| Owner (tentative) | Xavier (Eurocat) |
+| Reviewer | Xavier |
 | Deployment model assessed | TBD |
 | Target environment | TBD |
 | EDC version / release | TBD |
@@ -39,25 +39,18 @@ The quality metric, expected output and comparative criteria remain those define
 
 #### Test-specific assessment scope
 
-Coverage test: assess that the API is available and test that a data sharing request is properly covered: 
-- Initiate a data sharing 
-- Retrieve data sharing information and status 
-- Receive data sharing request outcome condition 
-- Retrieve data sharing information of past data sharing actions. 
-
-The system ranks higher if the API is secured and implements common methods, like REST.
+Test the policies that are supported out of the box.  
+For the policies that are not supported, describe the effort of how to build them, and rank the system consequently (e.g.: create a plugin in a documented environment ranks better than integrating an external function that introduces dependencies and interface maintenance).
 
 #### Expected Output
 
-The test aims to provide a comprehensive evaluation of the following aspects:
+Usage control is defined based on the IDSA Position Paper “[Data Usage Control in IDS](https://internationaldataspaces.org/data-sovereignty-updated-position-paper-on-data-usage-control-in-the-ids/)”. Usage control involves specifying and enforcing restrictions on what must (or must not) happen to data after access has been granted.
 
-- **Assess the Availability of the API:** Ensure that the API is accessible and functional.
-- **Test Data Sharing Requests:** Verify that data sharing requests are correctly processed, covering these steps:
-    - Initiating a data sharing request.
-    - Retrieving information and status of the data sharing request.
-    - Receiving the outcome of the data sharing request, including conditions.
-    - Accessing information on past data sharing activities.
-The system will score higher if the API is secured and utilizes standard methods, such as REST.
+The test aims to evaluate which usage policies are supported out of the box. For those policies not natively supported, it should describe the effort needed to implement them and rank the system accordingly. For instance, creating a plugin within a documented environment is rated more favorably than integrating an external function that introduces dependencies and requires interface maintenance. The essential policies that need to be implemented are:
+
+- **Allow-usage:** Always true or false.
+- **Role-restricted:** Based on the role of the participant.
+- **Location-restricted:** Based on the location of the consumer, typically "EU" or "Non-EU".
 
 ### Results
 
@@ -78,19 +71,20 @@ The result should clearly indicate which deployment model was assessed. It is ac
 
 #### Measured results
 
-| Requirement | Measured KPI |
-| -|--------------|
-| Initiate a data sharing | TBD |
-| Retrieve data sharing information and status | TBD |
-| Receive data sharing request outcome condition | TBD |
-| Retrieve data sharing information of past data sharing actions. | TBD |
+| Criteria | Measured KPI | Evidence | Notes |
+| --- | ---: | --- | --- |
+| No out of the box policies | TBD | TBD | Pending EMDS Final Stack assessment. |
+| No out of the box policies but policies are available from a library | TBD | TBD | Pending EMDS Final Stack assessment. |
+| Partial out-of-the-box-policies | TBD | TBD | Pending EMDS Final Stack assessment. |
+| Full set of out-of-the-box policies | TBD | TBD | Pending EMDS Final Stack assessment. |
+| Documented way to create/expand policies | TBD | TBD | Pending EMDS Final Stack assessment. |
+| Documented way to create/expand policies + templates for basic polices | TBD | TBD | Pending EMDS Final Stack assessment. |
 
-**Overall Calculation:** TBD
-**Functional Suitability Quality Metric Score:** TBD
+**Functional Suitability Quality Metric:** TBD
 
 #### Notes
 
-This result introduces an **EMDS Final Stack** perspective for the existing test `5.1.1.1` under the KPI1 area **Data sharing request**.
+This result introduces an **EMDS Final Stack** perspective for the existing test `5.2.1.1` under the KPI1 area **Usage control enforcement**.
 
 This result should not be interpreted as part of the original Phase 1 / Phase 2 stack-comparison campaign. It is intended as an integration phase assessment of the current EMDS final technical infrastructure.
 

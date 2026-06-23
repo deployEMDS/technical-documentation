@@ -1,4 +1,4 @@
-## [5.1.1.1] Data sharing: Data sharing request - Request data transfer
+## [4.2.1.6] Sharing agreement: Negotiation - Negotiating sharing agreement
 
 ### Stack: EMDS Final Stack (EDC-based)
 
@@ -13,12 +13,12 @@ This section identifies the technical context in which the EMDS Final Stack asse
 | Assessment context | Integration phase assessment of the EMDS final technical infrastructure |
 | Result perspective | `emds_final_stack` |
 | Stack under assessment | EMDS Final Stack (EDC-based) |
-| KPI1 area | Data sharing request |
-| Existing test ID | `5.1.1.1` |
-| Level | UC + Technical |
-| ISO/IEC 25010 mapping | Functional suitability, Reliability, Security |
+| KPI1 area | Security and restricted access |
+| Existing test ID | `4.2.1.6` |
+| Level | Technical |
+| ISO/IEC 25010 mapping | Security |
 | Owner (tentative) | Casper (imec) |
-| Reviewer | Wilhelm |
+| Reviewer | Casper |
 | Deployment model assessed | TBD |
 | Target environment | TBD |
 | EDC version / release | TBD |
@@ -39,25 +39,11 @@ The quality metric, expected output and comparative criteria remain those define
 
 #### Test-specific assessment scope
 
-Coverage test: assess that the API is available and test that a data sharing request is properly covered: 
-- Initiate a data sharing 
-- Retrieve data sharing information and status 
-- Receive data sharing request outcome condition 
-- Retrieve data sharing information of past data sharing actions. 
-
-The system ranks higher if the API is secured and implements common methods, like REST.
+Validate that the data sharing protocol is compatible with channel encryption (e.g. TLS), that a connector authentication has taken place exclusively for the data sharing negotiation.
 
 #### Expected Output
 
-The test aims to provide a comprehensive evaluation of the following aspects:
-
-- **Assess the Availability of the API:** Ensure that the API is accessible and functional.
-- **Test Data Sharing Requests:** Verify that data sharing requests are correctly processed, covering these steps:
-    - Initiating a data sharing request.
-    - Retrieving information and status of the data sharing request.
-    - Receiving the outcome of the data sharing request, including conditions.
-    - Accessing information on past data sharing activities.
-The system will score higher if the API is secured and utilizes standard methods, such as REST.
+The test aims to assess whether the data sharing protocol is compatible with channel encryption (e.g., TLS) and whether connector authentication has occurred solely for the purpose of data sharing negotiation.
 
 ### Results
 
@@ -78,19 +64,19 @@ The result should clearly indicate which deployment model was assessed. It is ac
 
 #### Measured results
 
-| Requirement | Measured KPI |
-| -|--------------|
-| Initiate a data sharing | TBD |
-| Retrieve data sharing information and status | TBD |
-| Receive data sharing request outcome condition | TBD |
-| Retrieve data sharing information of past data sharing actions. | TBD |
+| **Criteria** | Measured KPI | Evidence | Notes |
+| --- | ---: | --- | --- |
+| **No Coverage:** The solution fails to meet any of the specified technical requirements. It is not compatible with essential security protocols such as channel encryption (e.g., TLS), and no connector authentication has been implemented for data-sharing negotiations. The solution is completely inadequate for secure and effective operation. | TBD | TBD | Pending EMDS Final Stack assessment. |
+| **Minimal Coverage:** The solution meets up to 25% of the technical requirements. It offers very basic functionality, with significant limitations. Some minimal security measures might be in place, but critical features like connector authentication or comprehensive encryption are largely absent or inadequately implemented. | TBD | TBD | Pending EMDS Final Stack assessment. |
+| **Partial Coverage:** The solution satisfies approximately 50% of the technical requirements. While it includes some important features and may partially support security protocols and authentication processes, there are still substantial gaps that limit its overall effectiveness and reliability. | TBD | TBD | Pending EMDS Final Stack assessment. |
+| **Significant Coverage:** The solution covers about 80% of the technical requirements. It demonstrates a strong alignment with the desired technical criteria, including robust support for channel encryption and authentication mechanisms, though there may be minor areas where further improvement is needed. | TBD | TBD | Pending EMDS Final Stack assessment. |
+| **Full Coverage:** The solution fully meets all specified technical requirements. It provides comprehensive support for all key features, including complete compatibility with channel encryption protocols (e.g., TLS) and effective connector authentication for secure data-sharing negotiations. There are no significant gaps, making the solution highly suitable for deployment. | TBD | TBD | Pending EMDS Final Stack assessment. |
 
-**Overall Calculation:** TBD
-**Functional Suitability Quality Metric Score:** TBD
+**Functional Suitability Quality Metric:** TBD
 
 #### Notes
 
-This result introduces an **EMDS Final Stack** perspective for the existing test `5.1.1.1` under the KPI1 area **Data sharing request**.
+This result introduces an **EMDS Final Stack** perspective for the existing test `4.2.1.6` under the KPI1 area **Security and restricted access**.
 
 This result should not be interpreted as part of the original Phase 1 / Phase 2 stack-comparison campaign. It is intended as an integration phase assessment of the current EMDS final technical infrastructure.
 

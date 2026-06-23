@@ -1,4 +1,4 @@
-## [5.1.1.1] Data sharing: Data sharing request - Request data transfer
+## [5.1.1.2] Data sharing: Data sharing request - Request data transfer
 
 ### Stack: EMDS Final Stack (EDC-based)
 
@@ -13,12 +13,12 @@ This section identifies the technical context in which the EMDS Final Stack asse
 | Assessment context | Integration phase assessment of the EMDS final technical infrastructure |
 | Result perspective | `emds_final_stack` |
 | Stack under assessment | EMDS Final Stack (EDC-based) |
-| KPI1 area | Data sharing request |
-| Existing test ID | `5.1.1.1` |
+| KPI1 area | Minimal data transfer |
+| Existing test ID | `5.1.1.2` |
 | Level | UC + Technical |
-| ISO/IEC 25010 mapping | Functional suitability, Reliability, Security |
+| ISO/IEC 25010 mapping | Functional suitability, Compatibility, Reliability |
 | Owner (tentative) | Casper (imec) |
-| Reviewer | Wilhelm |
+| Reviewer | Carlos |
 | Deployment model assessed | TBD |
 | Target environment | TBD |
 | EDC version / release | TBD |
@@ -39,25 +39,21 @@ The quality metric, expected output and comparative criteria remain those define
 
 #### Test-specific assessment scope
 
-Coverage test: assess that the API is available and test that a data sharing request is properly covered: 
-- Initiate a data sharing 
-- Retrieve data sharing information and status 
-- Receive data sharing request outcome condition 
-- Retrieve data sharing information of past data sharing actions. 
-
-The system ranks higher if the API is secured and implements common methods, like REST.
+Coverage test: for each data plane available, test a minimal data sharing and identify possible inconsistencies with the original data product protocol endpoint (e.g., during data querying, we aren’t allowed to send http headers to the data source).
 
 #### Expected Output
 
-The test aims to provide a comprehensive evaluation of the following aspects:
+Evaluate the support of a minimal data sharing for the following data formats
 
-- **Assess the Availability of the API:** Ensure that the API is accessible and functional.
-- **Test Data Sharing Requests:** Verify that data sharing requests are correctly processed, covering these steps:
-    - Initiating a data sharing request.
-    - Retrieving information and status of the data sharing request.
-    - Receiving the outcome of the data sharing request, including conditions.
-    - Accessing information on past data sharing activities.
-The system will score higher if the API is secured and utilizes standard methods, such as REST.
+- GTFS - [Public dataset](https://opendata-ajuntament.barcelona.cat/data/dataset/c46503e3-cec6-4032-894d-1063b7a365ee/resource/1c92542e-0346-4df5-9824-d7753ab02e33/download) with direct download via HTTPS
+- GTFS-RT - [Public dataset](https://api.data.gov.my/gtfs-realtime/vehicle-position/ktmb/) via APIs
+- DATEX-II - [Public dataset](https://opendata.emel.pt/cycling/biciparks?skip=1&limit=1) via APIs
+- DATX II Light - No available datasets for this data format, tests are skipped
+- GBFS - [Public dataset](https://opendata.emel.pt/cycling/biciparks?skip=1&limit=1) via APIs
+- WMS/WFS - [Public dataset](https://openmaps.gov.bc.ca/geo/ows?SERVICE=WMS&REQUEST=GetCapabilities) via APIs
+
+Also access through APIs.
+Access to private APIs is tested using the AMB mobilitat endpoint.
 
 ### Results
 
@@ -78,19 +74,21 @@ The result should clearly indicate which deployment model was assessed. It is ac
 
 #### Measured results
 
-| Requirement | Measured KPI |
-| -|--------------|
-| Initiate a data sharing | TBD |
-| Retrieve data sharing information and status | TBD |
-| Receive data sharing request outcome condition | TBD |
-| Retrieve data sharing information of past data sharing actions. | TBD |
+| Test | Functional Completeness | Functional Correctness | Functional Appropriateness | Explanation |
+|-------------|-------------------------|-------------------------|----------------------------|------------------------------------------------------|
+| GTFS | TBD | TBD | TBD | TBD |
+| GTFS-RT | TBD | TBD | TBD | TBD |
+| DATEX-II | TBD | TBD | TBD | TBD |
+| GBFS | TBD | TBD | TBD | TBD |
+| WMS/WFS | TBD | TBD | TBD | TBD |
+| Private key | TBD | TBD | TBD | TBD |
+| Overall | TBD | TBD | TBD | TBD |
 
-**Overall Calculation:** TBD
 **Functional Suitability Quality Metric Score:** TBD
 
 #### Notes
 
-This result introduces an **EMDS Final Stack** perspective for the existing test `5.1.1.1` under the KPI1 area **Data sharing request**.
+This result introduces an **EMDS Final Stack** perspective for the existing test `5.1.1.2` under the KPI1 area **Minimal data transfer**.
 
 This result should not be interpreted as part of the original Phase 1 / Phase 2 stack-comparison campaign. It is intended as an integration phase assessment of the current EMDS final technical infrastructure.
 

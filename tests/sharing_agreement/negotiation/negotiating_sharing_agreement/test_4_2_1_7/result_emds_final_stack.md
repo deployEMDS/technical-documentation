@@ -1,4 +1,4 @@
-## [5.1.1.1] Data sharing: Data sharing request - Request data transfer
+## [4.2.1.7] Sharing agreement: Negotiation - Negotiating sharing agreement
 
 ### Stack: EMDS Final Stack (EDC-based)
 
@@ -13,12 +13,12 @@ This section identifies the technical context in which the EMDS Final Stack asse
 | Assessment context | Integration phase assessment of the EMDS final technical infrastructure |
 | Result perspective | `emds_final_stack` |
 | Stack under assessment | EMDS Final Stack (EDC-based) |
-| KPI1 area | Data sharing request |
-| Existing test ID | `5.1.1.1` |
-| Level | UC + Technical |
-| ISO/IEC 25010 mapping | Functional suitability, Reliability, Security |
-| Owner (tentative) | Casper (imec) |
-| Reviewer | Wilhelm |
+| KPI1 area | Observability / logging |
+| Existing test ID | `4.2.1.7` |
+| Level | Technical |
+| ISO/IEC 25010 mapping | Reliability, Maintainability |
+| Owner (tentative) | Carlos (i2CAT) |
+| Reviewer | Carlos |
 | Deployment model assessed | TBD |
 | Target environment | TBD |
 | EDC version / release | TBD |
@@ -39,25 +39,11 @@ The quality metric, expected output and comparative criteria remain those define
 
 #### Test-specific assessment scope
 
-Coverage test: assess that the API is available and test that a data sharing request is properly covered: 
-- Initiate a data sharing 
-- Retrieve data sharing information and status 
-- Receive data sharing request outcome condition 
-- Retrieve data sharing information of past data sharing actions. 
-
-The system ranks higher if the API is secured and implements common methods, like REST.
+Verify that the system outputs logs detailing the sharing agreement process. Rank higher if the logs provide business information under a standard format.
 
 #### Expected Output
 
-The test aims to provide a comprehensive evaluation of the following aspects:
-
-- **Assess the Availability of the API:** Ensure that the API is accessible and functional.
-- **Test Data Sharing Requests:** Verify that data sharing requests are correctly processed, covering these steps:
-    - Initiating a data sharing request.
-    - Retrieving information and status of the data sharing request.
-    - Receiving the outcome of the data sharing request, including conditions.
-    - Accessing information on past data sharing activities.
-The system will score higher if the API is secured and utilizes standard methods, such as REST.
+The test aims to verify that the system generates logs detailing the sharing agreement process. A higher rank will be given if these logs include business information in a standardized format.
 
 ### Results
 
@@ -78,19 +64,15 @@ The result should clearly indicate which deployment model was assessed. It is ac
 
 #### Measured results
 
-| Requirement | Measured KPI |
-| -|--------------|
-| Initiate a data sharing | TBD |
-| Retrieve data sharing information and status | TBD |
-| Receive data sharing request outcome condition | TBD |
-| Retrieve data sharing information of past data sharing actions. | TBD |
+| Requirement | Measured KPI | Evidence | Notes |
+| --- | ---: | --- | --- |
+| Test-specific requirement from `test.md` | TBD | TBD | Pending EMDS Final Stack assessment. |
 
-**Overall Calculation:** TBD
-**Functional Suitability Quality Metric Score:** TBD
+**Functional Suitability Quality Metric:** TBD
 
 #### Notes
 
-This result introduces an **EMDS Final Stack** perspective for the existing test `5.1.1.1` under the KPI1 area **Data sharing request**.
+This result introduces an **EMDS Final Stack** perspective for the existing test `4.2.1.7` under the KPI1 area **Observability / logging**.
 
 This result should not be interpreted as part of the original Phase 1 / Phase 2 stack-comparison campaign. It is intended as an integration phase assessment of the current EMDS final technical infrastructure.
 

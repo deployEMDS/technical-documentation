@@ -1,4 +1,4 @@
-## [5.1.1.1] Data sharing: Data sharing request - Request data transfer
+## [3.1.1.4] Data product survey: Discover - Consult data space catalogue
 
 ### Stack: EMDS Final Stack (EDC-based)
 
@@ -13,12 +13,12 @@ This section identifies the technical context in which the EMDS Final Stack asse
 | Assessment context | Integration phase assessment of the EMDS final technical infrastructure |
 | Result perspective | `emds_final_stack` |
 | Stack under assessment | EMDS Final Stack (EDC-based) |
-| KPI1 area | Data sharing request |
-| Existing test ID | `5.1.1.1` |
+| KPI1 area | Catalogue discovery / metadata |
+| Existing test ID | `3.1.1.4` |
 | Level | UC + Technical |
-| ISO/IEC 25010 mapping | Functional suitability, Reliability, Security |
-| Owner (tentative) | Casper (imec) |
-| Reviewer | Wilhelm |
+| ISO/IEC 25010 mapping | Functional suitability, Compatibility |
+| Owner (tentative) | Alessio (Cefriel) / Wilhelm |
+| Reviewer | Carlos |
 | Deployment model assessed | TBD |
 | Target environment | TBD |
 | EDC version / release | TBD |
@@ -39,25 +39,11 @@ The quality metric, expected output and comparative criteria remain those define
 
 #### Test-specific assessment scope
 
-Coverage test: assess that the API is available and test that a data sharing request is properly covered: 
-- Initiate a data sharing 
-- Retrieve data sharing information and status 
-- Receive data sharing request outcome condition 
-- Retrieve data sharing information of past data sharing actions. 
-
-The system ranks higher if the API is secured and implements common methods, like REST.
+Assessment: either the data product specification provides the necessary metadata to report quality, or the catalogue must be extended with an “-AP” profile. Ranks higher in the first case.
 
 #### Expected Output
 
-The test aims to provide a comprehensive evaluation of the following aspects:
-
-- **Assess the Availability of the API:** Ensure that the API is accessible and functional.
-- **Test Data Sharing Requests:** Verify that data sharing requests are correctly processed, covering these steps:
-    - Initiating a data sharing request.
-    - Retrieving information and status of the data sharing request.
-    - Receiving the outcome of the data sharing request, including conditions.
-    - Accessing information on past data sharing activities.
-The system will score higher if the API is secured and utilizes standard methods, such as REST.
+The test aims to determine whether the data product specification provides the necessary metadata for quality reporting or if the catalog needs to be extended with an "-AP" profile, with the former being ranked higher. The system may offer varying levels of support for Napcore's DCAT-AP profile, such as [MobilityDCAT-AP](https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/index.html) profiles. The evaluation focuses on the level of support for the Napcore Profile and its vocabulary.
 
 ### Results
 
@@ -78,19 +64,19 @@ The result should clearly indicate which deployment model was assessed. It is ac
 
 #### Measured results
 
-| Requirement | Measured KPI |
-| -|--------------|
-| Initiate a data sharing | TBD |
-| Retrieve data sharing information and status | TBD |
-| Receive data sharing request outcome condition | TBD |
-| Retrieve data sharing information of past data sharing actions. | TBD |
+| **Criteria** | Measured KPI | Evidence | Notes |
+| --- | ---: | --- | --- |
+| **No DCAT-AP Support:** The implementation does not allow any DCAT-AP profile or functionality. | TBD | TBD | Pending EMDS Final Stack assessment. |
+| **Breaks with Napcore DCAT-AP:** The implementation breaks if Napcore's DCAT-AP is used to describe data products. | TBD | TBD | Pending EMDS Final Stack assessment. |
+| **Ignores Extensions but Functional:** The implementation ignores the extensions of Napcore's DCAT-AP, but the system works as expected, with extended metadata retrievable as part of the distribution. | TBD | TBD | Pending EMDS Final Stack assessment. |
+| **Partial Integration:** The implementation integrates Napcore's DCAT-AP profile and utilizes it for some search and listing functionalities, but with limitations. | TBD | TBD | Pending EMDS Final Stack assessment. |
+| **Full Integration:** The implementation fully integrates Napcore's DCAT-AP profile and utilizes it effectively for search and listing functionalities. | TBD | TBD | Pending EMDS Final Stack assessment. |
 
-**Overall Calculation:** TBD
-**Functional Suitability Quality Metric Score:** TBD
+**Functional Suitability Quality Metric:** TBD
 
 #### Notes
 
-This result introduces an **EMDS Final Stack** perspective for the existing test `5.1.1.1` under the KPI1 area **Data sharing request**.
+This result introduces an **EMDS Final Stack** perspective for the existing test `3.1.1.4` under the KPI1 area **Catalogue discovery / metadata**.
 
 This result should not be interpreted as part of the original Phase 1 / Phase 2 stack-comparison campaign. It is intended as an integration phase assessment of the current EMDS final technical infrastructure.
 
