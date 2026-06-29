@@ -1,0 +1,101 @@
+﻿## [5.1.1.1] Data sharing: Data sharing request - Request data transfer
+
+### Stack: protoEMDS Final Stack (EDC-based)
+
+### Statement of assessment
+
+#### Environment
+
+This section identifies the technical context in which the protoEMDS Final Stack assessment is performed.
+
+| Field | Value |
+| --- | --- |
+| Assessment context | Integration phase assessment of the EMDS final technical infrastructure |
+| Result perspective | `protoemds_final_stack` |
+| Stack under assessment | protoEMDS Final Stack (EDC-based) |
+| KPI1 area | Data sharing request |
+| Existing test ID | `5.1.1.1` |
+| Level | UC + Technical |
+| ISO/IEC 25010 mapping | Functional suitability, Reliability, Security |
+| Owner (tentative) | Casper (imec) |
+| Reviewer | Wilhelm |
+| Deployment model assessed | TBD |
+| Target environment | TBD |
+| EDC version / release | TBD |
+| Connector deployment reference | TBD |
+| Assessment evidence | TBD |
+
+The assessment should be completed using the deployment model for which evidence is realistically available. It is not mandatory to execute the same test in both CaaS and on-premise environments.
+
+If only one deployment model is assessed, the other one should be marked as `Not assessed`.
+
+#### Tested quality metric and method
+
+This result reuses the existing stack-agnostic test definition in `test.md` and adds an protoEMDS Final Stack integration-assessment perspective.
+
+It does not replace the historical stack-specific result files, such as `result_edc_vc.md` or `result_fiware.md`.
+
+The quality metric, expected output and comparative criteria remain those defined by the original test. This result file should only capture the evidence and assessment outcome for the selected protoEMDS Final Stack deployment.
+
+#### Test-specific assessment scope
+
+Coverage test: assess that the API is available and test that a data sharing request is properly covered: 
+- Initiate a data sharing 
+- Retrieve data sharing information and status 
+- Receive data sharing request outcome condition 
+- Retrieve data sharing information of past data sharing actions. 
+
+The system ranks higher if the API is secured and implements common methods, like REST.
+
+#### Expected Output
+
+The test aims to provide a comprehensive evaluation of the following aspects:
+
+- **Assess the Availability of the API:** Ensure that the API is accessible and functional.
+- **Test Data Sharing Requests:** Verify that data sharing requests are correctly processed, covering these steps:
+    - Initiating a data sharing request.
+    - Retrieving information and status of the data sharing request.
+    - Receiving the outcome of the data sharing request, including conditions.
+    - Accessing information on past data sharing activities.
+The system will score higher if the API is secured and utilizes standard methods, such as REST.
+
+### Results
+
+#### Assessment
+
+Pending.
+
+The assessment should be completed once consolidated technical evidence is available for the protoEMDS Final Stack deployment.
+
+The result should clearly indicate which deployment model was assessed. It is acceptable to assess only one deployment model if evidence for the other deployment model is not available.
+
+#### Deployment model assessed
+
+| Deployment model | Status | Evidence | Consolidated assessment |
+| --- | --- | --- | --- |
+| CaaS / IONOS-managed deployment | TBD | TBD | Complete this row only if evidence is collected from the IONOS-managed deployment. Otherwise mark as `Not assessed`. |
+| On-premise deployment | TBD | TBD | Complete this row only if evidence is collected from an on-premise or locally managed deployment. Otherwise mark as `Not assessed`. |
+
+#### Measured results
+
+| Requirement | Measured KPI |
+| -|--------------|
+| Initiate a data sharing | TBD |
+| Retrieve data sharing information and status | TBD |
+| Receive data sharing request outcome condition | TBD |
+| Retrieve data sharing information of past data sharing actions. | TBD |
+
+**Overall Calculation:** TBD
+**Functional Suitability Quality Metric Score:** TBD
+
+#### Notes
+
+This result introduces an **protoEMDS Final Stack** perspective for the existing test `5.1.1.1` under the KPI1 area **Data sharing request**.
+
+This result should not be interpreted as part of the original Phase 1 / Phase 2 stack-comparison campaign. It is intended as an integration phase assessment of the current EMDS final technical infrastructure.
+
+The assessment should be completed using consolidated technical evidence, such as endpoint responses, logs, screenshots, Postman/curl executions, GitHub issues, pull requests, repository references, deployment status or confirmation from the relevant component owner.
+
+This result file was generated from the local `test.md` and, where available, the local `result_edc_vc.md` structure. EDC+VC-specific evidence, values and scores were intentionally not reused.
+
+
