@@ -38,9 +38,3 @@ The expected public connector paths are:
 | Connector UI | `/dashboard/` |
 
 TLS and protocol authentication must be demonstrated by live evidence. Deployment manifests, Ingress annotations, and certificate configuration are supporting evidence only.
-
-## Evidence handling
-
-Commit concise sanitized evidence that another partner can map back to each runbook step. Keep raw logs, traces, certificates, credentials, kubeconfig, tokens, secret values, and internal network details in the approved protected evidence store. Each manifest row should include a stable protected-source reference and SHA-256 hash.
-
-Test `4.2.3.1` owns authorization checks for negotiation APIs, status messages, and logs. Identity and credential lifecycle evidence belongs to test `1.3.1.5`; neither should inflate the `4.2.1.6` score.

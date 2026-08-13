@@ -6,7 +6,7 @@ This manifest indexes the sanitized, versioned evidence for the CaaS assessment.
 
 Do not commit secrets, credentials, bearer tokens, API keys, passwords, Vault material, kubeconfig data, internal IP addresses, full certificate chains, personal data, or unredacted application logs. Keep complete source captures in the approved protected evidence store.
 
-Each committed artifact must state the capture date, executing role, command category, source capture reference, and SHA-256 hash of the protected original or sanitized capture, as appropriate.
+Each committed artifact must state the capture date and command category, as appropriate.
 
 ## Deployment baseline
 
@@ -21,21 +21,22 @@ Each committed artifact must state the capture date, executing role, command cat
 
 ## Evidence index
 
-| ID | Test step | Sanitized artifact | Protected source reference | SHA-256 | Capture date | Reviewer | Status |
-| --- | --- | --- | --- | --- | --- | --- | --- |
-| ENV-01 | Live environment inventory | [`env-01-live-cluster-inventory.md`](./env-01-live-cluster-inventory.md) | Sanitized terminal capture; no protected source retained | `1cc7c69d5ad98ec5803b84f0c5aa06abf8100321a21180e380c37cea9449c529` | 2026-08-13 | Pending | Collected; review Helm release status before final assessment |
-| AUTH-01 | Live DSP authentication architecture | [`auth-01-live-authentication-configuration.md`](./auth-01-live-authentication-configuration.md) | Sanitized terminal capture; no protected source retained | `198c7523a8e2d77cc598a24469fc7751385d3a2355562f41ccbb0db2dde757ac` | 2026-08-13 | Pending | Collected; supporting configuration evidence only |
-| AUTH-02 | Kubernetes runtime configuration binding | [`auth-02-kubernetes-runtime-configuration-binding.md`](./auth-02-kubernetes-runtime-configuration-binding.md) | Sanitized terminal capture; no protected source retained | `83b29477b12636f89a58ec2e99ca3ff5b3e7cc589047368685a510bbc75ebbf8` | 2026-08-13 | Pending | Collected; selected non-secret settings confirmed in ready processes and required Secret key names verified without reading values |
-| TLS-01 | connector-a DID document and certificate validation | [`tls-01-connector-a-did-and-certificate.md`](./tls-01-connector-a-did-and-certificate.md) | Sanitized terminal capture; no protected source retained | `68b199d85a0a59ac47acb2d9fdb99ee8ee6eb4a8f5b55baaabf64b5666d7667f` | 2026-08-13 | Pending | Collected; DID advertises HTTPS DSP endpoint and certificate validation succeeded |
-| TLS-02 | connector-b DID document and certificate validation | [`tls-02-connector-b-did-and-certificate.md`](./tls-02-connector-b-did-and-certificate.md) | Sanitized terminal capture; no protected source retained | `2db85e4473a16f25a8b0a985156bbfc4c51b9cfd49a71a0cd54e16cc15f5c994` | 2026-08-13 | Pending | Collected; DID advertises HTTPS DSP endpoint and certificate validation succeeded |
-| TLS-03 | Plaintext DSP negative control | [`tls-01-connector-a-did-and-certificate.md`](./tls-01-connector-a-did-and-certificate.md); [`tls-02-connector-b-did-and-certificate.md`](./tls-02-connector-b-did-and-certificate.md) | Sanitized terminal capture; no protected source retained | See TLS-01 and TLS-02 | 2026-08-13 | Pending | Collected; both HTTP DSP routes return `308` redirects to HTTPS |
-| AUTH-03 | Supporting management API local-authentication control | [`neg-03-unauthenticated-management-api.md`](./neg-03-unauthenticated-management-api.md) | Sanitized terminal capture; no protected source retained | `615b1dca5b6d0b85a0d818301921910b24efd1bec73279beddf73ad5aa849ef7` | 2026-08-13 | Pending | Collected; both unauthenticated read-only asset queries returned `401 Unauthorized`; not proof of DSP authentication |
+| ID | Test step | Sanitized artifact | Capture date | Status |
+| --- | --- | --- | --- | --- |
+| ENV-01 | Live environment inventory | [`env-01-live-cluster-inventory.md`](./env-01-live-cluster-inventory.md) | 2026-08-13 | Collected; review Helm release status before final assessment |
+| AUTH-01 | Live DSP authentication architecture | [`auth-01-live-authentication-configuration.md`](./auth-01-live-authentication-configuration.md) | 2026-08-13 | Collected; supporting configuration evidence only |
+| AUTH-02 | Kubernetes runtime configuration binding | [`auth-02-kubernetes-runtime-configuration-binding.md`](./auth-02-kubernetes-runtime-configuration-binding.md) | 2026-08-13 | Collected; selected non-secret settings confirmed in ready processes and required Secret key names verified without reading values |
+| TLS-01 | connector-a DID document and certificate validation | [`tls-01-connector-a-did-and-certificate.md`](./tls-01-connector-a-did-and-certificate.md) | 2026-08-13 | Collected; DID advertises HTTPS DSP endpoint and certificate validation succeeded |
+| TLS-02 | connector-b DID document and certificate validation | [`tls-02-connector-b-did-and-certificate.md`](./tls-02-connector-b-did-and-certificate.md) | 2026-08-13 | Collected; DID advertises HTTPS DSP endpoint and certificate validation succeeded |
+| TLS-03 | Plaintext DSP negative control | [`tls-01-connector-a-did-and-certificate.md`](./tls-01-connector-a-did-and-certificate.md); [`tls-02-connector-b-did-and-certificate.md`](./tls-02-connector-b-did-and-certificate.md) | 2026-08-13 | Collected; both HTTP DSP routes return `308` redirects to HTTPS |
+| AUTH-03 | Supporting management API local-authentication control | [`neg-03-unauthenticated-management-api.md`](./neg-03-unauthenticated-management-api.md) | 2026-08-13 | Collected; both unauthenticated read-only asset queries returned `401 Unauthorized`; not proof of DSP authentication |
+| DSP-01 | Approved minimal negotiation using existing catalog offer | [`dsp-01-approved-minimal-negotiation.md`](./dsp-01-approved-minimal-negotiation.md) | 2026-08-13 | Collected; `asset1` / `policy1` / `contract3` payloads and mapping verified, both connector negotiations finalized, and no direct authentication-decision record found |
 
 ## Assessment boundary
 
-This assessment intentionally does not execute a contract negotiation or an invalid/non-participant DSP negotiation. Those state-changing checks belong to [test `4.2.1.3`](../../test_4_2_1_3/test.md), which assesses contract definition, and [test `4.2.3.1`](../../../refusal_or_registration_of_sharing_agreement/test_4_2_3_1/test.md), which assesses access restrictions for negotiation APIs, statuses, and logs.
+An approved minimal negotiation may be executed only to evidence the encrypted connector-to-connector DSP exchange. It must reuse the provider's existing catalog offer for `asset1`; it does not assess the `policy1` or `contract3` semantics. Contract definition belongs to [test `4.2.1.3`](../../test_4_2_1_3/test.md), while invalid/non-participant DSP negotiation and access restrictions for negotiation APIs, statuses, and logs belong to [test `4.2.3.1`](../../../refusal_or_registration_of_sharing_agreement/test_4_2_3_1/test.md).
 
-The collected evidence supports a maximum score of `2` (Partial Coverage) in this scope. It demonstrates encrypted DSP transport and a deployed DSP identity/authentication architecture, but does not prove that connector authentication occurred in a completed negotiation.
+`DSP-01` completed with both connectors reaching `FINALIZED` for the same agreement over the validated HTTPS DSP path. Together with the TLS and runtime configuration evidence, the proposed score is `4` (Full Coverage), pending Casper's review. Direct evidence of the counterpart authentication decision was not captured; the reviewer may change the score to `3` (Significant Coverage) if that evidence is required.
 
 ## Cross-test handoff
 
