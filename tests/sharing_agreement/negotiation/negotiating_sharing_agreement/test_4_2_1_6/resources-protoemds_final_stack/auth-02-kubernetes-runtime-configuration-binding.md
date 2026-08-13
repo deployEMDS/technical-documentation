@@ -6,8 +6,6 @@ This evidence verifies configuration delivery to the running Kubernetes control 
 | --- | --- | --- |
 | Capture date | 2026-08-13 | 2026-08-13 |
 | Control-plane Deployment | `connector-a-controlplane` | `connector-b-controlplane` |
-| Deployment generation / observed generation | `4 / 4` | `2 / 2` |
-| Ready replicas | `1` | `1` |
 | ConfigMap imported through `envFrom` | `connector-a-controlplane` | `connector-b-controlplane` |
 | Required non-secret keys present in source ConfigMap | DSP callback, DID issuer, participant ID, STS token URL, OpenTelemetry traces | DSP callback, DID issuer, participant ID, STS token URL, OpenTelemetry traces |
 | Ready control-plane Pod | `connector-a-controlplane-7cf9b77f66-v4rjf` | `connector-b-controlplane-95f45f8b4-xg74v` |
