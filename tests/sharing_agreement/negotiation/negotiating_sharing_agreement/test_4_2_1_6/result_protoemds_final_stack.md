@@ -21,7 +21,7 @@ This section identifies the technical context in which the protoEMDS Final Stack
 | Reviewer | Casper (imec)  |
 | Deployment model assessed | CaaS / IONOS-managed deployment |
 | Target environment | Ionos DCD `EMDS-PROD` |
-| EDC version / release | emds-edc-connector `9916cc56b682ae70988300d301b752ca8eb05121` <br> based on eclipse edc connector `0.10.0` |
+| EDC version / release | emds-edc-connector `9916cc56b682ae70988300d301b752ca8eb05121` <br/> based on eclipse edc connector `0.10.0` |
 | Connector deployment reference | `deployEMDS-k8s-deployment`, branch `prepare-prod`, commit `846e5f1d7a388e664fe9e4942e553021752d63c6` |
 | Assessment evidence | [`resources-protoemds_final_stack/evidence-manifest.md`](./resources-protoemds_final_stack/evidence-manifest.md), including [`DSP-01`](./resources-protoemds_final_stack/dsp-01-approved-minimal-negotiation.md) |
 
