@@ -17,13 +17,13 @@ This section identifies the technical context in which the protoEMDS Final Stack
 | Existing test ID | `4.2.1.6` |
 | Level | Technical |
 | ISO/IEC 25010 mapping | Security |
-| Owner (tentative) | Casper (imec) |
-| Reviewer | Casper |
-| Deployment model assessed | TBD |
-| Target environment | TBD |
-| EDC version / release | TBD |
-| Connector deployment reference | TBD |
-| Assessment evidence | TBD |
+| Owner (tentative) | Carlos (i2Cat) / Wilhelm (Fraunhofer IVI) |
+| Reviewer | Casper (imec)  |
+| Deployment model assessed | `deployEMDS-k8s-deployment` |
+| Target environment | Ionos DCD `EMDS-PROD` |
+| EDC version / release | emds-edc-connector `9916cc56b682ae70988300d301b752ca8eb05121` <br> based on eclipse edc connector `0.10.0` |
+| Connector deployment reference | `deployEMDS-k8s-deployment`, branch `prepare-prod`, commit `846e5f1d7a388e664fe9e4942e553021752d63c6` |
+| Assessment evidence | Pending. See [`code-protoemds_final_stack/README.md`](./code-protoemds_final_stack/README.md) and [`resources-protoemds_final_stack/evidence-manifest.md`](./resources-protoemds_final_stack/evidence-manifest.md). |
 
 The assessment should be completed using the deployment model for which evidence is realistically available. It is not mandatory to execute the same test in both CaaS and on-premise environments.
 
@@ -36,6 +36,8 @@ This result reuses the existing stack-agnostic test definition in `test.md` and 
 It does not replace the historical stack-specific result files, such as `result_edc_vc.md` or `result_fiware.md`.
 
 The quality metric, expected output and comparative criteria remain those defined by the original test. This result file should only capture the evidence and assessment outcome for the selected protoEMDS Final Stack deployment.
+
+The reproducible execution procedure is in [`code-protoemds_final_stack/README.md`](./code-protoemds_final_stack/README.md) and [`resources-protoemds_final_stack/evidence-manifest.md`](./resources-protoemds_final_stack/evidence-manifest.md).
 
 #### Test-specific assessment scope
 
@@ -83,5 +85,7 @@ This result should not be interpreted as part of the original Phase 1 / Phase 2 
 The assessment should be completed using consolidated technical evidence, such as endpoint responses, logs, screenshots, Postman/curl executions, GitHub issues, pull requests, repository references, deployment status or confirmation from the relevant component owner.
 
 This result file was generated from the local `test.md` and, where available, the local `result_edc_vc.md` structure. EDC+VC-specific evidence, values and scores were intentionally not reused.
+
+The test-local runbook and evidence manifest are versioned with this result to enable replication without exposing credentials, cluster configuration, raw logs or other sensitive operational information.
 
 
