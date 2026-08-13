@@ -6,12 +6,12 @@ It is the execution companion to [`../test.md`](../test.md). The assessment reco
 
 ## Scope
 
-This runbook assesses only the two requirements of test `4.2.1.6`:
+This runbook assesses the following within the agreed Security and Restricted Access scope for test `4.2.1.6`:
 
 1. The DSP negotiation channel is protected by TLS.
-2. Connector authentication is performed for the data-sharing negotiation.
+2. The deployed DSP identity and authentication architecture is present and operationally evidenced.
 
-Authorization to negotiation APIs, status messages, and logs is assessed separately by test `4.2.3.1`. Credential lifecycle, claims, usage policies, and UI login are not scored by this runbook.
+This assessment does not execute a contract negotiation. Contract definition using claims, usage policies, and service agreements belongs to [test `4.2.1.3`](../../test_4_2_1_3/test.md). Authorization to negotiation APIs, status messages, and logs is assessed separately by [test `4.2.3.1`](../../../refusal_or_registration_of_sharing_agreement/test_4_2_3_1/test.md). Credential lifecycle and UI login are also not scored by this runbook.
 
 ## Deployment baseline
 
@@ -30,7 +30,6 @@ The deployment revision is a baseline, not evidence of its current live state. R
 
 ## Safety and redaction
 
-- Use only the approved provider and consumer test connectors, test asset, and invalid/non-participant test identity.
 - Do not run write, delete, patch, apply, rollout, or shell-exec Kubernetes commands for this assessment.
 - Do not put kubeconfig content, tokens, API keys, passwords, Vault material, unredacted logs, full certificate chains, internal IP addresses, or personal data in this repository.
 - Do not use `curl --insecure` as evidence of TLS. Certificate hostname and trust validation must succeed without it.
@@ -49,7 +48,20 @@ export CONSUMER_DID='did:web:<consumer public hostname>'
 export DEPLOYMENT_REVISION='846e5f1d7a388e664fe9e4942e553021752d63c6'
 ```
 
-Obtain the authenticated negotiation procedure and the approved invalid/non-participant input from the connector owner. The installed EDC authentication mechanism must be identified before a protocol request is sent; do not infer it from the management API authentication mechanism.
+Identify the deployed DSP authentication mechanism from non-secret configuration and public DID evidence. Do not infer DSP authentication from the management API authentication mechanism.
+
+## Effective runtime configuration evidence
+
+Configuration source files and deployment manifests show intended configuration. This test also requires evidence that the running connector consumes the intended configuration source. Record the deployment-specific mechanism used and any limitation on process-level verification.
+
+| Deployment model | Effective configuration evidence |
+| --- | --- |
+| Kubernetes | Workload template binding to ConfigMaps, Secrets, or mounted files; observed Deployment revision; and a ready running Pod created from that template. |
+| Docker or Docker Compose | Running container image/ID plus its non-secret environment and mounted configuration-file bindings. |
+| VM or bare metal | Running service/process status plus the rendered properties file or service-unit environment it consumes. |
+| Managed platform | Deployed revision, platform configuration export, and running health/status evidence. |
+
+An approved non-sensitive diagnostics endpoint, startup log, or allow-listed runtime environment inspection may provide stronger process-level confirmation. Never run an unfiltered environment dump or read secret values. If process-level inspection is unavailable, state that the evidence proves configuration delivery to the runtime rather than the exact effective process environment.
 
 ## Step 1: capture the live environment inventory
 
@@ -69,7 +81,7 @@ Record, after redaction:
 - connector control-plane, data-plane, identity-hub, STS, and proxy workload image versions;
 - public Ingress or Gateway hostnames and TLS certificate readiness;
 - the provider and consumer `did:web` values; and
-- the deployed observability service used for trace correlation.
+- the deployed STS and observability components.
 
 Expected outcome: two intended connector tenants and their public routes can be identified, and the TLS certificate resource or trusted public certificate can be associated with each DSP hostname.
 
@@ -106,48 +118,51 @@ curl --head --silent --show-error --output /dev/null --write-out '%{http_code}\n
 
 Expected outcome: HTTP is redirected to HTTPS, rejected, or unavailable. It must not provide a usable plaintext DSP negotiation route.
 
-## Step 4: execute and correlate an authenticated negotiation
+## Step 4: verify effective DSP identity and authentication configuration
 
-Execute one approved provider-consumer negotiation using the connector owner's documented client procedure. Do not place request credentials or credential presentations in this repository.
+Establish the configuration-delivery chain from the deployment-specific source to a ready connector runtime. For Kubernetes, inspect the control-plane Deployment template for ConfigMap, Secret, or mounted-file bindings; record its observed generation and a ready Pod controlled by that template. For other deployment models, use the equivalent evidence listed above.
 
-Record the following in a sanitized correlation table:
+Then inspect non-secret identity/authentication values and public DID documents. Record only the following:
 
 | Field | Required evidence |
 | --- | --- |
-| Initiating connector | Consumer DID or approved redacted identifier |
-| Counterparty connector | Provider DID or approved redacted identifier |
-| Transport endpoint | HTTPS DSP URL |
-| Negotiation identifier | Redacted identifier or deterministic hash |
-| Authentication result | Accepted connector/participant identity mechanism |
-| Provider evidence | Sanitized log or trace reference |
-| Consumer evidence | Sanitized log or trace reference |
-| Outcome | Negotiation processed or rejected |
+| Runtime configuration delivery | Deployment-specific source binding and ready runtime revision |
+| Connector identity | `did:web` participant and issuer identifier |
+| DSP identity binding | HTTPS DSP callback address and DID `ProtocolEndpoint` |
+| Authentication component | Configured STS token-service endpoint |
+| Trace support | Enabled OpenTelemetry configuration |
 
-Expected outcome: a negotiation sent over the discovered HTTPS DSP URL is processed by the intended counterparty, and provider and consumer observations can be correlated by a non-sensitive negotiation or trace identifier.
+Expected outcome: each connector's public DID, delivered runtime configuration, and control-plane configuration consistently identify the HTTPS DSP endpoint and the deployed identity/authentication components.
 
-## Step 5: run approved negative controls
+When a deployment injects secrets, record only the Secret reference and required key names. Do not read or print Secret values. A local management API key is supporting management-access evidence and must not be presented as DSP connector-authentication evidence.
 
-Run only with approved test identities and non-production test assets.
+Where permitted, Kubernetes may provide stronger process-level evidence using `kubectl exec` with a fixed allow-list. Do not run `printenv` or `env` without selecting named variables first.
+
+```sh
+kubectl --context "$KUBE_CONTEXT" exec -n connector \
+  <controlplane-pod> -c controlplane -- sh -c \
+  'for name in EDC_DSP_CALLBACK_ADDRESS EDC_IAM_DID_WEB_USE_HTTPS EDC_IAM_ISSUER_ID EDC_IAM_STS_OAUTH_TOKEN_URL EDC_PARTICIPANT_ID OTEL_TRACES_EXPORTER; do printenv "$name"; done'
+```
+
+## Step 5: verify supporting local management API authentication
+
+Use a harmless, read-only request without credentials.
 
 | Check | Method | Expected outcome |
 | --- | --- | --- |
 | Management API without valid local credentials | Harmless read-only request to `/api/management/` | Denied; do not treat management credentials as DSP authentication evidence. |
-| DSP negotiation with invalid or non-participant identity | Connector-owner-approved invalid negotiation request | Denied before a contract negotiation proceeds. |
-| Plaintext DSP route | Step 3 HTTP `HEAD` request | Redirected, rejected, or unavailable. |
 
-Record only request category, status/result, timestamp, and correlated sanitized evidence reference. Do not record tokens, request bodies containing credentials, or full response bodies.
+Record only the request category, status/result, and sanitized evidence reference. Do not record tokens or full response bodies.
 
 ## Step 6: determine the score
 
 | Score | Evidence threshold |
 | ---: | --- |
 | 0 | Neither encrypted DSP communication nor connector authentication is demonstrated. |
-| 1 | Only partial or configuration-only evidence is available. |
-| 2 | Exactly one of TLS or connector authentication is demonstrated live. |
-| 3 | Both are demonstrated live, but a material limitation remains. |
-| 4 | Valid TLS, successful authenticated negotiation, approved authentication failure control, and end-to-end correlation are all demonstrated. |
+| 1 | TLS or the deployed DSP identity/authentication architecture is only partially evidenced. |
+| 2 | Valid TLS is demonstrated for both DSP endpoints and the deployed DSP identity/authentication architecture is consistently evidenced by public DID, non-secret configuration, and runtime configuration delivery. |
 
-Document unavailable controls as limitations. Do not assign a score from Helm values or Ingress configuration alone.
+Within this non-negotiation scope, the assessment is capped at `2` (Partial Coverage). A score above `2` would require proof that connector authentication occurred during a live negotiation, which is outside this test execution scope. Do not assign a score from Helm values or Ingress configuration alone.
 
 ## Evidence completion
 

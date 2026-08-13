@@ -25,23 +25,18 @@ Each committed artifact must state the capture date, executing role, command cat
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | ENV-01 | Live environment inventory | [`env-01-live-cluster-inventory.md`](./env-01-live-cluster-inventory.md) | Sanitized terminal capture; no protected source retained | `1cc7c69d5ad98ec5803b84f0c5aa06abf8100321a21180e380c37cea9449c529` | 2026-08-13 | Pending | Collected; review Helm release status before final assessment |
 | AUTH-01 | Live DSP authentication architecture | [`auth-01-live-authentication-configuration.md`](./auth-01-live-authentication-configuration.md) | Sanitized terminal capture; no protected source retained | `198c7523a8e2d77cc598a24469fc7751385d3a2355562f41ccbb0db2dde757ac` | 2026-08-13 | Pending | Collected; supporting configuration evidence only |
+| AUTH-02 | Kubernetes runtime configuration binding | [`auth-02-kubernetes-runtime-configuration-binding.md`](./auth-02-kubernetes-runtime-configuration-binding.md) | Sanitized terminal capture; no protected source retained | `83b29477b12636f89a58ec2e99ca3ff5b3e7cc589047368685a510bbc75ebbf8` | 2026-08-13 | Pending | Collected; selected non-secret settings confirmed in ready processes and required Secret key names verified without reading values |
 | TLS-01 | connector-a DID document and certificate validation | [`tls-01-connector-a-did-and-certificate.md`](./tls-01-connector-a-did-and-certificate.md) | Sanitized terminal capture; no protected source retained | `68b199d85a0a59ac47acb2d9fdb99ee8ee6eb4a8f5b55baaabf64b5666d7667f` | 2026-08-13 | Pending | Collected; DID advertises HTTPS DSP endpoint and certificate validation succeeded |
 | TLS-02 | connector-b DID document and certificate validation | [`tls-02-connector-b-did-and-certificate.md`](./tls-02-connector-b-did-and-certificate.md) | Sanitized terminal capture; no protected source retained | `2db85e4473a16f25a8b0a985156bbfc4c51b9cfd49a71a0cd54e16cc15f5c994` | 2026-08-13 | Pending | Collected; DID advertises HTTPS DSP endpoint and certificate validation succeeded |
 | TLS-03 | Plaintext DSP negative control | [`tls-01-connector-a-did-and-certificate.md`](./tls-01-connector-a-did-and-certificate.md); [`tls-02-connector-b-did-and-certificate.md`](./tls-02-connector-b-did-and-certificate.md) | Sanitized terminal capture; no protected source retained | See TLS-01 and TLS-02 | 2026-08-13 | Pending | Collected; both HTTP DSP routes return `308` redirects to HTTPS |
-| NEG-01 | Successful authenticated provider-consumer negotiation | TBD | TBD | TBD | TBD | TBD | Pending |
-| NEG-02 | Invalid or non-participant DSP authentication control | TBD | TBD | TBD | TBD | TBD | Pending |
-| NEG-03 | Management API local-authentication control | [`neg-03-unauthenticated-management-api.md`](./neg-03-unauthenticated-management-api.md) | Sanitized terminal capture; no protected source retained | `615b1dca5b6d0b85a0d818301921910b24efd1bec73279beddf73ad5aa849ef7` | 2026-08-13 | Pending | Collected; both unauthenticated read-only asset queries returned `401 Unauthorized` |
+| AUTH-03 | Supporting management API local-authentication control | [`neg-03-unauthenticated-management-api.md`](./neg-03-unauthenticated-management-api.md) | Sanitized terminal capture; no protected source retained | `615b1dca5b6d0b85a0d818301921910b24efd1bec73279beddf73ad5aa849ef7` | 2026-08-13 | Pending | Collected; both unauthenticated read-only asset queries returned `401 Unauthorized`; not proof of DSP authentication |
 
-## Open evidence items
+## Assessment boundary
 
-`NEG-01` and `NEG-02` require an approved test asset, the connector owner's authenticated negotiation procedure, and an approved invalid or non-participant test identity. They must not be attempted with discovered configuration credentials or an unapproved asset because an EDC negotiation creates state. Until both controls are collected and correlated in the configured observability stack, no final score can be assigned for connector authentication.
+This assessment intentionally does not execute a contract negotiation or an invalid/non-participant DSP negotiation. Those state-changing checks belong to [test `4.2.1.3`](../../test_4_2_1_3/test.md), which assesses contract definition, and [test `4.2.3.1`](../../../refusal_or_registration_of_sharing_agreement/test_4_2_3_1/test.md), which assesses access restrictions for negotiation APIs, statuses, and logs.
 
-## Negotiation correlation table
-
-| Run ID | Initiator | Counterparty | HTTPS DSP endpoint | Negotiation or trace ID | Authentication result | Provider evidence | Consumer evidence | Outcome |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| TBD | TBD | TBD | TBD | TBD | TBD | TBD | TBD | Pending |
+The collected evidence supports a maximum score of `2` (Partial Coverage) in this scope. It demonstrates encrypted DSP transport and a deployed DSP identity/authentication architecture, but does not prove that connector authentication occurred in a completed negotiation.
 
 ## Cross-test handoff
 
-Evidence about authorization to negotiation APIs, status messages, or logs must be recorded for test `4.2.3.1`; it is not evidence for the score of this test. Credential lifecycle evidence belongs to test `1.3.1.5`.
+Evidence about contract definition using claims, policies, and service agreements belongs to test `4.2.1.3`. Evidence about authorization to negotiation APIs, status messages, or logs belongs to test `4.2.3.1`; neither is evidence for the score of this test. Credential lifecycle evidence belongs to test `1.3.1.5`.
