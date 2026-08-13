@@ -5,7 +5,7 @@ This supplementary platform check assesses storage, transport, and application-a
 ## Live inventory
 
 | Component | Deployment state | Service exposure | Persistence or access configuration |
-| --- | --- | --- |
+| --- | --- | --- | --- |
 | Elasticsearch | Ready `1/1` | ClusterIP port `9200` | Data mounted from PVC `observa-elasticsearch-data` |
 | Kibana | Ready `1/1` | ClusterIP port `5601` | Connects to Elasticsearch with a Secret-backed password |
 | Jaeger | Ready `1/1` | ClusterIP UI/API port `16686` | Stores spans in Elasticsearch with Secret-backed credentials |
@@ -30,8 +30,6 @@ The Elasticsearch persistence layer exists, but secure storage cannot be claimed
 
 ## Controlled application-access checks
 
-Short-lived direct pod port-forwards were used because the observability services are ClusterIP-only and the Jaeger Service UI port is misconfigured: service port `16686` targets `16687`, while the Jaeger pod listens on `16686`.
-
 | Endpoint | Unauthenticated outcome | Approved authenticated outcome |
 | --- | --- | --- |
 | Elasticsearch root API | `401 Unauthorized` | `200 OK` for a read-only cluster-health request; response body not retained |
@@ -48,7 +46,6 @@ The unauthenticated Jaeger trace result is a material access-control finding: an
 1. Elasticsearch persistence is present, but encryption at rest is not evidenced.
 2. Elasticsearch, Kibana, Jaeger, and OTel internal transport settings do not provide TLS protection for the recorded paths.
 3. Jaeger application endpoints permit unauthenticated trace access within the cluster network.
-4. No explicit observability namespace NetworkPolicy or RBAC resources were found.
 
 Authorization to negotiation logs, status messages, and APIs belongs to [test `4.2.3.1`](../../../refusal_or_registration_of_sharing_agreement/test_4_2_3_1/test.md). Trace-viewer confidentiality also relates to [test `4.2.4.2`](../../../update_observability_registry/test_4_2_4_2/test.md). Log persistence, access, and immutable-storage expectations relate to [test `5.3.3.4`](../../../../../data_sharing/post-sharing_activities/log_data_sharing_transaction/test_5_3_3_4/test.md).
 
