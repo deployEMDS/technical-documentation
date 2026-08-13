@@ -17,7 +17,7 @@ Each committed artifact must state the capture date and command category, as app
 | Deployment repository | `deployEMDS-k8s-deployment` |
 | Deployment branch | `prepare-prod` |
 | Deployment revision | `846e5f1d7a388e664fe9e4942e553021752d63c6` |
-| Assessment status | Live evidence collection in progress |
+| Assessment status | CaaS evidence collection complete; reviewer confirmation pending |
 
 ## Evidence index
 
@@ -31,6 +31,8 @@ Each committed artifact must state the capture date and command category, as app
 | TLS-03 | Plaintext DSP negative control | [`tls-01-connector-a-did-and-certificate.md`](./tls-01-connector-a-did-and-certificate.md); [`tls-02-connector-b-did-and-certificate.md`](./tls-02-connector-b-did-and-certificate.md) | 2026-08-13 | Collected; both HTTP DSP routes return `308` redirects to HTTPS |
 | AUTH-03 | Supporting management API local-authentication control | [`neg-03-unauthenticated-management-api.md`](./neg-03-unauthenticated-management-api.md) | 2026-08-13 | Collected; both unauthenticated read-only asset queries returned `401 Unauthorized`; not proof of DSP authentication |
 | DSP-01 | Approved minimal negotiation using existing catalog offer | [`dsp-01-approved-minimal-negotiation.md`](./dsp-01-approved-minimal-negotiation.md) | 2026-08-13 | Collected; `asset1` / `policy1` / `contract3` payloads and mapping verified, both connector negotiations finalized, and no direct authentication-decision record found |
+| UI-01 | Supplementary dashboard TLS and login | [`ui-01-dashboard-tls-login.md`](./ui-01-dashboard-tls-login.md) | 2026-08-13 | Collected; HTTPS dashboard route and API-key access model verified without a server-side session |
+| LOG-01 | Supplementary observability storage and access | [`log-01-observability-storage-access.md`](./log-01-observability-storage-access.md) | 2026-08-13 | Collected; persistence verified, but Jaeger trace access is unauthenticated inside the cluster and storage/transport gaps are documented |
 
 ## Assessment boundary
 

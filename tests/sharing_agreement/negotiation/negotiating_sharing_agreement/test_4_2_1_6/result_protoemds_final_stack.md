@@ -59,6 +59,12 @@ The negotiation initiated by `connector-b` against `connector-a` reached `FINALI
 
 The collected evidence demonstrates encrypted DSP transport and a successful connector-to-connector agreement exchange. The proposed assessment is Full Coverage because the authenticated connector workflow finalized on both sides over the validated HTTPS DSP path. The captured logs do not provide a standalone authentication-event record that attributes peer authentication to a specific credential or verification decision; Casper should confirm this interpretation or change the score to Significant Coverage during review.
 
+#### Supplementary platform checks
+
+The connector dashboard is available over the same verified HTTPS ingress and redirects plaintext HTTP to HTTPS. Its implementation is a static single-page application that stores the connector API key only in browser session storage and uses it for management API requests. The dashboard route itself has no server-side session cookie; unauthenticated management access returned `401`, while one controlled read-only request with the approved key returned `200`. See [`UI-01`](./resources-protoemds_final_stack/ui-01-dashboard-tls-login.md).
+
+Collected observability data is persisted in Elasticsearch on a bound IONOS HDD PVC. However, encryption at rest is not evidenced, Elasticsearch HTTP and transport TLS are disabled, and the OpenTelemetry Collector is configured with insecure TLS to Jaeger. Jaeger trace endpoints allowed unauthenticated access through the internal service, while Elasticsearch and Kibana required the approved credential. These are supplementary platform findings and do not change the proposed `4.2.1.6` score. See [`LOG-01`](./resources-protoemds_final_stack/log-01-observability-storage-access.md). Authorization to negotiation logs remains in the scope of [test `4.2.3.1`](../../refusal_or_registration_of_sharing_agreement/test_4_2_3_1/test.md).
+
 #### Deployment model assessed
 
 | Deployment model | Status | Evidence | Consolidated assessment |

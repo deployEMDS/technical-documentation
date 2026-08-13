@@ -208,6 +208,19 @@ Do not commit the catalog response, request body, management credential, or agre
 
 Apply `0`–`4` after reviewing the negotiated exchange. A completed negotiation does not prove policy semantics, usage rights, or access authorization; those remain with their owning tests.
 
+## Supplementary platform checks
+
+The following checks implement the broader Security and Restricted Access scope agreed for this integration assessment. They are supplementary platform evidence and do not change the Functional Suitability score for test `4.2.1.6`.
+
+| Check | Evidence objective | Scope boundary |
+| --- | --- | --- |
+| Dashboard TLS and login | Verify the `/dashboard/` route is served over HTTPS, identify its authentication model, and perform one controlled read-only login/access check. | UI authentication is supplementary; it is not evidence of DSP connector authentication. |
+| Secure storage of collected logs | Verify observability persistence, service exposure, access controls, and telemetry transport settings. | Authorization to negotiation APIs, status messages, and logs belongs to [test `4.2.3.1`](../../../refusal_or_registration_of_sharing_agreement/test_4_2_3_1/test.md); trace-viewer confidentiality also relates to [test `4.2.4.2`](../../update_observability_registry/test_4_2_4_2/test.md); log persistence and immutable storage relate to [test `5.3.3.4`](../../../../../data_sharing/post-sharing_activities/log_data_sharing_transaction/test_5_3_3_4/test.md). |
+
+For the dashboard, capture verified TLS, HTTP-to-HTTPS behavior, unauthenticated behavior, one approved authenticated read-only view, and logout/session-clear behavior. Do not create or modify connector resources.
+
+For observability, capture Elasticsearch persistence, actual service exposure, unauthenticated endpoint behavior, approved authenticated access when available, and live TLS/transport settings. A persistent volume alone does not prove encryption at rest; record it as `Not assessed` unless the storage platform owner provides confirmation. Do not expose secrets, stored log content, trace content beyond the existing negotiation IDs, session cookies, or credential values.
+
 ## Evidence completion
 
 1. Add a row for each executed step to [`../resources-protoemds_final_stack/evidence-manifest.md`](../resources-protoemds_final_stack/evidence-manifest.md).
