@@ -17,7 +17,7 @@ Each committed artifact must state the capture date and command category, as app
 | Deployment repository | `deployEMDS-k8s-deployment` |
 | Deployment branch | `prepare-prod` |
 | Deployment revision | `846e5f1d7a388e664fe9e4942e553021752d63c6` |
-| Assessment status | CaaS evidence collection complete; co-author confirmation pending; reviewer confirmation pending |
+| Assessment status | CaaS evidence collection complete |
 
 ## Evidence index
 
