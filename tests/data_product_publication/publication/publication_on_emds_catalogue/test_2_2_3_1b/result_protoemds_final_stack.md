@@ -17,21 +17,22 @@ This section identifies the technical context in which the protoEMDS Final Stack
 | Existing test ID | `2.2.3.1B` |
 | Level | UC + Technical |
 | ISO/IEC 25010 mapping | Functional suitability, Compatibility |
-| Owner (tentative) | Alessio (Cefriel) / Wilhelm |
+| Owner | Casper (imec, @vghelu49) |
 | Reviewer | Alessio |
-| Deployment model assessed | TBD |
-| Target environment | TBD |
-| EDC version / release | TBD |
-| Connector deployment reference | TBD |
-| Assessment evidence | TBD |
+| Deployment model assessed | CaaS / IONOS-managed deployment |
+| Target environment | IONOS-managed CaaS deployment |
+| EDC version / release | `emds-edc-connector` `9916cc5`, based on Eclipse EDC `0.10.0` |
+| Connector deployment reference | `deployEMDS-k8s-deployment`, branch `prepare-prod`, commit `846e5f1` |
+| Assessment evidence | Bruno CLI API execution; all reported evidence is sanitized |
 
 The assessment should be completed using the deployment model for which evidence is realistically available. It is not mandatory to execute the same test in both CaaS and on-premise environments.
 
-If only one deployment model is assessed, the other one should be marked as `Not assessed`.
+The deployment models are assessed independently. The CaaS assessment is
+complete; the on-premise assessment remains `TBD`.
 
 #### Tested quality metric and method
 
-This result reuses the existing stack-agnostic test definition in `test.md` and adds an protoEMDS Final Stack integration-assessment perspective.
+This result reuses the existing stack-agnostic test definition in `test.md` and adds a protoEMDS Final Stack integration-assessment perspective.
 
 It does not replace the historical stack-specific result files, such as `result_edc_vc.md` or `result_fiware.md`.
 
@@ -50,39 +51,44 @@ The EMDS catalog, as defined in the relevant documentation, refers to the Data S
 
 #### Assessment
 
-Pending.
+Pass for the tested provider-to-consumer publication path.
 
-The assessment should be completed once consolidated technical evidence is available for the protoEMDS Final Stack deployment.
-
-The result should clearly indicate which deployment model was assessed. It is acceptable to assess only one deployment model if evidence for the other deployment model is not available.
+A disposable asset was created without a contract definition and was confirmed
+absent from the consumer catalogue. A policy and contract definition were then
+attached to that already existing asset. The next catalogue query returned the
+asset with its expected metadata, MobilityDCAT-AP field, quality annotation,
+policy offer, and data-service distributions. All API operations returned
+successful HTTP responses.
 
 #### Deployment model assessed
 
 | Deployment model | Status | Evidence | Consolidated assessment |
 | --- | --- | --- | --- |
-| CaaS / IONOS-managed deployment | TBD | TBD | Complete this row only if evidence is collected from the IONOS-managed deployment. Otherwise mark as `Not assessed`. |
-| On-premise deployment | TBD | TBD | Complete this row only if evidence is collected from an on-premise or locally managed deployment. Otherwise mark as `Not assessed`. |
+| CaaS / IONOS-managed deployment | Pass | Bruno CLI API execution | Existing asset was absent before publication and visible after its policy and contract definition were created. |
+| On-premise deployment | TBD | TBD | To be assessed separately. |
 
 #### Measured results
 
 | Criteria | Measured KPI | Evidence | Notes |
 | --- | ---: | --- | --- |
-| **No Coverage:** No technical requirements are met. The solution fails to provide any functionality for an existing data product published in the catalog. | TBD | TBD | Pending protoEMDS Final Stack assessment. |
-| **Minimal Coverage:** Up to 25% of the technical requirements are met. Only basic functionalities are implemented, leaving most requirements unaddressed. | TBD | TBD | Pending protoEMDS Final Stack assessment. |
-| **Partial Coverage:** Approximately 50% of the technical requirements are met. Key functions are partially implemented, but several critical aspects are lacking. | TBD | TBD | Pending protoEMDS Final Stack assessment. |
-| **Significant Coverage:** About 80% of the technical requirements are met. Most functionalities work as expected, with only minor gaps needing improvement. | TBD | TBD | Pending protoEMDS Final Stack assessment. |
-| **Full Coverage:** All technical requirements are fully met. The solution provides a comprehensive, out-of-the-box solution for an existing data product published in the catalog. | TBD | TBD | Pending protoEMDS Final Stack assessment. |
+| **No Coverage:** No technical requirements are met. The solution fails to provide any functionality for an existing data product published in the catalog. | Not selected | API execution | Publication succeeded. |
+| **Minimal Coverage:** Up to 25% of the technical requirements are met. Only basic functionalities are implemented, leaving most requirements unaddressed. | Not selected | API execution | Publication succeeded without the limitations described by this level. |
+| **Partial Coverage:** Approximately 50% of the technical requirements are met. Key functions are partially implemented, but several critical aspects are lacking. | Not selected | API execution | The complete test path succeeded. |
+| **Significant Coverage:** About 80% of the technical requirements are met. Most functionalities work as expected, with only minor gaps needing improvement. | Not selected | API execution | No gap was observed in the scope of this test. |
+| **Full Coverage:** All technical requirements are fully met. The solution provides a comprehensive, out-of-the-box solution for an existing data product published in the catalog. | **4** | API execution | The before/after catalogue checks prove that adding the policy and contract definition published an already existing asset. |
 
-**Functional Suitability Quality Metric:** TBD
+**Functional Suitability Quality Metric:** 4
+
+The score is 4 because the test isolated the publication transition: the asset
+already existed, was not initially offered in the catalogue, and became
+visible without recreating it after the policy and contract definition were
+added.
 
 #### Notes
 
-This result introduces an **protoEMDS Final Stack** perspective for the existing test `2.2.3.1B` under the KPI1 area **Catalogue publication**.
+This result introduces a **protoEMDS Final Stack** perspective for the existing test `2.2.3.1B` under the KPI1 area **Catalogue publication**.
 
 This result should not be interpreted as part of the original Phase 1 / Phase 2 stack-comparison campaign. It is intended as an integration phase assessment of the current EMDS final technical infrastructure.
 
-The assessment should be completed using consolidated technical evidence, such as endpoint responses, logs, screenshots, Postman/curl executions, GitHub issues, pull requests, repository references, deployment status or confirmation from the relevant component owner.
-
-This result file was generated from the local `test.md` and, where available, the local `result_edc_vc.md` structure. EDC+VC-specific evidence, values and scores were intentionally not reused.
-
-
+The score applies to the assessed CaaS deployment. The on-premise result
+remains TBD for a separate assessment.

@@ -17,21 +17,22 @@ This section identifies the technical context in which the protoEMDS Final Stack
 | Existing test ID | `3.1.1.4` |
 | Level | UC + Technical |
 | ISO/IEC 25010 mapping | Functional suitability, Compatibility |
-| Owner (tentative) | Alessio (Cefriel) / Wilhelm |
+| Owner | Casper (imec, @vghelu49) |
 | Reviewer | Carlos |
-| Deployment model assessed | TBD |
-| Target environment | TBD |
-| EDC version / release | TBD |
-| Connector deployment reference | TBD |
-| Assessment evidence | TBD |
+| Deployment model assessed | CaaS / IONOS-managed deployment |
+| Target environment | IONOS-managed CaaS deployment |
+| EDC version / release | `emds-edc-connector` `9916cc5`, based on Eclipse EDC `0.10.0` |
+| Connector deployment reference | `deployEMDS-k8s-deployment`, branch `prepare-prod`, commit `846e5f1` |
+| Assessment evidence | Bruno CLI API execution and authenticated Playwright UI verification; all reported evidence is sanitized |
 
 The assessment should be completed using the deployment model for which evidence is realistically available. It is not mandatory to execute the same test in both CaaS and on-premise environments.
 
-If only one deployment model is assessed, the other one should be marked as `Not assessed`.
+The deployment models are assessed independently. The CaaS assessment is
+complete; the on-premise assessment remains `TBD`.
 
 #### Tested quality metric and method
 
-This result reuses the existing stack-agnostic test definition in `test.md` and adds an protoEMDS Final Stack integration-assessment perspective.
+This result reuses the existing stack-agnostic test definition in `test.md` and adds a protoEMDS Final Stack integration-assessment perspective.
 
 It does not replace the historical stack-specific result files, such as `result_edc_vc.md` or `result_fiware.md`.
 
@@ -49,39 +50,56 @@ The test aims to determine whether the data product specification provides the n
 
 #### Assessment
 
-Pending.
+The connector accepted a disposable product containing standard DCAT metadata,
+a MobilityDCAT-AP mobility theme, and a DQV quality annotation using
+`dqv:hasQualityAnnotation`, `dqv:QualityAnnotation`, `oa:hasBody`, and
+`oa:hasTarget`.
 
-The assessment should be completed once consolidated technical evidence is available for the protoEMDS Final Stack deployment.
+The consumer catalogue returned `200 OK` and preserved the product title,
+MobilityDCAT-AP theme, and DQV quality annotation. In the native catalogue
+browser, the product detail view rendered spatial coverage and mobility theme
+and mapped the quality annotation into its **Quality Description** field. The
+same UI provides fields for further MobilityDCAT-AP metadata such as
+georeferencing method, network coverage, reference system, rights holder,
+transport mode, applicable legislation, assessment result, and intended
+information service.
 
-The result should clearly indicate which deployment model was assessed. It is acceptable to assess only one deployment model if evidence for the other deployment model is not available.
+The integration is limited because the catalogue browser does not offer
+quality-based search or filtering, and the quality annotation body and target
+were preserved by the API but not separately rendered in the assessed UI.
+
+![Sanitized catalogue view showing MobilityDCAT-AP and quality metadata](../test_3_1_1_1/images/catalogue-browser-protoemds-final-stack.png)
 
 #### Deployment model assessed
 
 | Deployment model | Status | Evidence | Consolidated assessment |
 | --- | --- | --- | --- |
-| CaaS / IONOS-managed deployment | TBD | TBD | Complete this row only if evidence is collected from the IONOS-managed deployment. Otherwise mark as `Not assessed`. |
-| On-premise deployment | TBD | TBD | Complete this row only if evidence is collected from an on-premise or locally managed deployment. Otherwise mark as `Not assessed`. |
+| CaaS / IONOS-managed deployment | Pass with limitations | Bruno CLI and Playwright | Profile metadata is preserved and partly rendered; profile-aware search is not available. |
+| On-premise deployment | TBD | TBD | To be assessed separately. |
 
 #### Measured results
 
 | **Criteria** | Measured KPI | Evidence | Notes |
 | --- | ---: | --- | --- |
-| **No DCAT-AP Support:** The implementation does not allow any DCAT-AP profile or functionality. | TBD | TBD | Pending protoEMDS Final Stack assessment. |
-| **Breaks with Napcore DCAT-AP:** The implementation breaks if Napcore's DCAT-AP is used to describe data products. | TBD | TBD | Pending protoEMDS Final Stack assessment. |
-| **Ignores Extensions but Functional:** The implementation ignores the extensions of Napcore's DCAT-AP, but the system works as expected, with extended metadata retrievable as part of the distribution. | TBD | TBD | Pending protoEMDS Final Stack assessment. |
-| **Partial Integration:** The implementation integrates Napcore's DCAT-AP profile and utilizes it for some search and listing functionalities, but with limitations. | TBD | TBD | Pending protoEMDS Final Stack assessment. |
-| **Full Integration:** The implementation fully integrates Napcore's DCAT-AP profile and utilizes it effectively for search and listing functionalities. | TBD | TBD | Pending protoEMDS Final Stack assessment. |
+| **No DCAT-AP Support:** The implementation does not allow any DCAT-AP profile or functionality. | Not selected | API and UI execution | MobilityDCAT-AP and DQV metadata were accepted. |
+| **Breaks with Napcore DCAT-AP:** The implementation breaks if Napcore's DCAT-AP is used to describe data products. | Not selected | API and UI execution | Publication and catalogue retrieval remained functional. |
+| **Ignores Extensions but Functional:** The implementation ignores the extensions of Napcore's DCAT-AP, but the system works as expected, with extended metadata retrievable as part of the distribution. | Not selected | API and UI execution | The UI actively renders several profile fields rather than only preserving them. |
+| **Partial Integration:** The implementation integrates Napcore's DCAT-AP profile and utilizes it for some search and listing functionalities, but with limitations. | **3** | API and UI execution | Metadata and DQV quality information are preserved and partly rendered in product details, but profile-aware search/filtering and complete quality-annotation rendering are missing. |
+| **Full Integration:** The implementation fully integrates Napcore's DCAT-AP profile and utilizes it effectively for search and listing functionalities. | Not selected | UI inspection | The assessed catalogue browser does not use profile fields for search or filtering. |
 
-**Functional Suitability Quality Metric:** TBD
+**Functional Suitability Quality Metric:** 3
+
+The score is 3 because the profile is more than pass-through metadata: the
+native UI exposes MobilityDCAT-AP creation fields and renders mobility and
+quality information in catalogue product details. It does not reach score 4
+because the UI does not provide profile-aware search/filtering and does not
+render every part of the DQV annotation.
 
 #### Notes
 
-This result introduces an **protoEMDS Final Stack** perspective for the existing test `3.1.1.4` under the KPI1 area **Catalogue discovery / metadata**.
+This result introduces a **protoEMDS Final Stack** perspective for the existing test `3.1.1.4` under the KPI1 area **Catalogue discovery / metadata**.
 
 This result should not be interpreted as part of the original Phase 1 / Phase 2 stack-comparison campaign. It is intended as an integration phase assessment of the current EMDS final technical infrastructure.
 
-The assessment should be completed using consolidated technical evidence, such as endpoint responses, logs, screenshots, Postman/curl executions, GitHub issues, pull requests, repository references, deployment status or confirmation from the relevant component owner.
-
-This result file was generated from the local `test.md` and, where available, the local `result_edc_vc.md` structure. EDC+VC-specific evidence, values and scores were intentionally not reused.
-
-
+The score applies to the assessed CaaS deployment. The on-premise result
+remains TBD for a separate assessment.
