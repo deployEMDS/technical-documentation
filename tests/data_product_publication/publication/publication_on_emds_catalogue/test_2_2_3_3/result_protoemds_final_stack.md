@@ -23,7 +23,7 @@ This section identifies the technical context in which the protoEMDS Final Stack
 | Target environment | IONOS-managed CaaS deployment |
 | EDC version / release | `emds-edc-connector` `9916cc5`, based on Eclipse EDC `0.10.0` |
 | Connector deployment reference | `deployEMDS-k8s-deployment`, branch `prepare-prod`, commit `846e5f1` |
-| Assessment evidence | Authenticated Playwright UI verification and Bruno CLI API execution; all reported evidence is sanitized |
+| Assessment evidence | Playwright UI verification and Bruno CLI API execution |
 
 The assessment should be completed using the deployment model for which evidence is realistically available. It is not mandatory to execute the same test in both CaaS and on-premise environments.
 
@@ -50,8 +50,8 @@ The test aims to verify the availability of a GUI for publishing a data product 
 
 #### Assessment
 
-The deployed connector includes an authenticated GUI for managing the complete
-set of resources needed to publish a data-product offering. The UI exposes:
+The connector UI has separate screens for assets, policies, contract
+definitions, and catalogues. The available controls include:
 
 - an asset list, search box, and asset-creation form;
 - core metadata, MobilityDCAT-AP, ODPS pricing, sample, and data-address tabs;
@@ -60,12 +60,13 @@ set of resources needed to publish a data-product offering. The UI exposes:
 - a catalogue browser that queries a counterparty by DSP address and DID and
   displays the resulting product and policy details.
 
-After the connector password was supplied through the UI, the Management API
-requests returned `200 OK`, and the product created through the API flow was
-visible in the asset list and catalogue browser. The assessed catalogue browser
-does not provide free-text search, metadata filters, or pagination controls.
+After the connector password was entered, Management API requests returned
+`200 OK`. The API-created product appeared in both the asset list and the
+catalogue browser. A complete publication was not submitted through the UI.
+The catalogue browser has no free-text search, metadata filters, or pagination
+controls.
 
-![Sanitized asset publication form](images/publication-form-protoemds-final-stack.png)
+![Asset publication form](images/publication-form-protoemds-final-stack.png)
 
 #### Deployment model assessed
 
@@ -86,11 +87,10 @@ does not provide free-text search, metadata filters, or pagination controls.
 
 **Functional Suitability Quality Metric:** 2
 
-The score is 2 because the native GUI implements the publication workflow and
-basic catalogue discovery, matching the Partial Coverage criterion. It does
-not reach score 3 because the discovery view lacks free-text search,
-customizable metadata filters, and pagination, and no external-system
-integration was demonstrated.
+The UI provides the main publication forms and basic catalogue browsing, but a
+full UI submission was not executed. The missing search, filtering, and
+pagination controls also limit the discovery workflow. This matches the
+Partial Coverage criterion.
 
 #### Notes
 

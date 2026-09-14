@@ -23,7 +23,7 @@ This section identifies the technical context in which the protoEMDS Final Stack
 | Target environment | IONOS-managed CaaS deployment |
 | EDC version / release | `emds-edc-connector` `9916cc5`, based on Eclipse EDC `0.10.0` |
 | Connector deployment reference | `deployEMDS-k8s-deployment`, branch `prepare-prod`, commit `846e5f1` |
-| Assessment evidence | Bruno CLI API execution and authenticated Playwright UI verification; all reported evidence is sanitized |
+| Assessment evidence | Bruno CLI API execution and Playwright UI verification |
 
 The assessment should be completed using the deployment model for which evidence is realistically available. It is not mandatory to execute the same test in both CaaS and on-premise environments.
 
@@ -50,8 +50,8 @@ The test aims to determine whether the data product specification provides the n
 
 #### Assessment
 
-The connector accepted a disposable product containing standard DCAT metadata,
-a MobilityDCAT-AP mobility theme, and a DQV quality annotation using
+The test product included standard DCAT metadata, a MobilityDCAT-AP mobility
+theme, and a DQV quality annotation using
 `dqv:hasQualityAnnotation`, `dqv:QualityAnnotation`, `oa:hasBody`, and
 `oa:hasTarget`.
 
@@ -64,11 +64,11 @@ georeferencing method, network coverage, reference system, rights holder,
 transport mode, applicable legislation, assessment result, and intended
 information service.
 
-The integration is limited because the catalogue browser does not offer
-quality-based search or filtering, and the quality annotation body and target
-were preserved by the API but not separately rendered in the assessed UI.
+The catalogue browser does not offer quality-based search or filtering. The
+API preserved the annotation body and target, but the UI did not display them
+as separate fields.
 
-![Sanitized catalogue view showing MobilityDCAT-AP and quality metadata](../test_3_1_1_1/images/catalogue-browser-protoemds-final-stack.png)
+![Catalogue view showing MobilityDCAT-AP and quality metadata](../test_3_1_1_1/images/catalogue-browser-protoemds-final-stack.png)
 
 #### Deployment model assessed
 
@@ -89,11 +89,10 @@ were preserved by the API but not separately rendered in the assessed UI.
 
 **Functional Suitability Quality Metric:** 3
 
-The score is 3 because the profile is more than pass-through metadata: the
-native UI exposes MobilityDCAT-AP creation fields and renders mobility and
-quality information in catalogue product details. It does not reach score 4
-because the UI does not provide profile-aware search/filtering and does not
-render every part of the DQV annotation.
+The profile is more than pass-through metadata: the UI exposes
+MobilityDCAT-AP fields and displays mobility and quality information in the
+product details. Profile-aware search is missing, and not every part of the
+DQV annotation is displayed, so the result matches Partial Integration.
 
 #### Notes
 

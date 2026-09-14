@@ -23,7 +23,7 @@ This section identifies the technical context in which the protoEMDS Final Stack
 | Target environment | IONOS-managed CaaS deployment |
 | EDC version / release | `emds-edc-connector` `9916cc5`, based on Eclipse EDC `0.10.0` |
 | Connector deployment reference | `deployEMDS-k8s-deployment`, branch `prepare-prod`, commit `846e5f1` |
-| Assessment evidence | Bruno CLI API execution and authenticated Playwright UI verification; all reported evidence is sanitized |
+| Assessment evidence | Bruno CLI API execution and Playwright UI verification |
 
 The assessment should be completed using the deployment model for which evidence is realistically available. It is not mandatory to execute the same test in both CaaS and on-premise environments.
 
@@ -51,18 +51,18 @@ refers to the Data Space-only catalog, specifically the internal EDC catalog and
 
 #### Assessment
 
-Pass for the tested provider-to-consumer publication path.
+Pass.
 
-The run created a new asset, policy, and contract definition, then retrieved
-the new dataset from the consumer catalogue with `200 OK`. The returned
-dataset ID, metadata, distributions, and DSP endpoint were present and
-consistent with the test fixture.
+A new asset, policy, and contract definition were created through the
+provider's Management API. A catalogue request from the consumer returned
+`200 OK` and included the product with its expected metadata, DSP endpoint,
+and `HttpData-PULL` and `HttpData-PUSH` distributions.
 
 #### Deployment model assessed
 
 | Deployment model | Status | Evidence | Consolidated assessment |
 | --- | --- | --- | --- |
-| CaaS / IONOS-managed deployment | Pass | Sanitized Bruno CLI run record | New test product was visible from the consumer catalogue. |
+| CaaS / IONOS-managed deployment | Pass | Bruno CLI output | New test product was visible from the consumer catalogue. |
 | On-premise deployment | TBD | TBD | To be assessed separately. |
 
 #### Measured results
@@ -77,10 +77,9 @@ consistent with the test fixture.
 
 **Functional Suitability Quality Metric:** 4
 
-The score is 4 because this run covered the complete publication path required
-by the test: creating the product resources and confirming that the resulting
-product was visible in the consumer catalogue. It does not imply that the
-separate de-publication, UI, or federation tests have passed.
+The standard Management API covered the complete publication path without
+custom changes. The catalogue response confirmed that the consumer could see
+the new product, so this test meets the Full Coverage criterion.
 
 #### Notes
 

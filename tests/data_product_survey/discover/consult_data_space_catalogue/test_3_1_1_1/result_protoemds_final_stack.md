@@ -23,7 +23,7 @@ This section identifies the technical context in which the protoEMDS Final Stack
 | Target environment | IONOS-managed CaaS deployment |
 | EDC version / release | `emds-edc-connector` `9916cc5`, based on Eclipse EDC `0.10.0` |
 | Connector deployment reference | `deployEMDS-k8s-deployment`, branch `prepare-prod`, commit `846e5f1` |
-| Assessment evidence | Bruno CLI API execution and authenticated Playwright UI verification; all reported evidence is sanitized |
+| Assessment evidence | Bruno CLI API execution and Playwright UI verification |
 
 The assessment should be completed using the deployment model for which evidence is realistically available. It is not mandatory to execute the same test in both CaaS and on-premise environments.
 
@@ -52,16 +52,15 @@ The criteria for evaluation include being open-source, a hosted solution, or par
 
 #### Assessment
 
-The API and native UI discovery paths passed with limitations.
+The catalogue was queried through both the Management API and the connector
+UI. The API returned `200 OK` with the expected dataset metadata and DSP
+distributions. The UI accepted a counterparty DSP address and DID, listed the
+available products, and displayed product and policy details.
 
-The consumer Management API returned the newly published dataset with `200 OK`
-and the expected dataset metadata and DSP distributions. The authenticated
-catalogue browser accepted a counterparty DSP address and DID, returned
-multiple products, and displayed product and policy details. No free-text
-catalogue search, metadata filters, or pagination controls were available in
-the assessed UI. Integration with an external search platform was not executed.
+The UI has no free-text search, metadata filters, or pagination controls. No
+external search platform was connected during this test.
 
-![Sanitized catalogue browser showing MobilityDCAT-AP metadata and quality information](images/catalogue-browser-protoemds-final-stack.png)
+![Catalogue browser showing MobilityDCAT-AP metadata and quality information](images/catalogue-browser-protoemds-final-stack.png)
 
 #### Deployment model assessed
 
@@ -82,11 +81,10 @@ the assessed UI. Integration with an external search platform was not executed.
 
 **Functional Suitability Quality Metric:** 2
 
-The score is 2 because the deployment provides a functional online catalogue
-browser and a machine-readable DCAT JSON-LD API, but the assessed UI is a
-counterparty catalogue browser rather than an advanced search experience. It
-does not expose free-text search, metadata filters, or pagination controls, and
-no external search-tool integration was completed during this assessment.
+The deployment provides a working catalogue browser and a DCAT JSON-LD API,
+but not the search features required for a higher score. Since no external
+search integration was tested either, the result matches the Partial Coverage
+criterion.
 
 #### Notes
 

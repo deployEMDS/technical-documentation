@@ -23,7 +23,7 @@ This section identifies the technical context in which the protoEMDS Final Stack
 | Target environment | IONOS-managed CaaS deployment |
 | EDC version / release | `emds-edc-connector` `9916cc5`, based on Eclipse EDC `0.10.0` |
 | Connector deployment reference | `deployEMDS-k8s-deployment`, branch `prepare-prod`, commit `846e5f1` |
-| Assessment evidence | Bruno CLI API execution; all reported evidence is sanitized |
+| Assessment evidence | Bruno CLI API execution |
 
 The assessment should be completed using the deployment model for which evidence is realistically available. It is not mandatory to execute the same test in both CaaS and on-premise environments.
 
@@ -50,14 +50,12 @@ The test aims to examine the process of catalog de-publication for a data produc
 
 #### Assessment
 
-Pass for the tested de-publication path.
+Pass.
 
-The disposable product was first confirmed visible in the consumer catalogue.
-Deleting its contract definition returned `204 No Content`. A subsequent
-catalogue query returned `200 OK` without the product, while a direct asset
-lookup still returned `200 OK`. This demonstrates that the offer was
-de-published without deleting the reusable underlying asset. The remaining
-test policy and asset were removed after the observation was recorded.
+The product was visible before its contract definition was deleted. The delete
+request returned `204 No Content`; the next catalogue query no longer included
+the product, while a direct asset lookup still returned `200 OK`. The test
+policy and asset were removed afterward.
 
 #### Deployment model assessed
 
@@ -78,10 +76,9 @@ test policy and asset were removed after the observation was recorded.
 
 **Functional Suitability Quality Metric:** 4
 
-The score is 4 because the standard Management API provided a complete
-de-publication operation without custom development. The before/after
-catalogue checks proved the visibility change, and the retained asset proved
-that de-publication did not require deleting the data product itself.
+The standard Management API removed the offer from the catalogue without
+custom development or deletion of the underlying asset. This meets the Full
+Coverage criterion.
 
 #### Notes
 

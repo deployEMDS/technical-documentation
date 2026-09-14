@@ -23,7 +23,7 @@ This section identifies the technical context in which the protoEMDS Final Stack
 | Target environment | IONOS-managed CaaS deployment |
 | EDC version / release | `emds-edc-connector` `9916cc5`, based on Eclipse EDC `0.10.0` |
 | Connector deployment reference | `deployEMDS-k8s-deployment`, branch `prepare-prod`, commit `846e5f1` |
-| Assessment evidence | Bruno CLI API execution; all reported evidence is sanitized |
+| Assessment evidence | Bruno CLI API execution |
 
 The assessment should be completed using the deployment model for which evidence is realistically available. It is not mandatory to execute the same test in both CaaS and on-premise environments.
 
@@ -51,14 +51,12 @@ The EMDS catalog, as defined in the relevant documentation, refers to the Data S
 
 #### Assessment
 
-Pass for the tested provider-to-consumer publication path.
+Pass.
 
-A disposable asset was created without a contract definition and was confirmed
-absent from the consumer catalogue. A policy and contract definition were then
-attached to that already existing asset. The next catalogue query returned the
-asset with its expected metadata, MobilityDCAT-AP field, quality annotation,
-policy offer, and data-service distributions. All API operations returned
-successful HTTP responses.
+The asset was created first, without a policy or contract definition, and did
+not appear in the consumer catalogue. After adding the policy and contract
+definition, the same asset appeared with its metadata, policy offer, and
+data-service distributions.
 
 #### Deployment model assessed
 
@@ -79,10 +77,9 @@ successful HTTP responses.
 
 **Functional Suitability Quality Metric:** 4
 
-The score is 4 because the test isolated the publication transition: the asset
-already existed, was not initially offered in the catalogue, and became
-visible without recreating it after the policy and contract definition were
-added.
+The before-and-after queries show that an existing asset can be published by
+adding its policy and contract definition; the asset did not need to be
+recreated. This meets the Full Coverage criterion.
 
 #### Notes
 
