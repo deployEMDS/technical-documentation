@@ -28,7 +28,7 @@ This section identifies the technical context in which the protoEMDS Final Stack
 The assessment should be completed using the deployment model for which evidence is realistically available. It is not mandatory to execute the same test in both CaaS and on-premise environments.
 
 The deployment models are assessed independently. The CaaS assessment is
-complete; the on-premise assessment remains `TBD`.
+complete. The on-premise assessment remains `TBD`.
 
 #### Tested quality metric and method
 
@@ -60,13 +60,17 @@ available products, and displayed product and policy details.
 The UI has no free-text search, metadata filters, or pagination controls. No
 external search platform was connected during this test.
 
-![Catalogue browser showing MobilityDCAT-AP metadata and quality information](images/catalogue-browser-protoemds-final-stack.png)
+![Catalogue browser showing MobilityDCAT-AP metadata and quality information](./images/catalogue-browser-protoemds-final-stack.png)
+
+The screenshot shows the catalogue browser with the counterparty address and
+identifier fields, the catalogue action, published asset cards, and the
+additional mobility-properties view for a selected asset.
 
 #### Deployment model assessed
 
 | Deployment model | Status | Evidence | Consolidated assessment |
 | --- | --- | --- | --- |
-| CaaS / IONOS-managed deployment | Assessed | Bruno CLI and Playwright | API and UI catalogue retrieval passed; advanced search and external integration remain limitations. |
+| CaaS / IONOS-managed deployment | Assessed | Bruno CLI and Playwright | API and UI catalogue retrieval passed. Advanced search and external integration remain limitations. |
 | On-premise deployment | TBD | TBD | To be assessed separately. |
 
 #### Measured results
@@ -85,6 +89,94 @@ The deployment provides a working catalogue browser and a DCAT JSON-LD API,
 but not the search features required for a higher score. Since no external
 search integration was tested either, the result matches the Partial Coverage
 criterion.
+
+#### Execution and evidence
+
+The evidence snippets use generic participant labels. Credentials, hostnames,
+and participant-specific identifiers are omitted. Disposable test IDs are
+retained to keep the workflow concrete.
+
+**Sanitized Bruno catalogue query**
+
+```yaml
+variables:
+  provider: "<provider-host>"
+  consumer: "<consumer-host>"
+  asset-id: "fla01-cat-test-asset-01"
+
+request:
+  method: POST
+  url: https://{{consumer}}/api/management/v3/catalog/request
+  body:
+    "counterPartyAddress": "https://{{provider}}/api/dsp"
+    "counterPartyId": "did:web:<provider-host>"
+    "protocol": "dataspace-protocol-http"
+    "querySpec":
+      "offset": 0
+      "limit": 100
+```
+
+The catalogue assertion was:
+
+```javascript
+const response = res.getBody()
+const datasets = Array.isArray(response["dcat:dataset"])
+  ? response["dcat:dataset"]
+  : [response["dcat:dataset"]].filter(Boolean)
+const assetId = bru.getEnvVar("asset-id") || bru.getVar("asset-id")
+const dataset = datasets.find(item =>
+  item["@id"] === assetId || item.id === assetId
+)
+
+if (res.getStatus() !== 200) {
+  throw new Error(`Catalogue request failed with HTTP ${res.getStatus()}`)
+}
+
+if (!dataset) {
+  throw new Error("Expected test asset is absent from the catalogue")
+}
+```
+
+The relevant catalogue response excerpt was:
+
+```json
+{
+  "dcat:dataset": [
+    {
+      "@id": "fla01-cat-test-asset-01",
+      "dct:title": "Flanders catalogue integration test",
+      "dcat:distribution": [
+        {
+          "@type": "dcat:Distribution",
+          "dct:format": {
+            "@id": "HttpData-PULL"
+          }
+        }
+      ]
+    }
+  ]
+}
+```
+
+**Sanitized UI workflow**
+
+```javascript
+await page.goto("https://<connector-host>/dashboard/")
+await page.getByRole("link", {name: "Catalog browser"}).click()
+await page.getByLabel("Counterparty DSP address").fill(
+  "https://<provider-host>/api/dsp"
+)
+await page.getByLabel("Counterparty DID").fill("did:web:<provider-host>")
+await page.getByRole("button", {name: "Catalog"}).click()
+await page.getByText("Flanders catalogue integration test").click()
+```
+
+| Evidence | Sanitized observation |
+| --- | --- |
+| API-01 | The consumer catalogue returned the expected dataset and distributions. |
+| UI-01 | The native catalogue browser displayed product and policy details. |
+| UI-02 | Free-text search, metadata filters, and pagination were absent. |
+| Screenshot | [Catalogue browser screenshot](./images/catalogue-browser-protoemds-final-stack.png) |
 
 #### Notes
 

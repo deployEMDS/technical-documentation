@@ -28,7 +28,7 @@ This section identifies the technical context in which the protoEMDS Final Stack
 The assessment should be completed using the deployment model for which evidence is realistically available. It is not mandatory to execute the same test in both CaaS and on-premise environments.
 
 The deployment models are assessed independently. The CaaS assessment is
-complete; the on-premise assessment remains `TBD`.
+complete. The on-premise assessment remains `TBD`.
 
 #### Tested quality metric and method
 
@@ -53,10 +53,10 @@ The test aims to verify the availability of a GUI for publishing a data product 
 The connector UI has separate screens for assets, policies, contract
 definitions, and catalogues. The available controls include:
 
-- an asset list, search box, and asset-creation form;
-- core metadata, MobilityDCAT-AP, ODPS pricing, sample, and data-address tabs;
-- policy creation with permission, prohibition, and obligation rules;
-- contract-definition creation linking policies and one or more assets;
+- an asset list, search box, and asset-creation form
+- core metadata, MobilityDCAT-AP, ODPS pricing, sample, and data-address tabs
+- policy creation with permission, prohibition, and obligation rules
+- contract-definition creation linking policies and one or more assets
 - a catalogue browser that queries a counterparty by DSP address and DID and
   displays the resulting product and policy details.
 
@@ -66,7 +66,12 @@ catalogue browser. A complete publication was not submitted through the UI.
 The catalogue browser has no free-text search, metadata filters, or pagination
 controls.
 
-![Asset publication form](images/publication-form-protoemds-final-stack.png)
+![Asset publication form](./images/publication-form-protoemds-final-stack.png)
+
+The screenshot shows the asset publication form with fields for the asset
+identifier, title, description, version, data address, publisher, frequency,
+and mobility theme. It also shows the available tabs for data address,
+MobilityDCAT-AP, pricing, sample, and policy information.
 
 #### Deployment model assessed
 
@@ -91,6 +96,63 @@ The UI provides the main publication forms and basic catalogue browsing, but a
 full UI submission was not executed. The missing search, filtering, and
 pagination controls also limit the discovery workflow. This matches the
 Partial Coverage criterion.
+
+#### Execution and evidence
+
+The evidence snippets use generic participant labels. Credentials, hostnames,
+and participant-specific identifiers are omitted. Disposable test IDs are
+retained to keep the workflow concrete.
+
+**Sanitized UI workflow**
+
+```javascript
+await page.goto("https://<connector-host>/dashboard/")
+await page.getByRole("link", {name: "Assets"}).click()
+await page.getByRole("button", {name: "Create asset"}).click()
+await page.getByLabel("Title").fill("Flanders catalogue integration test")
+await page.getByRole("link", {name: "Policies"}).click()
+await page.getByRole("link", {name: "Contract definitions"}).click()
+await page.getByRole("link", {name: "Catalog browser"}).click()
+await page.getByLabel("Counterparty DSP address").fill(
+  "https://<provider-host>/api/dsp"
+)
+await page.getByLabel("Counterparty DID").fill("did:web:<provider-host>")
+await page.getByRole("button", {name: "Catalog"}).click()
+```
+
+The supporting API fixture used the following sanitized request sequence:
+
+```yaml
+sequence:
+  - POST /api/management/v3/assets
+  - POST /api/management/v3/policydefinitions
+  - POST /api/management/v3/contractdefinitions
+  - POST /api/management/v3/catalog/request
+assertions:
+  - every mutation returns HTTP 200
+  - the catalogue contains the configured asset ID
+  - the UI displays the asset and policy details
+```
+
+The supporting catalogue response excerpt was:
+
+```json
+{
+  "dcat:dataset": [
+    {
+      "@id": "fla01-cat-test-asset-01",
+      "dct:title": "Flanders catalogue integration test"
+    }
+  ]
+}
+```
+
+| Evidence | Sanitized observation |
+| --- | --- |
+| UI-01 | Asset, policy, contract-definition, and catalogue screens were available. |
+| UI-02 | The catalogue browser displayed the published product. |
+| UI-03 | Advanced search, filtering, and pagination were not available. |
+| Screenshot | [Publication form screenshot](./images/publication-form-protoemds-final-stack.png) |
 
 #### Notes
 

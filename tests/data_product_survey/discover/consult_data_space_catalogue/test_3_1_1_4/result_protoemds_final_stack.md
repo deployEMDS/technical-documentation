@@ -28,7 +28,7 @@ This section identifies the technical context in which the protoEMDS Final Stack
 The assessment should be completed using the deployment model for which evidence is realistically available. It is not mandatory to execute the same test in both CaaS and on-premise environments.
 
 The deployment models are assessed independently. The CaaS assessment is
-complete; the on-premise assessment remains `TBD`.
+complete. The on-premise assessment remains `TBD`.
 
 #### Tested quality metric and method
 
@@ -68,13 +68,18 @@ The catalogue browser does not offer quality-based search or filtering. The
 API preserved the annotation body and target, but the UI did not display them
 as separate fields.
 
-![Catalogue view showing MobilityDCAT-AP and quality metadata](../test_3_1_1_1/images/catalogue-browser-protoemds-final-stack.png)
+![Catalogue view showing MobilityDCAT-AP and quality metadata](./images/catalogue-browser-protoemds-final-stack.png)
+
+The screenshot shows the selected asset's additional mobility-properties view.
+The visible fields include georeferencing method, network coverage, reference
+system, rights holder, transport mode, assessment result, intended information
+service, and quality description.
 
 #### Deployment model assessed
 
 | Deployment model | Status | Evidence | Consolidated assessment |
 | --- | --- | --- | --- |
-| CaaS / IONOS-managed deployment | Pass with limitations | Bruno CLI and Playwright | Profile metadata is preserved and partly rendered; profile-aware search is not available. |
+| CaaS / IONOS-managed deployment | Pass with limitations | Bruno CLI and Playwright | Profile metadata is preserved and partly rendered. Profile-aware search is not available. |
 | On-premise deployment | TBD | TBD | To be assessed separately. |
 
 #### Measured results
@@ -93,6 +98,103 @@ The profile is more than pass-through metadata: the UI exposes
 MobilityDCAT-AP fields and displays mobility and quality information in the
 product details. Profile-aware search is missing, and not every part of the
 DQV annotation is displayed, so the result matches Partial Integration.
+
+#### Execution and evidence
+
+The evidence snippets use generic participant labels. Credentials, hostnames,
+and participant-specific identifiers are omitted. Disposable test IDs are
+retained to keep the workflow concrete.
+
+**Sanitized Bruno metadata query**
+
+```yaml
+variables:
+  provider: "<provider-host>"
+  consumer: "<consumer-host>"
+  asset-id: "fla01-cat-test-asset-01"
+
+request:
+  method: POST
+  url: https://{{consumer}}/api/management/v3/catalog/request
+  body:
+    "counterPartyAddress": "https://{{provider}}/api/dsp"
+    "counterPartyId": "did:web:<provider-host>"
+    "protocol": "dataspace-protocol-http"
+    "querySpec":
+      "offset": 0
+      "limit": 100
+```
+
+The metadata assertions were:
+
+```javascript
+const response = res.getBody()
+const datasets = Array.isArray(response["dcat:dataset"])
+  ? response["dcat:dataset"]
+  : [response["dcat:dataset"]].filter(Boolean)
+const assetId = bru.getEnvVar("asset-id") || bru.getVar("asset-id")
+const dataset = datasets.find(item =>
+  item["@id"] === assetId || item.id === assetId
+)
+
+if (res.getStatus() !== 200 || !dataset) {
+  throw new Error("Expected catalogue dataset was not returned")
+}
+
+if (!dataset["dct:title"]) {
+  throw new Error("Dataset title is missing")
+}
+
+if (!dataset["mobilitydcatap:mobilityTheme"]) {
+  throw new Error("MobilityDCAT-AP theme is missing")
+}
+
+if (!dataset["dqv:hasQualityAnnotation"] &&
+    !dataset["http://www.w3.org/ns/dqv#hasQualityAnnotation"]) {
+  throw new Error("DQV quality annotation is missing")
+}
+```
+
+The relevant catalogue response excerpt was:
+
+```json
+{
+  "dcat:dataset": [
+    {
+      "@id": "fla01-cat-test-asset-01",
+      "dct:title": "Flanders catalogue integration test",
+      "mobilitydcatap:mobilityTheme": "https://w3id.org/mobilitydcat-ap/mobility-theme/other",
+      "dqv:hasQualityAnnotation": {
+        "@id": "urn:deployemds:quality:integration-test",
+        "oa:hasBody": "urn:deployemds:quality:body:integration-test",
+        "oa:hasTarget": "fla01-cat-test-asset-01"
+      }
+    }
+  ]
+}
+```
+
+**Sanitized UI workflow**
+
+```javascript
+await page.goto("https://<connector-host>/dashboard/")
+await page.getByRole("link", {name: "Catalog browser"}).click()
+await page.getByLabel("Counterparty DSP address").fill(
+  "https://<provider-host>/api/dsp"
+)
+await page.getByLabel("Counterparty DID").fill("did:web:<provider-host>")
+await page.getByRole("button", {name: "Catalog"}).click()
+await page.getByText("Flanders catalogue integration test").click()
+await page.getByRole("button", {name: "Additional Mobility Properties"}).click()
+```
+
+| Evidence | Sanitized observation |
+| --- | --- |
+| API-01 | DCAT metadata, MobilityDCAT-AP metadata, and DQV annotation were preserved. |
+| UI-01 | Spatial and mobility metadata were rendered in the product view. |
+| UI-02 | Quality information was mapped to the visible quality description. |
+| UI-03 | Quality-based search and filtering were not available. |
+| Screenshot | [Catalogue metadata screenshot](./images/catalogue-browser-protoemds-final-stack.png) |
 
 #### Notes
 

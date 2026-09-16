@@ -28,7 +28,7 @@ This section identifies the technical context in which the protoEMDS Final Stack
 The assessment should be completed using the deployment model for which evidence is realistically available. It is not mandatory to execute the same test in both CaaS and on-premise environments.
 
 The deployment models are assessed independently. The CaaS assessment is
-complete; the on-premise assessment remains `TBD`.
+complete. The on-premise assessment remains `TBD`.
 
 #### Tested quality metric and method
 
@@ -78,8 +78,99 @@ data-service distributions.
 **Functional Suitability Quality Metric:** 4
 
 The before-and-after queries show that an existing asset can be published by
-adding its policy and contract definition; the asset did not need to be
+adding its policy and contract definition. The asset did not need to be
 recreated. This meets the Full Coverage criterion.
+
+#### Execution and evidence
+
+The evidence snippets use generic participant labels. Credentials, hostnames,
+and participant-specific identifiers are omitted. Disposable test IDs are
+retained to keep the workflow concrete.
+
+**Sanitized Bruno workflow**
+
+```yaml
+variables:
+  provider: "<provider-host>"
+  consumer: "<consumer-host>"
+  asset-id: "fla01-cat-test-asset-01"
+  policy-id: "fla01-cat-test-policy-01"
+  contract-id: "fla01-cat-test-contract-01"
+
+sequence:
+  - request: Create Test Asset
+    method: POST
+    url: https://{{provider}}/api/management/v3/assets
+    expected_status: 200
+  - request: Query Test Catalogue
+    method: POST
+    url: https://{{consumer}}/api/management/v3/catalog/request
+    variables:
+      expect-asset-present: "false"
+    expected_status: 200
+  - request: Create Test Policy
+    method: POST
+    url: https://{{provider}}/api/management/v3/policydefinitions
+    expected_status: 200
+  - request: Create Test Contract Definition
+    method: POST
+    url: https://{{provider}}/api/management/v3/contractdefinitions
+    expected_status: 200
+  - request: Query Test Catalogue
+    method: POST
+    url: https://{{consumer}}/api/management/v3/catalog/request
+    variables:
+      expect-asset-present: "true"
+    expected_status: 200
+```
+
+The catalogue assertion used for both queries was:
+
+```javascript
+const response = res.getBody()
+const datasets = Array.isArray(response["dcat:dataset"])
+  ? response["dcat:dataset"]
+  : [response["dcat:dataset"]].filter(Boolean)
+const assetId = bru.getEnvVar("asset-id") || bru.getVar("asset-id")
+const expectedPresent =
+  String(bru.getEnvVar("expect-asset-present") || "true") === "true"
+const found = datasets.some(item =>
+  item["@id"] === assetId || item.id === assetId
+)
+
+if (res.getStatus() !== 200) {
+  throw new Error(`Catalogue request failed with HTTP ${res.getStatus()}`)
+}
+
+if (found !== expectedPresent) {
+  throw new Error("Catalogue presence did not match the expected state")
+}
+```
+
+The relevant before-and-after response excerpts were:
+
+```json
+{
+  "before_publication": {
+    "dcat:dataset": []
+  },
+  "after_publication": {
+    "dcat:dataset": [
+      {
+        "@id": "fla01-cat-test-asset-01",
+        "dct:title": "Flanders catalogue integration test"
+      }
+    ]
+  }
+}
+```
+
+| Evidence | Sanitized observation |
+| --- | --- |
+| API-01 | The asset was created before publication configuration. |
+| API-02 | The first catalogue query confirmed the asset was absent. |
+| API-03 | The second catalogue query confirmed the same asset was visible. |
+| Scope | One provider-to-consumer path was assessed. |
 
 #### Notes
 

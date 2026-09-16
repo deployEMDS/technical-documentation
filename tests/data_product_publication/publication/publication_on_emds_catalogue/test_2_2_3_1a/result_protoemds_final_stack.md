@@ -28,7 +28,7 @@ This section identifies the technical context in which the protoEMDS Final Stack
 The assessment should be completed using the deployment model for which evidence is realistically available. It is not mandatory to execute the same test in both CaaS and on-premise environments.
 
 The deployment models are assessed independently. The CaaS assessment is
-complete; the on-premise assessment remains `TBD`.
+complete. The on-premise assessment remains `TBD`.
 
 #### Tested quality metric and method
 
@@ -73,13 +73,130 @@ and `HttpData-PULL` and `HttpData-PUSH` distributions.
 | **Minimal Coverage:** Up to 25% of the technical requirements are met. Only basic functionalities are implemented, leaving most requirements unaddressed. | Not selected | API and UI execution | Publication succeeded without the limitations described by this level. |
 | **Partial Coverage:** Approximately 50% of the technical requirements are met. Key functions are partially implemented, but several critical aspects are lacking. | Not selected | API and UI execution | The complete test path succeeded. |
 | **Significant Coverage:** About 80% of the technical requirements are met. Most functionalities work as expected, with only minor gaps needing improvement. | Not selected | API and UI execution | No gap was observed in the scope of this test. |
-| **Full Coverage:** All technical requirements are fully met. The solution provides a comprehensive, out-of-the-box solution for the new data product in the catalog. | **4** | API and UI execution | Asset, policy, and contract creation returned `200 OK`; the consumer catalogue returned the new product with the expected metadata and distributions. |
+| **Full Coverage:** All technical requirements are fully met. The solution provides a comprehensive, out-of-the-box solution for the new data product in the catalog. | **4** | API and UI execution | Asset, policy, and contract creation returned `200 OK`. The consumer catalogue returned the new product with the expected metadata and distributions. |
 
 **Functional Suitability Quality Metric:** 4
 
 The standard Management API covered the complete publication path without
 custom changes. The catalogue response confirmed that the consumer could see
 the new product, so this test meets the Full Coverage criterion.
+
+#### Execution and evidence
+
+The evidence snippets use generic participant labels. Credentials, hostnames,
+and participant-specific identifiers are omitted. Disposable test IDs are
+retained to keep the workflow concrete.
+
+**Sanitized Bruno workflow**
+
+```yaml
+variables:
+  provider: "<provider-host>"
+  consumer: "<consumer-host>"
+  asset-id: "fla01-cat-test-asset-01"
+  policy-id: "fla01-cat-test-policy-01"
+  contract-id: "fla01-cat-test-contract-01"
+
+requests:
+  - name: Create Test Asset
+    method: POST
+    url: https://{{provider}}/api/management/v3/assets
+    expected_status: 200
+    body:
+      "@id": "{{asset-id}}"
+      "properties":
+        "dct:title": "Flanders catalogue integration test"
+        "dct:description": "Disposable test asset"
+        "dct:publisher":
+          "foaf:name": "Test provider"
+        "mobilitydcatap:mobilityTheme": "<mobility-theme>"
+        "dqv:hasQualityAnnotation": "<quality-annotation>"
+      "dataAddress":
+        "edc:type": "HttpData"
+        "edc:baseUrl": "<test-data-endpoint>"
+
+  - name: Create Test Policy
+    method: POST
+    url: https://{{provider}}/api/management/v3/policydefinitions
+    expected_status: 200
+    body:
+      "@id": "{{policy-id}}"
+      "policy":
+        "@type": "odrl:Set"
+        "permission": []
+        "prohibition": []
+        "obligation": []
+
+  - name: Create Test Contract Definition
+    method: POST
+    url: https://{{provider}}/api/management/v3/contractdefinitions
+    expected_status: 200
+    body:
+      "@id": "{{contract-id}}"
+      "accessPolicyId": "{{policy-id}}"
+      "contractPolicyId": "{{policy-id}}"
+      "assetsSelector":
+        "operandLeft": "https://w3id.org/edc/v0.0.1/ns/id"
+        "operator": "="
+        "operandRight": "{{asset-id}}"
+
+  - name: Query Test Catalogue
+    method: POST
+    url: https://{{consumer}}/api/management/v3/catalog/request
+    expected_status: 200
+    body:
+      "counterPartyAddress": "https://{{provider}}/api/dsp"
+      "counterPartyId": "did:web:<provider-host>"
+      "protocol": "dataspace-protocol-http"
+      "querySpec":
+        "offset": 0
+        "limit": 100
+```
+
+The catalogue assertion used after the final request was:
+
+```javascript
+const response = res.getBody()
+const datasets = Array.isArray(response["dcat:dataset"])
+  ? response["dcat:dataset"]
+  : [response["dcat:dataset"]].filter(Boolean)
+const assetId = bru.getEnvVar("asset-id") || bru.getVar("asset-id")
+
+if (res.getStatus() !== 200) {
+  throw new Error(`Catalogue request failed with HTTP ${res.getStatus()}`)
+}
+
+if (!datasets.some(item => item["@id"] === assetId || item.id === assetId)) {
+  throw new Error("Expected test asset is absent from the catalogue")
+}
+```
+
+The relevant catalogue response excerpt was:
+
+```json
+{
+  "dcat:dataset": [
+    {
+      "@id": "fla01-cat-test-asset-01",
+      "dct:title": "Flanders catalogue integration test",
+      "dcat:distribution": [
+        {
+          "@type": "dcat:Distribution",
+          "dct:format": {
+            "@id": "HttpData-PULL"
+          }
+        }
+      ]
+    }
+  ]
+}
+```
+
+| Evidence | Sanitized observation |
+| --- | --- |
+| API-01 | Asset, policy, and contract creation returned `200 OK`. |
+| API-02 | The consumer catalogue returned the expected dataset. |
+| Scope | One provider-to-consumer path was assessed. |
 
 #### Notes
 
