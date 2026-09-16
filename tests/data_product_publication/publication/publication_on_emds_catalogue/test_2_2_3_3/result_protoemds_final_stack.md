@@ -17,21 +17,22 @@ This section identifies the technical context in which the protoEMDS Final Stack
 | Existing test ID | `2.2.3.3` |
 | Level | UC + Technical |
 | ISO/IEC 25010 mapping | Functional suitability, Compatibility |
-| Owner (tentative) | Alessio (Cefriel) / Wilhelm |
+| Owner | Casper (imec, @vghelu49) |
 | Reviewer | Alessio |
-| Deployment model assessed | TBD |
-| Target environment | TBD |
-| EDC version / release | TBD |
-| Connector deployment reference | TBD |
-| Assessment evidence | TBD |
+| Deployment model assessed | CaaS / IONOS-managed deployment |
+| Target environment | IONOS-managed CaaS deployment |
+| EDC version / release | `emds-edc-connector` `9916cc5`, based on Eclipse EDC `0.10.0` |
+| Connector deployment reference | `deployEMDS-k8s-deployment`, branch `prepare-prod`, commit `846e5f1` |
+| Assessment evidence | Playwright UI verification and Bruno CLI API execution |
 
 The assessment should be completed using the deployment model for which evidence is realistically available. It is not mandatory to execute the same test in both CaaS and on-premise environments.
 
-If only one deployment model is assessed, the other one should be marked as `Not assessed`.
+The deployment models are assessed independently. The CaaS assessment is
+complete; the on-premise assessment remains `TBD`.
 
 #### Tested quality metric and method
 
-This result reuses the existing stack-agnostic test definition in `test.md` and adds an protoEMDS Final Stack integration-assessment perspective.
+This result reuses the existing stack-agnostic test definition in `test.md` and adds a protoEMDS Final Stack integration-assessment perspective.
 
 It does not replace the historical stack-specific result files, such as `result_edc_vc.md` or `result_fiware.md`.
 
@@ -49,39 +50,53 @@ The test aims to verify the availability of a GUI for publishing a data product 
 
 #### Assessment
 
-Pending.
+The connector UI has separate screens for assets, policies, contract
+definitions, and catalogues. The available controls include:
 
-The assessment should be completed once consolidated technical evidence is available for the protoEMDS Final Stack deployment.
+- an asset list, search box, and asset-creation form;
+- core metadata, MobilityDCAT-AP, ODPS pricing, sample, and data-address tabs;
+- policy creation with permission, prohibition, and obligation rules;
+- contract-definition creation linking policies and one or more assets;
+- a catalogue browser that queries a counterparty by DSP address and DID and
+  displays the resulting product and policy details.
 
-The result should clearly indicate which deployment model was assessed. It is acceptable to assess only one deployment model if evidence for the other deployment model is not available.
+After the connector password was entered, Management API requests returned
+`200 OK`. The API-created product appeared in both the asset list and the
+catalogue browser. A complete publication was not submitted through the UI.
+The catalogue browser has no free-text search, metadata filters, or pagination
+controls.
+
+![Asset publication form](images/publication-form-protoemds-final-stack.png)
 
 #### Deployment model assessed
 
 | Deployment model | Status | Evidence | Consolidated assessment |
 | --- | --- | --- | --- |
-| CaaS / IONOS-managed deployment | TBD | TBD | Complete this row only if evidence is collected from the IONOS-managed deployment. Otherwise mark as `Not assessed`. |
-| On-premise deployment | TBD | TBD | Complete this row only if evidence is collected from an on-premise or locally managed deployment. Otherwise mark as `Not assessed`. |
+| CaaS / IONOS-managed deployment | Assessed | Playwright UI and Bruno CLI | GUI supports asset, policy, and contract-definition workflows plus basic catalogue browsing. |
+| On-premise deployment | TBD | TBD | To be assessed separately. |
 
 #### Measured results
 
 | Criteria | Measured KPI | Evidence | Notes |
 | --- | ---: | --- | --- |
-| **No Coverage:** No technical requirements are met. The solution does not have a GUI tool for publishing a data product offering into the catalogue and enabling discovery. The system does not provide any GUI means for users to interact with or manage data product offerings. | TBD | TBD | Pending protoEMDS Final Stack assessment. |
-| **Minimal Coverage:** Up to 25% of the technical requirements are met. The solution provides limited functionality, such as a basic GUI tool with minimal features, allowing for partial publication of data products but lacks robust discovery options. User interface might be clunky, and only a few essential functions are available. | TBD | TBD | Pending protoEMDS Final Stack assessment. |
-| **Partial Coverage:** Approximately 50% of the technical requirements are met. The solution includes a GUI tool that allows for the publication of data products and some discovery features. However, it lacks advanced functionality, such as customizable search options, detailed metadata management, or integration with other systems. Usability and user experience are moderately acceptable. | TBD | TBD | Pending protoEMDS Final Stack assessment. |
-| **Significant Coverage:** About 80% of the technical requirements are met. The solution offers a comprehensive GUI tool with most required features, such as advanced publication workflows, robust discovery capabilities, customizable search filters, and metadata management. Integration with other systems and platforms is partially supported, and the user experience is generally smooth. However, some advanced features or full system integration might still be lacking. | TBD | TBD | Pending protoEMDS Final Stack assessment. |
-| **Full Coverage:** All technical requirements are fully met. The solution includes a fully featured GUI tool for publishing data product offerings into the catalogue, complete with advanced discovery features, customizable search options, detailed metadata management, and full integration with other systems. The user interface is intuitive and user-friendly, providing an excellent user experience. | TBD | TBD | Pending protoEMDS Final Stack assessment. |
+| **No Coverage:** No technical requirements are met. The solution does not have a GUI tool for publishing a data product offering into the catalogue and enabling discovery. The system does not provide any GUI means for users to interact with or manage data product offerings. | Not selected | UI inspection | A native connector GUI is deployed. |
+| **Minimal Coverage:** Up to 25% of the technical requirements are met. The solution provides limited functionality, such as a basic GUI tool with minimal features, allowing for partial publication of data products but lacks robust discovery options. User interface might be clunky, and only a few essential functions are available. | Not selected | UI inspection | The GUI covers all three publication resources and basic discovery. |
+| **Partial Coverage:** Approximately 50% of the technical requirements are met. The solution includes a GUI tool that allows for the publication of data products and some discovery features. However, it lacks advanced functionality, such as customizable search options, detailed metadata management, or integration with other systems. Usability and user experience are moderately acceptable. | **2** | UI and API execution | Publication forms and detailed metadata management are available, and catalogue browsing works. Advanced discovery filters, pagination, and external integrations were not demonstrated. |
+| **Significant Coverage:** About 80% of the technical requirements are met. The solution offers a comprehensive GUI tool with most required features, such as advanced publication workflows, robust discovery capabilities, customizable search filters, and metadata management. Integration with other systems and platforms is partially supported, and the user experience is generally smooth. However, some advanced features or full system integration might still be lacking. | Not selected | UI inspection | Robust discovery and customizable search filters are absent. |
+| **Full Coverage:** All technical requirements are fully met. The solution includes a fully featured GUI tool for publishing data product offerings into the catalogue, complete with advanced discovery features, customizable search options, detailed metadata management, and full integration with other systems. The user interface is intuitive and user-friendly, providing an excellent user experience. | Not selected | UI inspection | Advanced discovery and full external integration were not demonstrated. |
 
-**Functional Suitability Quality Metric:** TBD
+**Functional Suitability Quality Metric:** 2
+
+The UI provides the main publication forms and basic catalogue browsing, but a
+full UI submission was not executed. The missing search, filtering, and
+pagination controls also limit the discovery workflow. This matches the
+Partial Coverage criterion.
 
 #### Notes
 
-This result introduces an **protoEMDS Final Stack** perspective for the existing test `2.2.3.3` under the KPI1 area **Catalogue publication**.
+This result introduces a **protoEMDS Final Stack** perspective for the existing test `2.2.3.3` under the KPI1 area **Catalogue publication**.
 
 This result should not be interpreted as part of the original Phase 1 / Phase 2 stack-comparison campaign. It is intended as an integration phase assessment of the current EMDS final technical infrastructure.
 
-The assessment should be completed using consolidated technical evidence, such as endpoint responses, logs, screenshots, Postman/curl executions, GitHub issues, pull requests, repository references, deployment status or confirmation from the relevant component owner.
-
-This result file was generated from the local `test.md` and, where available, the local `result_edc_vc.md` structure. EDC+VC-specific evidence, values and scores were intentionally not reused.
-
-
+The score applies to the assessed CaaS deployment. The on-premise result
+remains TBD for a separate assessment.
