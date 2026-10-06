@@ -6,7 +6,7 @@ cryptography==43.0.1
 Deprecated==1.2.14
 et-xmlfile==1.1.0
 idna==3.7
-Jinja2==3.1.4
+Jinja2==3.1.6
 MarkupSafe==2.1.5
 numpy==2.0.0
 openpyxl==3.1.4
