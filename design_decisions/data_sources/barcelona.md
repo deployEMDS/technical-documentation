@@ -20,3 +20,7 @@ Barcelona data sets that can be used for testing.
   - API Key request form: https://www.ambmobilitat.cat/Principales/OpenData.aspx
   - Swagger documentation: https://api.ambmobilitat.cat/v1/swagger-ui.html
 - **Format**: JSON
+
+## Demo
+
+Scripts that validate and profile the AMB GTFS feed and an EDC workflow that publishes it as a data product: [`barcelona_demo/`](barcelona_demo/README.md).

@@ -1,0 +1,97 @@
+# Barcelona demo: publish the AMB bus GTFS feed as an EDC data product and consume it.
+# Same request shapes as the sanitized Bruno workflow in
+# tests/data_product_publication/publication/publication_on_emds_catalogue/test_2_2_3_1a.
+# Fill in the hosts and the management API key from your own environment; never commit them.
+
+variables:
+  provider: "<provider-host>"
+  consumer: "<consumer-host>"
+  asset-id: "bcn-amb-gtfs-bus"
+  policy-id: "bcn-amb-open-use"
+  contract-id: "bcn-amb-gtfs-offer"
+
+requests:
+  - name: 1 Create asset (provider)
+    method: POST
+    url: https://{{provider}}/api/management/v3/assets
+    expected_status: 200
+    body:
+      "@id": "{{asset-id}}"
+      "properties":
+        "dct:title": "AMB metropolitan bus timetables (GTFS)"
+        "dct:description": "Scheduled services of the Barcelona metropolitan bus network"
+        "dct:publisher":
+          "foaf:name": "AMB Mobilitat"
+        "dct:format": "GTFS"
+        "mobilitydcatap:mobilityTheme": "<public-transport mobility theme URI>"
+        "dqv:hasQualityAnnotation": "validate_gtfs.sh: PASS (0 orphan references)"
+      "dataAddress":
+        "edc:type": "HttpData"
+        "edc:baseUrl": "https://www.ambmobilitat.cat/OpenData/google_transit.zip"
+
+  - name: 2 Create policy (provider)
+    method: POST
+    url: https://{{provider}}/api/management/v3/policydefinitions
+    expected_status: 200
+    body:
+      "@id": "{{policy-id}}"
+      "policy":
+        "@type": "odrl:Set"
+        "permission":
+          - "odrl:action": "odrl:use"
+        "prohibition": []
+        "obligation": []
+
+  - name: 3 Create contract definition (provider)
+    method: POST
+    url: https://{{provider}}/api/management/v3/contractdefinitions
+    expected_status: 200
+    body:
+      "@id": "{{contract-id}}"
+      "accessPolicyId": "{{policy-id}}"
+      "contractPolicyId": "{{policy-id}}"
+      "assetsSelector":
+        "operandLeft": "https://w3id.org/edc/v0.0.1/ns/id"
+        "operator": "="
+        "operandRight": "{{asset-id}}"
+
+  - name: 4 Query catalogue (consumer)
+    method: POST
+    url: https://{{consumer}}/api/management/v3/catalog/request
+    expected_status: 200
+    body:
+      "counterPartyAddress": "https://{{provider}}/api/dsp"
+      "counterPartyId": "did:web:<provider-host>"
+      "protocol": "dataspace-protocol-http"
+      "querySpec":
+        "offset": 0
+        "limit": 100
+    # assert: a dcat:dataset with @id == {{asset-id}} is present; save its odrl:hasPolicy @id as offer-id
+
+  - name: 5 Start contract negotiation (consumer)
+    method: POST
+    url: https://{{consumer}}/api/management/v3/contractnegotiations
+    expected_status: 200
+    body:
+      "@type": "ContractRequest"
+      "counterPartyAddress": "https://{{provider}}/api/dsp"
+      "protocol": "dataspace-protocol-http"
+      "policy":
+        "@id": "{{offer-id}}"
+        "@type": "odrl:Offer"
+        "assigner": "did:web:<provider-host>"
+        "target": "{{asset-id}}"
+    # poll GET /v3/contractnegotiations/{{negotiation-id}} until state == FINALIZED; save contractAgreementId
+
+  - name: 6 Start transfer (consumer)
+    method: POST
+    url: https://{{consumer}}/api/management/v3/transferprocesses
+    expected_status: 200
+    body:
+      "@type": "TransferRequest"
+      "counterPartyAddress": "https://{{provider}}/api/dsp"
+      "protocol": "dataspace-protocol-http"
+      "contractId": "{{agreement-id}}"
+      "transferType": "HttpData-PULL"
+    # poll until state == STARTED, then GET /v3/edrs/{{transfer-id}}/dataaddress for endpoint + token,
+    # download through the provider data plane and compare its sha256 with the source feed
