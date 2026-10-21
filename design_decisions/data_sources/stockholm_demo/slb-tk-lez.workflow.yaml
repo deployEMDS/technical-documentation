@@ -1,0 +1,111 @@
+# Stockholm LEZ demo: SLB-analys (provider) shares NO2, PM10 and noise with Trafikkontoret (consumer).
+# Request shapes follow tests/data_product_publication/publication/publication_on_emds_catalogue/test_2_2_3_1a.
+# Fill in hosts, DIDs, the management API key and the theme URI from your environment; never commit them.
+# The EnviroSuite API key is stored as a secret in the SLB connector's vault under "envirosuite-key".
+
+variables:
+  slb: "<slb-connector-host>"
+  tk: "<tk-connector-host>"
+  air-asset: "slb-norrlandsgatan21-no2-pm10"
+  noise-asset: "slb-noise-lday-central"
+  policy-id: "lez-follow-up-tk"
+  contract-id: "slb-lez-offer"
+
+requests:
+  - name: 1 Register air asset (SLB)
+    method: POST
+    url: https://{{slb}}/api/management/v3/assets
+    expected_status: 200
+    body:
+      "@id": "{{air-asset}}"
+      "properties":
+        "dct:title": "Hourly NO2 and PM10, Norrlandsgatan 21"
+        "dct:spatial": "Norrlandsgatan 21, Stockholm"
+        "mobilitydcatap:mobilityTheme": "<environment theme URI>"
+      "dataAddress":
+        "edc:type": "HttpData"
+        "edc:baseUrl": "https://open.slb.nu/api/timeseries/v1.1b/get-timeseries/"
+        "edc:proxyQueryParams": "true"
+
+  - name: 2 Register noise asset (SLB)
+    method: POST
+    url: https://{{slb}}/api/management/v3/assets
+    expected_status: 200
+    body:
+      "@id": "{{noise-asset}}"
+      "properties":
+        "dct:title": "Daily Lday noise, Sveavägen and Norrlandsgatan"
+      "dataAddress":
+        "edc:type": "HttpData"
+        "edc:baseUrl": "https://app.envirosuite.com/api/query/"
+        "edc:authKey": "apiKey"
+        "edc:secretName": "envirosuite-key"
+
+  - name: 3 Policy: LEZ follow-up, TK only (SLB)
+    method: POST
+    url: https://{{slb}}/api/management/v3/policydefinitions
+    expected_status: 200
+    body:
+      "@id": "{{policy-id}}"
+      "policy":
+        "@type": "odrl:Set"
+        "permission":
+          - "action": "use"
+            "constraint":
+              - "leftOperand": "purpose"
+                "operator": "eq"
+                "rightOperand": "LEZ-follow-up"
+              - "leftOperand": "participant"
+                "operator": "eq"
+                "rightOperand": "did:web:<tk-host>"
+
+  - name: 4 Contract definition for both assets (SLB)
+    method: POST
+    url: https://{{slb}}/api/management/v3/contractdefinitions
+    expected_status: 200
+    body:
+      "@id": "{{contract-id}}"
+      "accessPolicyId": "{{policy-id}}"
+      "contractPolicyId": "{{policy-id}}"
+      "assetsSelector":
+        - "operandLeft": "https://w3id.org/edc/v0.0.1/ns/id"
+          "operator": "in"
+          "operandRight": ["{{air-asset}}", "{{noise-asset}}"]
+
+  - name: 5 Catalogue request (TK)
+    method: POST
+    url: https://{{tk}}/api/management/v3/catalog/request
+    expected_status: 200
+    body:
+      "counterPartyAddress": "https://{{slb}}/api/dsp"
+      "counterPartyId": "did:web:<slb-host>"
+      "protocol": "dataspace-protocol-http"
+    # assert: both datasets present; save each odrl:hasPolicy @id
+
+  - name: 6 Contract negotiation (TK)
+    method: POST
+    url: https://{{tk}}/api/management/v3/contractnegotiations
+    expected_status: 200
+    body:
+      "@type": "ContractRequest"
+      "counterPartyAddress": "https://{{slb}}/api/dsp"
+      "protocol": "dataspace-protocol-http"
+      "policy":
+        "@id": "{{offer-air}}"
+        "@type": "odrl:Offer"
+        "assigner": "did:web:<slb-host>"
+        "target": "{{air-asset}}"
+    # poll until FINALIZED; save contractAgreementId
+
+  - name: 7 Transfer (TK)
+    method: POST
+    url: https://{{tk}}/api/management/v3/transferprocesses
+    expected_status: 200
+    body:
+      "@type": "TransferRequest"
+      "counterPartyAddress": "https://{{slb}}/api/dsp"
+      "protocol": "dataspace-protocol-http"
+      "contractId": "{{agreement-id}}"
+      "transferType": "HttpData-PULL"
+    # then GET /v3/edrs/{{transfer-id}}/dataaddress and call the endpoint with
+    # ?stations=Norrlandsgatan%2021&parameters=NO2,PM10&format=FME&from_datetime=...
